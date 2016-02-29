@@ -10,6 +10,9 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "RACEXTScope.h"
 #import "Macros.h"
 #import "BBNavigationController.h"
 #import "BBBaseViewController.h"

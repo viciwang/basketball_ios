@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94C3256462DD92BC59B3B7DC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC760580A1189ADB4692EFA3 /* libPods.a */; };
 		9F9617851C83D6B10078FB3C /* BasketballTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9617841C83D6B10078FB3C /* BasketballTests.m */; };
 		9F9617901C83D6B10078FB3C /* BasketballUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F96178F1C83D6B10078FB3C /* BasketballUITests.m */; };
 		9F9617CE1C83E9440078FB3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9617B61C83E9440078FB3C /* AppDelegate.m */; };
@@ -18,6 +19,11 @@
 		9F9617DB1C83EDEE0078FB3C /* BBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9617DA1C83EDEE0078FB3C /* BBBaseViewController.m */; };
 		9F9617DE1C83EF400078FB3C /* BBTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9617DD1C83EF400078FB3C /* BBTabBar.m */; };
 		9F9617E11C83F17A0078FB3C /* BBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9617E01C83F17A0078FB3C /* BBNavigationController.m */; };
+		9F9617E71C8423840078FB3C /* BBNetworkApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9617E61C8423840078FB3C /* BBNetworkApiManager.m */; };
+		9F9617EB1C842F650078FB3C /* BBResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9617EA1C842F650078FB3C /* BBResponseSerializer.m */; };
+		9F9617F11C8481B20078FB3C /* NetworkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9617F01C8481B20078FB3C /* NetworkingTests.m */; };
+		B91E4A0830D4E2934C2E5942 /* libPods-BasketballUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCAE2E14C59748D4FBEDA815 /* libPods-BasketballUITests.a */; };
+		B946B2BF429B549859CE2790 /* libPods-BasketballTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 454EC07F5EADEFDF21A03033 /* libPods-BasketballTests.a */; };
 		F09A0B15D823E9CC1970FAE5 /* libPods-Basketball.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FAC236898270C51172348FF /* libPods-Basketball.a */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +46,11 @@
 
 /* Begin PBXFileReference section */
 		0D1289D0FCCF9F7A978AF9AA /* Pods-Basketball.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Basketball.release.xcconfig"; path = "Pods/Target Support Files/Pods-Basketball/Pods-Basketball.release.xcconfig"; sourceTree = "<group>"; };
+		32B924173A301EA8FDABB772 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		3951ABE4AB0E9B07BA873B31 /* Pods-BasketballUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasketballUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasketballUITests/Pods-BasketballUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3A5FD21ACB1E7A28EAB5643C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		454EC07F5EADEFDF21A03033 /* libPods-BasketballTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BasketballTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		57110659635C4C869209B5F2 /* Pods-BasketballTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasketballTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasketballTests/Pods-BasketballTests.release.xcconfig"; sourceTree = "<group>"; };
 		660EF624F264D7C9E5A7DE97 /* Pods-Basketball.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Basketball.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Basketball/Pods-Basketball.debug.xcconfig"; sourceTree = "<group>"; };
 		7FAC236898270C51172348FF /* libPods-Basketball.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Basketball.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9617671C83D6B00078FB3C /* Basketball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Basketball.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +78,18 @@
 		9F9617E01C83F17A0078FB3C /* BBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBNavigationController.m; sourceTree = "<group>"; };
 		9F9617E21C83F26E0078FB3C /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		9F9617E31C841B470078FB3C /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		9F9617E51C8423840078FB3C /* BBNetworkApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBNetworkApiManager.h; path = Networking/BBNetworkApiManager.h; sourceTree = "<group>"; };
+		9F9617E61C8423840078FB3C /* BBNetworkApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBNetworkApiManager.m; path = Networking/BBNetworkApiManager.m; sourceTree = "<group>"; };
+		9F9617E81C8427E30078FB3C /* BBNetworkAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBNetworkAddress.h; path = Networking/BBNetworkAddress.h; sourceTree = "<group>"; };
+		9F9617E91C842F650078FB3C /* BBResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBResponseSerializer.h; path = Networking/BBResponseSerializer.h; sourceTree = "<group>"; };
+		9F9617EA1C842F650078FB3C /* BBResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBResponseSerializer.m; path = Networking/BBResponseSerializer.m; sourceTree = "<group>"; };
+		9F9617EE1C8452160078FB3C /* RACEXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACEXTScope.h; sourceTree = "<group>"; };
+		9F9617EF1C8452160078FB3C /* RACmetamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACmetamacros.h; sourceTree = "<group>"; };
+		9F9617F01C8481B20078FB3C /* NetworkingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkingTests.m; sourceTree = "<group>"; };
+		AC760580A1189ADB4692EFA3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD2D7BC5FA26556C6156742C /* Pods-BasketballTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasketballTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasketballTests/Pods-BasketballTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DCAE2E14C59748D4FBEDA815 /* libPods-BasketballUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BasketballUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF5B0CAA973DB41607093925 /* Pods-BasketballUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasketballUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasketballUITests/Pods-BasketballUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +98,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F09A0B15D823E9CC1970FAE5 /* libPods-Basketball.a in Frameworks */,
+				94C3256462DD92BC59B3B7DC /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B946B2BF429B549859CE2790 /* libPods-BasketballTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B91E4A0830D4E2934C2E5942 /* libPods-BasketballUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +162,7 @@
 			children = (
 				9F9617841C83D6B10078FB3C /* BasketballTests.m */,
 				9F9617861C83D6B10078FB3C /* Info.plist */,
+				9F9617F01C8481B20078FB3C /* NetworkingTests.m */,
 			);
 			path = BasketballTests;
 			sourceTree = "<group>";
@@ -266,6 +293,7 @@
 		9F9617C41C83E9440078FB3C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				9F9617E41C8422E00078FB3C /* Networking */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -301,6 +329,7 @@
 		9F9617CC1C83E9440078FB3C /* Constant */ = {
 			isa = PBXGroup;
 			children = (
+				9F9617ED1C8452160078FB3C /* RACExtObjc */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -312,11 +341,38 @@
 			path = Modified;
 			sourceTree = "<group>";
 		};
+		9F9617E41C8422E00078FB3C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				9F9617E51C8423840078FB3C /* BBNetworkApiManager.h */,
+				9F9617E61C8423840078FB3C /* BBNetworkApiManager.m */,
+				9F9617E81C8427E30078FB3C /* BBNetworkAddress.h */,
+				9F9617E91C842F650078FB3C /* BBResponseSerializer.h */,
+				9F9617EA1C842F650078FB3C /* BBResponseSerializer.m */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		9F9617ED1C8452160078FB3C /* RACExtObjc */ = {
+			isa = PBXGroup;
+			children = (
+				9F9617EE1C8452160078FB3C /* RACEXTScope.h */,
+				9F9617EF1C8452160078FB3C /* RACmetamacros.h */,
+			);
+			path = RACExtObjc;
+			sourceTree = "<group>";
+		};
 		C4730757E71590C0C361FDFC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				660EF624F264D7C9E5A7DE97 /* Pods-Basketball.debug.xcconfig */,
 				0D1289D0FCCF9F7A978AF9AA /* Pods-Basketball.release.xcconfig */,
+				CD2D7BC5FA26556C6156742C /* Pods-BasketballTests.debug.xcconfig */,
+				57110659635C4C869209B5F2 /* Pods-BasketballTests.release.xcconfig */,
+				3951ABE4AB0E9B07BA873B31 /* Pods-BasketballUITests.debug.xcconfig */,
+				EF5B0CAA973DB41607093925 /* Pods-BasketballUITests.release.xcconfig */,
+				32B924173A301EA8FDABB772 /* Pods.debug.xcconfig */,
+				3A5FD21ACB1E7A28EAB5643C /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -325,6 +381,9 @@
 			isa = PBXGroup;
 			children = (
 				7FAC236898270C51172348FF /* libPods-Basketball.a */,
+				454EC07F5EADEFDF21A03033 /* libPods-BasketballTests.a */,
+				DCAE2E14C59748D4FBEDA815 /* libPods-BasketballUITests.a */,
+				AC760580A1189ADB4692EFA3 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -356,9 +415,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F9617971C83D6B10078FB3C /* Build configuration list for PBXNativeTarget "BasketballTests" */;
 			buildPhases = (
+				3967752A96B4ABB5D99C0D99 /* Check Pods Manifest.lock */,
 				9F96177C1C83D6B10078FB3C /* Sources */,
 				9F96177D1C83D6B10078FB3C /* Frameworks */,
 				9F96177E1C83D6B10078FB3C /* Resources */,
+				5C65982558B971C477D6B0A4 /* Embed Pods Frameworks */,
+				425703CF66597112105CDBF6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -374,9 +436,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F96179A1C83D6B10078FB3C /* Build configuration list for PBXNativeTarget "BasketballUITests" */;
 			buildPhases = (
+				51567A908DA231C8A4427C11 /* Check Pods Manifest.lock */,
 				9F9617871C83D6B10078FB3C /* Sources */,
 				9F9617881C83D6B10078FB3C /* Frameworks */,
 				9F9617891C83D6B10078FB3C /* Resources */,
+				7B97A426A5F91407D2FB22D6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -487,6 +551,81 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		3967752A96B4ABB5D99C0D99 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		425703CF66597112105CDBF6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BasketballTests/Pods-BasketballTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51567A908DA231C8A4427C11 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5C65982558B971C477D6B0A4 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BasketballTests/Pods-BasketballTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B97A426A5F91407D2FB22D6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BasketballUITests/Pods-BasketballUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BF783BFBFCB8A7254E36F2A9 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -499,7 +638,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Basketball/Pods-Basketball-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -511,7 +650,9 @@
 			files = (
 				9F9617DB1C83EDEE0078FB3C /* BBBaseViewController.m in Sources */,
 				9F9617D21C83E9440078FB3C /* main.m in Sources */,
+				9F9617EB1C842F650078FB3C /* BBResponseSerializer.m in Sources */,
 				9F9617D81C83EDC60078FB3C /* BBModel.m in Sources */,
+				9F9617E71C8423840078FB3C /* BBNetworkApiManager.m in Sources */,
 				9F9617D51C83ED860078FB3C /* BBTabBarController.m in Sources */,
 				9F9617E11C83F17A0078FB3C /* BBNavigationController.m in Sources */,
 				9F9617CE1C83E9440078FB3C /* AppDelegate.m in Sources */,
@@ -524,6 +665,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F9617851C83D6B10078FB3C /* BasketballTests.m in Sources */,
+				9F9617F11C8481B20078FB3C /* NetworkingTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

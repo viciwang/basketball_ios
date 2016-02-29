@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9F96176C1C83D6B00078FB3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F96176B1C83D6B00078FB3C /* main.m */; };
-		9F96176F1C83D6B00078FB3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F96176E1C83D6B00078FB3C /* AppDelegate.m */; };
-		9F9617721C83D6B00078FB3C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9617711C83D6B00078FB3C /* ViewController.m */; };
-		9F9617751C83D6B00078FB3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9617731C83D6B00078FB3C /* Main.storyboard */; };
-		9F9617771C83D6B00078FB3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F9617761C83D6B00078FB3C /* Assets.xcassets */; };
-		9F96177A1C83D6B00078FB3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9617781C83D6B00078FB3C /* LaunchScreen.storyboard */; };
 		9F9617851C83D6B10078FB3C /* BasketballTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9617841C83D6B10078FB3C /* BasketballTests.m */; };
 		9F9617901C83D6B10078FB3C /* BasketballUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F96178F1C83D6B10078FB3C /* BasketballUITests.m */; };
+		9F9617CE1C83E9440078FB3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9617B61C83E9440078FB3C /* AppDelegate.m */; };
+		9F9617CF1C83E9440078FB3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F9617C31C83E9440078FB3C /* Assets.xcassets */; };
+		9F9617D01C83E9440078FB3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9617C61C83E9440078FB3C /* LaunchScreen.storyboard */; };
+		9F9617D21C83E9440078FB3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9617C91C83E9440078FB3C /* main.m */; };
+		9F9617D51C83ED860078FB3C /* BBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9617D41C83ED860078FB3C /* BBTabBarController.m */; };
+		9F9617D81C83EDC60078FB3C /* BBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9617D71C83EDC60078FB3C /* BBModel.m */; };
+		9F9617DB1C83EDEE0078FB3C /* BBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9617DA1C83EDEE0078FB3C /* BBBaseViewController.m */; };
+		9F9617DE1C83EF400078FB3C /* BBTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9617DD1C83EF400078FB3C /* BBTabBar.m */; };
+		9F9617E11C83F17A0078FB3C /* BBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9617E01C83F17A0078FB3C /* BBNavigationController.m */; };
 		F09A0B15D823E9CC1970FAE5 /* libPods-Basketball.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FAC236898270C51172348FF /* libPods-Basketball.a */; };
 /* End PBXBuildFile section */
 
@@ -40,21 +43,29 @@
 		660EF624F264D7C9E5A7DE97 /* Pods-Basketball.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Basketball.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Basketball/Pods-Basketball.debug.xcconfig"; sourceTree = "<group>"; };
 		7FAC236898270C51172348FF /* libPods-Basketball.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Basketball.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9617671C83D6B00078FB3C /* Basketball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Basketball.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F96176B1C83D6B00078FB3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9F96176D1C83D6B00078FB3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		9F96176E1C83D6B00078FB3C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9F9617701C83D6B00078FB3C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9F9617711C83D6B00078FB3C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		9F9617741C83D6B00078FB3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9F9617761C83D6B00078FB3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9F9617791C83D6B00078FB3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9F96177B1C83D6B00078FB3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F9617801C83D6B10078FB3C /* BasketballTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasketballTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9617841C83D6B10078FB3C /* BasketballTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasketballTests.m; sourceTree = "<group>"; };
 		9F9617861C83D6B10078FB3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F96178B1C83D6B10078FB3C /* BasketballUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasketballUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F96178F1C83D6B10078FB3C /* BasketballUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasketballUITests.m; sourceTree = "<group>"; };
 		9F9617911C83D6B10078FB3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F9617B51C83E9440078FB3C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9F9617B61C83E9440078FB3C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9F9617C31C83E9440078FB3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9F9617C71C83E9440078FB3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9F9617C81C83E9440078FB3C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F9617C91C83E9440078FB3C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9F9617D31C83ED860078FB3C /* BBTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBTabBarController.h; sourceTree = "<group>"; };
+		9F9617D41C83ED860078FB3C /* BBTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBTabBarController.m; sourceTree = "<group>"; };
+		9F9617D61C83EDC60078FB3C /* BBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBModel.h; sourceTree = "<group>"; };
+		9F9617D71C83EDC60078FB3C /* BBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBModel.m; sourceTree = "<group>"; };
+		9F9617D91C83EDEE0078FB3C /* BBBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBaseViewController.h; sourceTree = "<group>"; };
+		9F9617DA1C83EDEE0078FB3C /* BBBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBaseViewController.m; sourceTree = "<group>"; };
+		9F9617DC1C83EF400078FB3C /* BBTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBTabBar.h; sourceTree = "<group>"; };
+		9F9617DD1C83EF400078FB3C /* BBTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBTabBar.m; sourceTree = "<group>"; };
+		9F9617DF1C83F17A0078FB3C /* BBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBNavigationController.h; sourceTree = "<group>"; };
+		9F9617E01C83F17A0078FB3C /* BBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBNavigationController.m; sourceTree = "<group>"; };
+		9F9617E21C83F26E0078FB3C /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,25 +119,15 @@
 		9F9617691C83D6B00078FB3C /* Basketball */ = {
 			isa = PBXGroup;
 			children = (
-				9F96176D1C83D6B00078FB3C /* AppDelegate.h */,
-				9F96176E1C83D6B00078FB3C /* AppDelegate.m */,
-				9F9617701C83D6B00078FB3C /* ViewController.h */,
-				9F9617711C83D6B00078FB3C /* ViewController.m */,
-				9F9617731C83D6B00078FB3C /* Main.storyboard */,
-				9F9617761C83D6B00078FB3C /* Assets.xcassets */,
-				9F9617781C83D6B00078FB3C /* LaunchScreen.storyboard */,
-				9F96177B1C83D6B00078FB3C /* Info.plist */,
-				9F96176A1C83D6B00078FB3C /* Supporting Files */,
+				9F9617B41C83E9440078FB3C /* Appdelegate */,
+				9F9617CB1C83E9440078FB3C /* Vendors */,
+				9F9617CA1C83E9440078FB3C /* Utils */,
+				9F9617B71C83E9440078FB3C /* AppModules */,
+				9F9617C41C83E9440078FB3C /* Services */,
+				9F9617C21C83E9440078FB3C /* Resources */,
+				9F9617C51C83E9440078FB3C /* SupportingFiles */,
 			);
 			path = Basketball;
-			sourceTree = "<group>";
-		};
-		9F96176A1C83D6B00078FB3C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				9F96176B1C83D6B00078FB3C /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		9F9617831C83D6B10078FB3C /* BasketballTests */ = {
@@ -145,6 +146,168 @@
 				9F9617911C83D6B10078FB3C /* Info.plist */,
 			);
 			path = BasketballUITests;
+			sourceTree = "<group>";
+		};
+		9F9617B41C83E9440078FB3C /* Appdelegate */ = {
+			isa = PBXGroup;
+			children = (
+				9F9617B51C83E9440078FB3C /* AppDelegate.h */,
+				9F9617B61C83E9440078FB3C /* AppDelegate.m */,
+			);
+			path = Appdelegate;
+			sourceTree = "<group>";
+		};
+		9F9617B71C83E9440078FB3C /* AppModules */ = {
+			isa = PBXGroup;
+			children = (
+				9F9617B81C83E9440078FB3C /* Base */,
+				9F9617BD1C83E9440078FB3C /* Sport */,
+			);
+			path = AppModules;
+			sourceTree = "<group>";
+		};
+		9F9617B81C83E9440078FB3C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9F9617B91C83E9440078FB3C /* Controllers */,
+				9F9617BA1C83E9440078FB3C /* Models */,
+				9F9617BC1C83E9440078FB3C /* Views */,
+				9F9617BB1C83E9440078FB3C /* Other */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		9F9617B91C83E9440078FB3C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9F9617D31C83ED860078FB3C /* BBTabBarController.h */,
+				9F9617D41C83ED860078FB3C /* BBTabBarController.m */,
+				9F9617D91C83EDEE0078FB3C /* BBBaseViewController.h */,
+				9F9617DA1C83EDEE0078FB3C /* BBBaseViewController.m */,
+				9F9617DF1C83F17A0078FB3C /* BBNavigationController.h */,
+				9F9617E01C83F17A0078FB3C /* BBNavigationController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9F9617BA1C83E9440078FB3C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9F9617D61C83EDC60078FB3C /* BBModel.h */,
+				9F9617D71C83EDC60078FB3C /* BBModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9F9617BB1C83E9440078FB3C /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		9F9617BC1C83E9440078FB3C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9F9617DC1C83EF400078FB3C /* BBTabBar.h */,
+				9F9617DD1C83EF400078FB3C /* BBTabBar.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9F9617BD1C83E9440078FB3C /* Sport */ = {
+			isa = PBXGroup;
+			children = (
+				9F9617BE1C83E9440078FB3C /* Controllers */,
+				9F9617BF1C83E9440078FB3C /* Models */,
+				9F9617C01C83E9440078FB3C /* Other */,
+				9F9617C11C83E9440078FB3C /* Views */,
+			);
+			path = Sport;
+			sourceTree = "<group>";
+		};
+		9F9617BE1C83E9440078FB3C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9F9617BF1C83E9440078FB3C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9F9617C01C83E9440078FB3C /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		9F9617C11C83E9440078FB3C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9F9617C21C83E9440078FB3C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9F9617C31C83E9440078FB3C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9F9617C41C83E9440078FB3C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9F9617C51C83E9440078FB3C /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				9F9617C61C83E9440078FB3C /* LaunchScreen.storyboard */,
+				9F9617C81C83E9440078FB3C /* Info.plist */,
+				9F9617C91C83E9440078FB3C /* main.m */,
+				9F9617E21C83F26E0078FB3C /* PrefixHeader.pch */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		9F9617CA1C83E9440078FB3C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		9F9617CB1C83E9440078FB3C /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				9F9617CC1C83E9440078FB3C /* Constant */,
+				9F9617CD1C83E9440078FB3C /* Modified */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		9F9617CC1C83E9440078FB3C /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		9F9617CD1C83E9440078FB3C /* Modified */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modified;
 			sourceTree = "<group>";
 		};
 		C4730757E71590C0C361FDFC /* Pods */ = {
@@ -270,9 +433,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F96177A1C83D6B00078FB3C /* LaunchScreen.storyboard in Resources */,
-				9F9617771C83D6B00078FB3C /* Assets.xcassets in Resources */,
-				9F9617751C83D6B00078FB3C /* Main.storyboard in Resources */,
+				9F9617CF1C83E9440078FB3C /* Assets.xcassets in Resources */,
+				9F9617D01C83E9440078FB3C /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,9 +507,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F9617721C83D6B00078FB3C /* ViewController.m in Sources */,
-				9F96176F1C83D6B00078FB3C /* AppDelegate.m in Sources */,
-				9F96176C1C83D6B00078FB3C /* main.m in Sources */,
+				9F9617DB1C83EDEE0078FB3C /* BBBaseViewController.m in Sources */,
+				9F9617D21C83E9440078FB3C /* main.m in Sources */,
+				9F9617D81C83EDC60078FB3C /* BBModel.m in Sources */,
+				9F9617D51C83ED860078FB3C /* BBTabBarController.m in Sources */,
+				9F9617E11C83F17A0078FB3C /* BBNavigationController.m in Sources */,
+				9F9617CE1C83E9440078FB3C /* AppDelegate.m in Sources */,
+				9F9617DE1C83EF400078FB3C /* BBTabBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,18 +549,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9F9617731C83D6B00078FB3C /* Main.storyboard */ = {
+		9F9617C61C83E9440078FB3C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9F9617741C83D6B00078FB3C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		9F9617781C83D6B00078FB3C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9F9617791C83D6B00078FB3C /* Base */,
+				9F9617C71C83E9440078FB3C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -487,7 +645,9 @@
 			baseConfigurationReference = 660EF624F264D7C9E5A7DE97 /* Pods-Basketball.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Basketball/Info.plist;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PREFIX_HEADER = "${SRCROOT}/Basketball/SupportingFiles/PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Basketball/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.basketball.Basketball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -499,7 +659,9 @@
 			baseConfigurationReference = 0D1289D0FCCF9F7A978AF9AA /* Pods-Basketball.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Basketball/Info.plist;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PREFIX_HEADER = "${SRCROOT}/Basketball/SupportingFiles/PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Basketball/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.basketball.Basketball;
 				PRODUCT_NAME = "$(TARGET_NAME)";

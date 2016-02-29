@@ -10,4 +10,12 @@
 
 @implementation BBModel
 
++ (instancetype)createFromJSONDictionary:(NSDictionary *)dict {
+    return [MTLJSONAdapter modelOfClass:self.class fromJSONDictionary:dict error:nil];
+}
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return nil;
+}
+
 @end

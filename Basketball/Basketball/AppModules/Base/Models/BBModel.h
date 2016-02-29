@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MTLModel.h"
+#import "MTLJSONAdapter.h"
 
-@interface BBModel : NSObject
+@interface BBModel : MTLModel <MTLJSONSerializing>
+
++ (instancetype)createFromJSONDictionary:(NSDictionary *)dict;
 
 @end

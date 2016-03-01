@@ -9,8 +9,8 @@
 #ifndef BBNetworkAddress_h
 #define BBNetworkAddress_h
 
-#define kApiBaseUrl @"http://www.baidu.com"
+#define kApiBaseUrl @"http://localhost"
 
-#define kApiTestAddress @"/"
+#define kApiTestAddress @"test.json"
 
 #endif /* BBNetworkAddress_h */

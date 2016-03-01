@@ -29,6 +29,8 @@
     [[BBNetworkApiManager shareManager] requestSampleWithCompetionBlock:^(id responseObject, NSError *error) {
         
     }];
+    
+    
     NSLog(@"ok *********");
 }
 

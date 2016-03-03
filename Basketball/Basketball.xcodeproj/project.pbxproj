@@ -12,6 +12,15 @@
 		9F244CFD1C8527D500A388F6 /* BBResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F244CFB1C8527D500A388F6 /* BBResponseSerializer.m */; };
 		9F244D151C856DC600A388F6 /* BasketballTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F244D141C856DC600A388F6 /* BasketballTests.m */; };
 		9F244D2F1C856E5D00A388F6 /* BasketballUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F244D2E1C856E5D00A388F6 /* BasketballUITests.m */; };
+		9F9394541C8893C9009E6DDF /* BBStepCountingMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9394531C8893C9009E6DDF /* BBStepCountingMainViewController.m */; };
+		9F9394551C8893C9009E6DDF /* BBStepCountingMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9394531C8893C9009E6DDF /* BBStepCountingMainViewController.m */; };
+		9F9394561C8893C9009E6DDF /* BBStepCountingMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9394531C8893C9009E6DDF /* BBStepCountingMainViewController.m */; };
+		9F93945A1C88946F009E6DDF /* BBStepCountingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9394591C88946F009E6DDF /* BBStepCountingManager.m */; };
+		9F93945B1C88946F009E6DDF /* BBStepCountingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9394591C88946F009E6DDF /* BBStepCountingManager.m */; };
+		9F93945C1C88946F009E6DDF /* BBStepCountingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9394591C88946F009E6DDF /* BBStepCountingManager.m */; };
+		9F93945F1C88968D009E6DDF /* BBStepCountingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F93945E1C88968D009E6DDF /* BBStepCountingService.m */; };
+		9F9394601C88968D009E6DDF /* BBStepCountingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F93945E1C88968D009E6DDF /* BBStepCountingService.m */; };
+		9F9394611C88968D009E6DDF /* BBStepCountingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F93945E1C88968D009E6DDF /* BBStepCountingService.m */; };
 		9F9617CE1C83E9440078FB3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9617B61C83E9440078FB3C /* AppDelegate.m */; };
 		9F9617CF1C83E9440078FB3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F9617C31C83E9440078FB3C /* Assets.xcassets */; };
 		9F9617D01C83E9440078FB3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9617C61C83E9440078FB3C /* LaunchScreen.storyboard */; };
@@ -63,6 +72,12 @@
 		9F244D2C1C856E5D00A388F6 /* BasketballUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasketballUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F244D2E1C856E5D00A388F6 /* BasketballUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasketballUITests.m; sourceTree = "<group>"; };
 		9F244D301C856E5D00A388F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F9394521C8893C9009E6DDF /* BBStepCountingMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBStepCountingMainViewController.h; path = Basketball/AppModules/StepCounting/Controllers/BBStepCountingMainViewController.h; sourceTree = SOURCE_ROOT; };
+		9F9394531C8893C9009E6DDF /* BBStepCountingMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBStepCountingMainViewController.m; path = Basketball/AppModules/StepCounting/Controllers/BBStepCountingMainViewController.m; sourceTree = SOURCE_ROOT; };
+		9F9394581C88946F009E6DDF /* BBStepCountingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBStepCountingManager.h; path = StepCounting/BBStepCountingManager.h; sourceTree = "<group>"; };
+		9F9394591C88946F009E6DDF /* BBStepCountingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBStepCountingManager.m; path = StepCounting/BBStepCountingManager.m; sourceTree = "<group>"; };
+		9F93945D1C88968D009E6DDF /* BBStepCountingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBStepCountingService.h; path = StepCounting/BBStepCountingService.h; sourceTree = "<group>"; };
+		9F93945E1C88968D009E6DDF /* BBStepCountingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBStepCountingService.m; path = StepCounting/BBStepCountingService.m; sourceTree = "<group>"; };
 		9F9617671C83D6B00078FB3C /* Basketball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Basketball.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9617B51C83E9440078FB3C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9F9617B61C83E9440078FB3C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -159,6 +174,17 @@
 				9F244D301C856E5D00A388F6 /* Info.plist */,
 			);
 			path = BasketballUITests;
+			sourceTree = "<group>";
+		};
+		9F9394571C889416009E6DDF /* StepCounting */ = {
+			isa = PBXGroup;
+			children = (
+				9F9394581C88946F009E6DDF /* BBStepCountingManager.h */,
+				9F9394591C88946F009E6DDF /* BBStepCountingManager.m */,
+				9F93945D1C88968D009E6DDF /* BBStepCountingService.h */,
+				9F93945E1C88968D009E6DDF /* BBStepCountingService.m */,
+			);
+			name = StepCounting;
 			sourceTree = "<group>";
 		};
 		9F96175E1C83D6B00078FB3C = {
@@ -278,6 +304,8 @@
 		9F9617BE1C83E9440078FB3C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9F9394521C8893C9009E6DDF /* BBStepCountingMainViewController.h */,
+				9F9394531C8893C9009E6DDF /* BBStepCountingMainViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -314,6 +342,7 @@
 		9F9617C41C83E9440078FB3C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				9F9394571C889416009E6DDF /* StepCounting */,
 				9F244CF61C8527D500A388F6 /* Networking */,
 			);
 			path = Services;
@@ -629,6 +658,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F9394551C8893C9009E6DDF /* BBStepCountingMainViewController.m in Sources */,
+				9F93945B1C88946F009E6DDF /* BBStepCountingManager.m in Sources */,
+				9F9394601C88968D009E6DDF /* BBStepCountingService.m in Sources */,
 				9F244D151C856DC600A388F6 /* BasketballTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -637,6 +669,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F9394561C8893C9009E6DDF /* BBStepCountingMainViewController.m in Sources */,
+				9F93945C1C88946F009E6DDF /* BBStepCountingManager.m in Sources */,
+				9F9394611C88968D009E6DDF /* BBStepCountingService.m in Sources */,
 				9F244D2F1C856E5D00A388F6 /* BasketballUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -649,11 +684,14 @@
 				9F9617D21C83E9440078FB3C /* main.m in Sources */,
 				9F244CFD1C8527D500A388F6 /* BBResponseSerializer.m in Sources */,
 				9F9617D81C83EDC60078FB3C /* BBModel.m in Sources */,
+				9F9394541C8893C9009E6DDF /* BBStepCountingMainViewController.m in Sources */,
 				9F244CFC1C8527D500A388F6 /* BBNetworkApiManager.m in Sources */,
+				9F93945F1C88968D009E6DDF /* BBStepCountingService.m in Sources */,
 				9F9617D51C83ED860078FB3C /* BBTabBarController.m in Sources */,
 				9F9617E11C83F17A0078FB3C /* BBNavigationController.m in Sources */,
 				9F9617CE1C83E9440078FB3C /* AppDelegate.m in Sources */,
 				9F9617DE1C83EF400078FB3C /* BBTabBar.m in Sources */,
+				9F93945A1C88946F009E6DDF /* BBStepCountingManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

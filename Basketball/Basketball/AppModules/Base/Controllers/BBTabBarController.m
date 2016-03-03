@@ -8,6 +8,7 @@
 
 #import "BBTabBarController.h"
 #import "BBNetworkApiManager.h"
+#import "BBStepCountingMainViewController.h"
 
 @interface BBTabBarController ()
 
@@ -35,7 +36,7 @@
     UIImage *selectedImage = [UIImage imageNamed:@"icon_great"];
     [self addChildViewController:[BBBaseViewController new] title:@"运动" defaultImage:defaultImage selectedImage:selectedImage];
     [self addChildViewController:[BBBaseViewController new] title:@"运动" defaultImage:defaultImage selectedImage:selectedImage];
-    [self addChildViewController:[BBBaseViewController new] title:@"运动" defaultImage:defaultImage selectedImage:selectedImage];
+    [self addChildViewController:[BBStepCountingMainViewController new] title:@"运动" defaultImage:defaultImage selectedImage:selectedImage];
     [self addChildViewController:[BBBaseViewController new] title:@"个人" defaultImage:defaultImage selectedImage:selectedImage];
 }
 

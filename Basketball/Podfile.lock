@@ -26,8 +26,8 @@ PODS:
   - Mantle (2.0.6):
     - Mantle/extobjc (= 2.0.6)
   - Mantle/extobjc (2.0.6)
+  - Masonry (0.6.4)
   - MBProgressHUD (0.9.2)
-  - PureLayout (3.0.1)
   - Reachability (3.2)
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
@@ -38,8 +38,8 @@ DEPENDENCIES:
   - CocoaLumberjack (~> 2.2.0)
   - FLEX (~> 2.2.0)
   - Mantle (~> 2.0.6)
+  - Masonry (~> 0.6.4)
   - MBProgressHUD (~> 0.9.2)
-  - PureLayout (~> 3.0.1)
   - Reachability (~> 3.2)
   - SDWebImage (~> 3.7.5)
 
@@ -48,8 +48,8 @@ SPEC CHECKSUMS:
   CocoaLumberjack: 17fe8581f84914d5d7e6360f7c70022b173c3ae0
   FLEX: bc8a4fb887ed5d3cdf7c2f3bd665f7bb1647cc58
   Mantle: 299966b00759634931699f69cb6a30b9239b944d
+  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
-  PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
 

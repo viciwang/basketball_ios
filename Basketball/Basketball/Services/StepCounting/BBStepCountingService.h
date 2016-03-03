@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (StepCountingUpdateBlock)(NSUInteger numberOfSteps, NSDate *timestamp, NSError *error);
+typedef void (^StepCountingUpdateBlock)(NSUInteger numberOfSteps, NSDate *timestamp, NSError *error);
 
 @protocol BBStepCountingService <NSObject>
 

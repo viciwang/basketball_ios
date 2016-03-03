@@ -7,6 +7,7 @@
 //
 
 #import "BBTabBarController.h"
+#import "BBNetworkApiManager.h"
 
 @interface BBTabBarController ()
 

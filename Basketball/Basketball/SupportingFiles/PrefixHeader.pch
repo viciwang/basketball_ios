@@ -10,6 +10,9 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
+@import CocoaLumberjack;
+extern const int ddLogLevel;
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "RACEXTScope.h"

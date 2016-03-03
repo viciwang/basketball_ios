@@ -14,6 +14,12 @@
 
 @end
 
+#ifdef DEBUG
+const int ddLogLevel = DDLogLevelVerbose;
+#else
+const int ddLogLevel = DDLogLevelWarning;
+#endif
+
 @implementation AppDelegate
 
 
@@ -27,6 +33,7 @@
     // debug
 #if DEBUG
     [self configFLEX];
+    [self configCocoaLumberjack];
 #endif
     
     return YES;
@@ -45,6 +52,11 @@
     if (gestureRecognizer.state == UIGestureRecognizerStateRecognized) {
         [[FLEXManager sharedManager] showExplorer];
     }
+}
+
+- (void)configCocoaLumberjack {
+    [DDLog addLogger:[DDTTYLogger sharedInstance]]; // TTY = Xcode console
+    [DDLog addLogger:[DDASLLogger sharedInstance]]; // ASL = Apple System Logs
 }
 
 @end

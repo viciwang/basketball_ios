@@ -30,7 +30,17 @@
         if (handler) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 handler(pedometerData.numberOfSteps.unsignedIntegerValue, pedometerData.endDate, error);
-            });            
+            });
+        }
+    }];
+}
+
+- (void)queryStepCountingFromDate:(NSDate *)beginDate endDate:(NSDate *)endDate handler:(StepCountingUpdateBlock)handler {
+    [self.pedmeter queryPedometerDataFromDate:beginDate toDate:endDate withHandler:^(CMPedometerData * _Nullable pedometerData, NSError * _Nullable error) {
+        if (handler) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                handler(pedometerData.numberOfSteps.unsignedIntegerValue, pedometerData.endDate, error);
+            });
         }
     }];
 }

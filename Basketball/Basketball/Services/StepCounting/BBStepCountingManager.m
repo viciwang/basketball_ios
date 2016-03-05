@@ -8,6 +8,7 @@
 
 #import "BBStepCountingManager.h"
 #import "BBStepCountingService.h"
+#import "NSDate+Utilities.h"
 
 @interface BBStepCountingManager ()
 
@@ -35,8 +36,22 @@
     }];
 }
 
-- (void)stopStepCounting {
-    
+- (void)queryStepsOfToday:(QueryResultBlock)resultBlock {
+    __block NSMutableArray *result = [[NSMutableArray alloc]init];
+    __block NSUInteger count = 0;
+    for (NSUInteger index = 0; index < 24; index++) {
+        [result addObject:@(0)];
+    }
+    NSDate *beginDate = [[NSDate date]dateAtStartOfDay] ;
+    for (NSUInteger index = 0; index < 24; index++) {
+        [self.stepCountingService queryStepCountingFromDate:[beginDate dateByAddingHours:index] endDate:[beginDate dateByAddingHours:index+1] handler:^(NSUInteger numberOfSteps, NSDate *timestamp, NSError *error) {
+            result[timestamp.hour] = @(numberOfSteps);
+            count++;
+            if (count >= 24) {
+                resultBlock(result);
+            }
+        }];
+    }
 }
 
 @end

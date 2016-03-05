@@ -183,6 +183,6 @@ static inline void TimeThisBlock (void (^block)(void), NSString *message) {
 
 #pragma mark - Some convince block
 
-typedef void (voidBlock)();
+typedef void (^voidBlock)();
 
 #endif /* Macros_h */

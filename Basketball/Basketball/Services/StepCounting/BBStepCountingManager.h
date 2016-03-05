@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void(^QueryResultBlock)(NSArray *steps);
+
 @interface BBStepCountingManager : NSObject
 
 + (BBStepCountingManager *)sharedManager;
@@ -15,5 +17,13 @@
 - (void)startStepCounting;
 
 - (void)stopStepCounting;
+
+- (void)queryStepsOfToday:(QueryResultBlock)resultBlock;
+
+//- (void)queryStepsOfThisWeek:(QueryResultBlock)resultBlock;
+//
+//- (void)queryStepsOfThisMonth:(QueryResultBlock)resultBlock;
+//
+//- (void)queryStepsOfThisYear:(QueryResultBlock)resultBlock;
 
 @end

@@ -7,18 +7,62 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BB060D40BFAAD28F5E93CFF /* libPods-Basketball.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E1AC70C65345F5D14EC094 /* libPods-Basketball.a */; };
+		9BE76A280DD840DDE6F5B98E /* libPods-BasketballTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF811C5D7E0D5D90760B582B /* libPods-BasketballTests.a */; };
 		9F9617851C83D6B10078FB3C /* BasketballTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9617841C83D6B10078FB3C /* BasketballTests.m */; };
 		9F9617901C83D6B10078FB3C /* BasketballUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F96178F1C83D6B10078FB3C /* BasketballUITests.m */; };
-		9F9617CE1C83E9440078FB3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9617B61C83E9440078FB3C /* AppDelegate.m */; };
-		9F9617CF1C83E9440078FB3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F9617C31C83E9440078FB3C /* Assets.xcassets */; };
-		9F9617D01C83E9440078FB3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9617C61C83E9440078FB3C /* LaunchScreen.storyboard */; };
-		9F9617D21C83E9440078FB3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9617C91C83E9440078FB3C /* main.m */; };
-		9F9617D51C83ED860078FB3C /* BBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9617D41C83ED860078FB3C /* BBTabBarController.m */; };
-		9F9617D81C83EDC60078FB3C /* BBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9617D71C83EDC60078FB3C /* BBModel.m */; };
-		9F9617DB1C83EDEE0078FB3C /* BBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9617DA1C83EDEE0078FB3C /* BBBaseViewController.m */; };
-		9F9617DE1C83EF400078FB3C /* BBTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9617DD1C83EF400078FB3C /* BBTabBar.m */; };
-		9F9617E11C83F17A0078FB3C /* BBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9617E01C83F17A0078FB3C /* BBNavigationController.m */; };
-		F09A0B15D823E9CC1970FAE5 /* libPods-Basketball.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FAC236898270C51172348FF /* libPods-Basketball.a */; };
+		C37A048A1C8EFA6300468889 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C37A04621C8EFA6300468889 /* AppDelegate.m */; };
+		C37A048B1C8EFA6300468889 /* BBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C37A04671C8EFA6300468889 /* BBBaseViewController.m */; };
+		C37A048C1C8EFA6300468889 /* BBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C37A04691C8EFA6300468889 /* BBNavigationController.m */; };
+		C37A048D1C8EFA6300468889 /* BBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C37A046B1C8EFA6300468889 /* BBTabBarController.m */; };
+		C37A048E1C8EFA6300468889 /* BBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C37A046E1C8EFA6300468889 /* BBModel.m */; };
+		C37A048F1C8EFA6300468889 /* BBTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C37A04711C8EFA6300468889 /* BBTabBar.m */; };
+		C37A04901C8EFA6300468889 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C37A04741C8EFA6300468889 /* Assets.xcassets */; };
+		C37A04911C8EFA6300468889 /* BBNetworkApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C37A04791C8EFA6300468889 /* BBNetworkApiManager.m */; };
+		C37A04921C8EFA6300468889 /* BBResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C37A047B1C8EFA6300468889 /* BBResponseSerializer.m */; };
+		C37A04931C8EFA6300468889 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37A047E1C8EFA6300468889 /* LaunchScreen.storyboard */; };
+		C37A04941C8EFA6300468889 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C37A04801C8EFA6300468889 /* Info.plist */; };
+		C37A04951C8EFA6300468889 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C37A04811C8EFA6300468889 /* main.m */; };
+		C37A04A41C8EFA8D00468889 /* BBGamesScore.m in Sources */ = {isa = PBXBuildFile; fileRef = C37A04991C8EFA8D00468889 /* BBGamesScore.m */; };
+		C37A04A51C8EFA8D00468889 /* BBGamesScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C37A049D1C8EFA8D00468889 /* BBGamesScoreViewController.m */; };
+		C37A04A61C8EFA8D00468889 /* BBGamesScoreViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C37A04A01C8EFA8D00468889 /* BBGamesScoreViewModel.m */; };
+		C37A04A71C8EFA8D00468889 /* BBGamesScoreViewController_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37A04A21C8EFA8D00468889 /* BBGamesScoreViewController_iPhone.storyboard */; };
+		C37A04A81C8EFA8D00468889 /* BBGamesScoreTableViewCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = C37A04A31C8EFA8D00468889 /* BBGamesScoreTableViewCell_iPhone.xib */; };
+		C37A04AE1C8F1F5000468889 /* UIStoryboard+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = C37A04AB1C8F1F5000468889 /* UIStoryboard+Addition.m */; };
+		C37A04AF1C8F1F5000468889 /* UIViewController+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = C37A04AD1C8F1F5000468889 /* UIViewController+Create.m */; };
+		C37A04B21C8F223600468889 /* BBGamesScoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C37A04B11C8F223600468889 /* BBGamesScoreTableViewCell.m */; };
+		C37A04D21C8F24AE00468889 /* ATL_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C37A04B41C8F24AD00468889 /* ATL_logo.png */; };
+		C37A04D31C8F24AE00468889 /* BKN_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C37A04B51C8F24AD00468889 /* BKN_logo.png */; };
+		C37A04D41C8F24AE00468889 /* BOS_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C37A04B61C8F24AD00468889 /* BOS_logo.png */; };
+		C37A04D51C8F24AE00468889 /* CHA_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C37A04B71C8F24AE00468889 /* CHA_logo.png */; };
+		C37A04D61C8F24AE00468889 /* CHI_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C37A04B81C8F24AE00468889 /* CHI_logo.png */; };
+		C37A04D71C8F24AE00468889 /* CLE_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C37A04B91C8F24AE00468889 /* CLE_logo.png */; };
+		C37A04D81C8F24AE00468889 /* DAL_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C37A04BA1C8F24AE00468889 /* DAL_logo.png */; };
+		C37A04D91C8F24AE00468889 /* DEN_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C37A04BB1C8F24AE00468889 /* DEN_logo.png */; };
+		C37A04DA1C8F24AE00468889 /* DET_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C37A04BC1C8F24AE00468889 /* DET_logo.png */; };
+		C37A04DB1C8F24AE00468889 /* GSW_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C37A04BD1C8F24AE00468889 /* GSW_logo.png */; };
+		C37A04DC1C8F24AE00468889 /* HOU_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C37A04BE1C8F24AE00468889 /* HOU_logo.png */; };
+		C37A04DD1C8F24AE00468889 /* IND_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C37A04BF1C8F24AE00468889 /* IND_logo.png */; };
+		C37A04DE1C8F24AE00468889 /* LAC_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C37A04C01C8F24AE00468889 /* LAC_logo.png */; };
+		C37A04DF1C8F24AE00468889 /* LAL_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C37A04C11C8F24AE00468889 /* LAL_logo.png */; };
+		C37A04E01C8F24AE00468889 /* MEM_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C37A04C21C8F24AE00468889 /* MEM_logo.png */; };
+		C37A04E11C8F24AE00468889 /* MIA_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C37A04C31C8F24AE00468889 /* MIA_logo.png */; };
+		C37A04E21C8F24AE00468889 /* MIL_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C37A04C41C8F24AE00468889 /* MIL_logo.png */; };
+		C37A04E31C8F24AE00468889 /* MIN_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C37A04C51C8F24AE00468889 /* MIN_logo.png */; };
+		C37A04E41C8F24AE00468889 /* NOP_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C37A04C61C8F24AE00468889 /* NOP_logo.png */; };
+		C37A04E51C8F24AE00468889 /* NYK_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C37A04C71C8F24AE00468889 /* NYK_logo.png */; };
+		C37A04E61C8F24AE00468889 /* OKC_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C37A04C81C8F24AE00468889 /* OKC_logo.png */; };
+		C37A04E71C8F24AE00468889 /* ORL_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C37A04C91C8F24AE00468889 /* ORL_logo.png */; };
+		C37A04E81C8F24AE00468889 /* PHI_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C37A04CA1C8F24AE00468889 /* PHI_logo.png */; };
+		C37A04E91C8F24AE00468889 /* PHX_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C37A04CB1C8F24AE00468889 /* PHX_logo.png */; };
+		C37A04EA1C8F24AE00468889 /* POR_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C37A04CC1C8F24AE00468889 /* POR_logo.png */; };
+		C37A04EB1C8F24AE00468889 /* SAC_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C37A04CD1C8F24AE00468889 /* SAC_logo.png */; };
+		C37A04EC1C8F24AE00468889 /* SAS_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C37A04CE1C8F24AE00468889 /* SAS_logo.png */; };
+		C37A04ED1C8F24AE00468889 /* TOR_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C37A04CF1C8F24AE00468889 /* TOR_logo.png */; };
+		C37A04EE1C8F24AE00468889 /* UTA_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C37A04D01C8F24AE00468889 /* UTA_logo.png */; };
+		C37A04EF1C8F24AE00468889 /* WAS_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C37A04D11C8F24AE00468889 /* WAS_logo.png */; };
+		C37A04F21C8F294500468889 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = C37A04F11C8F294500468889 /* UIView+Utils.m */; };
+		D50C29727586BF2195CD2B52 /* libPods-BasketballUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18B7499A3716AD72A1A2612B /* libPods-BasketballUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,9 +83,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D1289D0FCCF9F7A978AF9AA /* Pods-Basketball.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Basketball.release.xcconfig"; path = "Pods/Target Support Files/Pods-Basketball/Pods-Basketball.release.xcconfig"; sourceTree = "<group>"; };
-		660EF624F264D7C9E5A7DE97 /* Pods-Basketball.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Basketball.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Basketball/Pods-Basketball.debug.xcconfig"; sourceTree = "<group>"; };
-		7FAC236898270C51172348FF /* libPods-Basketball.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Basketball.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18B7499A3716AD72A1A2612B /* libPods-BasketballUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BasketballUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3812FC45A7A76E0AE1D2D47E /* Pods-Basketball.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Basketball.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Basketball/Pods-Basketball.debug.xcconfig"; sourceTree = "<group>"; };
+		74BA99F6BA065C83BDCBC8E5 /* Pods-Basketball.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Basketball.release.xcconfig"; path = "Pods/Target Support Files/Pods-Basketball/Pods-Basketball.release.xcconfig"; sourceTree = "<group>"; };
+		77ABC80ED1C9D6E2979F53CC /* Pods-BasketballTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasketballTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasketballTests/Pods-BasketballTests.release.xcconfig"; sourceTree = "<group>"; };
+		813E99C3FF830848E315AFFA /* Pods-BasketballUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasketballUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasketballUITests/Pods-BasketballUITests.release.xcconfig"; sourceTree = "<group>"; };
+		97E1AC70C65345F5D14EC094 /* libPods-Basketball.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Basketball.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9617671C83D6B00078FB3C /* Basketball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Basketball.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9617801C83D6B10078FB3C /* BasketballTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasketballTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9617841C83D6B10078FB3C /* BasketballTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasketballTests.m; sourceTree = "<group>"; };
@@ -49,23 +96,80 @@
 		9F96178B1C83D6B10078FB3C /* BasketballUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasketballUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F96178F1C83D6B10078FB3C /* BasketballUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasketballUITests.m; sourceTree = "<group>"; };
 		9F9617911C83D6B10078FB3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9F9617B51C83E9440078FB3C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		9F9617B61C83E9440078FB3C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9F9617C31C83E9440078FB3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9F9617C71C83E9440078FB3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9F9617C81C83E9440078FB3C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9F9617C91C83E9440078FB3C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9F9617D31C83ED860078FB3C /* BBTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBTabBarController.h; sourceTree = "<group>"; };
-		9F9617D41C83ED860078FB3C /* BBTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBTabBarController.m; sourceTree = "<group>"; };
-		9F9617D61C83EDC60078FB3C /* BBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBModel.h; sourceTree = "<group>"; };
-		9F9617D71C83EDC60078FB3C /* BBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBModel.m; sourceTree = "<group>"; };
-		9F9617D91C83EDEE0078FB3C /* BBBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBaseViewController.h; sourceTree = "<group>"; };
-		9F9617DA1C83EDEE0078FB3C /* BBBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBaseViewController.m; sourceTree = "<group>"; };
-		9F9617DC1C83EF400078FB3C /* BBTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBTabBar.h; sourceTree = "<group>"; };
-		9F9617DD1C83EF400078FB3C /* BBTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBTabBar.m; sourceTree = "<group>"; };
-		9F9617DF1C83F17A0078FB3C /* BBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBNavigationController.h; sourceTree = "<group>"; };
-		9F9617E01C83F17A0078FB3C /* BBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBNavigationController.m; sourceTree = "<group>"; };
-		9F9617E21C83F26E0078FB3C /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		A9D64C1B4CB6B2353EF2AA12 /* Pods-BasketballUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasketballUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasketballUITests/Pods-BasketballUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AF811C5D7E0D5D90760B582B /* libPods-BasketballTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BasketballTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B559F3B0A304BA0C6DEE9778 /* Pods-BasketballTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasketballTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasketballTests/Pods-BasketballTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C37A04611C8EFA6300468889 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C37A04621C8EFA6300468889 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C37A04661C8EFA6300468889 /* BBBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBaseViewController.h; sourceTree = "<group>"; };
+		C37A04671C8EFA6300468889 /* BBBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBaseViewController.m; sourceTree = "<group>"; };
+		C37A04681C8EFA6300468889 /* BBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBNavigationController.h; sourceTree = "<group>"; };
+		C37A04691C8EFA6300468889 /* BBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBNavigationController.m; sourceTree = "<group>"; };
+		C37A046A1C8EFA6300468889 /* BBTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBTabBarController.h; sourceTree = "<group>"; };
+		C37A046B1C8EFA6300468889 /* BBTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBTabBarController.m; sourceTree = "<group>"; };
+		C37A046D1C8EFA6300468889 /* BBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBModel.h; sourceTree = "<group>"; };
+		C37A046E1C8EFA6300468889 /* BBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBModel.m; sourceTree = "<group>"; };
+		C37A04701C8EFA6300468889 /* BBTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBTabBar.h; sourceTree = "<group>"; };
+		C37A04711C8EFA6300468889 /* BBTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBTabBar.m; sourceTree = "<group>"; };
+		C37A04741C8EFA6300468889 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C37A04771C8EFA6300468889 /* BBNetworkAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBNetworkAddress.h; sourceTree = "<group>"; };
+		C37A04781C8EFA6300468889 /* BBNetworkApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBNetworkApiManager.h; sourceTree = "<group>"; };
+		C37A04791C8EFA6300468889 /* BBNetworkApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBNetworkApiManager.m; sourceTree = "<group>"; };
+		C37A047A1C8EFA6300468889 /* BBResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBResponseSerializer.h; sourceTree = "<group>"; };
+		C37A047B1C8EFA6300468889 /* BBResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBResponseSerializer.m; sourceTree = "<group>"; };
+		C37A047F1C8EFA6300468889 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C37A04801C8EFA6300468889 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C37A04811C8EFA6300468889 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C37A04821C8EFA6300468889 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		C37A04841C8EFA6300468889 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		C37A04881C8EFA6300468889 /* RACEXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACEXTScope.h; sourceTree = "<group>"; };
+		C37A04891C8EFA6300468889 /* RACmetamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACmetamacros.h; sourceTree = "<group>"; };
+		C37A04981C8EFA8D00468889 /* BBGamesScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBGamesScore.h; sourceTree = "<group>"; };
+		C37A04991C8EFA8D00468889 /* BBGamesScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBGamesScore.m; sourceTree = "<group>"; };
+		C37A049C1C8EFA8D00468889 /* BBGamesScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBGamesScoreViewController.h; sourceTree = "<group>"; };
+		C37A049D1C8EFA8D00468889 /* BBGamesScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBGamesScoreViewController.m; sourceTree = "<group>"; };
+		C37A049F1C8EFA8D00468889 /* BBGamesScoreViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBGamesScoreViewModel.h; sourceTree = "<group>"; };
+		C37A04A01C8EFA8D00468889 /* BBGamesScoreViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBGamesScoreViewModel.m; sourceTree = "<group>"; };
+		C37A04A21C8EFA8D00468889 /* BBGamesScoreViewController_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BBGamesScoreViewController_iPhone.storyboard; sourceTree = "<group>"; };
+		C37A04A31C8EFA8D00468889 /* BBGamesScoreTableViewCell_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBGamesScoreTableViewCell_iPhone.xib; sourceTree = "<group>"; };
+		C37A04AA1C8F1F5000468889 /* UIStoryboard+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+Addition.h"; sourceTree = "<group>"; };
+		C37A04AB1C8F1F5000468889 /* UIStoryboard+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+Addition.m"; sourceTree = "<group>"; };
+		C37A04AC1C8F1F5000468889 /* UIViewController+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Create.h"; sourceTree = "<group>"; };
+		C37A04AD1C8F1F5000468889 /* UIViewController+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Create.m"; sourceTree = "<group>"; };
+		C37A04B01C8F223600468889 /* BBGamesScoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBGamesScoreTableViewCell.h; sourceTree = "<group>"; };
+		C37A04B11C8F223600468889 /* BBGamesScoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBGamesScoreTableViewCell.m; sourceTree = "<group>"; };
+		C37A04B41C8F24AD00468889 /* ATL_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ATL_logo.png; sourceTree = "<group>"; };
+		C37A04B51C8F24AD00468889 /* BKN_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BKN_logo.png; sourceTree = "<group>"; };
+		C37A04B61C8F24AD00468889 /* BOS_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BOS_logo.png; sourceTree = "<group>"; };
+		C37A04B71C8F24AE00468889 /* CHA_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CHA_logo.png; sourceTree = "<group>"; };
+		C37A04B81C8F24AE00468889 /* CHI_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CHI_logo.png; sourceTree = "<group>"; };
+		C37A04B91C8F24AE00468889 /* CLE_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CLE_logo.png; sourceTree = "<group>"; };
+		C37A04BA1C8F24AE00468889 /* DAL_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DAL_logo.png; sourceTree = "<group>"; };
+		C37A04BB1C8F24AE00468889 /* DEN_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DEN_logo.png; sourceTree = "<group>"; };
+		C37A04BC1C8F24AE00468889 /* DET_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DET_logo.png; sourceTree = "<group>"; };
+		C37A04BD1C8F24AE00468889 /* GSW_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GSW_logo.png; sourceTree = "<group>"; };
+		C37A04BE1C8F24AE00468889 /* HOU_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HOU_logo.png; sourceTree = "<group>"; };
+		C37A04BF1C8F24AE00468889 /* IND_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IND_logo.png; sourceTree = "<group>"; };
+		C37A04C01C8F24AE00468889 /* LAC_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LAC_logo.png; sourceTree = "<group>"; };
+		C37A04C11C8F24AE00468889 /* LAL_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LAL_logo.png; sourceTree = "<group>"; };
+		C37A04C21C8F24AE00468889 /* MEM_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MEM_logo.png; sourceTree = "<group>"; };
+		C37A04C31C8F24AE00468889 /* MIA_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MIA_logo.png; sourceTree = "<group>"; };
+		C37A04C41C8F24AE00468889 /* MIL_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MIL_logo.png; sourceTree = "<group>"; };
+		C37A04C51C8F24AE00468889 /* MIN_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MIN_logo.png; sourceTree = "<group>"; };
+		C37A04C61C8F24AE00468889 /* NOP_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NOP_logo.png; sourceTree = "<group>"; };
+		C37A04C71C8F24AE00468889 /* NYK_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NYK_logo.png; sourceTree = "<group>"; };
+		C37A04C81C8F24AE00468889 /* OKC_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OKC_logo.png; sourceTree = "<group>"; };
+		C37A04C91C8F24AE00468889 /* ORL_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ORL_logo.png; sourceTree = "<group>"; };
+		C37A04CA1C8F24AE00468889 /* PHI_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PHI_logo.png; sourceTree = "<group>"; };
+		C37A04CB1C8F24AE00468889 /* PHX_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PHX_logo.png; sourceTree = "<group>"; };
+		C37A04CC1C8F24AE00468889 /* POR_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = POR_logo.png; sourceTree = "<group>"; };
+		C37A04CD1C8F24AE00468889 /* SAC_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SAC_logo.png; sourceTree = "<group>"; };
+		C37A04CE1C8F24AE00468889 /* SAS_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SAS_logo.png; sourceTree = "<group>"; };
+		C37A04CF1C8F24AE00468889 /* TOR_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TOR_logo.png; sourceTree = "<group>"; };
+		C37A04D01C8F24AE00468889 /* UTA_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UTA_logo.png; sourceTree = "<group>"; };
+		C37A04D11C8F24AE00468889 /* WAS_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WAS_logo.png; sourceTree = "<group>"; };
+		C37A04F01C8F294500468889 /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
+		C37A04F11C8F294500468889 /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +177,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F09A0B15D823E9CC1970FAE5 /* libPods-Basketball.a in Frameworks */,
+				2BB060D40BFAAD28F5E93CFF /* libPods-Basketball.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +185,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BE76A280DD840DDE6F5B98E /* libPods-BasketballTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,12 +193,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D50C29727586BF2195CD2B52 /* libPods-BasketballUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8845A6C665DC8250159396AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97E1AC70C65345F5D14EC094 /* libPods-Basketball.a */,
+				AF811C5D7E0D5D90760B582B /* libPods-BasketballTests.a */,
+				18B7499A3716AD72A1A2612B /* libPods-BasketballUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9F96175E1C83D6B00078FB3C = {
 			isa = PBXGroup;
 			children = (
@@ -101,8 +217,8 @@
 				9F9617831C83D6B10078FB3C /* BasketballTests */,
 				9F96178E1C83D6B10078FB3C /* BasketballUITests */,
 				9F9617681C83D6B00078FB3C /* Products */,
-				C4730757E71590C0C361FDFC /* Pods */,
-				CC3696FEECE8FADBF2461180 /* Frameworks */,
+				FC6043A4540795715CE9A00E /* Pods */,
+				8845A6C665DC8250159396AE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,13 +235,13 @@
 		9F9617691C83D6B00078FB3C /* Basketball */ = {
 			isa = PBXGroup;
 			children = (
-				9F9617B41C83E9440078FB3C /* Appdelegate */,
-				9F9617CB1C83E9440078FB3C /* Vendors */,
-				9F9617CA1C83E9440078FB3C /* Utils */,
-				9F9617B71C83E9440078FB3C /* AppModules */,
-				9F9617C41C83E9440078FB3C /* Services */,
-				9F9617C21C83E9440078FB3C /* Resources */,
-				9F9617C51C83E9440078FB3C /* SupportingFiles */,
+				C37A04601C8EFA6300468889 /* Appdelegate */,
+				C37A04631C8EFA6300468889 /* AppModules */,
+				C37A04731C8EFA6300468889 /* Resources */,
+				C37A04751C8EFA6300468889 /* Services */,
+				C37A047D1C8EFA6300468889 /* SupportingFiles */,
+				C37A04831C8EFA6300468889 /* Utils */,
+				C37A04851C8EFA6300468889 /* Vendors */,
 			);
 			path = Basketball;
 			sourceTree = "<group>";
@@ -148,183 +264,273 @@
 			path = BasketballUITests;
 			sourceTree = "<group>";
 		};
-		9F9617B41C83E9440078FB3C /* Appdelegate */ = {
+		C37A04601C8EFA6300468889 /* Appdelegate */ = {
 			isa = PBXGroup;
 			children = (
-				9F9617B51C83E9440078FB3C /* AppDelegate.h */,
-				9F9617B61C83E9440078FB3C /* AppDelegate.m */,
+				C37A04611C8EFA6300468889 /* AppDelegate.h */,
+				C37A04621C8EFA6300468889 /* AppDelegate.m */,
 			);
 			path = Appdelegate;
 			sourceTree = "<group>";
 		};
-		9F9617B71C83E9440078FB3C /* AppModules */ = {
+		C37A04631C8EFA6300468889 /* AppModules */ = {
 			isa = PBXGroup;
 			children = (
-				9F9617B81C83E9440078FB3C /* Base */,
-				9F9617BD1C83E9440078FB3C /* Sport */,
+				C37A04961C8EFA8D00468889 /* GameScore */,
+				C37A04641C8EFA6300468889 /* Base */,
+				C37A04721C8EFA6300468889 /* StepCounting */,
 			);
 			path = AppModules;
 			sourceTree = "<group>";
 		};
-		9F9617B81C83E9440078FB3C /* Base */ = {
+		C37A04641C8EFA6300468889 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				9F9617B91C83E9440078FB3C /* Controllers */,
-				9F9617BA1C83E9440078FB3C /* Models */,
-				9F9617BC1C83E9440078FB3C /* Views */,
-				9F9617BB1C83E9440078FB3C /* Other */,
+				C37A04651C8EFA6300468889 /* Controllers */,
+				C37A046C1C8EFA6300468889 /* Models */,
+				C37A046F1C8EFA6300468889 /* Views */,
 			);
 			path = Base;
 			sourceTree = "<group>";
 		};
-		9F9617B91C83E9440078FB3C /* Controllers */ = {
+		C37A04651C8EFA6300468889 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9F9617D31C83ED860078FB3C /* BBTabBarController.h */,
-				9F9617D41C83ED860078FB3C /* BBTabBarController.m */,
-				9F9617D91C83EDEE0078FB3C /* BBBaseViewController.h */,
-				9F9617DA1C83EDEE0078FB3C /* BBBaseViewController.m */,
-				9F9617DF1C83F17A0078FB3C /* BBNavigationController.h */,
-				9F9617E01C83F17A0078FB3C /* BBNavigationController.m */,
+				C37A04661C8EFA6300468889 /* BBBaseViewController.h */,
+				C37A04671C8EFA6300468889 /* BBBaseViewController.m */,
+				C37A04681C8EFA6300468889 /* BBNavigationController.h */,
+				C37A04691C8EFA6300468889 /* BBNavigationController.m */,
+				C37A046A1C8EFA6300468889 /* BBTabBarController.h */,
+				C37A046B1C8EFA6300468889 /* BBTabBarController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		9F9617BA1C83E9440078FB3C /* Models */ = {
+		C37A046C1C8EFA6300468889 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9F9617D61C83EDC60078FB3C /* BBModel.h */,
-				9F9617D71C83EDC60078FB3C /* BBModel.m */,
+				C37A046D1C8EFA6300468889 /* BBModel.h */,
+				C37A046E1C8EFA6300468889 /* BBModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		9F9617BB1C83E9440078FB3C /* Other */ = {
+		C37A046F1C8EFA6300468889 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = Other;
-			sourceTree = "<group>";
-		};
-		9F9617BC1C83E9440078FB3C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				9F9617DC1C83EF400078FB3C /* BBTabBar.h */,
-				9F9617DD1C83EF400078FB3C /* BBTabBar.m */,
+				C37A04701C8EFA6300468889 /* BBTabBar.h */,
+				C37A04711C8EFA6300468889 /* BBTabBar.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		9F9617BD1C83E9440078FB3C /* Sport */ = {
-			isa = PBXGroup;
-			children = (
-				9F9617BE1C83E9440078FB3C /* Controllers */,
-				9F9617BF1C83E9440078FB3C /* Models */,
-				9F9617C01C83E9440078FB3C /* Other */,
-				9F9617C11C83E9440078FB3C /* Views */,
-			);
-			path = Sport;
-			sourceTree = "<group>";
-		};
-		9F9617BE1C83E9440078FB3C /* Controllers */ = {
+		C37A04721C8EFA6300468889 /* StepCounting */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Controllers;
+			path = StepCounting;
 			sourceTree = "<group>";
 		};
-		9F9617BF1C83E9440078FB3C /* Models */ = {
+		C37A04731C8EFA6300468889 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		9F9617C01C83E9440078FB3C /* Other */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Other;
-			sourceTree = "<group>";
-		};
-		9F9617C11C83E9440078FB3C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		9F9617C21C83E9440078FB3C /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				9F9617C31C83E9440078FB3C /* Assets.xcassets */,
+				C37A04B31C8F24AD00468889 /* nba_logo */,
+				C37A04741C8EFA6300468889 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		9F9617C41C83E9440078FB3C /* Services */ = {
+		C37A04751C8EFA6300468889 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				C37A04761C8EFA6300468889 /* Networking */,
+				C37A047C1C8EFA6300468889 /* Notification */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		9F9617C51C83E9440078FB3C /* SupportingFiles */ = {
+		C37A04761C8EFA6300468889 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				9F9617C61C83E9440078FB3C /* LaunchScreen.storyboard */,
-				9F9617C81C83E9440078FB3C /* Info.plist */,
-				9F9617C91C83E9440078FB3C /* main.m */,
-				9F9617E21C83F26E0078FB3C /* PrefixHeader.pch */,
+				C37A04771C8EFA6300468889 /* BBNetworkAddress.h */,
+				C37A04781C8EFA6300468889 /* BBNetworkApiManager.h */,
+				C37A04791C8EFA6300468889 /* BBNetworkApiManager.m */,
+				C37A047A1C8EFA6300468889 /* BBResponseSerializer.h */,
+				C37A047B1C8EFA6300468889 /* BBResponseSerializer.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C37A047C1C8EFA6300468889 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		C37A047D1C8EFA6300468889 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C37A047E1C8EFA6300468889 /* LaunchScreen.storyboard */,
+				C37A04801C8EFA6300468889 /* Info.plist */,
+				C37A04811C8EFA6300468889 /* main.m */,
+				C37A04821C8EFA6300468889 /* PrefixHeader.pch */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		9F9617CA1C83E9440078FB3C /* Utils */ = {
+		C37A04831C8EFA6300468889 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C37A04841C8EFA6300468889 /* Macros.h */,
+				C37A04A91C8F1F5000468889 /* Category */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		9F9617CB1C83E9440078FB3C /* Vendors */ = {
+		C37A04851C8EFA6300468889 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
-				9F9617CC1C83E9440078FB3C /* Constant */,
-				9F9617CD1C83E9440078FB3C /* Modified */,
+				C37A04861C8EFA6300468889 /* Constant */,
 			);
 			path = Vendors;
 			sourceTree = "<group>";
 		};
-		9F9617CC1C83E9440078FB3C /* Constant */ = {
+		C37A04861C8EFA6300468889 /* Constant */ = {
 			isa = PBXGroup;
 			children = (
+				C37A04871C8EFA6300468889 /* RACExtObjc */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
 		};
-		9F9617CD1C83E9440078FB3C /* Modified */ = {
+		C37A04871C8EFA6300468889 /* RACExtObjc */ = {
+			isa = PBXGroup;
+			children = (
+				C37A04881C8EFA6300468889 /* RACEXTScope.h */,
+				C37A04891C8EFA6300468889 /* RACmetamacros.h */,
+			);
+			path = RACExtObjc;
+			sourceTree = "<group>";
+		};
+		C37A04961C8EFA8D00468889 /* GameScore */ = {
+			isa = PBXGroup;
+			children = (
+				C37A04971C8EFA8D00468889 /* Models */,
+				C37A049A1C8EFA8D00468889 /* Other */,
+				C37A049B1C8EFA8D00468889 /* ViewControllers */,
+				C37A049E1C8EFA8D00468889 /* ViewModels */,
+				C37A04A11C8EFA8D00468889 /* Views */,
+			);
+			path = GameScore;
+			sourceTree = "<group>";
+		};
+		C37A04971C8EFA8D00468889 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C37A04981C8EFA8D00468889 /* BBGamesScore.h */,
+				C37A04991C8EFA8D00468889 /* BBGamesScore.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C37A049A1C8EFA8D00468889 /* Other */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Modified;
+			path = Other;
 			sourceTree = "<group>";
 		};
-		C4730757E71590C0C361FDFC /* Pods */ = {
+		C37A049B1C8EFA8D00468889 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				660EF624F264D7C9E5A7DE97 /* Pods-Basketball.debug.xcconfig */,
-				0D1289D0FCCF9F7A978AF9AA /* Pods-Basketball.release.xcconfig */,
+				C37A049C1C8EFA8D00468889 /* BBGamesScoreViewController.h */,
+				C37A049D1C8EFA8D00468889 /* BBGamesScoreViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C37A049E1C8EFA8D00468889 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C37A049F1C8EFA8D00468889 /* BBGamesScoreViewModel.h */,
+				C37A04A01C8EFA8D00468889 /* BBGamesScoreViewModel.m */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C37A04A11C8EFA8D00468889 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C37A04A21C8EFA8D00468889 /* BBGamesScoreViewController_iPhone.storyboard */,
+				C37A04A31C8EFA8D00468889 /* BBGamesScoreTableViewCell_iPhone.xib */,
+				C37A04B01C8F223600468889 /* BBGamesScoreTableViewCell.h */,
+				C37A04B11C8F223600468889 /* BBGamesScoreTableViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C37A04A91C8F1F5000468889 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				C37A04F01C8F294500468889 /* UIView+Utils.h */,
+				C37A04F11C8F294500468889 /* UIView+Utils.m */,
+				C37A04AA1C8F1F5000468889 /* UIStoryboard+Addition.h */,
+				C37A04AB1C8F1F5000468889 /* UIStoryboard+Addition.m */,
+				C37A04AC1C8F1F5000468889 /* UIViewController+Create.h */,
+				C37A04AD1C8F1F5000468889 /* UIViewController+Create.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		C37A04B31C8F24AD00468889 /* nba_logo */ = {
+			isa = PBXGroup;
+			children = (
+				C37A04B41C8F24AD00468889 /* ATL_logo.png */,
+				C37A04B51C8F24AD00468889 /* BKN_logo.png */,
+				C37A04B61C8F24AD00468889 /* BOS_logo.png */,
+				C37A04B71C8F24AE00468889 /* CHA_logo.png */,
+				C37A04B81C8F24AE00468889 /* CHI_logo.png */,
+				C37A04B91C8F24AE00468889 /* CLE_logo.png */,
+				C37A04BA1C8F24AE00468889 /* DAL_logo.png */,
+				C37A04BB1C8F24AE00468889 /* DEN_logo.png */,
+				C37A04BC1C8F24AE00468889 /* DET_logo.png */,
+				C37A04BD1C8F24AE00468889 /* GSW_logo.png */,
+				C37A04BE1C8F24AE00468889 /* HOU_logo.png */,
+				C37A04BF1C8F24AE00468889 /* IND_logo.png */,
+				C37A04C01C8F24AE00468889 /* LAC_logo.png */,
+				C37A04C11C8F24AE00468889 /* LAL_logo.png */,
+				C37A04C21C8F24AE00468889 /* MEM_logo.png */,
+				C37A04C31C8F24AE00468889 /* MIA_logo.png */,
+				C37A04C41C8F24AE00468889 /* MIL_logo.png */,
+				C37A04C51C8F24AE00468889 /* MIN_logo.png */,
+				C37A04C61C8F24AE00468889 /* NOP_logo.png */,
+				C37A04C71C8F24AE00468889 /* NYK_logo.png */,
+				C37A04C81C8F24AE00468889 /* OKC_logo.png */,
+				C37A04C91C8F24AE00468889 /* ORL_logo.png */,
+				C37A04CA1C8F24AE00468889 /* PHI_logo.png */,
+				C37A04CB1C8F24AE00468889 /* PHX_logo.png */,
+				C37A04CC1C8F24AE00468889 /* POR_logo.png */,
+				C37A04CD1C8F24AE00468889 /* SAC_logo.png */,
+				C37A04CE1C8F24AE00468889 /* SAS_logo.png */,
+				C37A04CF1C8F24AE00468889 /* TOR_logo.png */,
+				C37A04D01C8F24AE00468889 /* UTA_logo.png */,
+				C37A04D11C8F24AE00468889 /* WAS_logo.png */,
+			);
+			path = nba_logo;
+			sourceTree = "<group>";
+		};
+		FC6043A4540795715CE9A00E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3812FC45A7A76E0AE1D2D47E /* Pods-Basketball.debug.xcconfig */,
+				74BA99F6BA065C83BDCBC8E5 /* Pods-Basketball.release.xcconfig */,
+				B559F3B0A304BA0C6DEE9778 /* Pods-BasketballTests.debug.xcconfig */,
+				77ABC80ED1C9D6E2979F53CC /* Pods-BasketballTests.release.xcconfig */,
+				A9D64C1B4CB6B2353EF2AA12 /* Pods-BasketballUITests.debug.xcconfig */,
+				813E99C3FF830848E315AFFA /* Pods-BasketballUITests.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		CC3696FEECE8FADBF2461180 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7FAC236898270C51172348FF /* libPods-Basketball.a */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,12 +540,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F9617941C83D6B10078FB3C /* Build configuration list for PBXNativeTarget "Basketball" */;
 			buildPhases = (
-				37A70C14040D45170F995203 /* Check Pods Manifest.lock */,
+				4F8037EEA5881EA2C12419DB /* Check Pods Manifest.lock */,
 				9F9617631C83D6B00078FB3C /* Sources */,
 				9F9617641C83D6B00078FB3C /* Frameworks */,
 				9F9617651C83D6B00078FB3C /* Resources */,
-				BF783BFBFCB8A7254E36F2A9 /* Embed Pods Frameworks */,
-				0D6EF2060EF78E97E15C7F3F /* Copy Pods Resources */,
+				EB95EA9350CF5D2EE10E004B /* Embed Pods Frameworks */,
+				C4DB54500CFBBB79A9F8A6DB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -354,9 +560,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F9617971C83D6B10078FB3C /* Build configuration list for PBXNativeTarget "BasketballTests" */;
 			buildPhases = (
+				0104890A592AA4862FC1E69F /* Check Pods Manifest.lock */,
 				9F96177C1C83D6B10078FB3C /* Sources */,
 				9F96177D1C83D6B10078FB3C /* Frameworks */,
 				9F96177E1C83D6B10078FB3C /* Resources */,
+				EB910231130CC21B04E6DA2D /* Embed Pods Frameworks */,
+				EA7A60D2E4555798FD1B3D82 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -372,9 +581,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F96179A1C83D6B10078FB3C /* Build configuration list for PBXNativeTarget "BasketballUITests" */;
 			buildPhases = (
+				F1AB2C6AB6DA7A80E24FB568 /* Check Pods Manifest.lock */,
 				9F9617871C83D6B10078FB3C /* Sources */,
 				9F9617881C83D6B10078FB3C /* Frameworks */,
 				9F9617891C83D6B10078FB3C /* Resources */,
+				4B3C69A5BDB0F853CD7BB13A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -433,8 +644,41 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F9617CF1C83E9440078FB3C /* Assets.xcassets in Resources */,
-				9F9617D01C83E9440078FB3C /* LaunchScreen.storyboard in Resources */,
+				C37A04DB1C8F24AE00468889 /* GSW_logo.png in Resources */,
+				C37A04DE1C8F24AE00468889 /* LAC_logo.png in Resources */,
+				C37A04D81C8F24AE00468889 /* DAL_logo.png in Resources */,
+				C37A04E21C8F24AE00468889 /* MIL_logo.png in Resources */,
+				C37A04901C8EFA6300468889 /* Assets.xcassets in Resources */,
+				C37A04D71C8F24AE00468889 /* CLE_logo.png in Resources */,
+				C37A04931C8EFA6300468889 /* LaunchScreen.storyboard in Resources */,
+				C37A04DA1C8F24AE00468889 /* DET_logo.png in Resources */,
+				C37A04DF1C8F24AE00468889 /* LAL_logo.png in Resources */,
+				C37A04A71C8EFA8D00468889 /* BBGamesScoreViewController_iPhone.storyboard in Resources */,
+				C37A04ED1C8F24AE00468889 /* TOR_logo.png in Resources */,
+				C37A04E51C8F24AE00468889 /* NYK_logo.png in Resources */,
+				C37A04D91C8F24AE00468889 /* DEN_logo.png in Resources */,
+				C37A04EE1C8F24AE00468889 /* UTA_logo.png in Resources */,
+				C37A04D41C8F24AE00468889 /* BOS_logo.png in Resources */,
+				C37A04E71C8F24AE00468889 /* ORL_logo.png in Resources */,
+				C37A04DD1C8F24AE00468889 /* IND_logo.png in Resources */,
+				C37A04941C8EFA6300468889 /* Info.plist in Resources */,
+				C37A04EB1C8F24AE00468889 /* SAC_logo.png in Resources */,
+				C37A04D51C8F24AE00468889 /* CHA_logo.png in Resources */,
+				C37A04E31C8F24AE00468889 /* MIN_logo.png in Resources */,
+				C37A04E01C8F24AE00468889 /* MEM_logo.png in Resources */,
+				C37A04DC1C8F24AE00468889 /* HOU_logo.png in Resources */,
+				C37A04E81C8F24AE00468889 /* PHI_logo.png in Resources */,
+				C37A04EF1C8F24AE00468889 /* WAS_logo.png in Resources */,
+				C37A04EC1C8F24AE00468889 /* SAS_logo.png in Resources */,
+				C37A04D31C8F24AE00468889 /* BKN_logo.png in Resources */,
+				C37A04D61C8F24AE00468889 /* CHI_logo.png in Resources */,
+				C37A04E41C8F24AE00468889 /* NOP_logo.png in Resources */,
+				C37A04D21C8F24AE00468889 /* ATL_logo.png in Resources */,
+				C37A04A81C8EFA8D00468889 /* BBGamesScoreTableViewCell_iPhone.xib in Resources */,
+				C37A04E61C8F24AE00468889 /* OKC_logo.png in Resources */,
+				C37A04E91C8F24AE00468889 /* PHX_logo.png in Resources */,
+				C37A04EA1C8F24AE00468889 /* POR_logo.png in Resources */,
+				C37A04E11C8F24AE00468889 /* MIA_logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,22 +699,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0D6EF2060EF78E97E15C7F3F /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Basketball/Pods-Basketball-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		37A70C14040D45170F995203 /* Check Pods Manifest.lock */ = {
+		0104890A592AA4862FC1E69F /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -485,7 +714,82 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		BF783BFBFCB8A7254E36F2A9 /* Embed Pods Frameworks */ = {
+		4B3C69A5BDB0F853CD7BB13A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BasketballUITests/Pods-BasketballUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F8037EEA5881EA2C12419DB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C4DB54500CFBBB79A9F8A6DB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Basketball/Pods-Basketball-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA7A60D2E4555798FD1B3D82 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BasketballTests/Pods-BasketballTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB910231130CC21B04E6DA2D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BasketballTests/Pods-BasketballTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB95EA9350CF5D2EE10E004B /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -500,6 +804,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Basketball/Pods-Basketball-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F1AB2C6AB6DA7A80E24FB568 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -507,13 +826,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F9617DB1C83EDEE0078FB3C /* BBBaseViewController.m in Sources */,
-				9F9617D21C83E9440078FB3C /* main.m in Sources */,
-				9F9617D81C83EDC60078FB3C /* BBModel.m in Sources */,
-				9F9617D51C83ED860078FB3C /* BBTabBarController.m in Sources */,
-				9F9617E11C83F17A0078FB3C /* BBNavigationController.m in Sources */,
-				9F9617CE1C83E9440078FB3C /* AppDelegate.m in Sources */,
-				9F9617DE1C83EF400078FB3C /* BBTabBar.m in Sources */,
+				C37A04B21C8F223600468889 /* BBGamesScoreTableViewCell.m in Sources */,
+				C37A048A1C8EFA6300468889 /* AppDelegate.m in Sources */,
+				C37A048B1C8EFA6300468889 /* BBBaseViewController.m in Sources */,
+				C37A048C1C8EFA6300468889 /* BBNavigationController.m in Sources */,
+				C37A04911C8EFA6300468889 /* BBNetworkApiManager.m in Sources */,
+				C37A048E1C8EFA6300468889 /* BBModel.m in Sources */,
+				C37A04A51C8EFA8D00468889 /* BBGamesScoreViewController.m in Sources */,
+				C37A04AF1C8F1F5000468889 /* UIViewController+Create.m in Sources */,
+				C37A048D1C8EFA6300468889 /* BBTabBarController.m in Sources */,
+				C37A04A61C8EFA8D00468889 /* BBGamesScoreViewModel.m in Sources */,
+				C37A04AE1C8F1F5000468889 /* UIStoryboard+Addition.m in Sources */,
+				C37A04A41C8EFA8D00468889 /* BBGamesScore.m in Sources */,
+				C37A04921C8EFA6300468889 /* BBResponseSerializer.m in Sources */,
+				C37A04951C8EFA6300468889 /* main.m in Sources */,
+				C37A04F21C8F294500468889 /* UIView+Utils.m in Sources */,
+				C37A048F1C8EFA6300468889 /* BBTabBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,10 +877,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9F9617C61C83E9440078FB3C /* LaunchScreen.storyboard */ = {
+		C37A047E1C8EFA6300468889 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9F9617C71C83E9440078FB3C /* Base */,
+				C37A047F1C8EFA6300468889 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -642,7 +970,7 @@
 		};
 		9F9617951C83D6B10078FB3C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 660EF624F264D7C9E5A7DE97 /* Pods-Basketball.debug.xcconfig */;
+			baseConfigurationReference = 3812FC45A7A76E0AE1D2D47E /* Pods-Basketball.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
@@ -656,7 +984,7 @@
 		};
 		9F9617961C83D6B10078FB3C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0D1289D0FCCF9F7A978AF9AA /* Pods-Basketball.release.xcconfig */;
+			baseConfigurationReference = 74BA99F6BA065C83BDCBC8E5 /* Pods-Basketball.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
@@ -670,6 +998,7 @@
 		};
 		9F9617981C83D6B10078FB3C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B559F3B0A304BA0C6DEE9778 /* Pods-BasketballTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = BasketballTests/Info.plist;
@@ -682,6 +1011,7 @@
 		};
 		9F9617991C83D6B10078FB3C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77ABC80ED1C9D6E2979F53CC /* Pods-BasketballTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = BasketballTests/Info.plist;
@@ -694,6 +1024,7 @@
 		};
 		9F96179B1C83D6B10078FB3C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9D64C1B4CB6B2353EF2AA12 /* Pods-BasketballUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = BasketballUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -706,6 +1037,7 @@
 		};
 		9F96179C1C83D6B10078FB3C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 813E99C3FF830848E315AFFA /* Pods-BasketballUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = BasketballUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

@@ -14,6 +14,12 @@
     return [MTLJSONAdapter modelOfClass:self.class fromJSONDictionary:dict error:nil];
 }
 
++ (NSArray *)modelsFromJSONArray:(NSArray *)array {
+    
+    NSError *error;
+    NSArray *result = [MTLJSONAdapter modelsOfClass:self.class fromJSONArray:array error:&error];
+    return result;
+}
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return nil;
 }

@@ -9,8 +9,11 @@
 #import "BBTabBarController.h"
 #import "BBNetworkApiManager.h"
 #import "BBStepCountingMainViewController.h"
+#import "BBGamesScoreViewController.h"
 
 @interface BBTabBarController ()
+
+@property (nonatomic, strong) BBGamesScoreViewController *gamesScoreViewController;
 
 @end
 
@@ -34,7 +37,10 @@
 - (void)setupChildViewControllers {
     UIImage *defaultImage = [UIImage imageNamed:@"icon_default_avatar"];
     UIImage *selectedImage = [UIImage imageNamed:@"icon_great"];
-    [self addChildViewController:[BBBaseViewController new] title:@"运动" defaultImage:defaultImage selectedImage:selectedImage];
+    
+    _gamesScoreViewController = [BBGamesScoreViewController create];
+    
+    [self addChildViewController:_gamesScoreViewController title:@"运动" defaultImage:defaultImage selectedImage:selectedImage];
     [self addChildViewController:[BBBaseViewController new] title:@"运动" defaultImage:defaultImage selectedImage:selectedImage];
     [self addChildViewController:[BBStepCountingMainViewController new] title:@"运动" defaultImage:defaultImage selectedImage:selectedImage];
     [self addChildViewController:[BBBaseViewController new] title:@"个人" defaultImage:defaultImage selectedImage:selectedImage];

@@ -16,6 +16,7 @@ end
 
 target 'Basketball' do
     shared_pods
+pod 'MONActivityIndicatorView'
 end
 
 target 'BasketballTests' do

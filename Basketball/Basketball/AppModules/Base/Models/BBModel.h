@@ -14,4 +14,6 @@
 
 + (instancetype)createFromJSONDictionary:(NSDictionary *)dict;
 
++ (NSArray *)modelsFromJSONArray:(NSArray *)array;
+
 @end

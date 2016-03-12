@@ -44,6 +44,17 @@
     return manager;
 }
 
+- (instancetype)init {
+    
+    self = [super initWithBaseURL:[NSURL URLWithString:kApiBaseUrl]];
+    if (self) {
+        self.requestSerializer = [AFHTTPRequestSerializer serializer];
+        self.responseSerializer = [BBResponseSerializer serializer];
+        self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", nil];
+        self.parseQueue = dispatch_queue_create("com.basketball.Basketball.parseQueue", DISPATCH_QUEUE_CONCURRENT);
+    }
+    return self;
+}
 #pragma mark - common action
 
 // 此方法用上面的宏（REQUEST）代替

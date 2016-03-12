@@ -31,6 +31,7 @@ PODS:
   - Mantle/extobjc (2.0.6)
   - Masonry (0.6.4)
   - MBProgressHUD (0.9.2)
+  - MONActivityIndicatorView (0.0.3)
   - Reachability (3.2)
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
@@ -44,6 +45,7 @@ DEPENDENCIES:
   - Mantle (~> 2.0.6)
   - Masonry (~> 0.6.4)
   - MBProgressHUD (~> 0.9.2)
+  - MONActivityIndicatorView
   - Reachability (~> 3.2)
   - SDWebImage (~> 3.7.5)
 
@@ -55,6 +57,7 @@ SPEC CHECKSUMS:
   Mantle: 299966b00759634931699f69cb6a30b9239b944d
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MONActivityIndicatorView: a00611695de16d956b17d03be25ee49a8effc5f2
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
 

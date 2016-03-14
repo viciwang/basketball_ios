@@ -16,9 +16,15 @@ NSString * const BBURLResponseSerializationErrorDomain = @"com.basketball.Basket
     id responseObject = [super responseObjectForResponse:response data:data error:error];
     if (!error) {
         NSUInteger code = [responseObject[@"code"] unsignedIntegerValue];
+        NSString *errorMsg = responseObject[@"msg"]?responseObject[@"msg"]:@"出错了";
         switch (code) {
             case 99:{
-                *error = [[NSError alloc] initWithDomain:BBURLResponseSerializationErrorDomain code:code userInfo:responseObject[@"msg"]];
+                *error = [[NSError alloc] initWithDomain:BBURLResponseSerializationErrorDomain code:code userInfo:@{@"msg":errorMsg}];
+                break;
+            }
+            case 1:{
+                *error = [[NSError alloc] initWithDomain:BBURLResponseSerializationErrorDomain code:code userInfo:@{@"msg":errorMsg}];
+                break;
             }
             default:
                 break;

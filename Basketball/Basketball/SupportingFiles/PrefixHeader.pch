@@ -10,8 +10,14 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
+@import Charts;
+@import CocoaLumberjack;
+extern const int ddLogLevel;
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "Masonry.h"
+#import "BBNotificationDefine.h"
 #import "RACEXTScope.h"
 #import "Macros.h"
 #import "BBNavigationController.h"

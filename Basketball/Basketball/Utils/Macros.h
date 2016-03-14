@@ -181,4 +181,8 @@ static inline void TimeThisBlock (void (^block)(void), NSString *message) {
     LOG(@"Took %f seconds to %@", (CGFloat)nanos / NSEC_PER_SEC, message);
 }
 
+#pragma mark - Some convince block
+
+typedef void (^voidBlock)();
+
 #endif /* Macros_h */

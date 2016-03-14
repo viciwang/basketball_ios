@@ -2,12 +2,11 @@
 //  BasketballTests.m
 //  BasketballTests
 //
-//  Created by Allen on 3/1/16.
+//  Created by Allen on 3/4/16.
 //  Copyright © 2016 wgl. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
-#import "BBNetworkApiManager.h"
 
 @interface BasketballTests : XCTestCase
 
@@ -26,12 +25,8 @@
 }
 
 - (void)testExample {
-    [[BBNetworkApiManager shareManager] requestSampleWithCompetionBlock:^(id responseObject, NSError *error) {
-        
-    }];
-    
-    
-    NSLog(@"ok *********");
+    // This is an example of a functional test case.
+    // Use XCTAssert and related functions to verify your tests produce the correct results.
 }
 
 - (void)testPerformanceExample {

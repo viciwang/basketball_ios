@@ -12,7 +12,7 @@ typedef void(^BBNetworkResponseBlock)(id responseObject, NSError *error);
 
 @interface BBNetworkApiManager : AFHTTPSessionManager
 
-+ (BBNetworkApiManager *)shareManager;
++ (BBNetworkApiManager *)sharedManager;
 
 - (NSURLSessionDataTask *)requestSampleWithCompetionBlock:(BBNetworkResponseBlock)responseBlock;
 

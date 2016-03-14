@@ -8,6 +8,7 @@
 
 #import "BBTabBarController.h"
 #import "BBNetworkApiManager.h"
+#import "BBStepCountingMainViewController.h"
 #import "BBGamesScoreViewController.h"
 
 @interface BBTabBarController ()
@@ -41,7 +42,7 @@
     
     [self addChildViewController:_gamesScoreViewController title:@"运动" defaultImage:defaultImage selectedImage:selectedImage];
     [self addChildViewController:[BBBaseViewController new] title:@"运动" defaultImage:defaultImage selectedImage:selectedImage];
-    [self addChildViewController:[BBBaseViewController new] title:@"运动" defaultImage:defaultImage selectedImage:selectedImage];
+    [self addChildViewController:[BBStepCountingMainViewController new] title:@"运动" defaultImage:defaultImage selectedImage:selectedImage];
     [self addChildViewController:[BBBaseViewController new] title:@"个人" defaultImage:defaultImage selectedImage:selectedImage];
 }
 

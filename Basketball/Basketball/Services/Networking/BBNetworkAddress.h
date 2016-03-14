@@ -9,10 +9,22 @@
 #ifndef BBNetworkAddress_h
 #define BBNetworkAddress_h
 
-#define kApiBaseUrl @"http://localhost:8080"
+#define kApiBaseUrl @"http://localhost:8000"
 
 #define kApiTestAddress @"test.json"
 
 #define kApiGamesScoreAddress @"basketball_php/"
+
+#define kApiUserLogin @"user/login"
+
+#define kApiUserRegister @"user/register"
+
+#define kApiUserGetVerifyCode @"user/getVerifyCode"
+
+#define kApiUserUploadHeadImage @"user/uploadHeadImage"
+
+#define kApiUserUpdateInfo @"user/updateInfo"
+
+#define kApiUserResetPassword @"user/resetPassword"
 
 #endif /* BBNetworkAddress_h */

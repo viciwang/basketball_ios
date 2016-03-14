@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "BBTabBarController.h"
 #import "FLEXManager.h"
+#import "BBDatabaseManager.h"
+#import "BBNetworkApiManager.h"
 
 @interface AppDelegate ()
 
@@ -29,6 +31,11 @@ const int ddLogLevel = DDLogLevelWarning;
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [BBTabBarController new];
     [self.window makeKeyAndVisible];
+    
+    [[BBDatabaseManager sharedManager] retriveCurrentUser];
+    [[BBNetworkApiManager sharedManager] loginWithEmail:@"1214362919@qq.com" password:@"1234" completionBlock:^(id responseObject, NSError *error) {
+        
+    }];
     
     // debug
 #if DEBUG

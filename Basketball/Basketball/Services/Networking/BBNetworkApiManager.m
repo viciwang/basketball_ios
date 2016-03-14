@@ -10,6 +10,7 @@
 #import "BBNetworkAddress.h"
 #import "BBResponseSerializer.h"
 #import "BBModel.h"
+#import "BBUser.h"
 
 #define REQUEST(METHOD, URLString, PARAMETERS, MODEL_CLASS, RESPONSE_BLOCK) \
 { \
@@ -39,6 +40,7 @@
         manager = [[BBNetworkApiManager alloc]initWithBaseURL:[NSURL URLWithString:kApiBaseUrl]];
         manager.requestSerializer = [AFHTTPRequestSerializer serializer];
         manager.responseSerializer = [BBResponseSerializer serializer];
+        manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/html", @"text/javascript", nil];
         manager.parseQueue = dispatch_queue_create("com.basketball.Basketball.parseQueue", DISPATCH_QUEUE_CONCURRENT);
     });
     return manager;
@@ -87,6 +89,7 @@
 }
 
 - (void)handleSuccessTask:(NSURLSessionDataTask *)task responseObject:(id)responseObject responseModelClass:(Class)modelClass completionBlock:(BBNetworkResponseBlock)responseBlock {
+    DDLogInfo(@"接口访问成功：%@ \n %@",task.response.URL, responseObject);
     dispatch_async(self.parseQueue, ^{
         id dataObject = nil;
         if (modelClass) {
@@ -105,6 +108,7 @@
 }
 
 - (void)handleFailTask:(NSURLSessionDataTask *)task error:(NSError *)error completionBlock:(BBNetworkResponseBlock)responseBlock {
+    DDLogInfo(@"接口访问失败：%@ \n %@",task.response.URL, error);
     if (responseBlock) {
         responseBlock(nil, error);
     }
@@ -112,17 +116,56 @@
 
 #pragma mark - request
 
-- (NSURLSessionDataTask *)requestSampleWithCompetionBlock:(BBNetworkResponseBlock)responseBlock {
-    
-    NSDictionary *dict = @{@"userName":@"allen",
-                           @"phone":@"15625043034"};
-    // REQUEST参数含义参见上面的 GET:parameters:modelClass:completionBlock: 参数说明
+- (NSURLSessionDataTask *)getVerifyCodeWithEmail:(NSString *)email
+                                 completionBlock:(BBNetworkResponseBlock)responseBlock {
+    REQUEST(POST, kApiUserGetVerifyCode, (@{@"email":email}), nil, ^(NSDictionary *dict, NSError *error){
+        if (responseBlock) {
+            if (!error) {
+                responseBlock(dict[@"verifyCode"],nil);
+            }
+            else {
+                responseBlock(nil,error);
+            }
+        }
+    });
+}
 
-    // get方法示例
-    REQUEST(GET, kApiTestAddress, dict, nil, responseBlock);
-    
-    // post方法示例
-    REQUEST(POST, kApiTestAddress, dict, [BBModel class], responseBlock);
+- (NSURLSessionDataTask *)uploadImageWithImage:(UIImage *)image
+                               completionBlock:(BBNetworkResponseBlock)responseBlock {
+    return [self POST:kApiUserUploadHeadImage parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        NSString *fileName = [NSString stringWithFormat:@"%@.jpeg", @([[NSDate date] timeIntervalSince1970]).stringValue];
+        [formData appendPartWithFileData:UIImageJPEGRepresentation(image, 0.8) name:@"image" fileName:fileName mimeType:@"image/jpeg"];
+    } progress:nil
+       success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *responseObject) {
+        if (responseBlock) {
+            responseBlock(responseObject[@"headImageUrl"],nil);
+        }
+    }
+       failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (responseBlock) {
+            responseBlock(nil,error);
+        }
+    }];
+}
+
+- (NSURLSessionDataTask *)loginWithEmail:(NSString *)email
+                                password:(NSString *)password
+                         completionBlock:(BBNetworkResponseBlock)responseBlock {
+    REQUEST(POST, kApiUserLogin ,(@{@"email":email , @"password":password}), [BBUser class], responseBlock);
+}
+
+- (NSURLSessionDataTask *)registerWithEmail:(NSString *)email
+                                   password:(NSString *)password
+                                 verifyCode:(NSString *)verifyCode
+                            completionBlock:(BBNetworkResponseBlock)responseBlock {
+    REQUEST(POST, kApiUserLogin ,(@{@"email":email,@"password":password,@"verifyCode":verifyCode}), [BBUser class], responseBlock);
+}
+
+- (NSURLSessionDataTask *)updateUserInfoWithCity:(NSString *)city
+                                        nickName:(NSString *)nickName
+                                    headImageUrl:(NSString *)headImageUrl
+                                 completionBlock:(BBNetworkResponseBlock)responseBlock {
+    REQUEST(POST, kApiUserUpdateInfo, (@{@"city":city,@"nickName":nickName,@"headImageUrl":headImageUrl}), [BBUser class], responseBlock);
 }
 
 @end

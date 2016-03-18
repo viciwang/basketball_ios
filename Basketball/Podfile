@@ -13,11 +13,11 @@ def shared_pods
     pod 'CocoaLumberjack', '~> 2.2.0'
     pod 'Charts', '~> 2.2.3'
     pod 'FMDB', '~> 2.6'
+    pod 'MONActivityIndicatorView'
 end
 
 target 'Basketball' do
     shared_pods
-pod 'MONActivityIndicatorView'
 end
 
 target 'BasketballTests' do

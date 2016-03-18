@@ -32,11 +32,6 @@ const int ddLogLevel = DDLogLevelWarning;
     self.window.rootViewController = [BBTabBarController new];
     [self.window makeKeyAndVisible];
     
-    [[BBDatabaseManager sharedManager] retriveCurrentUser];
-    [[BBNetworkApiManager sharedManager] loginWithEmail:@"1214362919@qq.com" password:@"1234" completionBlock:^(id responseObject, NSError *error) {
-        
-    }];
-    
     // debug
 #if DEBUG
     [self configFLEX];

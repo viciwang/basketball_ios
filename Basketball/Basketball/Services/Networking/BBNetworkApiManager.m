@@ -138,7 +138,7 @@
     } progress:nil
        success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *responseObject) {
         if (responseBlock) {
-            responseBlock(responseObject[@"headImageUrl"],nil);
+            responseBlock(responseObject[@"data"][@"headImageUrl"],nil);
         }
     }
        failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -151,14 +151,27 @@
 - (NSURLSessionDataTask *)loginWithEmail:(NSString *)email
                                 password:(NSString *)password
                          completionBlock:(BBNetworkResponseBlock)responseBlock {
-    REQUEST(POST, kApiUserLogin ,(@{@"email":email , @"password":password}), [BBUser class], responseBlock);
+    REQUEST(POST, kApiUserLogin ,(@{@"email":email , @"password":password}), [BBUser class], ^(BBUser *user, NSError *error){
+        if (error) {
+            if (responseBlock) {
+                responseBlock(nil, error);
+            }
+        }
+        else {
+            [[BBNetworkApiManager sharedManager].requestSerializer setValue:user.token forHTTPHeaderField:@"token"];
+            [[BBNetworkApiManager sharedManager].requestSerializer setValue:user.uid forHTTPHeaderField:@"uid"];
+            if (responseBlock) {
+                responseBlock(user, error);
+            }
+        }
+    });
 }
 
 - (NSURLSessionDataTask *)registerWithEmail:(NSString *)email
                                    password:(NSString *)password
                                  verifyCode:(NSString *)verifyCode
                             completionBlock:(BBNetworkResponseBlock)responseBlock {
-    REQUEST(POST, kApiUserLogin ,(@{@"email":email,@"password":password,@"verifyCode":verifyCode}), [BBUser class], responseBlock);
+    REQUEST(POST, kApiUserRegister ,(@{@"email":email,@"password":password,@"verifyCode":verifyCode}), [BBUser class], responseBlock);
 }
 
 - (NSURLSessionDataTask *)updateUserInfoWithCity:(NSString *)city
@@ -166,6 +179,10 @@
                                     headImageUrl:(NSString *)headImageUrl
                                  completionBlock:(BBNetworkResponseBlock)responseBlock {
     REQUEST(POST, kApiUserUpdateInfo, (@{@"city":city,@"nickName":nickName,@"headImageUrl":headImageUrl}), [BBUser class], responseBlock);
+}
+
+- (NSURLSessionDataTask *)resetPasswordWithPassword:(NSString *)password completionBlock:(BBNetworkResponseBlock)responseBlock {
+    return nil;
 }
 
 @end

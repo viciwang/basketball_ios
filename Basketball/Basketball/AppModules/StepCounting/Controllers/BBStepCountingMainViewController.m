@@ -10,6 +10,7 @@
 #import "BBStepCountingManager.h"
 #import "BBStepCountingTabBarView.h"
 #import "BBStepCountingStatisticViewController.h"
+#import "BBStepCountingMineViewController.h"
 
 @interface BBStepCountingMainViewController ()
 <
@@ -69,7 +70,7 @@
     self.statisticsVCs = [NSMutableArray new];
     NSArray *array = @[@(BBStepCountingStatisticTypeToday),@(BBStepCountingStatisticTypeThisWeek),@(BBStepCountingStatisticTypeThisMonth),@(BBStepCountingStatisticTypeThisYear)];
     for (NSNumber *type in array) {
-        [self.statisticsVCs addObject:[[BBStepCountingStatisticViewController alloc]initWithStatisticsType:type.unsignedIntegerValue]];
+        [self.statisticsVCs addObject:[BBStepCountingMineViewController new]];
     }
     
     [self.pageViewController setViewControllers:@[self.statisticsVCs[0]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];

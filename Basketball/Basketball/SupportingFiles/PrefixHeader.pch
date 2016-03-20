@@ -31,6 +31,7 @@ extern const int ddLogLevel;
 #import "UIView+Utils.h"
 
 #import "MONActivityIndicatorView.h"
+#import "ReactiveCocoa.h"
 
 // ArticleModule
 #import "WYFeedManager.h"

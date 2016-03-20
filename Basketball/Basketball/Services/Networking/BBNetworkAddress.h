@@ -31,4 +31,6 @@
 
 #define kArticleSourceAddress @"articlemanager/articlesource"
 
+#define kApiStepCountingAverage @"stepCounting/average"
+
 #endif /* BBNetworkAddress_h */

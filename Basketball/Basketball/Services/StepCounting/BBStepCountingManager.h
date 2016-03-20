@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void(^QueryResultBlock)(NSArray *steps);
+typedef void(^QueryResultBlock)(NSArray *steps, NSUInteger todayTotalStep);
 
 @interface BBStepCountingManager : NSObject
 

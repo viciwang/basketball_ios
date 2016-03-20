@@ -146,6 +146,7 @@
 
 
 + (id)loadFromNib;
++ (id)loadFromNibGeneral;
 
 + (UINib *)registerNib;
 

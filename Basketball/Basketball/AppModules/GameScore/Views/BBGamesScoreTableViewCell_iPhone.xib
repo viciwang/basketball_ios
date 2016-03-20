@@ -5,6 +5,16 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9525.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="YaHei.ttf">
+            <string>MicrosoftYaHei</string>
+            <string>MicrosoftYaHei</string>
+            <string>MicrosoftYaHei</string>
+            <string>MicrosoftYaHei</string>
+            <string>MicrosoftYaHei</string>
+            <string>MicrosoftYaHei</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -35,8 +45,8 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="QcM-z2-mft"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MicrosoftYaHei" family="Microsoft YaHei" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -49,8 +59,8 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="xPD-VM-JIa"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MicrosoftYaHei" family="Microsoft YaHei" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -64,8 +74,8 @@
                                     <constraint firstAttribute="height" constant="20" id="A3t-aE-AOe"/>
                                     <constraint firstAttribute="width" constant="50" id="Eud-xF-LDe"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MicrosoftYaHei" family="Microsoft YaHei" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="第四节 10:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufr-TO-Ukv">
@@ -74,8 +84,8 @@
                                     <constraint firstAttribute="height" constant="20" id="1wk-9p-76F"/>
                                     <constraint firstAttribute="width" constant="70" id="wh2-X0-y8E"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MicrosoftYaHei" family="Microsoft YaHei" pointSize="11"/>
+                                <color key="textColor" red="0.83055160979999998" green="0.33058716389999998" blue="0.062267866550000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="鹈鹕" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8PI-Kb-Zc8">
@@ -84,7 +94,7 @@
                                     <constraint firstAttribute="width" constant="60" id="rs8-qq-KuC"/>
                                     <constraint firstAttribute="height" constant="13" id="trc-MB-qs7"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <fontDescription key="fontDescription" name="MicrosoftYaHei" family="Microsoft YaHei" pointSize="10"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -94,7 +104,7 @@
                                     <constraint firstAttribute="width" constant="60" id="Hif-X5-KBh"/>
                                     <constraint firstAttribute="height" constant="13" id="Mxu-T0-DRU"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <fontDescription key="fontDescription" name="MicrosoftYaHei" family="Microsoft YaHei" pointSize="10"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -137,11 +147,21 @@
                             </mask>
                         </variation>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VdP-K0-04i" userLabel="SeperatorLine">
+                        <rect key="frame" x="20" y="115" width="462" height="1"/>
+                        <color key="backgroundColor" red="0.96969696975656561" green="0.96969696975656561" blue="0.96969696975656561" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="qgj-SN-dfI"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="VdP-K0-04i" secondAttribute="bottom" id="1tr-0h-LFd"/>
+                    <constraint firstAttribute="trailing" secondItem="VdP-K0-04i" secondAttribute="trailing" constant="20" id="1u0-4c-Uwk"/>
                     <constraint firstItem="Epu-Tt-kiV" firstAttribute="leading" secondItem="xqe-L0-4uP" secondAttribute="leading" id="4S7-jo-ub6"/>
                     <constraint firstAttribute="bottom" secondItem="Epu-Tt-kiV" secondAttribute="bottom" id="5Ev-BK-G8i"/>
+                    <constraint firstItem="VdP-K0-04i" firstAttribute="leading" secondItem="xqe-L0-4uP" secondAttribute="leading" constant="20" id="6Wp-nU-bJH"/>
                     <constraint firstAttribute="trailing" secondItem="Epu-Tt-kiV" secondAttribute="trailing" id="XGJ-Ub-z4i"/>
                     <constraint firstItem="Epu-Tt-kiV" firstAttribute="top" secondItem="xqe-L0-4uP" secondAttribute="top" id="ccS-4a-spk"/>
                 </constraints>

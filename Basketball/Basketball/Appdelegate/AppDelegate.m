@@ -27,9 +27,11 @@ const int ddLogLevel = DDLogLevelWarning;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[BBTabBarController new]];
+    [navigationController setNavigationBarHidden:YES];
     // 初始化页面
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [BBTabBarController new];
+    self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     
     // debug

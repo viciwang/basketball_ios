@@ -12,12 +12,15 @@
 
 @import Charts;
 @import CocoaLumberjack;
+@import SDWebImage;
+
 extern const int ddLogLevel;
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "Masonry.h"
 #import "BBNotificationDefine.h"
+#import "BBNetworkAddress.h"
 #import "RACEXTScope.h"
 #import "Macros.h"
 #import "BBNavigationController.h"
@@ -29,4 +32,8 @@ extern const int ddLogLevel;
 
 #import "MONActivityIndicatorView.h"
 
+// ArticleModule
+#import "WYFeedManager.h"
+#import "UIImage+Utils.h"
+#import "UINavigationBar+Addition.h"
 #endif /* PrefixHeader_pch */

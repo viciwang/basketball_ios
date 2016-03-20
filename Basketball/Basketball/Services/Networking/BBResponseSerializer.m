@@ -14,7 +14,11 @@ NSString * const BBURLResponseSerializationErrorDomain = @"com.basketball.Basket
 
 - (id)responseObjectForResponse:(NSURLResponse *)response data:(NSData *)data error:(NSError *__autoreleasing  _Nullable *)error {
     id responseObject = [super responseObjectForResponse:response data:data error:error];
-    DDLogInfo(@"接口访问：%@ \n 返回：%@，\n出错：%@",response.URL, responseObject, *error);
+    DDLogInfo(@"接口访问：%@ \n 返回：\n%@，\n",response.URL, responseObject);
+    if (*error) {
+        DDLogInfo(@"出错信息！！！！！:\n%@",*error);
+    }
+    
     if (!(*error)) {
         NSUInteger code = [responseObject[@"code"] unsignedIntegerValue];
         NSString *errorMsg = responseObject[@"msg"]?responseObject[@"msg"]:@"出错了";

@@ -31,11 +31,11 @@
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDirectory = [paths objectAtIndex:0];
         NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:@"Basketball.sqlite"];
+        NSLog(@"数据库物理地址：%@",writableDBPath);
         _localDatabase = [FMDatabase databaseWithPath:writableDBPath];
         [_localDatabase open];
         [_localDatabase executeUpdate:@"CREATE TABLE IF NOT EXISTS \
          `User` ( \
-         `id` int(10) NOT NULL, \
          `uid` char(10) NOT NULL, \
          `email` varchar(56) NOT NULL, \
          `nickName` varchar(30) NOT NULL, \
@@ -73,11 +73,12 @@
 
 - (BOOL)saveCurrentUser:(BBUser *)user {
     
-    if (![self.localDatabase executeStatements:@"TRUNCATE TABLE User"]) {
+    if (![self.localDatabase open] || !user) {
         return NO;
     }
     
-    if (![self.localDatabase open] || !user) {
+    if (![self.localDatabase executeStatements:@"DELETE FROM User"]) {
+        DDLogInfo(@"清空用户表出错：%@",[self.localDatabase lastErrorMessage]);
         return NO;
     }
 

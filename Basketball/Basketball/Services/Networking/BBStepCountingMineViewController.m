@@ -9,11 +9,14 @@
 #import "BBStepCountingMineViewController.h"
 #import "BBStepCountingRollView.h"
 #import "BBStepCountingChartView.h"
+#import "BBStepCountingManager.h"
+#import "BBNetworkApiManager.h"
 
 @interface BBStepCountingMineViewController ()
 
 @property (nonatomic, strong) BBStepCountingRollView *rollView;
 @property (nonatomic, strong) BBStepCountingChartView *chartView;
+@property (nonatomic, strong) UIButton *showHistoryButton;
 
 @end
 
@@ -23,11 +26,15 @@
     [super viewDidLoad];
     [self.view addSubview:self.rollView];
     [self.view addSubview:self.chartView];
+    [self.view addSubview:self.showHistoryButton];
+    [self.showHistoryButton addTarget:self action:@selector(showHistory:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self loadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self.rollView refreshWithPercent:0.85];
+//    [self.rollView refreshWithPercent:0.85];
 }
 
 - (void)updateViewConstraints {
@@ -43,7 +50,13 @@
         @strongify(self);
         make.top.equalTo(self.rollView.mas_bottom);
         make.left.right.equalTo(self.view);
-        make.height.equalTo(self.view).multipliedBy(0.3);
+        make.height.equalTo(self.view).multipliedBy(0.4);
+    }];
+    [self.showHistoryButton mas_updateConstraints:^(MASConstraintMaker *make) {
+        @strongify(self);
+        make.bottom.equalTo(self.view);
+        make.left.right.equalTo(self.view);
+        make.height.equalTo(self.view).multipliedBy(0.1);
     }];
     [super updateViewConstraints];
 }
@@ -57,8 +70,7 @@
 
 - (BBStepCountingRollView *)rollView {
     if (!_rollView) {
-        _rollView = [BBStepCountingRollView new];
-        _rollView.backgroundColor = [UIColor redColor];
+        _rollView = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([BBStepCountingRollView class]) owner:nil options:nil].firstObject;
     }
     return _rollView;
 }
@@ -68,5 +80,44 @@
         _chartView = [BBStepCountingChartView new];
     }
     return _chartView;
+}
+
+- (UIButton *)showHistoryButton {
+    if (!_showHistoryButton) {
+        _showHistoryButton = [UIButton new];
+        _showHistoryButton.backgroundColor = [UIColor redColor];
+        [_showHistoryButton setTitle:@"查看历史数据" forState:UIControlStateNormal];
+        [_showHistoryButton.titleLabel setFont:[UIFont systemFontOfSize:14]];
+        [_showHistoryButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    }
+    return _showHistoryButton;
+}
+
+#pragma mark - action
+
+- (void)showHistory:(UIButton *)button {
+    
+}
+
+#pragma mark - load data
+
+- (void)loadData {
+    RACSubject *subject = [RACSubject subject];
+    @weakify(self);
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [[BBStepCountingManager sharedManager] queryStepsOfToday:^(NSArray *steps, NSUInteger totalSteps) {
+        @strongify(self);
+        [subject sendNext:dict];
+        [self.chartView refreshWithData:steps];
+    }];
+    
+    [[BBNetworkApiManager sharedManager] getStepCountingAverageWithCompletionBlock:^(NSNumber *totalCount, NSError *error) {
+        @strongify(self);
+        
+    }];
+    
+//    [RACSignal combineLatest:@[]]
+    
+    
 }
 @end

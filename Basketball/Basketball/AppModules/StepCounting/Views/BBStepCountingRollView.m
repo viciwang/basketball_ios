@@ -12,6 +12,9 @@
 
 @property (nonatomic, strong) CAShapeLayer *circleLayer;
 @property (nonatomic, strong) CAShapeLayer *backCircleLayer;
+@property (nonatomic, weak) IBOutlet UILabel *todayCountingLabel;
+@property (nonatomic, weak) IBOutlet UILabel *describeLabel;
+@property (nonatomic, weak) IBOutlet UILabel *averageLabel;
 
 @end
 
@@ -26,7 +29,8 @@
     self.backCircleLayer.path = path.CGPath;
 }
 
-- (void)refreshWithPercent:(CGFloat)percent {
+- (void)refreshWithTodaySteps:(NSUInteger)steps percent:(CGFloat)percent {
+    self.todayCountingLabel.text = @(steps).stringValue;
     self.circleLayer.strokeEnd = percent;
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
     animation.fromValue = @0.0;
@@ -59,5 +63,4 @@
     }
     return _backCircleLayer;
 }
-
 @end

@@ -48,6 +48,7 @@
 		9FDEF2421C9C153900B629C5 /* BBView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDEF2411C9C153900B629C5 /* BBView.m */; };
 		9FDEF2451C9C15A600B629C5 /* BBStepCountingRollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDEF2441C9C15A600B629C5 /* BBStepCountingRollView.m */; };
 		9FDEF2481C9D30AC00B629C5 /* BBStepCountingChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDEF2471C9D30AC00B629C5 /* BBStepCountingChartView.m */; };
+		9FDEF24D1C9D6AA700B629C5 /* BBStepCountingRollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FDEF24C1C9D6AA700B629C5 /* BBStepCountingRollView.xib */; };
 		A561C348B4F4ED8E5B40916E /* Pods_BasketballUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DCE818E35F87A15C9DF53C /* Pods_BasketballUITests.framework */; };
 		B1A187AD7EE70415ABDA6A8B /* Pods_BasketballTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887329AE799F0622598BBE5B /* Pods_BasketballTests.framework */; };
 		C3584B011C9075C60087FF34 /* UIStoryboard+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = C3584AFC1C9075C60087FF34 /* UIStoryboard+Addition.m */; };
@@ -178,6 +179,7 @@
 		9FDEF2441C9C15A600B629C5 /* BBStepCountingRollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBStepCountingRollView.m; path = Basketball/AppModules/StepCounting/Views/BBStepCountingRollView.m; sourceTree = SOURCE_ROOT; };
 		9FDEF2461C9D30AC00B629C5 /* BBStepCountingChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBStepCountingChartView.h; path = Basketball/AppModules/StepCounting/Views/BBStepCountingChartView.h; sourceTree = SOURCE_ROOT; };
 		9FDEF2471C9D30AC00B629C5 /* BBStepCountingChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBStepCountingChartView.m; path = Basketball/AppModules/StepCounting/Views/BBStepCountingChartView.m; sourceTree = SOURCE_ROOT; };
+		9FDEF24C1C9D6AA700B629C5 /* BBStepCountingRollView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBStepCountingRollView.xib; path = Basketball/AppModules/StepCounting/Views/BBStepCountingRollView.xib; sourceTree = SOURCE_ROOT; };
 		A8F627D85FA2A7BB946462FE /* Pods-BasketballUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasketballUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasketballUITests/Pods-BasketballUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C3584AFB1C9075C60087FF34 /* UIStoryboard+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+Addition.h"; sourceTree = "<group>"; };
 		C3584AFC1C9075C60087FF34 /* UIStoryboard+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+Addition.m"; sourceTree = "<group>"; };
@@ -413,7 +415,7 @@
 				9F1B63951C94855B00C486B0 /* Personal */,
 				C3584B041C9075D80087FF34 /* GameScore */,
 				9F9617B81C83E9440078FB3C /* Base */,
-				9F9617BD1C83E9440078FB3C /* Sport */,
+				9F9617BD1C83E9440078FB3C /* StepCounting */,
 			);
 			path = AppModules;
 			sourceTree = "<group>";
@@ -469,7 +471,7 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		9F9617BD1C83E9440078FB3C /* Sport */ = {
+		9F9617BD1C83E9440078FB3C /* StepCounting */ = {
 			isa = PBXGroup;
 			children = (
 				9F9617BE1C83E9440078FB3C /* Controllers */,
@@ -477,6 +479,7 @@
 				9F9617C01C83E9440078FB3C /* Other */,
 				9F9617C11C83E9440078FB3C /* Views */,
 			);
+			name = StepCounting;
 			path = Sport;
 			sourceTree = "<group>";
 		};
@@ -514,6 +517,7 @@
 				9F9394A21C89611F009E6DDF /* BBStepCountingTabBarView.m */,
 				9FDEF2431C9C15A600B629C5 /* BBStepCountingRollView.h */,
 				9FDEF2441C9C15A600B629C5 /* BBStepCountingRollView.m */,
+				9FDEF24C1C9D6AA700B629C5 /* BBStepCountingRollView.xib */,
 				9FDEF2461C9D30AC00B629C5 /* BBStepCountingChartView.h */,
 				9FDEF2471C9D30AC00B629C5 /* BBStepCountingChartView.m */,
 			);
@@ -835,6 +839,7 @@
 				C3584B531C9076220087FF34 /* SAS_logo.png in Resources */,
 				C3584B391C9076220087FF34 /* ATL_logo.png in Resources */,
 				C3584B501C9076220087FF34 /* PHX_logo.png in Resources */,
+				9FDEF24D1C9D6AA700B629C5 /* BBStepCountingRollView.xib in Resources */,
 				C3584B411C9076220087FF34 /* DET_logo.png in Resources */,
 				C3584B471C9076220087FF34 /* MEM_logo.png in Resources */,
 				C3584B511C9076220087FF34 /* POR_logo.png in Resources */,

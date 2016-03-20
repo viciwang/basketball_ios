@@ -10,4 +10,6 @@
 
 @interface BBStepCountingChartView : BBView
 
+- (void)refreshWithData:(NSArray *)steps;
+
 @end

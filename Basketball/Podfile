@@ -14,6 +14,7 @@ def shared_pods
     pod 'Charts', '~> 2.2.3'
     pod 'FMDB', '~> 2.6'
     pod 'MONActivityIndicatorView'
+    pod 'ReactiveCocoa', '~> 2.5'
 end
 
 target 'Basketball' do

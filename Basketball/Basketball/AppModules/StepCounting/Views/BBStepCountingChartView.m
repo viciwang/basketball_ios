@@ -27,7 +27,6 @@ ChartViewDelegate
     if (self) {
         self.backgroundColor = UIColorFromHex(arc4random()%0xffffff);
         [self setupChartView];
-        [self updateChartData];
     }
     return self;
 }
@@ -68,13 +67,9 @@ ChartViewDelegate
     self.chartView.xAxis.labelTextColor =[UIColor whiteColor];
 }
 
-- (void)updateChartData {
-    @weakify(self);
-    [[BBStepCountingManager sharedManager] queryStepsOfToday:^(NSArray *steps) {
-        @strongify(self);
-        [self updateTodayData:steps];
-        [self.chartView animateWithYAxisDuration:1.0];
-    }];
+- (void)refreshWithData:(NSArray *)steps {
+    [self updateTodayData:steps];
+    [self.chartView animateWithYAxisDuration:1.0];
 }
 
 - (void)updateTodayData:(NSArray *)data {

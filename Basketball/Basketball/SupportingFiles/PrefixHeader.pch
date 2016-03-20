@@ -28,5 +28,6 @@ extern const int ddLogLevel;
 #import "UIView+Utils.h"
 
 #import "MONActivityIndicatorView.h"
+#import "ReactiveCocoa.h"
 
 #endif /* PrefixHeader_pch */

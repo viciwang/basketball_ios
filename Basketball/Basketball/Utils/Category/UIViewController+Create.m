@@ -2,8 +2,8 @@
 //  UIViewController+Create.m
 //  wangying
 //
-//  Created by Ron on 16-2-24.
-//  Copyright (c) 2014年 HGG. All rights reserved.
+//  Created by yingwang on 16/3/7.
+//  Copyright © 2016年 yingwang. All rights reserved.
 //
 
 #import "UIViewController+Create.h"

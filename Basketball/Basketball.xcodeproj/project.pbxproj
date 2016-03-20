@@ -51,6 +51,7 @@
 		9FDEF25A1C9E822500B629C5 /* BBLoginViewController_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FDEF2581C9E822500B629C5 /* BBLoginViewController_iPhone.storyboard */; };
 		9FDEF25D1C9E825300B629C5 /* BBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDEF25C1C9E825300B629C5 /* BBUser.m */; };
 		9FDEF2601C9E8DD900B629C5 /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDEF25F1C9E8DD900B629C5 /* UIViewController+HUD.m */; };
+		9FDEF2631C9EAD2C00B629C5 /* UIWindow+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDEF2621C9EAD2C00B629C5 /* UIWindow+Utils.m */; };
 		A561C348B4F4ED8E5B40916E /* Pods_BasketballUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DCE818E35F87A15C9DF53C /* Pods_BasketballUITests.framework */; };
 		B1A187AD7EE70415ABDA6A8B /* Pods_BasketballTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887329AE799F0622598BBE5B /* Pods_BasketballTests.framework */; };
 		C3584B011C9075C60087FF34 /* UIStoryboard+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = C3584AFC1C9075C60087FF34 /* UIStoryboard+Addition.m */; };
@@ -187,6 +188,8 @@
 		9FDEF25C1C9E825300B629C5 /* BBUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBUser.m; path = Personal/Models/BBUser.m; sourceTree = "<group>"; };
 		9FDEF25E1C9E8DD900B629C5 /* UIViewController+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HUD.h"; sourceTree = "<group>"; };
 		9FDEF25F1C9E8DD900B629C5 /* UIViewController+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HUD.m"; sourceTree = "<group>"; };
+		9FDEF2611C9EAD2C00B629C5 /* UIWindow+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Utils.h"; sourceTree = "<group>"; };
+		9FDEF2621C9EAD2C00B629C5 /* UIWindow+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Utils.m"; sourceTree = "<group>"; };
 		A8F627D85FA2A7BB946462FE /* Pods-BasketballUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasketballUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasketballUITests/Pods-BasketballUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C3584AFB1C9075C60087FF34 /* UIStoryboard+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+Addition.h"; sourceTree = "<group>"; };
 		C3584AFC1C9075C60087FF34 /* UIStoryboard+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+Addition.m"; sourceTree = "<group>"; };
@@ -609,6 +612,8 @@
 				C3584AFE1C9075C60087FF34 /* UIView+Utils.m */,
 				C3584AFF1C9075C60087FF34 /* UIViewController+Create.h */,
 				C3584B001C9075C60087FF34 /* UIViewController+Create.m */,
+				9FDEF2611C9EAD2C00B629C5 /* UIWindow+Utils.h */,
+				9FDEF2621C9EAD2C00B629C5 /* UIWindow+Utils.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1084,6 +1089,7 @@
 				9F9617E11C83F17A0078FB3C /* BBNavigationController.m in Sources */,
 				9F9617CE1C83E9440078FB3C /* AppDelegate.m in Sources */,
 				9F9617DE1C83EF400078FB3C /* BBTabBar.m in Sources */,
+				9FDEF2631C9EAD2C00B629C5 /* UIWindow+Utils.m in Sources */,
 				9F93945A1C88946F009E6DDF /* BBStepCountingManager.m in Sources */,
 				C3584B151C9075D80087FF34 /* BBGamesScoreViewController.m in Sources */,
 			);

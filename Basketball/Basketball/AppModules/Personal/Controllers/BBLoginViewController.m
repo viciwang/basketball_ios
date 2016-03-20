@@ -10,6 +10,8 @@
 #import "RACReturnSignal.h"
 #import "BBNetworkApiManager.h"
 #import "BBUser.h"
+#import "UIWindow+Utils.h"
+#import "BBTabBarController.h"
 
 @interface BBLoginViewController ()
 
@@ -75,6 +77,7 @@
         }
         else {
             [BBUser setCurrentUser:user];
+            [[UIApplication sharedApplication].keyWindow bb_checkoutRootViewController:[BBTabBarController new]];
         }
     }];
 }

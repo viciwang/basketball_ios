@@ -185,4 +185,19 @@
     return nil;
 }
 
+- (NSURLSessionDataTask *)getStepCountingAverageWithCompletionBlock:(BBNetworkResponseBlock)responseBlock {
+    REQUEST(GET, kApiStepCountingAverage, nil, nil, ^(NSDictionary *dict, NSError *error){
+        if (error) {
+            if (responseBlock) {
+                responseBlock(nil,error);
+            }
+        }
+        else {
+            if (responseBlock) {
+                responseBlock(dict[@"totalCount"],nil);
+            }
+        }
+    });
+}
+
 @end

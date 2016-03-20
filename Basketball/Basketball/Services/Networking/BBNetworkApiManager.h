@@ -36,4 +36,6 @@ typedef void(^BBNetworkResponseBlock)(id responseObject, NSError *error);
 
 - (NSURLSessionDataTask *)resetPasswordWithPassword:(NSString *)password
                                     completionBlock:(BBNetworkResponseBlock)responseBlock;
+
+- (NSURLSessionDataTask *)getStepCountingAverageWithCompletionBlock:(BBNetworkResponseBlock)responseBlock;
 @end

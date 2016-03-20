@@ -27,4 +27,6 @@
 
 #define kApiUserResetPassword @"user/resetPassword"
 
+#define kApiStepCountingAverage @"stepCounting/average"
+
 #endif /* BBNetworkAddress_h */

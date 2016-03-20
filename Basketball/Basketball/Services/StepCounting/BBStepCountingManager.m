@@ -39,6 +39,7 @@
 - (void)queryStepsOfToday:(QueryResultBlock)resultBlock {
     __block NSMutableArray *result = [[NSMutableArray alloc]init];
     __block NSUInteger count = 0;
+    __block NSUInteger totalSteps = 0;
     for (NSUInteger index = 0; index < 24; index++) {
         [result addObject:@(0)];
     }
@@ -47,8 +48,9 @@
         [self.stepCountingService queryStepCountingFromDate:[beginDate dateByAddingHours:index] endDate:[beginDate dateByAddingHours:index+1] handler:^(NSUInteger numberOfSteps, NSDate *timestamp, NSError *error) {
             result[timestamp.hour] = @(numberOfSteps);
             count++;
+            totalSteps += numberOfSteps;
             if (count >= 24) {
-                resultBlock(result);
+                resultBlock(result, totalSteps);
             }
         }];
     }

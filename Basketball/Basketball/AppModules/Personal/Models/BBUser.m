@@ -7,6 +7,7 @@
 //
 
 #import "BBUser.h"
+#import "BBDatabaseManager.h"
 
 static BBUser * _sharedCurrentUser;
 
@@ -24,10 +25,15 @@ static BBUser * _sharedCurrentUser;
 }
 
 + (BBModel *)currentUser {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _sharedCurrentUser = [[BBDatabaseManager sharedManager] retriveCurrentUser];
+    });
     return _sharedCurrentUser;
 }
 
 + (void)setCurrentUser:(BBUser *)user {
+    [[BBDatabaseManager sharedManager] saveCurrentUser:user];
     _sharedCurrentUser = user;
 }
 

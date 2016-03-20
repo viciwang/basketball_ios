@@ -89,7 +89,6 @@
 }
 
 - (void)handleSuccessTask:(NSURLSessionDataTask *)task responseObject:(id)responseObject responseModelClass:(Class)modelClass completionBlock:(BBNetworkResponseBlock)responseBlock {
-    DDLogInfo(@"接口访问成功：%@ \n %@",task.response.URL, responseObject);
     dispatch_async(self.parseQueue, ^{
         id dataObject = nil;
         if (modelClass) {
@@ -108,7 +107,6 @@
 }
 
 - (void)handleFailTask:(NSURLSessionDataTask *)task error:(NSError *)error completionBlock:(BBNetworkResponseBlock)responseBlock {
-    DDLogInfo(@"接口访问失败：%@ \n %@",task.response.URL, error);
     if (responseBlock) {
         responseBlock(nil, error);
     }

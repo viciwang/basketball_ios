@@ -2,8 +2,8 @@
 //  UIView+Utils.m
 //  wangying
 //
-//  Created by Ron on 15-12-31.
-//  Copyright (c) 2015 iOS. No rights reserved.
+//  Created by yingwang on 16/3/7.
+//  Copyright © 2016年 yingwang. All rights reserved.
 //
 
 #import "UIView+Utils.h"

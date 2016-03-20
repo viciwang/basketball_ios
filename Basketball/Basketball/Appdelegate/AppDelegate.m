@@ -11,6 +11,8 @@
 #import "FLEXManager.h"
 #import "BBDatabaseManager.h"
 #import "BBNetworkApiManager.h"
+#import "BBNavigationController.h"
+#import "BBLoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -27,11 +29,17 @@ const int ddLogLevel = DDLogLevelWarning;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[BBTabBarController new]];
-    [navigationController setNavigationBarHidden:YES];
+    UIViewController *controller = nil;
+    if (![BBUser currentUser]) {
+        controller = [[BBNavigationController alloc]initWithRootViewController:[BBLoginViewController create]];
+    }
+    else {
+        controller = [BBTabBarController new];
+    }
+    
     // 初始化页面
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = navigationController;
+    self.window.rootViewController = controller;
     [self.window makeKeyAndVisible];
     
     // debug

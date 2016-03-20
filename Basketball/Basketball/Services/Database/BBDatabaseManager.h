@@ -15,4 +15,6 @@
 
 - (BBUser *)retriveCurrentUser;
 
+- (BOOL)saveCurrentUser:(BBUser *)user;
+
 @end

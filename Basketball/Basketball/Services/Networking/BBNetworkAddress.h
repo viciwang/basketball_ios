@@ -9,7 +9,13 @@
 #ifndef BBNetworkAddress_h
 #define BBNetworkAddress_h
 
-#define kApiBaseUrl @"http://192.168.191.2:8081"
+//#define DEBUG_LOCAL_HOST "如果想要用localhost作为baseUrl，就注释掉这一行"
+
+#ifdef DEBUG_LOCAL_HOST
+  #define kApiBaseUrl @"http://192.168.191.2:8081"
+#else
+  #define kApiBaseUrl @"http://localhost:8000"
+#endif
 
 #define kApiTestAddress @"test.json"
 

@@ -22,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.hidesBottomBarWhenPushed = YES;
     self.tabBar.backgroundColor = [UIColor whiteColor];
     self.tabBar.tintColor = [UIColor colorWithRed:1/255.0 green:146/255.0 blue:201/255.0 alpha:1];
     self.tabBar.translucent = NO;
@@ -44,8 +45,6 @@
 #pragma mark - Setup SubViewController
 
 - (void)setupChildViewControllers {
-    UIImage *defaultImage = [UIImage imageNamed:@"icon_default_avatar"];
-    UIImage *selectedImage = [UIImage imageNamed:@"icon_great"];
     
     _gamesScoreViewController = [BBGamesScoreViewController create];
     

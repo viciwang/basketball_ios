@@ -9,6 +9,7 @@
 #import "BBGamesScoreViewController.h"
 #import "BBGamesScoreViewModel.h"
 #import "BBGamesScoreTableViewCell.h"
+#import "LCPageViewController.h"
 
 @interface BBGamesScoreViewController () <UITableViewDelegate,
                                           UITableViewDataSource,
@@ -123,7 +124,9 @@
     
     return 55;
 }
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 #pragma mark - table view datasource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;

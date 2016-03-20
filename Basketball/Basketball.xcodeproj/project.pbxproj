@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C82AEF524CB470AA962EF2F /* Pods_BasketballTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB4E0A70D8F5F7881A7B0AE6 /* Pods_BasketballTests.framework */; };
+		8447F708E038F5AE057B8C3D /* Pods_Basketball.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D6392DC447892E715F37F29 /* Pods_Basketball.framework */; };
 		9F1B638C1C944B5100C486B0 /* BBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9617D71C83EDC60078FB3C /* BBModel.m */; };
 		9F1B638D1C944B7500C486B0 /* BBResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F244CFB1C8527D500A388F6 /* BBResponseSerializer.m */; };
 		9F1B63941C9481B600C486B0 /* BBDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1B63931C9481B600C486B0 /* BBDatabaseManager.m */; };
@@ -52,8 +54,7 @@
 		9FDEF25D1C9E825300B629C5 /* BBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDEF25C1C9E825300B629C5 /* BBUser.m */; };
 		9FDEF2601C9E8DD900B629C5 /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDEF25F1C9E8DD900B629C5 /* UIViewController+HUD.m */; };
 		9FDEF2631C9EAD2C00B629C5 /* UIWindow+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDEF2621C9EAD2C00B629C5 /* UIWindow+Utils.m */; };
-		A561C348B4F4ED8E5B40916E /* Pods_BasketballUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DCE818E35F87A15C9DF53C /* Pods_BasketballUITests.framework */; };
-		B1A187AD7EE70415ABDA6A8B /* Pods_BasketballTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887329AE799F0622598BBE5B /* Pods_BasketballTests.framework */; };
+		9FF05EEB1C9EC1DC00BC13CA /* UIImage+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF05EEA1C9EC1DC00BC13CA /* UIImage+Utils.m */; };
 		C3584B011C9075C60087FF34 /* UIStoryboard+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = C3584AFC1C9075C60087FF34 /* UIStoryboard+Addition.m */; };
 		C3584B021C9075C60087FF34 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = C3584AFE1C9075C60087FF34 /* UIView+Utils.m */; };
 		C3584B031C9075C60087FF34 /* UIViewController+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = C3584B001C9075C60087FF34 /* UIViewController+Create.m */; };
@@ -93,7 +94,65 @@
 		C3584B541C9076220087FF34 /* TOR_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C3584B361C9076220087FF34 /* TOR_logo.png */; };
 		C3584B551C9076220087FF34 /* UTA_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C3584B371C9076220087FF34 /* UTA_logo.png */; };
 		C3584B561C9076220087FF34 /* WAS_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C3584B381C9076220087FF34 /* WAS_logo.png */; };
-		C5E74E3DA4A5DA3AF36C461C /* Pods_Basketball.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882AC8BAE67A1F277B460457 /* Pods_Basketball.framework */; };
+		C3F8A4D71C9D703F0086FF4B /* LCArticleContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A4B31C9D703F0086FF4B /* LCArticleContentViewController.m */; };
+		C3F8A4D81C9D703F0086FF4B /* LCArticleContentViewController_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3F8A4B41C9D703F0086FF4B /* LCArticleContentViewController_iPhone.storyboard */; };
+		C3F8A4D91C9D703F0086FF4B /* LCArticleContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A4B81C9D703F0086FF4B /* LCArticleContentViewModel.m */; };
+		C3F8A4DA1C9D703F0086FF4B /* LCArticleContentSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A4BB1C9D703F0086FF4B /* LCArticleContentSettingView.m */; };
+		C3F8A4DB1C9D703F0086FF4B /* LCArticleContentSettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F8A4BC1C9D703F0086FF4B /* LCArticleContentSettingView.xib */; };
+		C3F8A4DC1C9D703F0086FF4B /* LCArticleSinglePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A4C01C9D703F0086FF4B /* LCArticleSinglePageViewController.m */; };
+		C3F8A4DD1C9D703F0086FF4B /* LCArticleSinglePageViewController_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3F8A4C11C9D703F0086FF4B /* LCArticleSinglePageViewController_iPhone.storyboard */; };
+		C3F8A4DE1C9D703F0086FF4B /* LCPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A4C31C9D703F0086FF4B /* LCPageViewController.m */; };
+		C3F8A4DF1C9D703F0086FF4B /* LCArticleImageBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A4C81C9D703F0086FF4B /* LCArticleImageBoxView.m */; };
+		C3F8A4E01C9D703F0086FF4B /* LCArticleImageBoxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F8A4C91C9D703F0086FF4B /* LCArticleImageBoxView.xib */; };
+		C3F8A4E11C9D703F0086FF4B /* LCArticleTextBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A4CB1C9D703F0086FF4B /* LCArticleTextBoxView.m */; };
+		C3F8A4E21C9D703F0086FF4B /* LCArticleTextBoxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F8A4CC1C9D703F0086FF4B /* LCArticleTextBoxView.xib */; };
+		C3F8A4E31C9D703F0086FF4B /* LCArticlePageView+Style.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A4CF1C9D703F0086FF4B /* LCArticlePageView+Style.m */; };
+		C3F8A4E41C9D703F0086FF4B /* LCArticlePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A4D11C9D703F0086FF4B /* LCArticlePageView.m */; };
+		C3F8A4E51C9D703F0086FF4B /* LCArticlePageView1_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F8A4D21C9D703F0086FF4B /* LCArticlePageView1_iPhone.xib */; };
+		C3F8A4E61C9D703F0086FF4B /* LCArticlePageView2_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F8A4D31C9D703F0086FF4B /* LCArticlePageView2_iPhone.xib */; };
+		C3F8A4E71C9D703F0086FF4B /* LCFeedEntityPageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A4D61C9D703F0086FF4B /* LCFeedEntityPageViewModel.m */; };
+		C3F8A5301C9D72820086FF4B /* SDWebImageManager+Mutiple.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A4EC1C9D72820086FF4B /* SDWebImageManager+Mutiple.m */; };
+		C3F8A5311C9D72820086FF4B /* WYFeed+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A4EE1C9D72820086FF4B /* WYFeed+CoreDataProperties.m */; };
+		C3F8A5321C9D72820086FF4B /* WYFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A4F01C9D72820086FF4B /* WYFeed.m */; };
+		C3F8A5331C9D72820086FF4B /* WYFeedEntity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A4F21C9D72820086FF4B /* WYFeedEntity+CoreDataProperties.m */; };
+		C3F8A5341C9D72820086FF4B /* WYFeedEntity+VaildateArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A4F31C9D72820086FF4B /* WYFeedEntity+VaildateArticle.m */; };
+		C3F8A5351C9D72820086FF4B /* WYFeedEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A4F61C9D72820086FF4B /* WYFeedEntity.m */; };
+		C3F8A5361C9D72820086FF4B /* WYFeedManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A4F81C9D72820086FF4B /* WYFeedManager.m */; };
+		C3F8A5371C9D72820086FF4B /* WYFeedSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A4FB1C9D72820086FF4B /* WYFeedSerialization.m */; };
+		C3F8A5381C9D72820086FF4B /* WYHTTPRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A4FE1C9D72820086FF4B /* WYHTTPRequestManager.m */; };
+		C3F8A5391C9D72820086FF4B /* WYNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A5001C9D72820086FF4B /* WYNetworkingManager.m */; };
+		C3F8A53A1C9D72820086FF4B /* WYURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A5021C9D72820086FF4B /* WYURLSessionManager.m */; };
+		C3F8A53B1C9D72820086FF4B /* WYURLSessionTaskHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A5041C9D72820086FF4B /* WYURLSessionTaskHandler.m */; };
+		C3F8A53C1C9D72820086FF4B /* NSManagedObject+WYStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A5081C9D72820086FF4B /* NSManagedObject+WYStore.m */; };
+		C3F8A53D1C9D72820086FF4B /* NSManagedObject+WYStoreFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A50A1C9D72820086FF4B /* NSManagedObject+WYStoreFetch.m */; };
+		C3F8A53E1C9D72820086FF4B /* NSManagedObjectContext+WYStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A50C1C9D72820086FF4B /* NSManagedObjectContext+WYStore.m */; };
+		C3F8A53F1C9D72820086FF4B /* NSManagedObjectModel+WYStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A50E1C9D72820086FF4B /* NSManagedObjectModel+WYStore.m */; };
+		C3F8A5401C9D72820086FF4B /* NSPersistentStore+WYStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A5101C9D72820086FF4B /* NSPersistentStore+WYStore.m */; };
+		C3F8A5411C9D72820086FF4B /* NSPersistentStoreCoordinator+WYStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A5121C9D72820086FF4B /* NSPersistentStoreCoordinator+WYStore.m */; };
+		C3F8A5421C9D72820086FF4B /* WYStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A5151C9D72820086FF4B /* WYStore.m */; };
+		C3F8A5431C9D72820086FF4B /* WYFeedStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A5181C9D72820086FF4B /* WYFeedStore.m */; };
+		C3F8A5441C9D72820086FF4B /* TimeFormatterTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A51B1C9D72820086FF4B /* TimeFormatterTransform.m */; };
+		C3F8A5451C9D72820086FF4B /* WYXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A51E1C9D72820086FF4B /* WYXMLDocument.m */; };
+		C3F8A5461C9D72820086FF4B /* WYXMLParserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A5201C9D72820086FF4B /* WYXMLParserManager.m */; };
+		C3F8A5471C9D72820086FF4B /* WYXMLParserOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A5221C9D72820086FF4B /* WYXMLParserOperation.m */; };
+		C3F8A5481C9D72820086FF4B /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = C3F8A5241C9D72820086FF4B /* thumbnail.png */; };
+		C3F8A5491C9D72820086FF4B /* YaHei.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3F8A5251C9D72820086FF4B /* YaHei.ttf */; };
+		C3F8A54A1C9D72820086FF4B /* WYTextScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A52A1C9D72820086FF4B /* WYTextScrollView.m */; };
+		C3F8A54B1C9D72820086FF4B /* WYTeleTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A52D1C9D72820086FF4B /* WYTeleTextView.m */; };
+		C3F8A54C1C9D72820086FF4B /* WYTextContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A52F1C9D72820086FF4B /* WYTextContainer.m */; };
+		C3F8A5501C9D7E0A0086FF4B /* StatusBarAttentions.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A54F1C9D7E0A0086FF4B /* StatusBarAttentions.m */; };
+		C3F8A5591C9D80960086FF4B /* NewsRecourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A5541C9D80960086FF4B /* NewsRecourceViewController.m */; };
+		C3F8A55A1C9D80960086FF4B /* NewsRecourceViewController_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3F8A5551C9D80960086FF4B /* NewsRecourceViewController_iPhone.storyboard */; };
+		C3F8A55E1C9D81E80086FF4B /* Basketball.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A55C1C9D81E80086FF4B /* Basketball.xcdatamodeld */; };
+		C3F8A5601C9D85320086FF4B /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F8A55F1C9D85320086FF4B /* libxml2.tbd */; };
+		C3F8A5631C9D9ECC0086FF4B /* kaiti_GB2312.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3F8A5611C9D981B0086FF4B /* kaiti_GB2312.ttf */; };
+		C3F8A5641C9D9ECC0086FF4B /* songti.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3F8A5621C9D981B0086FF4B /* songti.ttf */; };
+		C3F8A56B1C9DA2AD0086FF4B /* BBArticleListViewController_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3F8A56A1C9DA2AD0086FF4B /* BBArticleListViewController_iPhone.storyboard */; };
+		C3F8A56E1C9DA41F0086FF4B /* BBArticleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A56D1C9DA41F0086FF4B /* BBArticleListViewController.m */; };
+		C3F8A5711C9DA43C0086FF4B /* BBArticleListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A5701C9DA43C0086FF4B /* BBArticleListViewCell.m */; };
+		C3FEE3891C9E411E000FCDBD /* BBArticleListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FEE3881C9E411E000FCDBD /* BBArticleListViewModel.m */; };
+		C3FEE38F1C9E7346000FCDBD /* UINavigationBar+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FEE38E1C9E7346000FCDBD /* UINavigationBar+Addition.m */; };
+		C625FB84273B2D85858FB2BA /* Pods_BasketballUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4F7B342AA976B75204BD566 /* Pods_BasketballUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,13 +173,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D1289D0FCCF9F7A978AF9AA /* Pods-Basketball.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Basketball.release.xcconfig"; path = "Pods/Target Support Files/Pods-Basketball/Pods-Basketball.release.xcconfig"; sourceTree = "<group>"; };
-		18ABF8C91032569967FB7FD3 /* Pods-BasketballUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasketballUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasketballUITests/Pods-BasketballUITests.release.xcconfig"; sourceTree = "<group>"; };
-		24DCE818E35F87A15C9DF53C /* Pods_BasketballUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasketballUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2EBBCE8ECFBB1AC10586E808 /* Pods-BasketballTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasketballTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasketballTests/Pods-BasketballTests.debug.xcconfig"; sourceTree = "<group>"; };
-		660EF624F264D7C9E5A7DE97 /* Pods-Basketball.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Basketball.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Basketball/Pods-Basketball.debug.xcconfig"; sourceTree = "<group>"; };
-		882AC8BAE67A1F277B460457 /* Pods_Basketball.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Basketball.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		887329AE799F0622598BBE5B /* Pods_BasketballTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasketballTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BF5D7110705CC5D3A052DF5 /* Pods-BasketballTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasketballTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasketballTests/Pods-BasketballTests.release.xcconfig"; sourceTree = "<group>"; };
+		6D6392DC447892E715F37F29 /* Pods_Basketball.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Basketball.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F48AA4A0B1B8EA5711ABB6C /* Pods-Basketball.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Basketball.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Basketball/Pods-Basketball.debug.xcconfig"; sourceTree = "<group>"; };
+		98E9B836D38D1C1CD9E8A4F7 /* Pods-BasketballUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasketballUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasketballUITests/Pods-BasketballUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9F1B63921C9481B600C486B0 /* BBDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBDatabaseManager.h; path = Database/BBDatabaseManager.h; sourceTree = "<group>"; };
 		9F1B63931C9481B600C486B0 /* BBDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBDatabaseManager.m; path = Database/BBDatabaseManager.m; sourceTree = "<group>"; };
 		9F244CF41C85279000A388F6 /* RACEXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACEXTScope.h; sourceTree = "<group>"; };
@@ -190,7 +246,10 @@
 		9FDEF25F1C9E8DD900B629C5 /* UIViewController+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HUD.m"; sourceTree = "<group>"; };
 		9FDEF2611C9EAD2C00B629C5 /* UIWindow+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Utils.h"; sourceTree = "<group>"; };
 		9FDEF2621C9EAD2C00B629C5 /* UIWindow+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Utils.m"; sourceTree = "<group>"; };
-		A8F627D85FA2A7BB946462FE /* Pods-BasketballUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasketballUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasketballUITests/Pods-BasketballUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9FF05EEA1C9EC1DC00BC13CA /* UIImage+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utils.m"; sourceTree = "<group>"; };
+		A1F89CE9CFD7462C0FE12EE3 /* Pods-BasketballUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasketballUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasketballUITests/Pods-BasketballUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		ADC83FAD308170906DC29C27 /* Pods-BasketballTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasketballTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasketballTests/Pods-BasketballTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BB4E0A70D8F5F7881A7B0AE6 /* Pods_BasketballTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasketballTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3584AFB1C9075C60087FF34 /* UIStoryboard+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+Addition.h"; sourceTree = "<group>"; };
 		C3584AFC1C9075C60087FF34 /* UIStoryboard+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+Addition.m"; sourceTree = "<group>"; };
 		C3584AFD1C9075C60087FF34 /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
@@ -237,7 +296,111 @@
 		C3584B361C9076220087FF34 /* TOR_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TOR_logo.png; sourceTree = "<group>"; };
 		C3584B371C9076220087FF34 /* UTA_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UTA_logo.png; sourceTree = "<group>"; };
 		C3584B381C9076220087FF34 /* WAS_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WAS_logo.png; sourceTree = "<group>"; };
-		FE2921DAFA9666A4CD058F6E /* Pods-BasketballTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasketballTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasketballTests/Pods-BasketballTests.release.xcconfig"; sourceTree = "<group>"; };
+		C3F8A4B21C9D703F0086FF4B /* LCArticleContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCArticleContentViewController.h; sourceTree = "<group>"; };
+		C3F8A4B31C9D703F0086FF4B /* LCArticleContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCArticleContentViewController.m; sourceTree = "<group>"; };
+		C3F8A4B41C9D703F0086FF4B /* LCArticleContentViewController_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LCArticleContentViewController_iPhone.storyboard; sourceTree = "<group>"; };
+		C3F8A4B71C9D703F0086FF4B /* LCArticleContentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCArticleContentViewModel.h; sourceTree = "<group>"; };
+		C3F8A4B81C9D703F0086FF4B /* LCArticleContentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCArticleContentViewModel.m; sourceTree = "<group>"; };
+		C3F8A4BA1C9D703F0086FF4B /* LCArticleContentSettingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCArticleContentSettingView.h; sourceTree = "<group>"; };
+		C3F8A4BB1C9D703F0086FF4B /* LCArticleContentSettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCArticleContentSettingView.m; sourceTree = "<group>"; };
+		C3F8A4BC1C9D703F0086FF4B /* LCArticleContentSettingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCArticleContentSettingView.xib; sourceTree = "<group>"; };
+		C3F8A4BF1C9D703F0086FF4B /* LCArticleSinglePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCArticleSinglePageViewController.h; sourceTree = "<group>"; };
+		C3F8A4C01C9D703F0086FF4B /* LCArticleSinglePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCArticleSinglePageViewController.m; sourceTree = "<group>"; };
+		C3F8A4C11C9D703F0086FF4B /* LCArticleSinglePageViewController_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LCArticleSinglePageViewController_iPhone.storyboard; sourceTree = "<group>"; };
+		C3F8A4C21C9D703F0086FF4B /* LCPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCPageViewController.h; sourceTree = "<group>"; };
+		C3F8A4C31C9D703F0086FF4B /* LCPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCPageViewController.m; sourceTree = "<group>"; };
+		C3F8A4C71C9D703F0086FF4B /* LCArticleImageBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCArticleImageBoxView.h; sourceTree = "<group>"; };
+		C3F8A4C81C9D703F0086FF4B /* LCArticleImageBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCArticleImageBoxView.m; sourceTree = "<group>"; };
+		C3F8A4C91C9D703F0086FF4B /* LCArticleImageBoxView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCArticleImageBoxView.xib; sourceTree = "<group>"; };
+		C3F8A4CA1C9D703F0086FF4B /* LCArticleTextBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCArticleTextBoxView.h; sourceTree = "<group>"; };
+		C3F8A4CB1C9D703F0086FF4B /* LCArticleTextBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCArticleTextBoxView.m; sourceTree = "<group>"; };
+		C3F8A4CC1C9D703F0086FF4B /* LCArticleTextBoxView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCArticleTextBoxView.xib; sourceTree = "<group>"; };
+		C3F8A4CE1C9D703F0086FF4B /* LCArticlePageView+Style.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LCArticlePageView+Style.h"; sourceTree = "<group>"; };
+		C3F8A4CF1C9D703F0086FF4B /* LCArticlePageView+Style.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LCArticlePageView+Style.m"; sourceTree = "<group>"; };
+		C3F8A4D01C9D703F0086FF4B /* LCArticlePageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCArticlePageView.h; sourceTree = "<group>"; };
+		C3F8A4D11C9D703F0086FF4B /* LCArticlePageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCArticlePageView.m; sourceTree = "<group>"; };
+		C3F8A4D21C9D703F0086FF4B /* LCArticlePageView1_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCArticlePageView1_iPhone.xib; sourceTree = "<group>"; };
+		C3F8A4D31C9D703F0086FF4B /* LCArticlePageView2_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCArticlePageView2_iPhone.xib; sourceTree = "<group>"; };
+		C3F8A4D51C9D703F0086FF4B /* LCFeedEntityPageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCFeedEntityPageViewModel.h; sourceTree = "<group>"; };
+		C3F8A4D61C9D703F0086FF4B /* LCFeedEntityPageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCFeedEntityPageViewModel.m; sourceTree = "<group>"; };
+		C3F8A4EB1C9D72820086FF4B /* SDWebImageManager+Mutiple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SDWebImageManager+Mutiple.h"; sourceTree = "<group>"; };
+		C3F8A4EC1C9D72820086FF4B /* SDWebImageManager+Mutiple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SDWebImageManager+Mutiple.m"; sourceTree = "<group>"; };
+		C3F8A4ED1C9D72820086FF4B /* WYFeed+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WYFeed+CoreDataProperties.h"; sourceTree = "<group>"; };
+		C3F8A4EE1C9D72820086FF4B /* WYFeed+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WYFeed+CoreDataProperties.m"; sourceTree = "<group>"; };
+		C3F8A4EF1C9D72820086FF4B /* WYFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYFeed.h; sourceTree = "<group>"; };
+		C3F8A4F01C9D72820086FF4B /* WYFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYFeed.m; sourceTree = "<group>"; };
+		C3F8A4F11C9D72820086FF4B /* WYFeedEntity+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WYFeedEntity+CoreDataProperties.h"; sourceTree = "<group>"; };
+		C3F8A4F21C9D72820086FF4B /* WYFeedEntity+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WYFeedEntity+CoreDataProperties.m"; sourceTree = "<group>"; };
+		C3F8A4F31C9D72820086FF4B /* WYFeedEntity+VaildateArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WYFeedEntity+VaildateArticle.m"; sourceTree = "<group>"; };
+		C3F8A4F41C9D72820086FF4B /* WYFeedEntity+ValidateArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WYFeedEntity+ValidateArticle.h"; sourceTree = "<group>"; };
+		C3F8A4F51C9D72820086FF4B /* WYFeedEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYFeedEntity.h; sourceTree = "<group>"; };
+		C3F8A4F61C9D72820086FF4B /* WYFeedEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYFeedEntity.m; sourceTree = "<group>"; };
+		C3F8A4F71C9D72820086FF4B /* WYFeedManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYFeedManager.h; sourceTree = "<group>"; };
+		C3F8A4F81C9D72820086FF4B /* WYFeedManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYFeedManager.m; sourceTree = "<group>"; };
+		C3F8A4FA1C9D72820086FF4B /* WYFeedSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYFeedSerialization.h; sourceTree = "<group>"; };
+		C3F8A4FB1C9D72820086FF4B /* WYFeedSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYFeedSerialization.m; sourceTree = "<group>"; };
+		C3F8A4FD1C9D72820086FF4B /* WYHTTPRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYHTTPRequestManager.h; sourceTree = "<group>"; };
+		C3F8A4FE1C9D72820086FF4B /* WYHTTPRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYHTTPRequestManager.m; sourceTree = "<group>"; };
+		C3F8A4FF1C9D72820086FF4B /* WYNetworkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNetworkingManager.h; sourceTree = "<group>"; };
+		C3F8A5001C9D72820086FF4B /* WYNetworkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNetworkingManager.m; sourceTree = "<group>"; };
+		C3F8A5011C9D72820086FF4B /* WYURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYURLSessionManager.h; sourceTree = "<group>"; };
+		C3F8A5021C9D72820086FF4B /* WYURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYURLSessionManager.m; sourceTree = "<group>"; };
+		C3F8A5031C9D72820086FF4B /* WYURLSessionTaskHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYURLSessionTaskHandler.h; sourceTree = "<group>"; };
+		C3F8A5041C9D72820086FF4B /* WYURLSessionTaskHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYURLSessionTaskHandler.m; sourceTree = "<group>"; };
+		C3F8A5071C9D72820086FF4B /* NSManagedObject+WYStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+WYStore.h"; sourceTree = "<group>"; };
+		C3F8A5081C9D72820086FF4B /* NSManagedObject+WYStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+WYStore.m"; sourceTree = "<group>"; };
+		C3F8A5091C9D72820086FF4B /* NSManagedObject+WYStoreFetch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+WYStoreFetch.h"; sourceTree = "<group>"; };
+		C3F8A50A1C9D72820086FF4B /* NSManagedObject+WYStoreFetch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+WYStoreFetch.m"; sourceTree = "<group>"; };
+		C3F8A50B1C9D72820086FF4B /* NSManagedObjectContext+WYStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+WYStore.h"; sourceTree = "<group>"; };
+		C3F8A50C1C9D72820086FF4B /* NSManagedObjectContext+WYStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+WYStore.m"; sourceTree = "<group>"; };
+		C3F8A50D1C9D72820086FF4B /* NSManagedObjectModel+WYStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectModel+WYStore.h"; sourceTree = "<group>"; };
+		C3F8A50E1C9D72820086FF4B /* NSManagedObjectModel+WYStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectModel+WYStore.m"; sourceTree = "<group>"; };
+		C3F8A50F1C9D72820086FF4B /* NSPersistentStore+WYStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSPersistentStore+WYStore.h"; sourceTree = "<group>"; };
+		C3F8A5101C9D72820086FF4B /* NSPersistentStore+WYStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSPersistentStore+WYStore.m"; sourceTree = "<group>"; };
+		C3F8A5111C9D72820086FF4B /* NSPersistentStoreCoordinator+WYStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSPersistentStoreCoordinator+WYStore.h"; sourceTree = "<group>"; };
+		C3F8A5121C9D72820086FF4B /* NSPersistentStoreCoordinator+WYStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSPersistentStoreCoordinator+WYStore.m"; sourceTree = "<group>"; };
+		C3F8A5131C9D72820086FF4B /* WYStore+Option.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WYStore+Option.h"; sourceTree = "<group>"; };
+		C3F8A5141C9D72820086FF4B /* WYStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYStore.h; sourceTree = "<group>"; };
+		C3F8A5151C9D72820086FF4B /* WYStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYStore.m; sourceTree = "<group>"; };
+		C3F8A5171C9D72820086FF4B /* WYFeedStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYFeedStore.h; sourceTree = "<group>"; };
+		C3F8A5181C9D72820086FF4B /* WYFeedStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYFeedStore.m; sourceTree = "<group>"; };
+		C3F8A51A1C9D72820086FF4B /* TimeFormatterTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeFormatterTransform.h; sourceTree = "<group>"; };
+		C3F8A51B1C9D72820086FF4B /* TimeFormatterTransform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeFormatterTransform.m; sourceTree = "<group>"; };
+		C3F8A51D1C9D72820086FF4B /* WYXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYXMLDocument.h; sourceTree = "<group>"; };
+		C3F8A51E1C9D72820086FF4B /* WYXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYXMLDocument.m; sourceTree = "<group>"; };
+		C3F8A51F1C9D72820086FF4B /* WYXMLParserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYXMLParserManager.h; sourceTree = "<group>"; };
+		C3F8A5201C9D72820086FF4B /* WYXMLParserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYXMLParserManager.m; sourceTree = "<group>"; };
+		C3F8A5211C9D72820086FF4B /* WYXMLParserOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYXMLParserOperation.h; sourceTree = "<group>"; };
+		C3F8A5221C9D72820086FF4B /* WYXMLParserOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYXMLParserOperation.m; sourceTree = "<group>"; };
+		C3F8A5241C9D72820086FF4B /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
+		C3F8A5251C9D72820086FF4B /* YaHei.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = YaHei.ttf; sourceTree = "<group>"; };
+		C3F8A5291C9D72820086FF4B /* WYTextScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTextScrollView.h; sourceTree = "<group>"; };
+		C3F8A52A1C9D72820086FF4B /* WYTextScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTextScrollView.m; sourceTree = "<group>"; };
+		C3F8A52C1C9D72820086FF4B /* WYTeleTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTeleTextView.h; sourceTree = "<group>"; };
+		C3F8A52D1C9D72820086FF4B /* WYTeleTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTeleTextView.m; sourceTree = "<group>"; };
+		C3F8A52E1C9D72820086FF4B /* WYTextContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTextContainer.h; sourceTree = "<group>"; };
+		C3F8A52F1C9D72820086FF4B /* WYTextContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTextContainer.m; sourceTree = "<group>"; };
+		C3F8A54E1C9D7E0A0086FF4B /* StatusBarAttentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusBarAttentions.h; sourceTree = "<group>"; };
+		C3F8A54F1C9D7E0A0086FF4B /* StatusBarAttentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusBarAttentions.m; sourceTree = "<group>"; };
+		C3F8A5531C9D80960086FF4B /* NewsRecourceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsRecourceViewController.h; sourceTree = "<group>"; };
+		C3F8A5541C9D80960086FF4B /* NewsRecourceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsRecourceViewController.m; sourceTree = "<group>"; };
+		C3F8A5551C9D80960086FF4B /* NewsRecourceViewController_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewsRecourceViewController_iPhone.storyboard; sourceTree = "<group>"; };
+		C3F8A55D1C9D81E80086FF4B /* Basketball.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Basketball.xcdatamodel; sourceTree = "<group>"; };
+		C3F8A55F1C9D85320086FF4B /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		C3F8A5611C9D981B0086FF4B /* kaiti_GB2312.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kaiti_GB2312.ttf; sourceTree = "<group>"; };
+		C3F8A5621C9D981B0086FF4B /* songti.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = songti.ttf; sourceTree = "<group>"; };
+		C3F8A56A1C9DA2AD0086FF4B /* BBArticleListViewController_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BBArticleListViewController_iPhone.storyboard; sourceTree = "<group>"; };
+		C3F8A56C1C9DA41F0086FF4B /* BBArticleListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBArticleListViewController.h; sourceTree = "<group>"; };
+		C3F8A56D1C9DA41F0086FF4B /* BBArticleListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBArticleListViewController.m; sourceTree = "<group>"; };
+		C3F8A56F1C9DA43C0086FF4B /* BBArticleListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBArticleListViewCell.h; sourceTree = "<group>"; };
+		C3F8A5701C9DA43C0086FF4B /* BBArticleListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBArticleListViewCell.m; sourceTree = "<group>"; };
+		C3FEE3871C9E411E000FCDBD /* BBArticleListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBArticleListViewModel.h; sourceTree = "<group>"; };
+		C3FEE3881C9E411E000FCDBD /* BBArticleListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBArticleListViewModel.m; sourceTree = "<group>"; };
+		C3FEE38A1C9E7158000FCDBD /* UIImage+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utils.h"; sourceTree = "<group>"; };
+		C3FEE38D1C9E7317000FCDBD /* UINavigationBar+Addition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Addition.h"; sourceTree = "<group>"; };
+		C3FEE38E1C9E7346000FCDBD /* UINavigationBar+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Addition.m"; sourceTree = "<group>"; };
+		C4F7B342AA976B75204BD566 /* Pods_BasketballUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasketballUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBC409B4DCC4D05B71C33D24 /* Pods-Basketball.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Basketball.release.xcconfig"; path = "Pods/Target Support Files/Pods-Basketball/Pods-Basketball.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,7 +408,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A561C348B4F4ED8E5B40916E /* Pods_BasketballUITests.framework in Frameworks */,
+				C625FB84273B2D85858FB2BA /* Pods_BasketballUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +416,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1A187AD7EE70415ABDA6A8B /* Pods_BasketballTests.framework in Frameworks */,
+				3C82AEF524CB470AA962EF2F /* Pods_BasketballTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,18 +424,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5E74E3DA4A5DA3AF36C461C /* Pods_Basketball.framework in Frameworks */,
+				C3F8A5601C9D85320086FF4B /* libxml2.tbd in Frameworks */,
+				8447F708E038F5AE057B8C3D /* Pods_Basketball.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58169B67DA6756B40D59B63C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8A55F1C9D85320086FF4B /* libxml2.tbd */,
+				6D6392DC447892E715F37F29 /* Pods_Basketball.framework */,
+				BB4E0A70D8F5F7881A7B0AE6 /* Pods_BasketballTests.framework */,
+				C4F7B342AA976B75204BD566 /* Pods_BasketballUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9F1B63911C9480C200C486B0 /* Database */ = {
 			isa = PBXGroup;
 			children = (
 				9F1B63921C9481B600C486B0 /* BBDatabaseManager.h */,
 				9F1B63931C9481B600C486B0 /* BBDatabaseManager.m */,
+				C3F8A55C1C9D81E80086FF4B /* Basketball.xcdatamodeld */,
 			);
 			name = Database;
 			sourceTree = "<group>";
@@ -383,8 +559,8 @@
 				9F9394711C88AC80009E6DDF /* BasketballUITests */,
 				9F93947F1C88AC8C009E6DDF /* BasketballTests */,
 				9F9617681C83D6B00078FB3C /* Products */,
-				C4730757E71590C0C361FDFC /* Pods */,
-				CC3696FEECE8FADBF2461180 /* Frameworks */,
+				AB599CBE0878A762D95FB102 /* Pods */,
+				58169B67DA6756B40D59B63C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -424,6 +600,7 @@
 		9F9617B71C83E9440078FB3C /* AppModules */ = {
 			isa = PBXGroup;
 			children = (
+				C3F8A4AF1C9D703F0086FF4B /* Article */,
 				9F1B63951C94855B00C486B0 /* Personal */,
 				C3584B041C9075D80087FF34 /* GameScore */,
 				9F9617B81C83E9440078FB3C /* Base */,
@@ -579,6 +756,7 @@
 		9F9617CB1C83E9440078FB3C /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				C3F8A4E81C9D72820086FF4B /* WYKit */,
 				9F244CF21C85279000A388F6 /* Constant */,
 			);
 			path = Vendors;
@@ -599,6 +777,19 @@
 			children = (
 			);
 			name = Views;
+			sourceTree = "<unknown>";
+		};
+		AB599CBE0878A762D95FB102 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F48AA4A0B1B8EA5711ABB6C /* Pods-Basketball.debug.xcconfig */,
+				FBC409B4DCC4D05B71C33D24 /* Pods-Basketball.release.xcconfig */,
+				ADC83FAD308170906DC29C27 /* Pods-BasketballTests.debug.xcconfig */,
+				5BF5D7110705CC5D3A052DF5 /* Pods-BasketballTests.release.xcconfig */,
+				A1F89CE9CFD7462C0FE12EE3 /* Pods-BasketballUITests.debug.xcconfig */,
+				98E9B836D38D1C1CD9E8A4F7 /* Pods-BasketballUITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		C3584AFA1C9075C60087FF34 /* Category */ = {
@@ -606,6 +797,8 @@
 			children = (
 				9FDEF25E1C9E8DD900B629C5 /* UIViewController+HUD.h */,
 				9FDEF25F1C9E8DD900B629C5 /* UIViewController+HUD.m */,
+				C3FEE38D1C9E7317000FCDBD /* UINavigationBar+Addition.h */,
+				C3FEE38E1C9E7346000FCDBD /* UINavigationBar+Addition.m */,
 				C3584AFB1C9075C60087FF34 /* UIStoryboard+Addition.h */,
 				C3584AFC1C9075C60087FF34 /* UIStoryboard+Addition.m */,
 				C3584AFD1C9075C60087FF34 /* UIView+Utils.h */,
@@ -614,6 +807,8 @@
 				C3584B001C9075C60087FF34 /* UIViewController+Create.m */,
 				9FDEF2611C9EAD2C00B629C5 /* UIWindow+Utils.h */,
 				9FDEF2621C9EAD2C00B629C5 /* UIWindow+Utils.m */,
+				C3FEE38A1C9E7158000FCDBD /* UIImage+Utils.h */,
+				9FF05EEA1C9EC1DC00BC13CA /* UIImage+Utils.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -712,27 +907,396 @@
 			path = nba_logo;
 			sourceTree = "<group>";
 		};
-		C4730757E71590C0C361FDFC /* Pods */ = {
+		C3F8A4AF1C9D703F0086FF4B /* Article */ = {
 			isa = PBXGroup;
 			children = (
-				660EF624F264D7C9E5A7DE97 /* Pods-Basketball.debug.xcconfig */,
-				0D1289D0FCCF9F7A978AF9AA /* Pods-Basketball.release.xcconfig */,
-				2EBBCE8ECFBB1AC10586E808 /* Pods-BasketballTests.debug.xcconfig */,
-				FE2921DAFA9666A4CD058F6E /* Pods-BasketballTests.release.xcconfig */,
-				A8F627D85FA2A7BB946462FE /* Pods-BasketballUITests.debug.xcconfig */,
-				18ABF8C91032569967FB7FD3 /* Pods-BasketballUITests.release.xcconfig */,
+				C3F8A5651C9DA2830086FF4B /* ArticleSource */,
+				C3F8A5511C9D80960086FF4B /* WebView */,
+				C3F8A4B01C9D703F0086FF4B /* ArticleContent */,
+				C3F8A4BD1C9D703F0086FF4B /* ArticleTable */,
 			);
-			name = Pods;
+			path = Article;
 			sourceTree = "<group>";
 		};
-		CC3696FEECE8FADBF2461180 /* Frameworks */ = {
+		C3F8A4B01C9D703F0086FF4B /* ArticleContent */ = {
 			isa = PBXGroup;
 			children = (
-				882AC8BAE67A1F277B460457 /* Pods_Basketball.framework */,
-				887329AE799F0622598BBE5B /* Pods_BasketballTests.framework */,
-				24DCE818E35F87A15C9DF53C /* Pods_BasketballUITests.framework */,
+				C3F8A4B11C9D703F0086FF4B /* Controllers */,
+				C3F8A4B51C9D703F0086FF4B /* Models */,
+				C3F8A4B61C9D703F0086FF4B /* ViewModels */,
+				C3F8A4B91C9D703F0086FF4B /* VIews */,
 			);
-			name = Frameworks;
+			path = ArticleContent;
+			sourceTree = "<group>";
+		};
+		C3F8A4B11C9D703F0086FF4B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8A4B21C9D703F0086FF4B /* LCArticleContentViewController.h */,
+				C3F8A4B31C9D703F0086FF4B /* LCArticleContentViewController.m */,
+				C3F8A4B41C9D703F0086FF4B /* LCArticleContentViewController_iPhone.storyboard */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C3F8A4B51C9D703F0086FF4B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C3F8A4B61C9D703F0086FF4B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8A4B71C9D703F0086FF4B /* LCArticleContentViewModel.h */,
+				C3F8A4B81C9D703F0086FF4B /* LCArticleContentViewModel.m */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C3F8A4B91C9D703F0086FF4B /* VIews */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8A4BA1C9D703F0086FF4B /* LCArticleContentSettingView.h */,
+				C3F8A4BB1C9D703F0086FF4B /* LCArticleContentSettingView.m */,
+				C3F8A4BC1C9D703F0086FF4B /* LCArticleContentSettingView.xib */,
+			);
+			path = VIews;
+			sourceTree = "<group>";
+		};
+		C3F8A4BD1C9D703F0086FF4B /* ArticleTable */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8A4BE1C9D703F0086FF4B /* Controller */,
+				C3F8A4C41C9D703F0086FF4B /* Model */,
+				C3F8A4C51C9D703F0086FF4B /* View */,
+				C3F8A4D41C9D703F0086FF4B /* ViewModels */,
+			);
+			path = ArticleTable;
+			sourceTree = "<group>";
+		};
+		C3F8A4BE1C9D703F0086FF4B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8A4BF1C9D703F0086FF4B /* LCArticleSinglePageViewController.h */,
+				C3F8A4C01C9D703F0086FF4B /* LCArticleSinglePageViewController.m */,
+				C3F8A4C11C9D703F0086FF4B /* LCArticleSinglePageViewController_iPhone.storyboard */,
+				C3F8A4C21C9D703F0086FF4B /* LCPageViewController.h */,
+				C3F8A4C31C9D703F0086FF4B /* LCPageViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C3F8A4C41C9D703F0086FF4B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C3F8A4C51C9D703F0086FF4B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8A4C61C9D703F0086FF4B /* Cell */,
+				C3F8A4CD1C9D703F0086FF4B /* Page */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C3F8A4C61C9D703F0086FF4B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8A4C71C9D703F0086FF4B /* LCArticleImageBoxView.h */,
+				C3F8A4C81C9D703F0086FF4B /* LCArticleImageBoxView.m */,
+				C3F8A4C91C9D703F0086FF4B /* LCArticleImageBoxView.xib */,
+				C3F8A4CA1C9D703F0086FF4B /* LCArticleTextBoxView.h */,
+				C3F8A4CB1C9D703F0086FF4B /* LCArticleTextBoxView.m */,
+				C3F8A4CC1C9D703F0086FF4B /* LCArticleTextBoxView.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		C3F8A4CD1C9D703F0086FF4B /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8A4CE1C9D703F0086FF4B /* LCArticlePageView+Style.h */,
+				C3F8A4CF1C9D703F0086FF4B /* LCArticlePageView+Style.m */,
+				C3F8A4D01C9D703F0086FF4B /* LCArticlePageView.h */,
+				C3F8A4D11C9D703F0086FF4B /* LCArticlePageView.m */,
+				C3F8A4D21C9D703F0086FF4B /* LCArticlePageView1_iPhone.xib */,
+				C3F8A4D31C9D703F0086FF4B /* LCArticlePageView2_iPhone.xib */,
+			);
+			path = Page;
+			sourceTree = "<group>";
+		};
+		C3F8A4D41C9D703F0086FF4B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8A4D51C9D703F0086FF4B /* LCFeedEntityPageViewModel.h */,
+				C3F8A4D61C9D703F0086FF4B /* LCFeedEntityPageViewModel.m */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C3F8A4E81C9D72820086FF4B /* WYKit */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8A4E91C9D72820086FF4B /* BaseComponent */,
+				C3F8A5231C9D72820086FF4B /* resource */,
+				C3F8A5261C9D72820086FF4B /* UIComponent */,
+			);
+			path = WYKit;
+			sourceTree = "<group>";
+		};
+		C3F8A4E91C9D72820086FF4B /* BaseComponent */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8A4EA1C9D72820086FF4B /* FeedManager */,
+				C3F8A4F91C9D72820086FF4B /* FeedSerilizer */,
+				C3F8A4FC1C9D72820086FF4B /* Networking */,
+				C3F8A5051C9D72820086FF4B /* Store */,
+				C3F8A5191C9D72820086FF4B /* TimeTransiform */,
+				C3F8A51C1C9D72820086FF4B /* XMLParser */,
+			);
+			path = BaseComponent;
+			sourceTree = "<group>";
+		};
+		C3F8A4EA1C9D72820086FF4B /* FeedManager */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8A4EB1C9D72820086FF4B /* SDWebImageManager+Mutiple.h */,
+				C3F8A4EC1C9D72820086FF4B /* SDWebImageManager+Mutiple.m */,
+				C3F8A4ED1C9D72820086FF4B /* WYFeed+CoreDataProperties.h */,
+				C3F8A4EE1C9D72820086FF4B /* WYFeed+CoreDataProperties.m */,
+				C3F8A4EF1C9D72820086FF4B /* WYFeed.h */,
+				C3F8A4F01C9D72820086FF4B /* WYFeed.m */,
+				C3F8A4F11C9D72820086FF4B /* WYFeedEntity+CoreDataProperties.h */,
+				C3F8A4F21C9D72820086FF4B /* WYFeedEntity+CoreDataProperties.m */,
+				C3F8A4F31C9D72820086FF4B /* WYFeedEntity+VaildateArticle.m */,
+				C3F8A4F41C9D72820086FF4B /* WYFeedEntity+ValidateArticle.h */,
+				C3F8A4F51C9D72820086FF4B /* WYFeedEntity.h */,
+				C3F8A4F61C9D72820086FF4B /* WYFeedEntity.m */,
+				C3F8A4F71C9D72820086FF4B /* WYFeedManager.h */,
+				C3F8A4F81C9D72820086FF4B /* WYFeedManager.m */,
+			);
+			path = FeedManager;
+			sourceTree = "<group>";
+		};
+		C3F8A4F91C9D72820086FF4B /* FeedSerilizer */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8A4FA1C9D72820086FF4B /* WYFeedSerialization.h */,
+				C3F8A4FB1C9D72820086FF4B /* WYFeedSerialization.m */,
+			);
+			path = FeedSerilizer;
+			sourceTree = "<group>";
+		};
+		C3F8A4FC1C9D72820086FF4B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8A4FD1C9D72820086FF4B /* WYHTTPRequestManager.h */,
+				C3F8A4FE1C9D72820086FF4B /* WYHTTPRequestManager.m */,
+				C3F8A4FF1C9D72820086FF4B /* WYNetworkingManager.h */,
+				C3F8A5001C9D72820086FF4B /* WYNetworkingManager.m */,
+				C3F8A5011C9D72820086FF4B /* WYURLSessionManager.h */,
+				C3F8A5021C9D72820086FF4B /* WYURLSessionManager.m */,
+				C3F8A5031C9D72820086FF4B /* WYURLSessionTaskHandler.h */,
+				C3F8A5041C9D72820086FF4B /* WYURLSessionTaskHandler.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C3F8A5051C9D72820086FF4B /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8A5061C9D72820086FF4B /* CoreData */,
+				C3F8A5161C9D72820086FF4B /* WYFeedStore */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		C3F8A5061C9D72820086FF4B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8A5071C9D72820086FF4B /* NSManagedObject+WYStore.h */,
+				C3F8A5081C9D72820086FF4B /* NSManagedObject+WYStore.m */,
+				C3F8A5091C9D72820086FF4B /* NSManagedObject+WYStoreFetch.h */,
+				C3F8A50A1C9D72820086FF4B /* NSManagedObject+WYStoreFetch.m */,
+				C3F8A50B1C9D72820086FF4B /* NSManagedObjectContext+WYStore.h */,
+				C3F8A50C1C9D72820086FF4B /* NSManagedObjectContext+WYStore.m */,
+				C3F8A50D1C9D72820086FF4B /* NSManagedObjectModel+WYStore.h */,
+				C3F8A50E1C9D72820086FF4B /* NSManagedObjectModel+WYStore.m */,
+				C3F8A50F1C9D72820086FF4B /* NSPersistentStore+WYStore.h */,
+				C3F8A5101C9D72820086FF4B /* NSPersistentStore+WYStore.m */,
+				C3F8A5111C9D72820086FF4B /* NSPersistentStoreCoordinator+WYStore.h */,
+				C3F8A5121C9D72820086FF4B /* NSPersistentStoreCoordinator+WYStore.m */,
+				C3F8A5131C9D72820086FF4B /* WYStore+Option.h */,
+				C3F8A5141C9D72820086FF4B /* WYStore.h */,
+				C3F8A5151C9D72820086FF4B /* WYStore.m */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		C3F8A5161C9D72820086FF4B /* WYFeedStore */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8A5171C9D72820086FF4B /* WYFeedStore.h */,
+				C3F8A5181C9D72820086FF4B /* WYFeedStore.m */,
+			);
+			path = WYFeedStore;
+			sourceTree = "<group>";
+		};
+		C3F8A5191C9D72820086FF4B /* TimeTransiform */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8A51A1C9D72820086FF4B /* TimeFormatterTransform.h */,
+				C3F8A51B1C9D72820086FF4B /* TimeFormatterTransform.m */,
+			);
+			path = TimeTransiform;
+			sourceTree = "<group>";
+		};
+		C3F8A51C1C9D72820086FF4B /* XMLParser */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8A51D1C9D72820086FF4B /* WYXMLDocument.h */,
+				C3F8A51E1C9D72820086FF4B /* WYXMLDocument.m */,
+				C3F8A51F1C9D72820086FF4B /* WYXMLParserManager.h */,
+				C3F8A5201C9D72820086FF4B /* WYXMLParserManager.m */,
+				C3F8A5211C9D72820086FF4B /* WYXMLParserOperation.h */,
+				C3F8A5221C9D72820086FF4B /* WYXMLParserOperation.m */,
+			);
+			path = XMLParser;
+			sourceTree = "<group>";
+		};
+		C3F8A5231C9D72820086FF4B /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8A5241C9D72820086FF4B /* thumbnail.png */,
+				C3F8A5611C9D981B0086FF4B /* kaiti_GB2312.ttf */,
+				C3F8A5621C9D981B0086FF4B /* songti.ttf */,
+				C3F8A5251C9D72820086FF4B /* YaHei.ttf */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+		C3F8A5261C9D72820086FF4B /* UIComponent */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8A54D1C9D7E0A0086FF4B /* FRStatusBar */,
+				C3F8A5271C9D72820086FF4B /* TextScrollView */,
+			);
+			path = UIComponent;
+			sourceTree = "<group>";
+		};
+		C3F8A5271C9D72820086FF4B /* TextScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8A5281C9D72820086FF4B /* CompositeTextView */,
+				C3F8A52B1C9D72820086FF4B /* SingleTextView */,
+			);
+			path = TextScrollView;
+			sourceTree = "<group>";
+		};
+		C3F8A5281C9D72820086FF4B /* CompositeTextView */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8A5291C9D72820086FF4B /* WYTextScrollView.h */,
+				C3F8A52A1C9D72820086FF4B /* WYTextScrollView.m */,
+			);
+			path = CompositeTextView;
+			sourceTree = "<group>";
+		};
+		C3F8A52B1C9D72820086FF4B /* SingleTextView */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8A52C1C9D72820086FF4B /* WYTeleTextView.h */,
+				C3F8A52D1C9D72820086FF4B /* WYTeleTextView.m */,
+				C3F8A52E1C9D72820086FF4B /* WYTextContainer.h */,
+				C3F8A52F1C9D72820086FF4B /* WYTextContainer.m */,
+			);
+			path = SingleTextView;
+			sourceTree = "<group>";
+		};
+		C3F8A54D1C9D7E0A0086FF4B /* FRStatusBar */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8A54E1C9D7E0A0086FF4B /* StatusBarAttentions.h */,
+				C3F8A54F1C9D7E0A0086FF4B /* StatusBarAttentions.m */,
+			);
+			path = FRStatusBar;
+			sourceTree = "<group>";
+		};
+		C3F8A5511C9D80960086FF4B /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8A5521C9D80960086FF4B /* Controller */,
+				C3F8A5561C9D80960086FF4B /* View */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		C3F8A5521C9D80960086FF4B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8A5531C9D80960086FF4B /* NewsRecourceViewController.h */,
+				C3F8A5541C9D80960086FF4B /* NewsRecourceViewController.m */,
+				C3F8A5551C9D80960086FF4B /* NewsRecourceViewController_iPhone.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C3F8A5561C9D80960086FF4B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C3F8A5651C9DA2830086FF4B /* ArticleSource */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8A5661C9DA2830086FF4B /* Models */,
+				C3F8A5671C9DA2830086FF4B /* ViewControllers */,
+				C3F8A5681C9DA2830086FF4B /* ViewModels */,
+				C3F8A5691C9DA2830086FF4B /* Views */,
+			);
+			path = ArticleSource;
+			sourceTree = "<group>";
+		};
+		C3F8A5661C9DA2830086FF4B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C3F8A5671C9DA2830086FF4B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8A56A1C9DA2AD0086FF4B /* BBArticleListViewController_iPhone.storyboard */,
+				C3F8A56C1C9DA41F0086FF4B /* BBArticleListViewController.h */,
+				C3F8A56D1C9DA41F0086FF4B /* BBArticleListViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C3F8A5681C9DA2830086FF4B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C3FEE3871C9E411E000FCDBD /* BBArticleListViewModel.h */,
+				C3FEE3881C9E411E000FCDBD /* BBArticleListViewModel.m */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C3F8A5691C9DA2830086FF4B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8A56F1C9DA43C0086FF4B /* BBArticleListViewCell.h */,
+				C3F8A5701C9DA43C0086FF4B /* BBArticleListViewCell.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -742,11 +1306,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F9394771C88AC80009E6DDF /* Build configuration list for PBXNativeTarget "BasketballUITests" */;
 			buildPhases = (
-				D68D1902D8C31F98712603A4 /* Check Pods Manifest.lock */,
+				6065C2D0D8F3E0C1DC935F5A /* Check Pods Manifest.lock */,
 				9F93946C1C88AC80009E6DDF /* Sources */,
 				9F93946D1C88AC80009E6DDF /* Frameworks */,
 				9F93946E1C88AC80009E6DDF /* Resources */,
-				00FB3E3429F1E3FADC13AD53 /* Copy Pods Resources */,
+				0ED38A43E64A3F70C4B561D4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -762,12 +1326,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F9394851C88AC8C009E6DDF /* Build configuration list for PBXNativeTarget "BasketballTests" */;
 			buildPhases = (
-				3CCFBCAFBB1BA53C524E6A98 /* Check Pods Manifest.lock */,
+				9A633EFBB850937C9B8063A6 /* Check Pods Manifest.lock */,
 				9F93947A1C88AC8C009E6DDF /* Sources */,
 				9F93947B1C88AC8C009E6DDF /* Frameworks */,
 				9F93947C1C88AC8C009E6DDF /* Resources */,
-				19DC9C5DBE1D01FA65C18423 /* Embed Pods Frameworks */,
-				F8E3EA20AB626EB8C320F2EE /* Copy Pods Resources */,
+				D9EBB854E381A0C4DC2101EA /* Embed Pods Frameworks */,
+				05CCFC92179354BA47821EA9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -783,12 +1347,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F9617941C83D6B10078FB3C /* Build configuration list for PBXNativeTarget "Basketball" */;
 			buildPhases = (
-				37A70C14040D45170F995203 /* Check Pods Manifest.lock */,
+				E2A8E45DBC830A37DB937A73 /* Check Pods Manifest.lock */,
 				9F9617631C83D6B00078FB3C /* Sources */,
 				9F9617641C83D6B00078FB3C /* Frameworks */,
 				9F9617651C83D6B00078FB3C /* Resources */,
-				BF783BFBFCB8A7254E36F2A9 /* Embed Pods Frameworks */,
-				0D6EF2060EF78E97E15C7F3F /* Copy Pods Resources */,
+				8C6695DA00A6B366849403C9 /* Embed Pods Frameworks */,
+				79F9A235B643ECB8F4EE306D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -818,7 +1382,7 @@
 					};
 					9F9617661C83D6B00078FB3C = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = JX5LFX27DB;
+						DevelopmentTeam = MY5Q8FA2DZ;
 					};
 				};
 			};
@@ -861,16 +1425,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3F8A5631C9D9ECC0086FF4B /* kaiti_GB2312.ttf in Resources */,
+				C3F8A56B1C9DA2AD0086FF4B /* BBArticleListViewController_iPhone.storyboard in Resources */,
+				C3F8A5641C9D9ECC0086FF4B /* songti.ttf in Resources */,
+				C3F8A5491C9D72820086FF4B /* YaHei.ttf in Resources */,
 				C3584B3D1C9076220087FF34 /* CHI_logo.png in Resources */,
+				C3F8A4DD1C9D703F0086FF4B /* LCArticleSinglePageViewController_iPhone.storyboard in Resources */,
 				9F9617CF1C83E9440078FB3C /* Assets.xcassets in Resources */,
 				C3584B401C9076220087FF34 /* DEN_logo.png in Resources */,
 				C3584B4B1C9076220087FF34 /* NOP_logo.png in Resources */,
 				C3584B541C9076220087FF34 /* TOR_logo.png in Resources */,
+				C3F8A4DB1C9D703F0086FF4B /* LCArticleContentSettingView.xib in Resources */,
 				C3584B3B1C9076220087FF34 /* BOS_logo.png in Resources */,
 				C3584B561C9076220087FF34 /* WAS_logo.png in Resources */,
 				C3584B3E1C9076220087FF34 /* CLE_logo.png in Resources */,
 				C3584B531C9076220087FF34 /* SAS_logo.png in Resources */,
 				C3584B391C9076220087FF34 /* ATL_logo.png in Resources */,
+				C3F8A55A1C9D80960086FF4B /* NewsRecourceViewController_iPhone.storyboard in Resources */,
 				C3584B501C9076220087FF34 /* PHX_logo.png in Resources */,
 				9FDEF24D1C9D6AA700B629C5 /* BBStepCountingRollView.xib in Resources */,
 				C3584B411C9076220087FF34 /* DET_logo.png in Resources */,
@@ -880,15 +1451,21 @@
 				C3584B551C9076220087FF34 /* UTA_logo.png in Resources */,
 				C3584B3C1C9076220087FF34 /* CHA_logo.png in Resources */,
 				C3584B491C9076220087FF34 /* MIL_logo.png in Resources */,
+				C3F8A5481C9D72820086FF4B /* thumbnail.png in Resources */,
+				C3F8A4E61C9D703F0086FF4B /* LCArticlePageView2_iPhone.xib in Resources */,
+				C3F8A4E21C9D703F0086FF4B /* LCArticleTextBoxView.xib in Resources */,
+				C3F8A4E01C9D703F0086FF4B /* LCArticleImageBoxView.xib in Resources */,
 				C3584B4F1C9076220087FF34 /* PHI_logo.png in Resources */,
 				C3584B4E1C9076220087FF34 /* ORL_logo.png in Resources */,
 				C3584B521C9076220087FF34 /* SAC_logo.png in Resources */,
 				9FDEF25A1C9E822500B629C5 /* BBLoginViewController_iPhone.storyboard in Resources */,
 				C3584B191C9075D80087FF34 /* BBGamesScoreViewController_iPhone.storyboard in Resources */,
+				C3F8A4E51C9D703F0086FF4B /* LCArticlePageView1_iPhone.xib in Resources */,
 				C3584B481C9076220087FF34 /* MIA_logo.png in Resources */,
 				C3584B431C9076220087FF34 /* HOU_logo.png in Resources */,
 				C3584B4D1C9076220087FF34 /* OKC_logo.png in Resources */,
 				C3584B461C9076220087FF34 /* LAL_logo.png in Resources */,
+				C3F8A4D81C9D703F0086FF4B /* LCArticleContentViewController_iPhone.storyboard in Resources */,
 				C3584B451C9076220087FF34 /* LAC_logo.png in Resources */,
 				C3584B441C9076220087FF34 /* IND_logo.png in Resources */,
 				9F9617D01C83E9440078FB3C /* LaunchScreen.storyboard in Resources */,
@@ -903,7 +1480,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		00FB3E3429F1E3FADC13AD53 /* Copy Pods Resources */ = {
+		05CCFC92179354BA47821EA9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BasketballTests/Pods-BasketballTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0ED38A43E64A3F70C4B561D4 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -918,7 +1510,22 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BasketballUITests/Pods-BasketballUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		0D6EF2060EF78E97E15C7F3F /* Copy Pods Resources */ = {
+		6065C2D0D8F3E0C1DC935F5A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		79F9A235B643ECB8F4EE306D /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -933,52 +1540,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Basketball/Pods-Basketball-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		19DC9C5DBE1D01FA65C18423 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BasketballTests/Pods-BasketballTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		37A70C14040D45170F995203 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		3CCFBCAFBB1BA53C524E6A98 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		BF783BFBFCB8A7254E36F2A9 /* Embed Pods Frameworks */ = {
+		8C6695DA00A6B366849403C9 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -993,7 +1555,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Basketball/Pods-Basketball-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D68D1902D8C31F98712603A4 /* Check Pods Manifest.lock */ = {
+		9A633EFBB850937C9B8063A6 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1008,19 +1570,34 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		F8E3EA20AB626EB8C320F2EE /* Copy Pods Resources */ = {
+		D9EBB854E381A0C4DC2101EA /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BasketballTests/Pods-BasketballTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BasketballTests/Pods-BasketballTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2A8E45DBC830A37DB937A73 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1063,33 +1640,78 @@
 				9F1B638D1C944B7500C486B0 /* BBResponseSerializer.m in Sources */,
 				9FDEF2601C9E8DD900B629C5 /* UIViewController+HUD.m in Sources */,
 				9F9394A31C89611F009E6DDF /* BBStepCountingTabBarView.m in Sources */,
+				9FF05EEB1C9EC1DC00BC13CA /* UIImage+Utils.m in Sources */,
+				C3F8A55E1C9D81E80086FF4B /* Basketball.xcdatamodeld in Sources */,
 				9FDEF2451C9C15A600B629C5 /* BBStepCountingRollView.m in Sources */,
 				9F9617DB1C83EDEE0078FB3C /* BBBaseViewController.m in Sources */,
 				9FDEF25D1C9E825300B629C5 /* BBUser.m in Sources */,
+				C3F8A4DC1C9D703F0086FF4B /* LCArticleSinglePageViewController.m in Sources */,
+				C3F8A54C1C9D72820086FF4B /* WYTextContainer.m in Sources */,
+				C3F8A5331C9D72820086FF4B /* WYFeedEntity+CoreDataProperties.m in Sources */,
+				C3F8A5351C9D72820086FF4B /* WYFeedEntity.m in Sources */,
 				9F9617D21C83E9440078FB3C /* main.m in Sources */,
+				C3F8A4E11C9D703F0086FF4B /* LCArticleTextBoxView.m in Sources */,
 				9F2EA0361C9C10960053A802 /* BBStepCountingMineViewController.m in Sources */,
 				9F1B638C1C944B5100C486B0 /* BBModel.m in Sources */,
+				C3F8A5361C9D72820086FF4B /* WYFeedManager.m in Sources */,
+				C3F8A5591C9D80960086FF4B /* NewsRecourceViewController.m in Sources */,
 				9F9394AD1C89E245009E6DDF /* NSDate+Utilities.m in Sources */,
+				C3F8A5311C9D72820086FF4B /* WYFeed+CoreDataProperties.m in Sources */,
 				9F9394541C8893C9009E6DDF /* BBStepCountingMainViewController.m in Sources */,
+				C3F8A4E71C9D703F0086FF4B /* LCFeedEntityPageViewModel.m in Sources */,
 				C3584B141C9075D80087FF34 /* BBGamesScore.m in Sources */,
 				C3584B031C9075C60087FF34 /* UIViewController+Create.m in Sources */,
+				C3F8A54A1C9D72820086FF4B /* WYTextScrollView.m in Sources */,
+				C3F8A4E41C9D703F0086FF4B /* LCArticlePageView.m in Sources */,
 				C3584B171C9075D80087FF34 /* BBGamesScoreTableViewCell.m in Sources */,
+				C3F8A5441C9D72820086FF4B /* TimeFormatterTransform.m in Sources */,
 				9F1B63941C9481B600C486B0 /* BBDatabaseManager.m in Sources */,
+				C3F8A5431C9D72820086FF4B /* WYFeedStore.m in Sources */,
+				C3F8A5411C9D72820086FF4B /* NSPersistentStoreCoordinator+WYStore.m in Sources */,
+				C3F8A5371C9D72820086FF4B /* WYFeedSerialization.m in Sources */,
+				C3F8A53F1C9D72820086FF4B /* NSManagedObjectModel+WYStore.m in Sources */,
+				C3F8A4DE1C9D703F0086FF4B /* LCPageViewController.m in Sources */,
+				C3F8A53D1C9D72820086FF4B /* NSManagedObject+WYStoreFetch.m in Sources */,
+				C3F8A5301C9D72820086FF4B /* SDWebImageManager+Mutiple.m in Sources */,
 				9FDEF2481C9D30AC00B629C5 /* BBStepCountingChartView.m in Sources */,
 				C3584B011C9075C60087FF34 /* UIStoryboard+Addition.m in Sources */,
+				C3F8A5401C9D72820086FF4B /* NSPersistentStore+WYStore.m in Sources */,
+				C3F8A5391C9D72820086FF4B /* WYNetworkingManager.m in Sources */,
 				C3584B021C9075C60087FF34 /* UIView+Utils.m in Sources */,
+				C3F8A53B1C9D72820086FF4B /* WYURLSessionTaskHandler.m in Sources */,
+				C3F8A4D71C9D703F0086FF4B /* LCArticleContentViewController.m in Sources */,
+				C3F8A53A1C9D72820086FF4B /* WYURLSessionManager.m in Sources */,
+				C3F8A5451C9D72820086FF4B /* WYXMLDocument.m in Sources */,
+				C3F8A5381C9D72820086FF4B /* WYHTTPRequestManager.m in Sources */,
 				9F244CFC1C8527D500A388F6 /* BBNetworkApiManager.m in Sources */,
 				9F93946B1C88AC48009E6DDF /* BBNotificationDefine.m in Sources */,
 				9FDEF2591C9E822500B629C5 /* BBLoginViewController.m in Sources */,
+				C3FEE38F1C9E7346000FCDBD /* UINavigationBar+Addition.m in Sources */,
+				C3F8A4E31C9D703F0086FF4B /* LCArticlePageView+Style.m in Sources */,
 				9F93945F1C88968D009E6DDF /* BBStepCountingService.m in Sources */,
+				C3F8A53E1C9D72820086FF4B /* NSManagedObjectContext+WYStore.m in Sources */,
+				C3F8A56E1C9DA41F0086FF4B /* BBArticleListViewController.m in Sources */,
+				C3F8A54B1C9D72820086FF4B /* WYTeleTextView.m in Sources */,
+				C3F8A5501C9D7E0A0086FF4B /* StatusBarAttentions.m in Sources */,
+				C3F8A53C1C9D72820086FF4B /* NSManagedObject+WYStore.m in Sources */,
 				9F9394991C8960BF009E6DDF /* BBStepCountingStatisticViewController.m in Sources */,
+				C3F8A5341C9D72820086FF4B /* WYFeedEntity+VaildateArticle.m in Sources */,
 				9F9617D51C83ED860078FB3C /* BBTabBarController.m in Sources */,
 				C3584B161C9075D80087FF34 /* BBGamesScoreViewModel.m in Sources */,
+				C3F8A5711C9DA43C0086FF4B /* BBArticleListViewCell.m in Sources */,
+				C3F8A4DF1C9D703F0086FF4B /* LCArticleImageBoxView.m in Sources */,
+				C3F8A4DA1C9D703F0086FF4B /* LCArticleContentSettingView.m in Sources */,
+				C3F8A5421C9D72820086FF4B /* WYStore.m in Sources */,
 				9FDEF2421C9C153900B629C5 /* BBView.m in Sources */,
 				9F9617E11C83F17A0078FB3C /* BBNavigationController.m in Sources */,
+				C3F8A5471C9D72820086FF4B /* WYXMLParserOperation.m in Sources */,
+				C3F8A5461C9D72820086FF4B /* WYXMLParserManager.m in Sources */,
+				C3F8A5321C9D72820086FF4B /* WYFeed.m in Sources */,
 				9F9617CE1C83E9440078FB3C /* AppDelegate.m in Sources */,
 				9F9617DE1C83EF400078FB3C /* BBTabBar.m in Sources */,
 				9FDEF2631C9EAD2C00B629C5 /* UIWindow+Utils.m in Sources */,
+				C3FEE3891C9E411E000FCDBD /* BBArticleListViewModel.m in Sources */,
+				C3F8A4D91C9D703F0086FF4B /* LCArticleContentViewModel.m in Sources */,
 				9F93945A1C88946F009E6DDF /* BBStepCountingManager.m in Sources */,
 				C3584B151C9075D80087FF34 /* BBGamesScoreViewController.m in Sources */,
 			);
@@ -1124,7 +1746,7 @@
 /* Begin XCBuildConfiguration section */
 		9F9394781C88AC80009E6DDF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A8F627D85FA2A7BB946462FE /* Pods-BasketballUITests.debug.xcconfig */;
+			baseConfigurationReference = A1F89CE9CFD7462C0FE12EE3 /* Pods-BasketballUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = BasketballUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1137,7 +1759,7 @@
 		};
 		9F9394791C88AC80009E6DDF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 18ABF8C91032569967FB7FD3 /* Pods-BasketballUITests.release.xcconfig */;
+			baseConfigurationReference = 98E9B836D38D1C1CD9E8A4F7 /* Pods-BasketballUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = BasketballUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1150,7 +1772,7 @@
 		};
 		9F9394861C88AC8C009E6DDF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2EBBCE8ECFBB1AC10586E808 /* Pods-BasketballTests.debug.xcconfig */;
+			baseConfigurationReference = ADC83FAD308170906DC29C27 /* Pods-BasketballTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
@@ -1165,7 +1787,7 @@
 		};
 		9F9394871C88AC8C009E6DDF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE2921DAFA9666A4CD058F6E /* Pods-BasketballTests.release.xcconfig */;
+			baseConfigurationReference = 5BF5D7110705CC5D3A052DF5 /* Pods-BasketballTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
@@ -1260,12 +1882,13 @@
 		};
 		9F9617951C83D6B10078FB3C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 660EF624F264D7C9E5A7DE97 /* Pods-Basketball.debug.xcconfig */;
+			baseConfigurationReference = 8F48AA4A0B1B8EA5711ABB6C /* Pods-Basketball.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = "${SRCROOT}/Basketball/SupportingFiles/PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = "${SDK_DIR}/usr/include/libxml2";
 				INFOPLIST_FILE = "$(SRCROOT)/Basketball/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.allen.basketball.Basketball;
@@ -1275,12 +1898,13 @@
 		};
 		9F9617961C83D6B10078FB3C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0D1289D0FCCF9F7A978AF9AA /* Pods-Basketball.release.xcconfig */;
+			baseConfigurationReference = FBC409B4DCC4D05B71C33D24 /* Pods-Basketball.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = "${SRCROOT}/Basketball/SupportingFiles/PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = "${SDK_DIR}/usr/include/libxml2";
 				INFOPLIST_FILE = "$(SRCROOT)/Basketball/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.allen.basketball.Basketball;
@@ -1328,6 +1952,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C3F8A55C1C9D81E80086FF4B /* Basketball.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C3F8A55D1C9D81E80086FF4B /* Basketball.xcdatamodel */,
+			);
+			currentVersion = C3F8A55D1C9D81E80086FF4B /* Basketball.xcdatamodel */;
+			path = Basketball.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9F96175F1C83D6B00078FB3C /* Project object */;
 }

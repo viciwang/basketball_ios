@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9520" systemVersion="14F1509" minimumToolsVersion="Xcode 7.0">
+    <entity name="WYFeed" representedClassName="WYFeed" syncable="YES">
+        <attribute name="feedDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastBuildDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="WYFeedEntity" representedClassName="WYFeedEntity" syncable="YES">
+        <attribute name="feedDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="feedLink" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hasRead" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="images" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="insertedDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="publishDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="sourceName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sqlIndex" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="thumbnail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="WYFeed" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="WYFeedEntity" positionX="-54" positionY="-9" width="128" height="210"/>
+    </elements>
+</model>

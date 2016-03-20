@@ -350,6 +350,11 @@ static char kDTActionHandlerLongPressGestureKey;
     return [[[NSBundle mainBundle] loadNibNamed:xibName owner:nil options:nil] firstObject];;
 }
 
++ (id)loadFromNibGeneral {
+    NSString *xibName = NSStringFromClass([self class]);
+    return [[[NSBundle mainBundle] loadNibNamed:xibName owner:nil options:nil] firstObject];;
+}
+
 + (UINib *)registerNib
 {
     NSString *xibName = NSStringFromClass([self class]);

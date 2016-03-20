@@ -6,6 +6,11 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="YaHei.ttf">
+            <string>MicrosoftYaHei</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Games Score View Controller-->
         <scene sceneID="XZr-HU-1nH">
@@ -24,8 +29,8 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016-03-08 NBA比赛" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLG-pf-WFw">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="35"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="MicrosoftYaHei" family="Microsoft YaHei" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -48,13 +53,13 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNi-uT-xo5">
-                                <rect key="frame" x="294" y="472" width="45" height="45"/>
+                                <rect key="frame" x="299" y="477" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="45" id="ed7-6p-LdE"/>
+                                    <constraint firstAttribute="width" constant="40" id="ed7-6p-LdE"/>
                                     <constraint firstAttribute="width" secondItem="HNi-uT-xo5" secondAttribute="height" id="k8Q-4c-xjN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
-                                <state key="normal" title="&gt;">
+                                <state key="normal" backgroundImage="nextPage">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -62,13 +67,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gS-E7-3ou">
-                                <rect key="frame" x="36" y="472" width="45" height="45"/>
+                                <rect key="frame" x="36" y="477" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0gS-E7-3ou" secondAttribute="height" id="S0h-zC-6Dq"/>
-                                    <constraint firstAttribute="width" constant="45" id="acf-Fk-lb8"/>
+                                    <constraint firstAttribute="width" constant="40" id="acf-Fk-lb8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
-                                <state key="normal" title="&lt;">
+                                <state key="normal" backgroundImage="prePage">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -105,4 +110,8 @@
             <point key="canvasLocation" x="1105.5" y="189.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="nextPage" width="60" height="60"/>
+        <image name="prePage" width="60" height="60"/>
+    </resources>
 </document>

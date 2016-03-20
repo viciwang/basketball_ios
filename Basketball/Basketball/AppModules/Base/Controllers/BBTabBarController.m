@@ -10,6 +10,7 @@
 #import "BBNetworkApiManager.h"
 #import "BBStepCountingMainViewController.h"
 #import "BBGamesScoreViewController.h"
+#import "BBArticleListViewController.h"
 
 @interface BBTabBarController ()
 
@@ -21,7 +22,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tabBar.backgroundColor = [UIColor whiteColor];
+    self.tabBar.tintColor = [UIColor colorWithRed:1/255.0 green:146/255.0 blue:201/255.0 alpha:1];
+    self.tabBar.translucent = NO;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(segueForArticleView:) name:@"KKKSSS" object:nil];
     [self setupChildViewControllers];
+}
+
+- (void)segueForArticleView:(NSNotification *)notification {
+    [self.navigationController pushViewController:notification.object animated:YES];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -40,10 +49,14 @@
     
     _gamesScoreViewController = [BBGamesScoreViewController create];
     
-    [self addChildViewController:_gamesScoreViewController title:@"运动" defaultImage:defaultImage selectedImage:selectedImage];
-    [self addChildViewController:[BBBaseViewController new] title:@"运动" defaultImage:defaultImage selectedImage:selectedImage];
-    [self addChildViewController:[BBStepCountingMainViewController new] title:@"运动" defaultImage:defaultImage selectedImage:selectedImage];
-    [self addChildViewController:[BBBaseViewController new] title:@"个人" defaultImage:defaultImage selectedImage:selectedImage];
+    [self addChildViewController:_gamesScoreViewController title:@"比分" defaultImage:[UIImage imageNamed:@"gameScore_normal"]
+                   selectedImage:[UIImage imageNamed:@"gameScore_selected"]];
+    [self addChildViewController:[BBArticleListViewController create] title:@"新闻" defaultImage:[UIImage imageNamed:@"article_normal"]
+                   selectedImage:[UIImage imageNamed:@"article_selected"]];
+    [self addChildViewController:[BBStepCountingMainViewController new] title:@"分享" defaultImage:[UIImage imageNamed:@"share_normal"]
+                   selectedImage:[UIImage imageNamed:@"share_selected"]];
+    [self addChildViewController:[BBBaseViewController new] title:@"个人" defaultImage:[UIImage imageNamed:@"user_normal"]
+                   selectedImage:[UIImage imageNamed:@"user_selected"]];
 }
 
 - (void)addChildViewController:(UIViewController *)childController
@@ -55,7 +68,12 @@
                                               selectedImage:[selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     
     BBNavigationController *childNav = [[BBNavigationController alloc]initWithRootViewController:childController];
+    childNav.navigationBar.translucent = YES;
+    [childNav.navigationBar lt_setBackgroundColor:[UIColor colorWithRed:1/255.0 green:146/255.0 blue:201/255.0 alpha:1]];
     childNav.tabBarItem = item;
+    UIFont *font = [UIFont fontWithName:@"MicrosoftYaHei" size:17];
+    NSDictionary *attri = @{NSFontAttributeName:font,NSForegroundColorAttributeName:[UIColor whiteColor]};
+    childNav.navigationBar.titleTextAttributes = attri;
     [self addChildViewController:childNav];
     // 设置title
     childController.title = title;

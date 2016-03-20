@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9527.1" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EgM-Fs-kWm">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9525.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--News Recource View Controller-->
+        <scene sceneID="O4a-ym-XmX">
+            <objects>
+                <viewController id="EgM-Fs-kWm" customClass="NewsRecourceViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TaT-Nr-7Iv"/>
+                        <viewControllerLayoutGuide type="bottom" id="ge8-2R-SUv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SP0-0A-hnx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IBF-gJ-par">
+                                <rect key="frame" x="0.0" y="523" width="320" height="45"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qTz-m2-ggu">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="45"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7xB-LV-5xt">
+                                                <rect key="frame" x="18" y="8" width="29" height="29"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="7xB-LV-5xt" secondAttribute="height" id="EZg-oj-Jtr"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="M1_ToolBarReturn"/>
+                                                <connections>
+                                                    <action selector="returnButtonAction:" destination="EgM-Fs-kWm" eventType="touchUpInside" id="UES-if-EUF"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="7xB-LV-5xt" secondAttribute="bottom" constant="8" id="MwJ-4K-b1R"/>
+                                            <constraint firstItem="7xB-LV-5xt" firstAttribute="centerX" secondItem="qTz-m2-ggu" secondAttribute="centerX" id="aa9-YW-IRG"/>
+                                            <constraint firstItem="7xB-LV-5xt" firstAttribute="top" secondItem="qTz-m2-ggu" secondAttribute="top" constant="8" id="xh9-Nk-fx4"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="qTz-m2-ggu" firstAttribute="leading" secondItem="IBF-gJ-par" secondAttribute="leading" id="B9t-q3-WB9"/>
+                                    <constraint firstItem="qTz-m2-ggu" firstAttribute="top" secondItem="IBF-gJ-par" secondAttribute="top" id="GMS-MC-CJg"/>
+                                    <constraint firstAttribute="bottom" secondItem="qTz-m2-ggu" secondAttribute="bottom" id="QvP-w0-BcI"/>
+                                    <constraint firstAttribute="height" constant="45" id="YNE-GW-n0f"/>
+                                    <constraint firstItem="qTz-m2-ggu" firstAttribute="width" secondItem="IBF-gJ-par" secondAttribute="width" multiplier="1:5" id="u5E-dQ-LBQ"/>
+                                </constraints>
+                            </view>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AhV-3j-Cfs">
+                                <rect key="frame" x="0.0" y="20" width="320" height="503"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rdK-uR-p3o">
+                                <rect key="frame" x="0.0" y="20" width="320" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IBF-gJ-par" firstAttribute="leading" secondItem="SP0-0A-hnx" secondAttribute="leading" id="2cM-Vf-FCZ"/>
+                            <constraint firstAttribute="trailing" secondItem="IBF-gJ-par" secondAttribute="trailing" id="6lU-pJ-rnd"/>
+                            <constraint firstItem="ge8-2R-SUv" firstAttribute="top" secondItem="IBF-gJ-par" secondAttribute="bottom" id="FwA-MF-ihL"/>
+                            <constraint firstAttribute="trailing" secondItem="AhV-3j-Cfs" secondAttribute="trailing" id="KdC-7r-yKz"/>
+                            <constraint firstItem="rdK-uR-p3o" firstAttribute="top" secondItem="TaT-Nr-7Iv" secondAttribute="bottom" id="OfS-x6-qEd"/>
+                            <constraint firstItem="AhV-3j-Cfs" firstAttribute="top" secondItem="TaT-Nr-7Iv" secondAttribute="bottom" id="TQQ-lv-XQR"/>
+                            <constraint firstAttribute="trailing" secondItem="rdK-uR-p3o" secondAttribute="trailing" id="X9q-9C-qHf"/>
+                            <constraint firstItem="AhV-3j-Cfs" firstAttribute="leading" secondItem="SP0-0A-hnx" secondAttribute="leading" id="bRa-Xy-G36"/>
+                            <constraint firstItem="rdK-uR-p3o" firstAttribute="leading" secondItem="SP0-0A-hnx" secondAttribute="leading" id="jcE-k4-YnZ"/>
+                            <constraint firstItem="IBF-gJ-par" firstAttribute="top" secondItem="AhV-3j-Cfs" secondAttribute="bottom" id="saF-Go-PwV"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="progressView" destination="rdK-uR-p3o" id="hI4-V3-Pmm"/>
+                        <outlet property="webView" destination="AhV-3j-Cfs" id="jSP-5j-5jK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NUk-40-Wey" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="474" y="346"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="M1_ToolBarReturn" width="16" height="16"/>
+    </resources>
+</document>

@@ -1382,7 +1382,7 @@
 					};
 					9F9617661C83D6B00078FB3C = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = MY5Q8FA2DZ;
+						DevelopmentTeam = JX5LFX27DB;
 					};
 				};
 			};

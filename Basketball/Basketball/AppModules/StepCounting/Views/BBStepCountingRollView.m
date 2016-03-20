@@ -29,8 +29,11 @@
     self.backCircleLayer.path = path.CGPath;
 }
 
-- (void)refreshWithTodaySteps:(NSUInteger)steps percent:(CGFloat)percent {
-    self.todayCountingLabel.text = @(steps).stringValue;
+- (void)refreshWithTodayStep:(NSUInteger)step average:(NSUInteger)average {
+    self.todayCountingLabel.text = @(step).stringValue;
+    self.averageLabel.text = [NSString stringWithFormat:@"日平均值：%@步",@(average).stringValue];
+    
+    CGFloat percent = step>average ? 1.0 : @(step).floatValue/average;
     self.circleLayer.strokeEnd = percent;
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
     animation.fromValue = @0.0;

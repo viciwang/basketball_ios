@@ -39,6 +39,13 @@
     dispatch_once(&onceToken, ^{
         manager = [[BBNetworkApiManager alloc]initWithBaseURL:[NSURL URLWithString:kApiBaseUrl]];
         manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+        
+        BBUser *user = [BBUser currentUser];
+        if (user) {
+            [manager.requestSerializer setValue:user.token forHTTPHeaderField:@"token"];
+            [manager.requestSerializer setValue:user.uid forHTTPHeaderField:@"uid"];
+        }
+        
         manager.responseSerializer = [BBResponseSerializer serializer];
         manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/html", @"text/javascript", nil];
         manager.parseQueue = dispatch_queue_create("com.basketball.Basketball.parseQueue", DISPATCH_QUEUE_CONCURRENT);

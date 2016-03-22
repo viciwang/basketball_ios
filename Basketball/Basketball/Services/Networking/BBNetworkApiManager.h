@@ -12,6 +12,12 @@ typedef void(^BBNetworkResponseBlock)(id responseObject, NSError *error);
 
 @interface BBNetworkApiManager : AFHTTPSessionManager
 
+#ifdef DEBUG
+
++ (void)configDebugBaseUrl:(NSString *)baseurl;
+
+#endif
+
 + (BBNetworkApiManager *)sharedManager;
 
 - (NSURLSessionDataTask *)getVerifyCodeWithEmail:(NSString *)email

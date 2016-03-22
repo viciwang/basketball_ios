@@ -23,6 +23,23 @@
 
 @implementation BBLoginViewController
 
++ (void)showLoginViewControllerWithCompletionBlock:(voidBlock)complectionBlock {
+    BBLoginViewController *loginVC = [BBLoginViewController create];
+    BBNavigationController *nav = [[BBNavigationController alloc] initWithRootViewController:loginVC];
+    loginVC.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"close" style:UIBarButtonItemStylePlain target:loginVC action:@selector(dismissLoginVC:)];
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:nav animated:YES completion:^{
+        if (complectionBlock) {
+            complectionBlock();
+        }
+    }];
+}
+
+- (void)dismissLoginVC:(id)sender {
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - life cycle
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

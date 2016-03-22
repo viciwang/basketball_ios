@@ -8,4 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-NSString *BBNotificationStepCountingUpdate = @"BBNotificationStepCountingUpdate";
+NSString *kBBNotificationStepCountingUpdate = @"kBBNotificationStepCountingUpdate";
+
+NSString *kBBNotificationTokenExpired = @"kBBNotificationTokenExpired";

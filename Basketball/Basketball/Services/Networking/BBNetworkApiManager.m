@@ -35,6 +35,19 @@
 
 @implementation BBNetworkApiManager
 
+#ifdef DEBUG
+static NSString *_debugBaseUrl = nil;
+
++ (void)configDebugBaseUrl:(NSString *)baseurl {
+
+    _debugBaseUrl = baseurl;
+}
+
++ (NSString *)retriveDebugBaseUrl {
+    return _debugBaseUrl;
+}
+#endif
+
 + (BBNetworkApiManager *)sharedManager {
     static BBNetworkApiManager *manager = nil;
     static dispatch_once_t onceToken;
@@ -45,7 +58,14 @@
 }
 
 - (instancetype)init {
+#ifdef DEBUG
+    if ([BBNetworkApiManager retriveDebugBaseUrl]) {
+        self = [super initWithBaseURL:[NSURL URLWithString:[BBNetworkApiManager retriveDebugBaseUrl]]];
+    }
+#else
     self = [super initWithBaseURL:[NSURL URLWithString:kApiBaseUrl]];
+#endif
+    
     if (self) {
         self.requestSerializer = [AFHTTPRequestSerializer serializer];
         

@@ -42,13 +42,29 @@ const int ddLogLevel = DDLogLevelWarning;
     self.window.rootViewController = controller;
     [self.window makeKeyAndVisible];
     
+    [self addNotificationObsever];
+    
     // debug
 #if DEBUG
     [self configFLEX];
     [self configCocoaLumberjack];
+    [self configBaseUrl];
 #endif
     
     return YES;
+}
+
+#pragma mark - notification
+
+- (void)addNotificationObsever {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tokenDidExpired) name:kBBNotificationTokenExpired object:nil];
+    
+}
+
+- (void)tokenDidExpired {
+    [BBLoginViewController showLoginViewControllerWithCompletionBlock:^{
+        
+    }];
 }
 
 #pragma mark - debug
@@ -69,6 +85,15 @@ const int ddLogLevel = DDLogLevelWarning;
 - (void)configCocoaLumberjack {
     [DDLog addLogger:[DDTTYLogger sharedInstance]]; // TTY = Xcode console
     [DDLog addLogger:[DDASLLogger sharedInstance]]; // ASL = Apple System Logs
+}
+
+- (void)configBaseUrl {
+    NSString *baseurl = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"DebugBaseUrl"];
+    if(baseurl) {
+        NSLog(@"设置baseurl为：%@",baseurl);
+        [BBNetworkApiManager configDebugBaseUrl:baseurl];
+    }
+  
 }
 
 @end

@@ -31,7 +31,7 @@
 - (void)startStepCounting {
     [self.stepCountingService startStepCountingWithHandler:^(NSUInteger numberOfSteps, NSDate *timestamp, NSError *error) {
         if (!error) {
-            [[NSNotificationCenter defaultCenter]postNotificationName:BBNotificationStepCountingUpdate object:nil userInfo:@{@"date":timestamp,@"steps":@(numberOfSteps)}];
+            [[NSNotificationCenter defaultCenter]postNotificationName:kBBNotificationStepCountingUpdate object:nil userInfo:@{@"date":timestamp,@"steps":@(numberOfSteps)}];
         }
     }];
 }

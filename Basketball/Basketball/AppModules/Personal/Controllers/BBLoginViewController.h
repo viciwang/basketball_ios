@@ -10,4 +10,6 @@
 
 @interface BBLoginViewController : BBBaseViewController
 
++ (void)showLoginViewControllerWithCompletionBlock:(voidBlock)complectionBlock;
+
 @end

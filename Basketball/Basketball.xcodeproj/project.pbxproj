@@ -13,8 +13,18 @@
 		9F1B638D1C944B7500C486B0 /* BBResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F244CFB1C8527D500A388F6 /* BBResponseSerializer.m */; };
 		9F1B63941C9481B600C486B0 /* BBDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1B63931C9481B600C486B0 /* BBDatabaseManager.m */; };
 		9F244CFC1C8527D500A388F6 /* BBNetworkApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F244CF91C8527D500A388F6 /* BBNetworkApiManager.m */; };
+		9F26F59F1C9FE77A00481EA6 /* BBStepCountingHistoryRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F26F59E1C9FE77A00481EA6 /* BBStepCountingHistoryRecord.m */; };
+		9F26F5A01C9FE77A00481EA6 /* BBStepCountingHistoryRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F26F59E1C9FE77A00481EA6 /* BBStepCountingHistoryRecord.m */; };
+		9F26F5AB1CA054B300481EA6 /* BBStepCountingHistoryRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F26F5A91CA054B300481EA6 /* BBStepCountingHistoryRecordCell.m */; };
+		9F26F5AC1CA054B300481EA6 /* BBStepCountingHistoryRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F26F5AA1CA054B300481EA6 /* BBStepCountingHistoryRecordCell.xib */; };
 		9F2EA0301C9A95350053A802 /* BBBaseTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EA02F1C9A95350053A802 /* BBBaseTestCase.m */; };
 		9F2EA0361C9C10960053A802 /* BBStepCountingMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EA0351C9C10960053A802 /* BBStepCountingMineViewController.m */; };
+		9F33CE881CA13C5F0016EB39 /* BBStepCountingRank.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F33CE871CA13C5F0016EB39 /* BBStepCountingRank.m */; };
+		9F33CE8A1CA140C20016EB39 /* StepCountingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F33CE891CA140C20016EB39 /* StepCountingTests.m */; };
+		9F33CE8B1CA143380016EB39 /* BBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDEF25C1C9E825300B629C5 /* BBUser.m */; };
+		9F33CE8E1CA147A80016EB39 /* BBStepCountingRankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F33CE8D1CA147A80016EB39 /* BBStepCountingRankViewController.m */; };
+		9F33CE921CA14B440016EB39 /* BBStepCountingRankCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F33CE901CA14B440016EB39 /* BBStepCountingRankCell.m */; };
+		9F33CE931CA14B440016EB39 /* BBStepCountingRankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F33CE911CA14B440016EB39 /* BBStepCountingRankCell.xib */; };
 		9F9394541C8893C9009E6DDF /* BBStepCountingMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9394531C8893C9009E6DDF /* BBStepCountingMainViewController.m */; };
 		9F93945A1C88946F009E6DDF /* BBStepCountingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9394591C88946F009E6DDF /* BBStepCountingManager.m */; };
 		9F93945F1C88968D009E6DDF /* BBStepCountingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F93945E1C88968D009E6DDF /* BBStepCountingService.m */; };
@@ -33,6 +43,7 @@
 		9F9617DB1C83EDEE0078FB3C /* BBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9617DA1C83EDEE0078FB3C /* BBBaseViewController.m */; };
 		9F9617DE1C83EF400078FB3C /* BBTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9617DD1C83EF400078FB3C /* BBTabBar.m */; };
 		9F9617E11C83F17A0078FB3C /* BBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9617E01C83F17A0078FB3C /* BBNavigationController.m */; };
+		9FA8A6A81C9FDDF10076403A /* BBStepCountingHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA8A6A71C9FDDF10076403A /* BBStepCountingHistoryViewController.m */; };
 		9FC217B81C97169400CF2B2A /* BBNetworkApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F244CF91C8527D500A388F6 /* BBNetworkApiManager.m */; };
 		9FC217BA1C97169400CF2B2A /* BBResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F244CFB1C8527D500A388F6 /* BBResponseSerializer.m */; };
 		9FC217BB1C9716C400CF2B2A /* BBDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1B63931C9481B600C486B0 /* BBDatabaseManager.m */; };
@@ -186,10 +197,23 @@
 		9F244CF91C8527D500A388F6 /* BBNetworkApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBNetworkApiManager.m; sourceTree = "<group>"; };
 		9F244CFA1C8527D500A388F6 /* BBResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBResponseSerializer.h; sourceTree = "<group>"; };
 		9F244CFB1C8527D500A388F6 /* BBResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBResponseSerializer.m; sourceTree = "<group>"; };
+		9F26F59D1C9FE77A00481EA6 /* BBStepCountingHistoryRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBStepCountingHistoryRecord.h; path = Basketball/AppModules/StepCounting/Models/BBStepCountingHistoryRecord.h; sourceTree = SOURCE_ROOT; };
+		9F26F59E1C9FE77A00481EA6 /* BBStepCountingHistoryRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBStepCountingHistoryRecord.m; path = Basketball/AppModules/StepCounting/Models/BBStepCountingHistoryRecord.m; sourceTree = SOURCE_ROOT; };
+		9F26F5A81CA054B300481EA6 /* BBStepCountingHistoryRecordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBStepCountingHistoryRecordCell.h; path = Basketball/AppModules/StepCounting/Views/BBStepCountingHistoryRecordCell.h; sourceTree = SOURCE_ROOT; };
+		9F26F5A91CA054B300481EA6 /* BBStepCountingHistoryRecordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBStepCountingHistoryRecordCell.m; path = Basketball/AppModules/StepCounting/Views/BBStepCountingHistoryRecordCell.m; sourceTree = SOURCE_ROOT; };
+		9F26F5AA1CA054B300481EA6 /* BBStepCountingHistoryRecordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBStepCountingHistoryRecordCell.xib; path = Basketball/AppModules/StepCounting/Views/BBStepCountingHistoryRecordCell.xib; sourceTree = SOURCE_ROOT; };
 		9F2EA02E1C9A95350053A802 /* BBBaseTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBaseTestCase.h; sourceTree = "<group>"; };
 		9F2EA02F1C9A95350053A802 /* BBBaseTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBaseTestCase.m; sourceTree = "<group>"; };
 		9F2EA0341C9C10960053A802 /* BBStepCountingMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBStepCountingMineViewController.h; path = Basketball/Services/Networking/BBStepCountingMineViewController.h; sourceTree = SOURCE_ROOT; };
 		9F2EA0351C9C10960053A802 /* BBStepCountingMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBStepCountingMineViewController.m; path = Basketball/Services/Networking/BBStepCountingMineViewController.m; sourceTree = SOURCE_ROOT; };
+		9F33CE861CA13C5F0016EB39 /* BBStepCountingRank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBStepCountingRank.h; path = Basketball/AppModules/StepCounting/Models/BBStepCountingRank.h; sourceTree = SOURCE_ROOT; };
+		9F33CE871CA13C5F0016EB39 /* BBStepCountingRank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBStepCountingRank.m; path = Basketball/AppModules/StepCounting/Models/BBStepCountingRank.m; sourceTree = SOURCE_ROOT; };
+		9F33CE891CA140C20016EB39 /* StepCountingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepCountingTests.m; sourceTree = "<group>"; };
+		9F33CE8C1CA147A80016EB39 /* BBStepCountingRankViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBStepCountingRankViewController.h; path = Basketball/AppModules/StepCounting/Controllers/BBStepCountingRankViewController.h; sourceTree = SOURCE_ROOT; };
+		9F33CE8D1CA147A80016EB39 /* BBStepCountingRankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBStepCountingRankViewController.m; path = Basketball/AppModules/StepCounting/Controllers/BBStepCountingRankViewController.m; sourceTree = SOURCE_ROOT; };
+		9F33CE8F1CA14B440016EB39 /* BBStepCountingRankCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBStepCountingRankCell.h; path = Basketball/AppModules/StepCounting/Views/BBStepCountingRankCell.h; sourceTree = SOURCE_ROOT; };
+		9F33CE901CA14B440016EB39 /* BBStepCountingRankCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBStepCountingRankCell.m; path = Basketball/AppModules/StepCounting/Views/BBStepCountingRankCell.m; sourceTree = SOURCE_ROOT; };
+		9F33CE911CA14B440016EB39 /* BBStepCountingRankCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBStepCountingRankCell.xib; path = Basketball/AppModules/StepCounting/Views/BBStepCountingRankCell.xib; sourceTree = SOURCE_ROOT; };
 		9F9394521C8893C9009E6DDF /* BBStepCountingMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBStepCountingMainViewController.h; path = Basketball/AppModules/StepCounting/Controllers/BBStepCountingMainViewController.h; sourceTree = SOURCE_ROOT; };
 		9F9394531C8893C9009E6DDF /* BBStepCountingMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBStepCountingMainViewController.m; path = Basketball/AppModules/StepCounting/Controllers/BBStepCountingMainViewController.m; sourceTree = SOURCE_ROOT; };
 		9F9394581C88946F009E6DDF /* BBStepCountingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBStepCountingManager.h; path = StepCounting/BBStepCountingManager.h; sourceTree = "<group>"; };
@@ -229,6 +253,8 @@
 		9F9617E01C83F17A0078FB3C /* BBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBNavigationController.m; sourceTree = "<group>"; };
 		9F9617E21C83F26E0078FB3C /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		9F9617E31C841B470078FB3C /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		9FA8A6A61C9FDDF10076403A /* BBStepCountingHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBStepCountingHistoryViewController.h; path = Basketball/AppModules/StepCounting/Controllers/BBStepCountingHistoryViewController.h; sourceTree = SOURCE_ROOT; };
+		9FA8A6A71C9FDDF10076403A /* BBStepCountingHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBStepCountingHistoryViewController.m; path = Basketball/AppModules/StepCounting/Controllers/BBStepCountingHistoryViewController.m; sourceTree = SOURCE_ROOT; };
 		9FC217B41C97160D00CF2B2A /* UserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTests.m; sourceTree = "<group>"; };
 		9FDEF2401C9C153900B629C5 /* BBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBView.h; sourceTree = "<group>"; };
 		9FDEF2411C9C153900B629C5 /* BBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBView.m; sourceTree = "<group>"; };
@@ -539,6 +565,7 @@
 				9FC217B41C97160D00CF2B2A /* UserTests.m */,
 				9F2EA02E1C9A95350053A802 /* BBBaseTestCase.h */,
 				9F2EA02F1C9A95350053A802 /* BBBaseTestCase.m */,
+				9F33CE891CA140C20016EB39 /* StepCountingTests.m */,
 			);
 			path = BasketballTests;
 			sourceTree = "<group>";
@@ -681,6 +708,10 @@
 				9F9394531C8893C9009E6DDF /* BBStepCountingMainViewController.m */,
 				9F2EA0341C9C10960053A802 /* BBStepCountingMineViewController.h */,
 				9F2EA0351C9C10960053A802 /* BBStepCountingMineViewController.m */,
+				9FA8A6A61C9FDDF10076403A /* BBStepCountingHistoryViewController.h */,
+				9FA8A6A71C9FDDF10076403A /* BBStepCountingHistoryViewController.m */,
+				9F33CE8C1CA147A80016EB39 /* BBStepCountingRankViewController.h */,
+				9F33CE8D1CA147A80016EB39 /* BBStepCountingRankViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -688,6 +719,10 @@
 		9F9617BF1C83E9440078FB3C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9F26F59D1C9FE77A00481EA6 /* BBStepCountingHistoryRecord.h */,
+				9F26F59E1C9FE77A00481EA6 /* BBStepCountingHistoryRecord.m */,
+				9F33CE861CA13C5F0016EB39 /* BBStepCountingRank.h */,
+				9F33CE871CA13C5F0016EB39 /* BBStepCountingRank.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -709,6 +744,12 @@
 				9FDEF24C1C9D6AA700B629C5 /* BBStepCountingRollView.xib */,
 				9FDEF2461C9D30AC00B629C5 /* BBStepCountingChartView.h */,
 				9FDEF2471C9D30AC00B629C5 /* BBStepCountingChartView.m */,
+				9F26F5A81CA054B300481EA6 /* BBStepCountingHistoryRecordCell.h */,
+				9F26F5A91CA054B300481EA6 /* BBStepCountingHistoryRecordCell.m */,
+				9F26F5AA1CA054B300481EA6 /* BBStepCountingHistoryRecordCell.xib */,
+				9F33CE8F1CA14B440016EB39 /* BBStepCountingRankCell.h */,
+				9F33CE901CA14B440016EB39 /* BBStepCountingRankCell.m */,
+				9F33CE911CA14B440016EB39 /* BBStepCountingRankCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1382,7 +1423,7 @@
 					};
 					9F9617661C83D6B00078FB3C = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = MY5Q8FA2DZ;
+						DevelopmentTeam = JX5LFX27DB;
 					};
 				};
 			};
@@ -1431,6 +1472,7 @@
 				C3F8A5491C9D72820086FF4B /* YaHei.ttf in Resources */,
 				C3584B3D1C9076220087FF34 /* CHI_logo.png in Resources */,
 				C3F8A4DD1C9D703F0086FF4B /* LCArticleSinglePageViewController_iPhone.storyboard in Resources */,
+				9F26F5AC1CA054B300481EA6 /* BBStepCountingHistoryRecordCell.xib in Resources */,
 				9F9617CF1C83E9440078FB3C /* Assets.xcassets in Resources */,
 				C3584B401C9076220087FF34 /* DEN_logo.png in Resources */,
 				C3584B4B1C9076220087FF34 /* NOP_logo.png in Resources */,
@@ -1458,6 +1500,7 @@
 				C3584B4F1C9076220087FF34 /* PHI_logo.png in Resources */,
 				C3584B4E1C9076220087FF34 /* ORL_logo.png in Resources */,
 				C3584B521C9076220087FF34 /* SAC_logo.png in Resources */,
+				9F33CE931CA14B440016EB39 /* BBStepCountingRankCell.xib in Resources */,
 				9FDEF25A1C9E822500B629C5 /* BBLoginViewController_iPhone.storyboard in Resources */,
 				C3584B191C9075D80087FF34 /* BBGamesScoreViewController_iPhone.storyboard in Resources */,
 				C3F8A4E51C9D703F0086FF4B /* LCArticlePageView1_iPhone.xib in Resources */,
@@ -1621,7 +1664,9 @@
 				9FC217D11C971A0900CF2B2A /* RACmetamacros.h in Sources */,
 				9FC217C21C97179B00CF2B2A /* BBGamesScore.m in Sources */,
 				9FC217C41C97179B00CF2B2A /* BBGamesScoreViewModel.m in Sources */,
+				9F26F5A01C9FE77A00481EA6 /* BBStepCountingHistoryRecord.m in Sources */,
 				9FC217C91C97179B00CF2B2A /* BBModel.m in Sources */,
+				9F33CE8B1CA143380016EB39 /* BBUser.m in Sources */,
 				9FC217CC1C97179B00CF2B2A /* BBNotificationDefine.m in Sources */,
 				9FC217CD1C97179B00CF2B2A /* BBStepCountingManager.m in Sources */,
 				9FC217CE1C97179B00CF2B2A /* BBStepCountingService.m in Sources */,
@@ -1630,6 +1675,7 @@
 				9FC217D01C9719DB00CF2B2A /* UserTests.m in Sources */,
 				9F2EA0301C9A95350053A802 /* BBBaseTestCase.m in Sources */,
 				9FC217BB1C9716C400CF2B2A /* BBDatabaseManager.m in Sources */,
+				9F33CE8A1CA140C20016EB39 /* StepCountingTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1649,6 +1695,7 @@
 				C3F8A54C1C9D72820086FF4B /* WYTextContainer.m in Sources */,
 				C3F8A5331C9D72820086FF4B /* WYFeedEntity+CoreDataProperties.m in Sources */,
 				C3F8A5351C9D72820086FF4B /* WYFeedEntity.m in Sources */,
+				9F26F5AB1CA054B300481EA6 /* BBStepCountingHistoryRecordCell.m in Sources */,
 				9F9617D21C83E9440078FB3C /* main.m in Sources */,
 				C3F8A4E11C9D703F0086FF4B /* LCArticleTextBoxView.m in Sources */,
 				9F2EA0361C9C10960053A802 /* BBStepCountingMineViewController.m in Sources */,
@@ -1669,6 +1716,7 @@
 				C3F8A5431C9D72820086FF4B /* WYFeedStore.m in Sources */,
 				C3F8A5411C9D72820086FF4B /* NSPersistentStoreCoordinator+WYStore.m in Sources */,
 				C3F8A5371C9D72820086FF4B /* WYFeedSerialization.m in Sources */,
+				9F26F59F1C9FE77A00481EA6 /* BBStepCountingHistoryRecord.m in Sources */,
 				C3F8A53F1C9D72820086FF4B /* NSManagedObjectModel+WYStore.m in Sources */,
 				C3F8A4DE1C9D703F0086FF4B /* LCPageViewController.m in Sources */,
 				C3F8A53D1C9D72820086FF4B /* NSManagedObject+WYStoreFetch.m in Sources */,
@@ -1678,6 +1726,7 @@
 				C3F8A5401C9D72820086FF4B /* NSPersistentStore+WYStore.m in Sources */,
 				C3F8A5391C9D72820086FF4B /* WYNetworkingManager.m in Sources */,
 				C3584B021C9075C60087FF34 /* UIView+Utils.m in Sources */,
+				9F33CE881CA13C5F0016EB39 /* BBStepCountingRank.m in Sources */,
 				C3F8A53B1C9D72820086FF4B /* WYURLSessionTaskHandler.m in Sources */,
 				C3F8A4D71C9D703F0086FF4B /* LCArticleContentViewController.m in Sources */,
 				C3F8A53A1C9D72820086FF4B /* WYURLSessionManager.m in Sources */,
@@ -1688,9 +1737,11 @@
 				9FDEF2591C9E822500B629C5 /* BBLoginViewController.m in Sources */,
 				C3FEE38F1C9E7346000FCDBD /* UINavigationBar+Addition.m in Sources */,
 				C3F8A4E31C9D703F0086FF4B /* LCArticlePageView+Style.m in Sources */,
+				9F33CE921CA14B440016EB39 /* BBStepCountingRankCell.m in Sources */,
 				9F93945F1C88968D009E6DDF /* BBStepCountingService.m in Sources */,
 				C3F8A53E1C9D72820086FF4B /* NSManagedObjectContext+WYStore.m in Sources */,
 				C3F8A56E1C9DA41F0086FF4B /* BBArticleListViewController.m in Sources */,
+				9F33CE8E1CA147A80016EB39 /* BBStepCountingRankViewController.m in Sources */,
 				C3F8A54B1C9D72820086FF4B /* WYTeleTextView.m in Sources */,
 				C3F8A5501C9D7E0A0086FF4B /* StatusBarAttentions.m in Sources */,
 				C3F8A53C1C9D72820086FF4B /* NSManagedObject+WYStore.m in Sources */,
@@ -1703,6 +1754,7 @@
 				C3F8A4DA1C9D703F0086FF4B /* LCArticleContentSettingView.m in Sources */,
 				C3F8A5421C9D72820086FF4B /* WYStore.m in Sources */,
 				9FDEF2421C9C153900B629C5 /* BBView.m in Sources */,
+				9FA8A6A81C9FDDF10076403A /* BBStepCountingHistoryViewController.m in Sources */,
 				9F9617E11C83F17A0078FB3C /* BBNavigationController.m in Sources */,
 				C3F8A5471C9D72820086FF4B /* WYXMLParserOperation.m in Sources */,
 				C3F8A5461C9D72820086FF4B /* WYXMLParserManager.m in Sources */,

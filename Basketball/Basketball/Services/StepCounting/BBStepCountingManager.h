@@ -14,9 +14,9 @@ typedef void(^QueryResultBlock)(NSArray *steps, NSUInteger todayTotalStep);
 
 + (BBStepCountingManager *)sharedManager;
 
-- (void)startStepCounting;
-
-- (void)stopStepCounting;
+//- (void)startStepCounting;
+//
+//- (void)stopStepCounting;
 
 - (void)queryStepsOfToday:(QueryResultBlock)resultBlock;
 

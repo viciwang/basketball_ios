@@ -11,6 +11,7 @@
 #import "BBStepCountingTabBarView.h"
 #import "BBStepCountingStatisticViewController.h"
 #import "BBStepCountingMineViewController.h"
+#import "BBStepCountingHistoryViewController.h"
 
 @interface BBStepCountingMainViewController ()
 <
@@ -68,16 +69,19 @@
     [self.view addSubview:self.pageViewController.view];
     
     self.statisticsVCs = [NSMutableArray new];
-    NSArray *array = @[@(BBStepCountingStatisticTypeToday),@(BBStepCountingStatisticTypeThisWeek),@(BBStepCountingStatisticTypeThisMonth),@(BBStepCountingStatisticTypeThisYear)];
-    for (NSNumber *type in array) {
-        [self.statisticsVCs addObject:[BBStepCountingMineViewController new]];
-    }
+    BBStepCountingMineViewController *mineVC = [BBStepCountingMineViewController new];
+    @weakify(self);
+    mineVC.showHistoryStepCountBlock = ^{
+        @strongify(self);
+        [self showHistory];
+    };
+    [self.statisticsVCs addObject:mineVC];
     
     [self.pageViewController setViewControllers:@[self.statisticsVCs[0]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
 }
 
 - (void)setupStepCounting {
-    [[BBStepCountingManager sharedManager] startStepCounting];
+//    [[BBStepCountingManager sharedManager] startStepCounting];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(stepCountingUpdate:) name:BBNotificationStepCountingUpdate object:nil];
 }
 
@@ -119,6 +123,13 @@
 
 - (void)tabBarView:(BBStepCountingTabBarView *)tabBarView didSelectedTabAtIndex:(NSUInteger)index {
     [self.pageViewController setViewControllers:@[self.statisticsVCs[index]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+}
+
+#pragma mark - push 
+
+- (void)showHistory {
+    BBStepCountingHistoryViewController *vc = [BBStepCountingHistoryViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

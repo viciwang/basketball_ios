@@ -11,6 +11,7 @@
 #import "BBStepCountingChartView.h"
 #import "BBStepCountingManager.h"
 #import "BBNetworkApiManager.h"
+#import "BBStepCountingHistoryViewController.h"
 
 @interface BBStepCountingMineViewController ()
 
@@ -96,28 +97,29 @@
 #pragma mark - action
 
 - (void)showHistory:(UIButton *)button {
-    
+    if (self.showHistoryStepCountBlock) {
+        self.showHistoryStepCountBlock();
+    }
 }
 
 #pragma mark - load data
 
 - (void)loadData {
-    RACSubject *subject = [RACSubject subject];
     @weakify(self);
-    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-    [[BBStepCountingManager sharedManager] queryStepsOfToday:^(NSArray *steps, NSUInteger totalSteps) {
+    [self showLoadingHUDWithInfo:nil];
+    [[BBNetworkApiManager sharedManager] getAverageStepCountWithCompletionBlock:^(NSNumber *average, NSError *error) {
         @strongify(self);
-        [subject sendNext:dict];
-        [self.chartView refreshWithData:steps];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        if (error) {
+            [self showErrorHUDWithInfo:error.userInfo[@"msg"]];
+        }
+        else {
+            [[BBStepCountingManager sharedManager] queryStepsOfToday:^(NSArray *steps, NSUInteger totalSteps) {
+                @strongify(self);
+                [self.chartView refreshWithData:steps];
+                [self.rollView refreshWithTodayStep:totalSteps average:average.unsignedIntegerValue];
+            }];
+        }
     }];
-    
-    [[BBNetworkApiManager sharedManager] getStepCountingAverageWithCompletionBlock:^(NSNumber *totalCount, NSError *error) {
-        @strongify(self);
-        
-    }];
-    
-//    [RACSignal combineLatest:@[]]
-    
-    
 }
 @end

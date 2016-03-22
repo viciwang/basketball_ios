@@ -82,7 +82,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     LCPageViewController *ctr = [[LCPageViewController alloc] init];
     ctr.feed = _viewModel.feeds[indexPath.row];
-    [self.parentViewController.navigationController pushViewController:ctr animated:YES];
+    [self.navigationController pushViewController:ctr animated:YES];
 }
 # pragma  mark - MonActivityView
 - (UIColor *)activityIndicatorView:(MONActivityIndicatorView *)activityIndicatorView circleBackgroundColorAtIndex:(NSUInteger)index {

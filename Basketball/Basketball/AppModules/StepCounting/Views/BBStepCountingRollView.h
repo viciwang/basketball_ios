@@ -10,6 +10,6 @@
 
 @interface BBStepCountingRollView : BBView
 
-- (void)refreshWithTodaySteps:(NSUInteger)steps percent:(CGFloat)percent;
+- (void)refreshWithTodayStep:(NSUInteger)steps average:(NSUInteger)average;
 
 @end

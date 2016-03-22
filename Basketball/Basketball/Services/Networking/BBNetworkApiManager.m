@@ -11,6 +11,7 @@
 #import "BBResponseSerializer.h"
 #import "BBModel.h"
 #import "BBUser.h"
+#import "BBStepCountingHistoryRecord.h"
 
 #define REQUEST(METHOD, URLString, PARAMETERS, MODEL_CLASS, RESPONSE_BLOCK) \
 { \
@@ -37,29 +38,23 @@
     static BBNetworkApiManager *manager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        manager = [[BBNetworkApiManager alloc]initWithBaseURL:[NSURL URLWithString:kApiBaseUrl]];
-        manager.requestSerializer = [AFHTTPRequestSerializer serializer];
-        
-        BBUser *user = [BBUser currentUser];
-        if (user) {
-            [manager.requestSerializer setValue:user.token forHTTPHeaderField:@"token"];
-            [manager.requestSerializer setValue:user.uid forHTTPHeaderField:@"uid"];
-        }
-        
-        manager.responseSerializer = [BBResponseSerializer serializer];
-        manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/html", @"text/javascript", nil];
-        manager.parseQueue = dispatch_queue_create("com.basketball.Basketball.parseQueue", DISPATCH_QUEUE_CONCURRENT);
+        manager = [[BBNetworkApiManager alloc]init];
     });
     return manager;
 }
 
 - (instancetype)init {
-    
     self = [super initWithBaseURL:[NSURL URLWithString:kApiBaseUrl]];
     if (self) {
         self.requestSerializer = [AFHTTPRequestSerializer serializer];
+        
+        BBUser *user = [BBUser currentUser];
+        if (user) {
+            [self.requestSerializer setValue:user.token forHTTPHeaderField:@"token"];
+            [self.requestSerializer setValue:user.uid forHTTPHeaderField:@"uid"];
+        }
         self.responseSerializer = [BBResponseSerializer serializer];
-        self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", nil];
+        self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/html", @"text/javascript", nil];
         self.parseQueue = dispatch_queue_create("com.basketball.Basketball.parseQueue", DISPATCH_QUEUE_CONCURRENT);
     }
     return self;
@@ -200,6 +195,25 @@
         else {
             if (responseBlock) {
                 responseBlock(dict[@"totalCount"],nil);
+            }
+        }
+    });
+}
+
+- (NSURLSessionDataTask *)getHistoryStepCountWithCompletionBlock:(BBNetworkResponseBlock)responseBlock {
+    REQUEST(GET, kApiStepCountingHistory, nil, nil, ^(NSArray *record,NSError *error){
+        if (error) {
+            if (responseBlock) {
+                responseBlock(nil,error);
+            }
+        }
+        else {
+            if (responseBlock) {
+                NSArray *records = [MTLJSONAdapter modelsOfClass:[BBStepCountingHistoryMonthRecord class] fromJSONArray:record error:&error];
+                if (error) {
+                    DDLogInfo(@"%@",error);
+                }
+                responseBlock(records,nil);
             }
         }
     });

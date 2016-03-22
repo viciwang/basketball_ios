@@ -10,4 +10,6 @@
 
 @interface BBStepCountingMineViewController : BBBaseViewController
 
+@property (nonatomic, copy) voidBlock showHistoryStepCountBlock;
+
 @end

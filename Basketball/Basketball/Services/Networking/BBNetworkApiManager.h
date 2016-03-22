@@ -29,7 +29,7 @@ typedef void(^BBNetworkResponseBlock)(id responseObject, NSError *error);
                                  verifyCode:(NSString *)verifyCode
                             completionBlock:(BBNetworkResponseBlock)responseBlock;
 
-- (NSURLSessionDataTask *)updateUserInfoWithCity:(NSString *)city
+- (NSURLSessionDataTask *)updateUserInfoWithCity:(NSString *)citSSy
                                         nickName:(NSString *)nickName
                                     headImageUrl:(NSString *)headImageUrl
                                  completionBlock:(BBNetworkResponseBlock)responseBlock;
@@ -38,4 +38,6 @@ typedef void(^BBNetworkResponseBlock)(id responseObject, NSError *error);
                                     completionBlock:(BBNetworkResponseBlock)responseBlock;
 
 - (NSURLSessionDataTask *)getStepCountingAverageWithCompletionBlock:(BBNetworkResponseBlock)responseBlock;
+
+- (NSURLSessionDataTask *)getHistoryStepCountWithCompletionBlock:(BBNetworkResponseBlock)responseBlock;
 @end

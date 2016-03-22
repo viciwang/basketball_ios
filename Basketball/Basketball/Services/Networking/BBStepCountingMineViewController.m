@@ -11,6 +11,7 @@
 #import "BBStepCountingChartView.h"
 #import "BBStepCountingManager.h"
 #import "BBNetworkApiManager.h"
+#import "BBStepCountingHistoryViewController.h"
 
 @interface BBStepCountingMineViewController ()
 
@@ -96,7 +97,9 @@
 #pragma mark - action
 
 - (void)showHistory:(UIButton *)button {
-    
+    if (self.showHistoryStepCountBlock) {
+        self.showHistoryStepCountBlock();
+    }
 }
 
 #pragma mark - load data

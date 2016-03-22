@@ -39,4 +39,8 @@
 
 #define kApiStepCountingAverage @"stepCounting/average"
 
+#define kApiStepCountingHistory @"stepCounting/history"
+
+#define kApiStepCountingRanking @"stepCounting/ranking"
+
 #endif /* BBNetworkAddress_h */

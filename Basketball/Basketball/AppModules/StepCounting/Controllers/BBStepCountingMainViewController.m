@@ -81,7 +81,7 @@
 }
 
 - (void)setupStepCounting {
-    [[BBStepCountingManager sharedManager] startStepCounting];
+//    [[BBStepCountingManager sharedManager] startStepCounting];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(stepCountingUpdate:) name:BBNotificationStepCountingUpdate object:nil];
 }
 

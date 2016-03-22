@@ -57,6 +57,7 @@ ChartViewDelegate
     NSMutableArray *xVals = [[NSMutableArray alloc] init];
     NSMutableArray *yVals = [[NSMutableArray alloc] init];
     
+    
     for (int i = 0; i < record.dayRecords.count; i++) {
         BBStepCountingHistoryDayRecord *r = record.dayRecords[i];
         [xVals addObject:r.date];
@@ -64,13 +65,13 @@ ChartViewDelegate
     }
     
     BarChartDataSet *set1 = [[BarChartDataSet alloc] initWithYVals:yVals label:@"DataSet"];
-    set1.barSpace = 0.35;
+    set1.colors = ChartColorTemplates.vordiplom;
+    set1.drawValuesEnabled = NO;
     
     NSMutableArray *dataSets = [[NSMutableArray alloc] init];
     [dataSets addObject:set1];
     
     BarChartData *data = [[BarChartData alloc] initWithXVals:xVals dataSets:dataSets];
-    [data setValueFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:10.f]];
     
     self.chartView.data = data;
 }

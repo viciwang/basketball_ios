@@ -9,8 +9,6 @@
 #import <XCTest/XCTest.h>
 #import "BBNetworkApiManager.h"
 #import "BBBaseTestCase.h"
-#import <malloc/malloc.h>
-#import <objc/runtime.h>
 #import "BBUser.h"
 
 @interface UserTests : BBBaseTestCase

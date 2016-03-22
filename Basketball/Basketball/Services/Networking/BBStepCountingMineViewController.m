@@ -107,7 +107,7 @@
 - (void)loadData {
     @weakify(self);
     [self showLoadingHUDWithInfo:nil];
-    [[BBNetworkApiManager sharedManager] getStepCountingAverageWithCompletionBlock:^(NSNumber *average, NSError *error) {
+    [[BBNetworkApiManager sharedManager] getAverageStepCountWithCompletionBlock:^(NSNumber *average, NSError *error) {
         @strongify(self);
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         if (error) {

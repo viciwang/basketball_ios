@@ -12,6 +12,7 @@
 #import "BBModel.h"
 #import "BBUser.h"
 #import "BBStepCountingHistoryRecord.h"
+#import "BBStepCountingRank.h"
 
 #define REQUEST(METHOD, URLString, PARAMETERS, MODEL_CLASS, RESPONSE_BLOCK) \
 { \
@@ -185,7 +186,7 @@
     return nil;
 }
 
-- (NSURLSessionDataTask *)getStepCountingAverageWithCompletionBlock:(BBNetworkResponseBlock)responseBlock {
+- (NSURLSessionDataTask *)getAverageStepCountWithCompletionBlock:(BBNetworkResponseBlock)responseBlock {
     REQUEST(GET, kApiStepCountingAverage, nil, nil, ^(NSDictionary *dict, NSError *error){
         if (error) {
             if (responseBlock) {
@@ -214,6 +215,23 @@
                     DDLogInfo(@"%@",error);
                 }
                 responseBlock(records,nil);
+            }
+        }
+    });
+}
+
+- (NSURLSessionDataTask *)getStepCountRankingWithCompletionBlock:(BBNetworkResponseBlock)responseBlock {
+    REQUEST(GET, kApiStepCountingRanking, nil, nil, ^(NSArray *ranking,NSError *error) {
+        if (responseBlock) {
+            if (error) {
+                responseBlock(nil,error);
+            }
+            else {
+                NSArray *rank = [MTLJSONAdapter modelsOfClass:[BBStepCountingRank class] fromJSONArray:ranking error:&error];
+                if (error) {
+                    DDLogInfo(@"%@",error);
+                }
+                responseBlock(rank,error);
             }
         }
     });

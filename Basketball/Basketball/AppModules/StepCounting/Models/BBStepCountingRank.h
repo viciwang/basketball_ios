@@ -12,6 +12,7 @@
 
 @property (nonatomic, copy) NSString *uid;
 @property (nonatomic, copy) NSString *nickName;
+@property (nonatomic, copy) NSString *headImageUrl;
 @property (nonatomic, assign) NSUInteger stepCount;
 
 @end

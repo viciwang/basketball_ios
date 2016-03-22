@@ -53,7 +53,7 @@ ChartViewDelegate
 
 #pragma mark - data
 
--(void)updateWithData:(BBStepCountingHistoryMonthRecord *)record {
+- (void)updateWithData:(BBStepCountingHistoryMonthRecord *)record {
     NSMutableArray *xVals = [[NSMutableArray alloc] init];
     NSMutableArray *yVals = [[NSMutableArray alloc] init];
     

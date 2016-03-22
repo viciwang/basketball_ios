@@ -14,7 +14,8 @@
     return @{
              @"uid":@"uid",
              @"stepCount":@"stepCount",
-             @"nickName":@"nickName"
+             @"nickName":@"nickName",
+             @"headImageUrl":@"headImageUrl"
              };
 }
 

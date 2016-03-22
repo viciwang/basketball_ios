@@ -82,7 +82,7 @@
 
 - (void)setupStepCounting {
 //    [[BBStepCountingManager sharedManager] startStepCounting];
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(stepCountingUpdate:) name:BBNotificationStepCountingUpdate object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(stepCountingUpdate:) name:kBBNotificationStepCountingUpdate object:nil];
 }
 
 - (void)stepCountingUpdate:(NSNotification *)notifation {

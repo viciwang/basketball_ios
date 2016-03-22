@@ -25,6 +25,7 @@ NSString * const BBURLResponseSerializationErrorDomain = @"com.basketball.Basket
         switch (code) {
             case 99:{
                 *error = [[NSError alloc] initWithDomain:BBURLResponseSerializationErrorDomain code:code userInfo:@{@"msg":errorMsg}];
+                [[NSNotificationCenter defaultCenter]postNotificationName:kBBNotificationTokenExpired object:nil];
                 break;
             }
             case 1:{

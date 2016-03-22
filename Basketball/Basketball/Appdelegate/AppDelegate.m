@@ -42,6 +42,8 @@ const int ddLogLevel = DDLogLevelWarning;
     self.window.rootViewController = controller;
     [self.window makeKeyAndVisible];
     
+    [self addNotificationObsever];
+    
     // debug
 #if DEBUG
     [self configFLEX];
@@ -50,6 +52,19 @@ const int ddLogLevel = DDLogLevelWarning;
 #endif
     
     return YES;
+}
+
+#pragma mark - notification
+
+- (void)addNotificationObsever {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tokenDidExpired) name:kBBNotificationTokenExpired object:nil];
+    
+}
+
+- (void)tokenDidExpired {
+    [BBLoginViewController showLoginViewControllerWithCompletionBlock:^{
+        
+    }];
 }
 
 #pragma mark - debug

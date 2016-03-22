@@ -9,6 +9,8 @@
 #ifndef BBNotificationDefine_h
 #define BBNotificationDefine_h
 
-extern NSString *BBNotificationStepCountingUpdate;
+extern NSString *kBBNotificationStepCountingUpdate;
+
+extern NSString *kBBNotificationTokenExpired;
 
 #endif /* BBNotificationDefine_h */

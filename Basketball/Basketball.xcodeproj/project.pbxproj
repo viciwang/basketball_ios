@@ -1408,6 +1408,7 @@
 				9F9617651C83D6B00078FB3C /* Resources */,
 				8C6695DA00A6B366849403C9 /* Embed Pods Frameworks */,
 				79F9A235B643ECB8F4EE306D /* Copy Pods Resources */,
+				9F33CEA21CA1857C0016EB39 /* Run Script For Setting Debug Base Url */,
 			);
 			buildRules = (
 			);
@@ -1627,6 +1628,20 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		9F33CEA21CA1857C0016EB39 /* Run Script For Setting Debug Base Url */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script For Setting Debug Base Url";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "baseurl=http:\\/\\/`ifconfig en0 | grep inet | grep -v inet6 | awk '{print $2}'`:8080\n/usr/libexec/PlistBuddy -c \"Set :DebugBaseUrl $baseurl\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\necho \"Updated ${TARGET_BUILD_DIR}/${INFOPLIST_PATH} DebugBaseUrl to $baseurl\"";
 		};
 		D9EBB854E381A0C4DC2101EA /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

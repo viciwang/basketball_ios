@@ -9,6 +9,7 @@
 #import "BBPersonalCenterViewController.h"
 #import "BBPersonalCenterCell.h"
 #import "BBUser.h"
+#import "BBPersonalTableViewHeaderCell.h"
 
 @interface BBPersonalCenterViewController ()
 <
@@ -17,7 +18,7 @@ UITableViewDataSource
 >
 
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) NSArray *records;
+@property (nonatomic, strong) BBPersonalTableViewHeaderCell *headerView;
 
 @end
 
@@ -29,7 +30,10 @@ UITableViewDataSource
     [super viewDidLoad];
     self.title = @"个人中心";
     [self setupTableView];
-    [self fillData];
+    [self.view setNeedsLayout];
+    [self.view layoutIfNeeded];
+    [self.view setNeedsUpdateConstraints];
+    [self.view updateConstraintsIfNeeded];
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,6 +44,7 @@ UITableViewDataSource
 
 - (void)updateViewConstraints {
     @weakify(self);
+    
     [self.tableView mas_updateConstraints:^(MASConstraintMaker *make) {
         @strongify(self);
         make.top.left.right.bottom.equalTo(self.view);
@@ -52,31 +57,52 @@ UITableViewDataSource
 - (void)setupTableView {
     self.tableView = [UITableView new];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([BBPersonalCenterCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:NSStringFromClass([BBPersonalCenterCell class])];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([BBPersonalTableViewHeaderCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:NSStringFromClass([BBPersonalTableViewHeaderCell class])];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.rowHeight = 150;
     [self.view addSubview:self.tableView];
-}
-
-#pragma mark - data
-
-- (void)fillData {
-    if ([BBUser currentUser]) {
-        
-    }
 }
 
 #pragma mark - tableview delegate
 
 #pragma mark - tableview datasource
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        return 150;
+    }
+    return 50;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 2;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.records.count;
+    if (section == 0) {
+        return 1;
+    }
+    else {
+        return 5;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    BBPersonalCenterCell *cell = [self.tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BBPersonalCenterCell class]) forIndexPath:indexPath];
-//    [cell updateWithData:self.records[indexPath.row]];
-    return cell;
+    if (indexPath.section == 0) {
+        BBPersonalTableViewHeaderCell *cell = [self.tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BBPersonalTableViewHeaderCell class]) forIndexPath:indexPath];
+        [cell fillDataWithUser:[BBUser currentUser]];
+        @weakify(self);
+        cell.changeInfoBlock = ^{
+            @strongify(self);
+            [self.navigationController pushViewController:[BBBaseViewController new] animated:YES];
+        };
+        return cell;
+    }
+    else {
+        BBPersonalCenterCell *cell = [self.tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BBPersonalCenterCell class]) forIndexPath:indexPath];
+        cell.backgroundColor = UIColorFromHex(arc4random()%0xffffff);
+        //    [cell updateWithData:self.records[indexPath.row]];
+        return cell;
+    }
 }
 @end

@@ -28,6 +28,8 @@
 		9F33CE961CA15D260016EB39 /* BBPersonalCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F33CE951CA15D260016EB39 /* BBPersonalCenterViewController.m */; };
 		9F33CEA01CA15E0D0016EB39 /* BBPersonalCenterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F33CE9E1CA15E0D0016EB39 /* BBPersonalCenterCell.m */; };
 		9F33CEA11CA15E0D0016EB39 /* BBPersonalCenterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F33CE9F1CA15E0D0016EB39 /* BBPersonalCenterCell.xib */; };
+		9F36B3B81CA3D23A00083496 /* BBPersonalTableViewHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F36B3B61CA3D23A00083496 /* BBPersonalTableViewHeaderCell.m */; };
+		9F36B3B91CA3D23A00083496 /* BBPersonalTableViewHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F36B3B71CA3D23A00083496 /* BBPersonalTableViewHeaderCell.xib */; };
 		9F9394541C8893C9009E6DDF /* BBStepCountingMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9394531C8893C9009E6DDF /* BBStepCountingMainViewController.m */; };
 		9F93945A1C88946F009E6DDF /* BBStepCountingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9394591C88946F009E6DDF /* BBStepCountingManager.m */; };
 		9F93945F1C88968D009E6DDF /* BBStepCountingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F93945E1C88968D009E6DDF /* BBStepCountingService.m */; };
@@ -222,6 +224,9 @@
 		9F33CE9D1CA15E0D0016EB39 /* BBPersonalCenterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBPersonalCenterCell.h; sourceTree = "<group>"; };
 		9F33CE9E1CA15E0D0016EB39 /* BBPersonalCenterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBPersonalCenterCell.m; sourceTree = "<group>"; };
 		9F33CE9F1CA15E0D0016EB39 /* BBPersonalCenterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBPersonalCenterCell.xib; sourceTree = "<group>"; };
+		9F36B3B51CA3D23A00083496 /* BBPersonalTableViewHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBPersonalTableViewHeaderCell.h; sourceTree = "<group>"; };
+		9F36B3B61CA3D23A00083496 /* BBPersonalTableViewHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBPersonalTableViewHeaderCell.m; sourceTree = "<group>"; };
+		9F36B3B71CA3D23A00083496 /* BBPersonalTableViewHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBPersonalTableViewHeaderCell.xib; sourceTree = "<group>"; };
 		9F9394521C8893C9009E6DDF /* BBStepCountingMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBStepCountingMainViewController.h; path = Basketball/AppModules/StepCounting/Controllers/BBStepCountingMainViewController.h; sourceTree = SOURCE_ROOT; };
 		9F9394531C8893C9009E6DDF /* BBStepCountingMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBStepCountingMainViewController.m; path = Basketball/AppModules/StepCounting/Controllers/BBStepCountingMainViewController.m; sourceTree = SOURCE_ROOT; };
 		9F9394581C88946F009E6DDF /* BBStepCountingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBStepCountingManager.h; path = StepCounting/BBStepCountingManager.h; sourceTree = "<group>"; };
@@ -542,6 +547,9 @@
 				9F33CE9D1CA15E0D0016EB39 /* BBPersonalCenterCell.h */,
 				9F33CE9E1CA15E0D0016EB39 /* BBPersonalCenterCell.m */,
 				9F33CE9F1CA15E0D0016EB39 /* BBPersonalCenterCell.xib */,
+				9F36B3B51CA3D23A00083496 /* BBPersonalTableViewHeaderCell.h */,
+				9F36B3B61CA3D23A00083496 /* BBPersonalTableViewHeaderCell.m */,
+				9F36B3B71CA3D23A00083496 /* BBPersonalTableViewHeaderCell.xib */,
 			);
 			name = Views;
 			path = Personal/Views;
@@ -1529,6 +1537,7 @@
 				9F9617D01C83E9440078FB3C /* LaunchScreen.storyboard in Resources */,
 				9F33CEA11CA15E0D0016EB39 /* BBPersonalCenterCell.xib in Resources */,
 				C3584B4A1C9076220087FF34 /* MIN_logo.png in Resources */,
+				9F36B3B91CA3D23A00083496 /* BBPersonalTableViewHeaderCell.xib in Resources */,
 				C3584B421C9076220087FF34 /* GSW_logo.png in Resources */,
 				C3584B3A1C9076220087FF34 /* BKN_logo.png in Resources */,
 				C3584B181C9075D80087FF34 /* BBGamesScoreTableViewCell_iPhone.xib in Resources */,
@@ -1641,7 +1650,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "baseurl=http:\\/\\/`ifconfig en0 | grep inet | grep -v inet6 | awk '{print $2}'`:8080\n/usr/libexec/PlistBuddy -c \"Set :DebugBaseUrl $baseurl\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\necho \"Updated ${TARGET_BUILD_DIR}/${INFOPLIST_PATH} DebugBaseUrl to $baseurl\"";
+			shellScript = "baseurl=http:\\/\\/`ifconfig en0 | grep inet | grep -v inet6 | awk '{print $2}'`:8081\n/usr/libexec/PlistBuddy -c \"Set :DebugBaseUrl $baseurl\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\necho \"Updated ${TARGET_BUILD_DIR}/${INFOPLIST_PATH} DebugBaseUrl to $baseurl\"";
 		};
 		D9EBB854E381A0C4DC2101EA /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1731,6 +1740,7 @@
 				9F2EA0361C9C10960053A802 /* BBStepCountingMineViewController.m in Sources */,
 				9F33CE961CA15D260016EB39 /* BBPersonalCenterViewController.m in Sources */,
 				9F1B638C1C944B5100C486B0 /* BBModel.m in Sources */,
+				9F36B3B81CA3D23A00083496 /* BBPersonalTableViewHeaderCell.m in Sources */,
 				C3F8A5361C9D72820086FF4B /* WYFeedManager.m in Sources */,
 				C3F8A5591C9D80960086FF4B /* NewsRecourceViewController.m in Sources */,
 				9F9394AD1C89E245009E6DDF /* NSDate+Utilities.m in Sources */,

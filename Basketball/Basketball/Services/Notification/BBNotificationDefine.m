@@ -11,3 +11,5 @@
 NSString *kBBNotificationStepCountingUpdate = @"kBBNotificationStepCountingUpdate";
 
 NSString *kBBNotificationTokenExpired = @"kBBNotificationTokenExpired";
+
+NSString *kBBNotificationUserDidLogin = @"kBBNotificationUserDidLogin";

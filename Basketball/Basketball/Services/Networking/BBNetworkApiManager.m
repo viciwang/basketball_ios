@@ -181,6 +181,7 @@ static NSString *_debugBaseUrl = nil;
         else {
             [[BBNetworkApiManager sharedManager].requestSerializer setValue:user.token forHTTPHeaderField:@"token"];
             [[BBNetworkApiManager sharedManager].requestSerializer setValue:user.uid forHTTPHeaderField:@"uid"];
+            [[NSNotificationCenter defaultCenter] postNotificationName:kBBNotificationUserDidLogin object:nil];
             if (responseBlock) {
                 responseBlock(user, error);
             }

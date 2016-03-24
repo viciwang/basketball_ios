@@ -93,7 +93,6 @@ const int ddLogLevel = DDLogLevelWarning;
         NSLog(@"设置baseurl为：%@",baseurl);
         [BBNetworkApiManager configDebugBaseUrl:baseurl];
     }
-  
 }
 
 @end

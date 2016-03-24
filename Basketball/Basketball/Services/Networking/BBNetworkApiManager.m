@@ -258,4 +258,16 @@ static NSString *_debugBaseUrl = nil;
     });
 }
 
+- (NSURLSessionDataTask *)logoutWithCompletionBlock:(BBNetworkResponseBlock)responseBlock {
+    REQUEST(GET, kApiUserLogout, nil, nil, ^(id responseObject, NSError *error){
+        if (!error) {
+            [BBUser setCurrentUser:nil];
+            [[NSNotificationCenter defaultCenter] postNotificationName:kBBNotificationUserDidLogout object:nil];
+        }
+        if (responseBlock) {
+            responseBlock(nil,error);
+        }
+    });
+}
+
 @end

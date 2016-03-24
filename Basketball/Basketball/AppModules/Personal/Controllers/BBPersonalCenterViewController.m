@@ -10,6 +10,11 @@
 #import "BBPersonalCenterCell.h"
 #import "BBUser.h"
 #import "BBPersonalTableViewHeaderCell.h"
+#import "BBNetworkApiManager.h"
+#import "MBProgressHUD.h"
+#import "UIWindow+Utils.h"
+#import "BBLoginViewController.h"
+#import "BBNavigationController.h"
 
 @interface BBPersonalCenterViewController ()
 <
@@ -73,6 +78,28 @@ UITableViewDataSource
 }
 
 #pragma mark - tableview delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSUInteger section = indexPath.section;
+    NSUInteger row = indexPath.row;
+    if (section == 1) {
+        
+    }
+    else if(section == 2) {
+        @weakify(self);
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"确定要退出" message:nil preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action0 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            @strongify(self);
+            [self logoutAction];
+        }];
+        UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            [alert dismissViewControllerAnimated:YES completion:nil];
+        }];
+        [alert addAction:action0];
+        [alert addAction:action1];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+}
 
 #pragma mark - tableview datasource
 
@@ -160,5 +187,23 @@ UITableViewDataSource
         }];
     }
     return _logoutCell;
+}
+
+#pragma mark - action 
+
+- (void)logoutAction {
+    [self showLoadingHUDWithInfo:nil];
+    @weakify(self);
+    [[BBNetworkApiManager sharedManager] logoutWithCompletionBlock:^(id responseObject, NSError *error) {
+        @strongify(self);
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        if (error) {
+            [self showErrorHUDWithInfo:error.userInfo[@"msg"]];
+        }
+        else {
+            BBNavigationController *nav = [[BBNavigationController alloc] initWithRootViewController:[BBLoginViewController create]];
+            [[UIApplication sharedApplication].keyWindow bb_checkoutRootViewController:nav];
+        }
+    }];
 }
 @end

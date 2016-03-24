@@ -30,6 +30,8 @@ typedef void(^BBNetworkResponseBlock)(id responseObject, NSError *error);
                                 password:(NSString *)password
                          completionBlock:(BBNetworkResponseBlock)responseBlock;
 
+- (NSURLSessionDataTask *)logoutWithCompletionBlock:(BBNetworkResponseBlock)responseBlock;
+
 - (NSURLSessionDataTask *)registerWithEmail:(NSString *)email
                                    password:(NSString *)password
                                  verifyCode:(NSString *)verifyCode
@@ -48,4 +50,5 @@ typedef void(^BBNetworkResponseBlock)(id responseObject, NSError *error);
 - (NSURLSessionDataTask *)getHistoryStepCountWithCompletionBlock:(BBNetworkResponseBlock)responseBlock;
 
 - (NSURLSessionDataTask *)getStepCountRankingWithCompletionBlock:(BBNetworkResponseBlock)responseBlock;
+
 @end

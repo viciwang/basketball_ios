@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class BBCommonCellView;
+
 @interface BBPersonalCenterCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *icon;
-@property (nonatomic, assign) BOOL isLastIndexInSection;
+@property (weak, nonatomic) IBOutlet BBCommonCellView *commonCellView;
 
 @end

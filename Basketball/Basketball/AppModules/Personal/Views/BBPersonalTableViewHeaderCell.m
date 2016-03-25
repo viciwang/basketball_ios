@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *headerImageView;
 @property (weak, nonatomic) IBOutlet UIButton *loginOrUserNameButton;
 @property (weak, nonatomic) IBOutlet UIButton *changeInfoButton;
+@property (weak, nonatomic) IBOutlet UIImageView *bgImageView;
 
 @end
 
@@ -21,6 +22,9 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+    self.headerImageView.layer.cornerRadius = 35;
+    self.headerImageView.clipsToBounds = YES;
     [self addObserver];
 }
 
@@ -37,6 +41,7 @@
         [self.loginOrUserNameButton setTitle:user.nickName forState:UIControlStateNormal];
         self.loginOrUserNameButton.userInteractionEnabled = NO;
         [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:user.headImageUrl]];
+        [self.bgImageView sd_setImageWithURL:[NSURL URLWithString:user.headImageUrl]];
     }
     else {
         [self.loginOrUserNameButton setTitle:@"立即登录" forState:UIControlStateNormal];

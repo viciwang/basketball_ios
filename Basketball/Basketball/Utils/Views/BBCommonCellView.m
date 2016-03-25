@@ -106,12 +106,21 @@
 
 - (void)configSubView {
     self.leftLabel = [self commonLabel];
-    self.leftLabelText = self.leftLabelText;
-    
     self.rightLabel = [self commonLabel];
-    self.rightLabelText = self.rightLabelText;
-    
     self.leftImageView = [UIImageView new];
+    self.rightImageView = [UIImageView new];
+    self.disclosureIndicatorImageView = [UIImageView new];
+    self.topLine = [UIView new];
+    self.bottomLine = [UIView new];
+    NSArray *array = @[self.leftLabel,self.rightLabel,self.leftImageView, \
+                       self.rightImageView,self.disclosureIndicatorImageView,self.topLine,self.bottomLine];
+    for (UIView *v in array) {
+        [self addSubview:v];
+    }
+    
+    self.leftLabelText = self.leftLabelText;
+    self.rightLabelText = self.rightLabelText;
+
     if (self.leftImageString) {
         self.leftImageString = self.leftImageString;
     }
@@ -119,31 +128,21 @@
         self.leftImage = self.leftImage;
     }
     
-    self.rightImageView = [UIImageView new];
     if (self.rightImageString) {
         self.rightImageString = self.rightImageString;
     }
     else {
         self.rightImage = self.rightImage;
     }
-    
-    self.disclosureIndicatorImageView = [UIImageView new];
+
     self.disclosureIndicatorImageView.image = [UIImage imageNamed:@"Right Arrow 2"];
     self.shouldShowdisclosureIndicator = self.shouldShowdisclosureIndicator;
     
-    self.topLine = [UIView new];
     self.topLine.backgroundColor = UIColorFromHex(0xd5d5d5);
     self.shouldShowTopLine = self.shouldShowTopLine;
     
-    self.bottomLine = [UIView new];
     self.bottomLine.backgroundColor = UIColorFromHex(0xd5d5d5);
     self.shouldShowBottomLine = self.shouldShowBottomLine;
-    
-    NSArray *array = @[self.leftLabel,self.rightLabel,self.leftImageView, \
-                       self.rightImageView,self.disclosureIndicatorImageView,self.topLine,self.bottomLine];
-    for (UIView *v in array) {
-        [self addSubview:v];
-    }
 }
 
 - (UILabel *)commonLabel {
@@ -158,11 +157,15 @@
 - (void)setLeftLabelText:(NSString *)leftLabelText {
     _leftLabelText = leftLabelText;
     self.leftLabel.text = leftLabelText;
+    [self setNeedsUpdateConstraints];
+    [self updateConstraintsIfNeeded];
 }
 
 - (void)setRightLabelText:(NSString *)rightLabelText {
     _rightLabelText = rightLabelText;
     self.rightLabel.text = rightLabelText;
+    [self setNeedsUpdateConstraints];
+    [self updateConstraintsIfNeeded];
 }
 
 - (void)setLeftImage:(UIImage *)leftImage {
@@ -199,6 +202,32 @@
 - (void)setShouldShowdisclosureIndicator:(BOOL)shouldShowdisclosureIndicator {
     _shouldShowdisclosureIndicator = shouldShowdisclosureIndicator;
     self.disclosureIndicatorImageView.hidden = !shouldShowdisclosureIndicator;
+    [self setNeedsUpdateConstraints];
+    [self updateConstraintsIfNeeded];
+}
+
+- (void)setTopLineLeftSpace:(CGFloat)topLineLeftSpace {
+    _topLineLeftSpace = topLineLeftSpace;
+    [self setNeedsUpdateConstraints];
+    [self updateConstraintsIfNeeded];
+}
+
+- (void)setTopLineRightSpace:(CGFloat)topLineRightSpace {
+    _topLineRightSpace = topLineRightSpace;
+    [self setNeedsUpdateConstraints];
+    [self updateConstraintsIfNeeded];
+}
+
+- (void)setBottomLineLeftSpace:(CGFloat)bottomLineLeftSpace {
+    _bottomLineLeftSpace = bottomLineLeftSpace;
+    [self setNeedsUpdateConstraints];
+    [self updateConstraintsIfNeeded];
+}
+
+- (void)setBottomLineRightSpace:(CGFloat)bottomLineRightSpace {
+    _bottomLineRightSpace = bottomLineRightSpace;
+    [self setNeedsUpdateConstraints];
+    [self updateConstraintsIfNeeded];
 }
 
 @end

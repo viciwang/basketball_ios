@@ -16,6 +16,7 @@
 #import "BBLoginViewController.h"
 #import "BBNavigationController.h"
 #import "BBChangeInfoViewController.h"
+#import "BBCommonCellView.h"
 
 @interface BBPersonalCenterViewController ()
 <
@@ -39,6 +40,8 @@ UITableViewDataSource
     [super viewDidLoad];
     self.title = @"个人中心";
     [self setupTableView];
+    [self setupObserver];
+//    [self setupBackground];
     [self.view setNeedsLayout];
     [self.view layoutIfNeeded];
     [self.view setNeedsUpdateConstraints];
@@ -61,6 +64,20 @@ UITableViewDataSource
     [super updateViewConstraints];
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark - noti
+
+- (void)setupObserver {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateInfo:) name:kBBNotificationUserDidUpdateInfo object:nil];
+}
+
+- (void)updateInfo:(NSNotification *)noti {
+    [self.tableView reloadData];
+}
+
 #pragma mark - UI
 
 - (void)setupTableView {
@@ -76,6 +93,23 @@ UITableViewDataSource
     
     self.cellTitles = @[@"运动数据",@"运动数据",@"运动数据"];
     self.cellIconString = @[@"Contact Card 1",@"Contact Card 1",@"Contact Card 1"];
+}
+
+- (void)setupBackground {
+    UIImageView *imageView = [UIImageView new];
+    UIVisualEffectView *effectView = [[UIVisualEffectView alloc]initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
+    [self.view insertSubview:imageView belowSubview:self.tableView];
+    [self.view insertSubview:effectView aboveSubview:imageView];
+    [imageView sd_setImageWithURL:[NSURL URLWithString:[BBUser currentUser].headImageUrl]];
+    @weakify(self);
+    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        @strongify(self);
+        make.left.right.top.bottom.equalTo(self.view);
+    }];
+    [effectView mas_makeConstraints:^(MASConstraintMaker *make) {
+        @strongify(self);
+        make.left.right.top.bottom.equalTo(self.view);
+    }];
 }
 
 #pragma mark - tableview delegate
@@ -150,6 +184,7 @@ UITableViewDataSource
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSUInteger row = indexPath.row;
     if (indexPath.section == 0) {
         BBPersonalTableViewHeaderCell *cell = [self.tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BBPersonalTableViewHeaderCell class]) forIndexPath:indexPath];
         [cell fillDataWithUser:[BBUser currentUser]];
@@ -162,9 +197,23 @@ UITableViewDataSource
     }
     else if(indexPath.section == 1) {
         BBPersonalCenterCell *cell = [self.tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BBPersonalCenterCell class]) forIndexPath:indexPath];
-        cell.icon.image = [UIImage imageNamed:self.cellIconString[indexPath.row]];
-        cell.descriptionLabel.text = self.cellTitles[indexPath.row];
-        cell.isLastIndexInSection = indexPath.row == self.cellTitles.count - 1;
+        cell.commonCellView.leftImage = [UIImage imageNamed:self.cellIconString[row]];
+        cell.commonCellView.leftLabelText = self.cellTitles[row];
+        cell.commonCellView.shouldShowTopLine = YES;
+        if (row != 0) {
+            cell.commonCellView.topLineLeftSpace = 10;
+            cell.commonCellView.topLineRightSpace = 10;
+        }
+        else {
+            cell.commonCellView.topLineLeftSpace = 0;
+            cell.commonCellView.topLineRightSpace = 0;
+        }
+        
+        cell.commonCellView.shouldShowBottomLine = (row == self.cellTitles.count - 1);
+        cell.commonCellView.bottomLineLeftSpace = 0;
+        cell.commonCellView.bottomLineRightSpace = 0;
+        
+        cell.commonCellView.shouldShowdisclosureIndicator = YES;
         return cell;
     }
     
@@ -179,6 +228,7 @@ UITableViewDataSource
 - (UITableViewCell *)logoutCell {
     if (!_logoutCell) {
         _logoutCell = [[UITableViewCell alloc]init];
+        _logoutCell.selectionStyle = UITableViewCellSelectionStyleNone;
         UILabel *label = [UILabel new];
         label.text = @"退出";
         label.font = [UIFont systemFontOfSize:15];

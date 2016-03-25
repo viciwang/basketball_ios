@@ -17,4 +17,6 @@ extern NSString *kBBNotificationUserDidLogin;
 
 extern NSString *kBBNotificationUserDidLogout;
 
+extern NSString *kBBNotificationUserDidUpdateInfo;
+
 #endif /* BBNotificationDefine_h */

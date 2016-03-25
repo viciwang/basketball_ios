@@ -14,38 +14,23 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Contact Card 1" translatesAutoresizingMaskIntoConstraints="NO" id="0iP-99-D6I">
-                        <rect key="frame" x="20" y="25" width="22" height="18"/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Is-KN-tnK">
-                        <rect key="frame" x="62" y="24" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Right Arrow 2" translatesAutoresizingMaskIntoConstraints="NO" id="ezb-gH-7EU">
-                        <rect key="frame" x="300" y="24" width="10" height="20"/>
-                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yre-NK-VpK" customClass="BBCommonCellView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstItem="0iP-99-D6I" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1bZ-FV-arS"/>
-                    <constraint firstAttribute="trailing" secondItem="ezb-gH-7EU" secondAttribute="trailing" constant="10" id="FPP-oW-4rj"/>
-                    <constraint firstItem="0iP-99-D6I" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="LL2-fl-GBn"/>
-                    <constraint firstItem="2Is-KN-tnK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="62" id="LRn-Jf-c2x"/>
-                    <constraint firstItem="2Is-KN-tnK" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="XDx-25-DVC"/>
-                    <constraint firstItem="ezb-gH-7EU" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="YVP-qE-aVT"/>
+                    <constraint firstAttribute="bottom" secondItem="Yre-NK-VpK" secondAttribute="bottom" id="5OP-lU-Xy3"/>
+                    <constraint firstItem="Yre-NK-VpK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="OPv-rO-8cY"/>
+                    <constraint firstItem="Yre-NK-VpK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="pC1-5k-ysG"/>
+                    <constraint firstAttribute="trailing" secondItem="Yre-NK-VpK" secondAttribute="trailing" id="yyP-nu-Ndj"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="descriptionLabel" destination="2Is-KN-tnK" id="pcC-pR-y3G"/>
-                <outlet property="icon" destination="0iP-99-D6I" id="4dr-zr-vrr"/>
+                <outlet property="commonCellView" destination="Yre-NK-VpK" id="Slx-y4-SoQ"/>
             </connections>
-            <point key="canvasLocation" x="179" y="325.5"/>
+            <point key="canvasLocation" x="-19" y="271.5"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="Contact Card 1" width="22" height="18"/>
-        <image name="Right Arrow 2" width="10" height="20"/>
-    </resources>
 </document>

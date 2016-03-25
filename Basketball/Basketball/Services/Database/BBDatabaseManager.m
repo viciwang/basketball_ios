@@ -74,7 +74,7 @@
 
 - (BOOL)saveCurrentUser:(BBUser *)user {
     
-    if (![self.localDatabase open] || !user) {
+    if (![self.localDatabase open]) {
         return NO;
     }
     
@@ -82,10 +82,15 @@
         DDLogInfo(@"清空用户表出错：%@",[self.localDatabase lastErrorMessage]);
         return NO;
     }
-
-    BOOL success = [self.localDatabase executeUpdate:@"INSERT INTO User (uid, email, nickName, headImageUrl, city, token, lastLoginTime) VALUES (?,?,?,?,?,?,?)",user.uid,user.email,user.nickName,user.headImageUrl,user.city,user.token,user.lastLoginTime];
-    if (!success) {
-        DDLogInfo(@"sqlite保存出错：%@",[self.localDatabase lastErrorMessage]);
+    BOOL success = NO;
+    if (user) {
+        BOOL success = [self.localDatabase executeUpdate:@"INSERT INTO User (uid, email, nickName, headImageUrl, city, token, lastLoginTime) VALUES (?,?,?,?,?,?,?)",user.uid,user.email,user.nickName,user.headImageUrl,user.city,user.token,user.lastLoginTime];
+        if (!success) {
+            DDLogInfo(@"sqlite保存出错：%@",[self.localDatabase lastErrorMessage]);
+        }
+    }
+    else {
+        success = YES;
     }
     [self.localDatabase close];
     return success;

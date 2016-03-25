@@ -17,45 +17,112 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tJm-kx-R9Z">
-                                <rect key="frame" x="20" y="20" width="280" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAp-uk-rW1">
+                                <rect key="frame" x="32" y="20" width="256" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6n-bE-kgN">
+                                <rect key="frame" x="32" y="80" width="256" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="邮箱" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tJm-kx-R9Z">
+                                <rect key="frame" x="42" y="20" width="236" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="MaR-Lg-a4F"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ldx-ZJ-jWY">
-                                <rect key="frame" x="20" y="70" width="280" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ldx-ZJ-jWY">
+                                <rect key="frame" x="42" y="80" width="236" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="MNU-jT-bBm"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G32-E4-6tb">
-                                <rect key="frame" x="20" y="120" width="280" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.55269361800000005" blue="0.40702713639999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="32" y="140" width="256" height="40"/>
+                                <color key="backgroundColor" red="0.0039215686269999999" green="0.57254901960000004" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="nSa-mv-Q8O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="登录">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="loginAction:" destination="TKq-7Q-z4C" eventType="touchUpInside" id="31a-7v-iEd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOy-lY-E9e">
-                                <rect key="frame" x="137" y="170" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="130" y="200" width="60" height="30"/>
+                                <state key="normal" title="忘记密码">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="forgetPasswordAction:" destination="TKq-7Q-z4C" eventType="touchUpInside" id="rlM-k8-vpl"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94509803921568625" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="tJm-kx-R9Z" firstAttribute="top" secondItem="cOb-So-n25" secondAttribute="top" constant="20" id="0Ep-7m-iAY"/>
                             <constraint firstItem="Ldx-ZJ-jWY" firstAttribute="trailing" secondItem="tJm-kx-R9Z" secondAttribute="trailing" id="2RH-iA-v4R"/>
                             <constraint firstItem="oOy-lY-E9e" firstAttribute="centerX" secondItem="cOb-So-n25" secondAttribute="centerX" id="4o9-3r-5i3"/>
                             <constraint firstItem="oOy-lY-E9e" firstAttribute="top" secondItem="G32-E4-6tb" secondAttribute="bottom" constant="20" id="6Al-q9-bfD"/>
-                            <constraint firstItem="tJm-kx-R9Z" firstAttribute="leading" secondItem="cOb-So-n25" secondAttribute="leading" constant="20" id="SB8-VN-wbn"/>
+                            <constraint firstItem="b6n-bE-kgN" firstAttribute="trailing" secondItem="Ldx-ZJ-jWY" secondAttribute="trailing" constant="10" id="AfJ-GZ-eEN"/>
+                            <constraint firstItem="pAp-uk-rW1" firstAttribute="bottom" secondItem="tJm-kx-R9Z" secondAttribute="bottom" id="BaN-II-A8y"/>
+                            <constraint firstItem="pAp-uk-rW1" firstAttribute="top" secondItem="tJm-kx-R9Z" secondAttribute="top" id="FqY-Fq-das"/>
+                            <constraint firstItem="pAp-uk-rW1" firstAttribute="leading" secondItem="tJm-kx-R9Z" secondAttribute="leading" constant="-10" id="GTU-Gq-lIv"/>
+                            <constraint firstItem="b6n-bE-kgN" firstAttribute="top" secondItem="Ldx-ZJ-jWY" secondAttribute="top" id="Jcg-XI-rO0"/>
+                            <constraint firstItem="b6n-bE-kgN" firstAttribute="leading" secondItem="Ldx-ZJ-jWY" secondAttribute="leading" constant="-10" id="JtY-Nz-sI0"/>
+                            <constraint firstItem="tJm-kx-R9Z" firstAttribute="leading" secondItem="cOb-So-n25" secondAttribute="leading" constant="42" id="SB8-VN-wbn"/>
+                            <constraint firstItem="b6n-bE-kgN" firstAttribute="bottom" secondItem="Ldx-ZJ-jWY" secondAttribute="bottom" id="XEl-0n-TUl"/>
                             <constraint firstItem="Ldx-ZJ-jWY" firstAttribute="top" secondItem="tJm-kx-R9Z" secondAttribute="bottom" constant="20" id="afi-a3-Yo0"/>
                             <constraint firstItem="Ldx-ZJ-jWY" firstAttribute="leading" secondItem="tJm-kx-R9Z" secondAttribute="leading" id="dxD-c6-NCA"/>
                             <constraint firstItem="G32-E4-6tb" firstAttribute="top" secondItem="Ldx-ZJ-jWY" secondAttribute="bottom" constant="20" id="pAE-N3-Kgy"/>
-                            <constraint firstAttribute="trailing" secondItem="tJm-kx-R9Z" secondAttribute="trailing" constant="20" id="qL2-mW-6ct"/>
-                            <constraint firstItem="G32-E4-6tb" firstAttribute="leading" secondItem="tJm-kx-R9Z" secondAttribute="leading" id="qZ0-jt-a8O"/>
-                            <constraint firstItem="G32-E4-6tb" firstAttribute="trailing" secondItem="tJm-kx-R9Z" secondAttribute="trailing" id="uR6-Xi-eWs"/>
+                            <constraint firstAttribute="trailing" secondItem="tJm-kx-R9Z" secondAttribute="trailing" constant="42" id="qL2-mW-6ct"/>
+                            <constraint firstItem="G32-E4-6tb" firstAttribute="leading" secondItem="tJm-kx-R9Z" secondAttribute="leading" constant="-10" id="qZ0-jt-a8O"/>
+                            <constraint firstItem="G32-E4-6tb" firstAttribute="trailing" secondItem="tJm-kx-R9Z" secondAttribute="trailing" constant="10" id="uR6-Xi-eWs"/>
+                            <constraint firstItem="pAp-uk-rW1" firstAttribute="trailing" secondItem="tJm-kx-R9Z" secondAttribute="trailing" constant="10" id="zWB-yJ-MlH"/>
                         </constraints>
                     </view>
                     <connections>

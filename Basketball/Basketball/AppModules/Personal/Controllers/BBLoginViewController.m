@@ -12,6 +12,7 @@
 #import "BBUser.h"
 #import "UIWindow+Utils.h"
 #import "BBTabBarController.h"
+#import "BBRegisterViewController.h"
 
 @interface BBLoginViewController ()
 
@@ -36,6 +37,8 @@
 
 - (void)dismissLoginVC:(id)sender {
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+
+
 }
 
 #pragma mark - life cycle
@@ -72,13 +75,23 @@
 
 - (void)setupSignal {
     @weakify(self);
-    RAC(self.loginButton, enabled) = [[RACSignal combineLatest:@[self.emailTextField.rac_textSignal,self.passwordTextField.rac_textSignal]]
+    RAC(self.loginButton, userInteractionEnabled) = [[RACSignal combineLatest:@[self.emailTextField.rac_textSignal,self.passwordTextField.rac_textSignal]]
                                       flattenMap:^RACStream *(id value) {
                                           @strongify(self);
                                           BOOL shouldEnable = self.emailTextField.text.length > 0;
                                           shouldEnable = shouldEnable && (self.passwordTextField.text.length > 0);
                                           return [RACReturnSignal return:@(shouldEnable)];
                                       }];
+
+    [RACObserve(self.loginButton, userInteractionEnabled) subscribeNext:^(id x) {
+        @strongify(self);
+        if (self.loginButton.userInteractionEnabled) {
+            self.loginButton.backgroundColor = baseColor;
+        }
+        else {
+            self.loginButton.backgroundColor = [UIColor lightGrayColor];
+        }
+    }];
 }
 
 #pragma mark - action 
@@ -104,6 +117,6 @@
 }
 
 - (void)registerAction:(UIButton *)sender {
-    
+    [self.navigationController pushViewController:[BBRegisterViewController create] animated:YES];
 }
 @end

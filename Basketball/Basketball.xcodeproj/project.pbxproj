@@ -47,6 +47,8 @@
 		9F7A79BD1CA52115004ABE1C /* NYXImagesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A79B01CA52115004ABE1C /* NYXImagesHelper.m */; };
 		9F7A79C11CA52B7D004ABE1C /* BBPersonalInfoEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A79BF1CA52B7D004ABE1C /* BBPersonalInfoEditViewController.m */; };
 		9F7A79C21CA52B7D004ABE1C /* BBPersonalInfoEditViewController_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7A79C01CA52B7D004ABE1C /* BBPersonalInfoEditViewController_iPhone.storyboard */; };
+		9F7A79C61CA56FBD004ABE1C /* BBRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A79C41CA56FBD004ABE1C /* BBRegisterViewController.m */; };
+		9F7A79C71CA56FBD004ABE1C /* BBRegisterViewController_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7A79C51CA56FBD004ABE1C /* BBRegisterViewController_iPhone.storyboard */; };
 		9F9394541C8893C9009E6DDF /* BBStepCountingMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9394531C8893C9009E6DDF /* BBStepCountingMainViewController.m */; };
 		9F93945A1C88946F009E6DDF /* BBStepCountingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9394591C88946F009E6DDF /* BBStepCountingManager.m */; };
 		9F93945F1C88968D009E6DDF /* BBStepCountingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F93945E1C88968D009E6DDF /* BBStepCountingService.m */; };
@@ -278,6 +280,9 @@
 		9F7A79BE1CA52B7D004ABE1C /* BBPersonalInfoEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBPersonalInfoEditViewController.h; path = Personal/Controllers/BBPersonalInfoEditViewController.h; sourceTree = "<group>"; };
 		9F7A79BF1CA52B7D004ABE1C /* BBPersonalInfoEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBPersonalInfoEditViewController.m; path = Personal/Controllers/BBPersonalInfoEditViewController.m; sourceTree = "<group>"; };
 		9F7A79C01CA52B7D004ABE1C /* BBPersonalInfoEditViewController_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BBPersonalInfoEditViewController_iPhone.storyboard; path = Personal/Controllers/BBPersonalInfoEditViewController_iPhone.storyboard; sourceTree = "<group>"; };
+		9F7A79C31CA56FBD004ABE1C /* BBRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBRegisterViewController.h; path = Personal/Controllers/BBRegisterViewController.h; sourceTree = "<group>"; };
+		9F7A79C41CA56FBD004ABE1C /* BBRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBRegisterViewController.m; path = Personal/Controllers/BBRegisterViewController.m; sourceTree = "<group>"; };
+		9F7A79C51CA56FBD004ABE1C /* BBRegisterViewController_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BBRegisterViewController_iPhone.storyboard; path = Personal/Controllers/BBRegisterViewController_iPhone.storyboard; sourceTree = "<group>"; };
 		9F9394521C8893C9009E6DDF /* BBStepCountingMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBStepCountingMainViewController.h; path = Basketball/AppModules/StepCounting/Controllers/BBStepCountingMainViewController.h; sourceTree = SOURCE_ROOT; };
 		9F9394531C8893C9009E6DDF /* BBStepCountingMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBStepCountingMainViewController.m; path = Basketball/AppModules/StepCounting/Controllers/BBStepCountingMainViewController.m; sourceTree = SOURCE_ROOT; };
 		9F9394581C88946F009E6DDF /* BBStepCountingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBStepCountingManager.h; path = StepCounting/BBStepCountingManager.h; sourceTree = "<group>"; };
@@ -963,6 +968,9 @@
 				9F7A79BE1CA52B7D004ABE1C /* BBPersonalInfoEditViewController.h */,
 				9F7A79BF1CA52B7D004ABE1C /* BBPersonalInfoEditViewController.m */,
 				9F7A79C01CA52B7D004ABE1C /* BBPersonalInfoEditViewController_iPhone.storyboard */,
+				9F7A79C31CA56FBD004ABE1C /* BBRegisterViewController.h */,
+				9F7A79C41CA56FBD004ABE1C /* BBRegisterViewController.m */,
+				9F7A79C51CA56FBD004ABE1C /* BBRegisterViewController_iPhone.storyboard */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1632,6 +1640,7 @@
 				C3584B531C9076220087FF34 /* SAS_logo.png in Resources */,
 				C3584B391C9076220087FF34 /* ATL_logo.png in Resources */,
 				C3F8A55A1C9D80960086FF4B /* NewsRecourceViewController_iPhone.storyboard in Resources */,
+				9F7A79C71CA56FBD004ABE1C /* BBRegisterViewController_iPhone.storyboard in Resources */,
 				C3584B501C9076220087FF34 /* PHX_logo.png in Resources */,
 				9FDEF24D1C9D6AA700B629C5 /* BBStepCountingRollView.xib in Resources */,
 				C3584B411C9076220087FF34 /* DET_logo.png in Resources */,
@@ -1876,6 +1885,7 @@
 				9F9394AD1C89E245009E6DDF /* NSDate+Utilities.m in Sources */,
 				C3F8A5311C9D72820086FF4B /* WYFeed+CoreDataProperties.m in Sources */,
 				9F9394541C8893C9009E6DDF /* BBStepCountingMainViewController.m in Sources */,
+				9F7A79C61CA56FBD004ABE1C /* BBRegisterViewController.m in Sources */,
 				C3F8A4E71C9D703F0086FF4B /* LCFeedEntityPageViewModel.m in Sources */,
 				C3584B141C9075D80087FF34 /* BBGamesScore.m in Sources */,
 				C3584B031C9075C60087FF34 /* UIViewController+Create.m in Sources */,

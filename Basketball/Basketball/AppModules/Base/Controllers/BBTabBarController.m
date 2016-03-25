@@ -11,6 +11,7 @@
 #import "BBStepCountingMainViewController.h"
 #import "BBGamesScoreViewController.h"
 #import "BBArticleListViewController.h"
+#import "BBPersonalCenterViewController.h"
 
 @interface BBTabBarController ()
 
@@ -54,7 +55,7 @@
                    selectedImage:[UIImage imageNamed:@"article_selected"]];
     [self addChildViewController:[BBStepCountingMainViewController new] title:@"分享" defaultImage:[UIImage imageNamed:@"share_normal"]
                    selectedImage:[UIImage imageNamed:@"share_selected"]];
-    [self addChildViewController:[BBBaseViewController new] title:@"个人" defaultImage:[UIImage imageNamed:@"user_normal"]
+    [self addChildViewController:[BBPersonalCenterViewController new] title:@"个人" defaultImage:[UIImage imageNamed:@"user_normal"]
                    selectedImage:[UIImage imageNamed:@"user_selected"]];
 }
 

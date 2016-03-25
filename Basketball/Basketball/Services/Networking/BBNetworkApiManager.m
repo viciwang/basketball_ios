@@ -151,9 +151,9 @@ static NSString *_debugBaseUrl = nil;
     });
 }
 
-- (NSURLSessionDataTask *)uploadImageWithImage:(UIImage *)image
-                               completionBlock:(BBNetworkResponseBlock)responseBlock {
-    return [self POST:kApiUserUploadHeadImage parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+- (NSURLSessionDataTask *)updateHeadImageUrlWithImage:(UIImage *)image
+                                      completionBlock:(BBNetworkResponseBlock)responseBlock {
+    return [self POST:kApiUserupDateHeadImageUrl parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         NSString *fileName = [NSString stringWithFormat:@"%@.jpeg", @([[NSDate date] timeIntervalSince1970]).stringValue];
         [formData appendPartWithFileData:UIImageJPEGRepresentation(image, 0.8) name:@"image" fileName:fileName mimeType:@"image/jpeg"];
     } progress:nil
@@ -181,6 +181,7 @@ static NSString *_debugBaseUrl = nil;
         else {
             [[BBNetworkApiManager sharedManager].requestSerializer setValue:user.token forHTTPHeaderField:@"token"];
             [[BBNetworkApiManager sharedManager].requestSerializer setValue:user.uid forHTTPHeaderField:@"uid"];
+            [[NSNotificationCenter defaultCenter] postNotificationName:kBBNotificationUserDidLogin object:nil];
             if (responseBlock) {
                 responseBlock(user, error);
             }
@@ -197,9 +198,9 @@ static NSString *_debugBaseUrl = nil;
 
 - (NSURLSessionDataTask *)updateUserInfoWithCity:(NSString *)city
                                         nickName:(NSString *)nickName
-                                    headImageUrl:(NSString *)headImageUrl
+                             personalDescription:(NSString *)personalDescription
                                  completionBlock:(BBNetworkResponseBlock)responseBlock {
-    REQUEST(POST, kApiUserUpdateInfo, (@{@"city":city,@"nickName":nickName,@"headImageUrl":headImageUrl}), [BBUser class], responseBlock);
+    REQUEST(POST, kApiUserUpdateInfo, (@{@"city":city?:@"",@"nickName":nickName?:@"",@"personalDescription":personalDescription?:@""}), [BBUser class], responseBlock);
 }
 
 - (NSURLSessionDataTask *)resetPasswordWithPassword:(NSString *)password completionBlock:(BBNetworkResponseBlock)responseBlock {
@@ -253,6 +254,18 @@ static NSString *_debugBaseUrl = nil;
                 }
                 responseBlock(rank,error);
             }
+        }
+    });
+}
+
+- (NSURLSessionDataTask *)logoutWithCompletionBlock:(BBNetworkResponseBlock)responseBlock {
+    REQUEST(GET, kApiUserLogout, nil, nil, ^(id responseObject, NSError *error){
+        if (!error) {
+            [BBUser setCurrentUser:nil];
+            [[NSNotificationCenter defaultCenter] postNotificationName:kBBNotificationUserDidLogout object:nil];
+        }
+        if (responseBlock) {
+            responseBlock(nil,error);
         }
     });
 }

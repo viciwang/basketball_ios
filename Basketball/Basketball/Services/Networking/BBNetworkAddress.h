@@ -23,11 +23,13 @@
 
 #define kApiUserLogin @"user/login"
 
+#define kApiUserLogout @"user/logout"
+
 #define kApiUserRegister @"user/register"
 
 #define kApiUserGetVerifyCode @"user/getVerifyCode"
 
-#define kApiUserUploadHeadImage @"user/uploadHeadImage"
+#define kApiUserupDateHeadImageUrl @"user/updateHeadImageUrl"
 
 #define kApiUserUpdateInfo @"user/updateInfo"
 

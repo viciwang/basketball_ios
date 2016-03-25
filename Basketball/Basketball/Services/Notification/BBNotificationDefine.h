@@ -13,4 +13,10 @@ extern NSString *kBBNotificationStepCountingUpdate;
 
 extern NSString *kBBNotificationTokenExpired;
 
+extern NSString *kBBNotificationUserDidLogin;
+
+extern NSString *kBBNotificationUserDidLogout;
+
+extern NSString *kBBNotificationUserDidUpdateInfo;
+
 #endif /* BBNotificationDefine_h */

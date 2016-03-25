@@ -46,6 +46,7 @@ const int ddLogLevel = DDLogLevelWarning;
     
     // debug
 #if DEBUG
+    NSLog(@"当前用户：\n%@",[BBUser currentUser]);
     [self configFLEX];
     [self configCocoaLumberjack];
     [self configBaseUrl];

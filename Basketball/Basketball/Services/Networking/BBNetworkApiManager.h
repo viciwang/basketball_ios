@@ -23,21 +23,23 @@ typedef void(^BBNetworkResponseBlock)(id responseObject, NSError *error);
 - (NSURLSessionDataTask *)getVerifyCodeWithEmail:(NSString *)email
                                  completionBlock:(BBNetworkResponseBlock)responseBlock;
 
-- (NSURLSessionDataTask *)uploadImageWithImage:(UIImage *)image
-                               completionBlock:(BBNetworkResponseBlock)responseBlock;
+- (NSURLSessionDataTask *)updateHeadImageUrlWithImage:(UIImage *)image
+                                      completionBlock:(BBNetworkResponseBlock)responseBlock;
 
 - (NSURLSessionDataTask *)loginWithEmail:(NSString *)email
                                 password:(NSString *)password
                          completionBlock:(BBNetworkResponseBlock)responseBlock;
+
+- (NSURLSessionDataTask *)logoutWithCompletionBlock:(BBNetworkResponseBlock)responseBlock;
 
 - (NSURLSessionDataTask *)registerWithEmail:(NSString *)email
                                    password:(NSString *)password
                                  verifyCode:(NSString *)verifyCode
                             completionBlock:(BBNetworkResponseBlock)responseBlock;
 
-- (NSURLSessionDataTask *)updateUserInfoWithCity:(NSString *)citSSy
+- (NSURLSessionDataTask *)updateUserInfoWithCity:(NSString *)city
                                         nickName:(NSString *)nickName
-                                    headImageUrl:(NSString *)headImageUrl
+                             personalDescription:(NSString *)personalDescription
                                  completionBlock:(BBNetworkResponseBlock)responseBlock;
 
 - (NSURLSessionDataTask *)resetPasswordWithPassword:(NSString *)password
@@ -48,4 +50,5 @@ typedef void(^BBNetworkResponseBlock)(id responseObject, NSError *error);
 - (NSURLSessionDataTask *)getHistoryStepCountWithCompletionBlock:(BBNetworkResponseBlock)responseBlock;
 
 - (NSURLSessionDataTask *)getStepCountRankingWithCompletionBlock:(BBNetworkResponseBlock)responseBlock;
+
 @end

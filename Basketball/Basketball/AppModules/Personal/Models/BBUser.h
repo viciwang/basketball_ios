@@ -17,6 +17,7 @@
 @property (nonatomic, copy) NSString *city;
 @property (nonatomic, copy) NSString *token;
 @property (nonatomic, copy) NSString *lastLoginTime;
+@property (nonatomic, copy) NSString *personalDescription;
 
 + (BBUser *)currentUser;
 

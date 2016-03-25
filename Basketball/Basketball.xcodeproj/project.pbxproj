@@ -45,6 +45,8 @@
 		9F7A79BB1CA52115004ABE1C /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A79AA1CA52115004ABE1C /* UIView+Screenshot.m */; };
 		9F7A79BC1CA52115004ABE1C /* NYXProgressiveImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A79AD1CA52115004ABE1C /* NYXProgressiveImageView.m */; };
 		9F7A79BD1CA52115004ABE1C /* NYXImagesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A79B01CA52115004ABE1C /* NYXImagesHelper.m */; };
+		9F7A79C11CA52B7D004ABE1C /* BBPersonalInfoEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A79BF1CA52B7D004ABE1C /* BBPersonalInfoEditViewController.m */; };
+		9F7A79C21CA52B7D004ABE1C /* BBPersonalInfoEditViewController_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7A79C01CA52B7D004ABE1C /* BBPersonalInfoEditViewController_iPhone.storyboard */; };
 		9F9394541C8893C9009E6DDF /* BBStepCountingMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9394531C8893C9009E6DDF /* BBStepCountingMainViewController.m */; };
 		9F93945A1C88946F009E6DDF /* BBStepCountingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9394591C88946F009E6DDF /* BBStepCountingManager.m */; };
 		9F93945F1C88968D009E6DDF /* BBStepCountingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F93945E1C88968D009E6DDF /* BBStepCountingService.m */; };
@@ -273,6 +275,9 @@
 		9F7A79AF1CA52115004ABE1C /* NYXImagesHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYXImagesHelper.h; sourceTree = "<group>"; };
 		9F7A79B01CA52115004ABE1C /* NYXImagesHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYXImagesHelper.m; sourceTree = "<group>"; };
 		9F7A79B11CA52115004ABE1C /* NYXImagesKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYXImagesKit.h; sourceTree = "<group>"; };
+		9F7A79BE1CA52B7D004ABE1C /* BBPersonalInfoEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBPersonalInfoEditViewController.h; path = Personal/Controllers/BBPersonalInfoEditViewController.h; sourceTree = "<group>"; };
+		9F7A79BF1CA52B7D004ABE1C /* BBPersonalInfoEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBPersonalInfoEditViewController.m; path = Personal/Controllers/BBPersonalInfoEditViewController.m; sourceTree = "<group>"; };
+		9F7A79C01CA52B7D004ABE1C /* BBPersonalInfoEditViewController_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BBPersonalInfoEditViewController_iPhone.storyboard; path = Personal/Controllers/BBPersonalInfoEditViewController_iPhone.storyboard; sourceTree = "<group>"; };
 		9F9394521C8893C9009E6DDF /* BBStepCountingMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBStepCountingMainViewController.h; path = Basketball/AppModules/StepCounting/Controllers/BBStepCountingMainViewController.h; sourceTree = SOURCE_ROOT; };
 		9F9394531C8893C9009E6DDF /* BBStepCountingMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBStepCountingMainViewController.m; path = Basketball/AppModules/StepCounting/Controllers/BBStepCountingMainViewController.m; sourceTree = SOURCE_ROOT; };
 		9F9394581C88946F009E6DDF /* BBStepCountingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBStepCountingManager.h; path = StepCounting/BBStepCountingManager.h; sourceTree = "<group>"; };
@@ -955,6 +960,9 @@
 				9F6AB7B91CA4488900C7D963 /* BBChangeInfoViewController.h */,
 				9F6AB7BA1CA4488900C7D963 /* BBChangeInfoViewController.m */,
 				9F6AB7BB1CA4488900C7D963 /* BBChangeInfoViewController_iPhone.storyboard */,
+				9F7A79BE1CA52B7D004ABE1C /* BBPersonalInfoEditViewController.h */,
+				9F7A79BF1CA52B7D004ABE1C /* BBPersonalInfoEditViewController.m */,
+				9F7A79C01CA52B7D004ABE1C /* BBPersonalInfoEditViewController_iPhone.storyboard */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1636,6 +1644,7 @@
 				C3F8A5481C9D72820086FF4B /* thumbnail.png in Resources */,
 				C3F8A4E61C9D703F0086FF4B /* LCArticlePageView2_iPhone.xib in Resources */,
 				C3F8A4E21C9D703F0086FF4B /* LCArticleTextBoxView.xib in Resources */,
+				9F7A79C21CA52B7D004ABE1C /* BBPersonalInfoEditViewController_iPhone.storyboard in Resources */,
 				C3F8A4E01C9D703F0086FF4B /* LCArticleImageBoxView.xib in Resources */,
 				C3584B4F1C9076220087FF34 /* PHI_logo.png in Resources */,
 				C3584B4E1C9076220087FF34 /* ORL_logo.png in Resources */,
@@ -1855,6 +1864,7 @@
 				C3F8A5331C9D72820086FF4B /* WYFeedEntity+CoreDataProperties.m in Sources */,
 				C3F8A5351C9D72820086FF4B /* WYFeedEntity.m in Sources */,
 				9F26F5AB1CA054B300481EA6 /* BBStepCountingHistoryRecordCell.m in Sources */,
+				9F7A79C11CA52B7D004ABE1C /* BBPersonalInfoEditViewController.m in Sources */,
 				9F9617D21C83E9440078FB3C /* main.m in Sources */,
 				C3F8A4E11C9D703F0086FF4B /* LCArticleTextBoxView.m in Sources */,
 				9F2EA0361C9C10960053A802 /* BBStepCountingMineViewController.m in Sources */,

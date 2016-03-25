@@ -198,9 +198,9 @@ static NSString *_debugBaseUrl = nil;
 
 - (NSURLSessionDataTask *)updateUserInfoWithCity:(NSString *)city
                                         nickName:(NSString *)nickName
-                                    headImageUrl:(NSString *)headImageUrl
+                             personalDescription:(NSString *)personalDescription
                                  completionBlock:(BBNetworkResponseBlock)responseBlock {
-    REQUEST(POST, kApiUserUpdateInfo, (@{@"city":city,@"nickName":nickName,@"headImageUrl":headImageUrl}), [BBUser class], responseBlock);
+    REQUEST(POST, kApiUserUpdateInfo, (@{@"city":city?:@"",@"nickName":nickName?:@"",@"personalDescription":personalDescription?:@""}), [BBUser class], responseBlock);
 }
 
 - (NSURLSessionDataTask *)resetPasswordWithPassword:(NSString *)password completionBlock:(BBNetworkResponseBlock)responseBlock {

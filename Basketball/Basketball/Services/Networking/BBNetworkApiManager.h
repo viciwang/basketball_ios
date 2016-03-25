@@ -37,9 +37,9 @@ typedef void(^BBNetworkResponseBlock)(id responseObject, NSError *error);
                                  verifyCode:(NSString *)verifyCode
                             completionBlock:(BBNetworkResponseBlock)responseBlock;
 
-- (NSURLSessionDataTask *)updateUserInfoWithCity:(NSString *)citSSy
+- (NSURLSessionDataTask *)updateUserInfoWithCity:(NSString *)city
                                         nickName:(NSString *)nickName
-                                    headImageUrl:(NSString *)headImageUrl
+                             personalDescription:(NSString *)personalDescription
                                  completionBlock:(BBNetworkResponseBlock)responseBlock;
 
 - (NSURLSessionDataTask *)resetPasswordWithPassword:(NSString *)password

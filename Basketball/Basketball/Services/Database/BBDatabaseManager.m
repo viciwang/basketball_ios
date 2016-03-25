@@ -42,7 +42,8 @@
          `headImageUrl` varchar(100) NOT NULL, \
          `city` varchar(30) NOT NULL, \
          `token` char(23) NOT NULL, \
-         `lastLoginTime` varchar(50) NOT NULL \
+         `lastLoginTime` varchar(50) NOT NULL, \
+         `personalDescription` varchar(180) \
          );"];
         [_localDatabase close];
     }

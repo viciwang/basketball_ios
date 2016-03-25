@@ -12,6 +12,7 @@
 #import "BBNetworkApiManager.h"
 #import "MBProgressHUD.h"
 #import "NYXImagesKit.h"
+#import "BBPersonalInfoEditViewController.h"
 
 @interface BBChangeInfoViewController ()
 <
@@ -68,12 +69,16 @@ UINavigationControllerDelegate
     }];
     self.nickNameCell.rightLabelText = user.nickName;
     self.cityCell.rightLabelText = user.city;
+    self.descriptionCell.rightLabelText = user.personalDescription;
+    
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction:)];
     [self.headImageCell addGestureRecognizer:tap];
     tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction:)];
     [self.nickNameCell addGestureRecognizer:tap];
     tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction:)];
     [self.cityCell addGestureRecognizer:tap];
+    tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction:)];
+    [self.descriptionCell addGestureRecognizer:tap];
 }
 
 - (void)tapAction:(UITapGestureRecognizer *)recognizer {
@@ -113,8 +118,44 @@ UINavigationControllerDelegate
             
             [self presentViewController:alert animated:YES completion:nil];
         }
+        else if (recognizer.view == self.descriptionCell) {
+            BBPersonalInfoEditViewController *vc = [BBPersonalInfoEditViewController create];
+            vc.currentDesc = [BBUser currentUser].personalDescription;
+            @weakify(self);
+            vc.endEditBlock = ^(NSString *desc) {
+                @strongify(self);
+                if (![desc isEqualToString:self.descriptionCell.rightLabelText]) {
+                    self.descriptionCell.rightLabelText = desc;
+                    [self updateInfo];
+                }
+            };
+            [self.navigationController pushViewController:vc animated:YES];
+        }
         else {
+            BBCommonCellView *cellView = (BBCommonCellView *)recognizer.view;
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:cellView.leftLabelText message:nil preferredStyle:UIAlertControllerStyleAlert];
             
+            [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+                textField.text = cellView.rightLabelText;
+            }];
+            
+            UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                UITextField *textField = alert.textFields[0];
+                if (![textField.text isEqualToString:cellView.rightLabelText] && textField.text.length>0) {
+                    cellView.rightLabelText = textField.text;
+                    [self updateInfo];
+                }
+                [alert dismissViewControllerAnimated:YES completion:nil];
+            }];
+            
+            UIAlertAction *cancle = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                [alert dismissViewControllerAnimated:YES completion:nil];
+            }];
+            
+            [alert addAction:action1];
+            [alert addAction:cancle];
+            
+            [self presentViewController:alert animated:YES completion:nil];
         }
     }
 }
@@ -139,6 +180,25 @@ UINavigationControllerDelegate
             [self fillData];
         }
     }];
+}
+
+- (void)updateInfo {
+    [self showLoadingHUDWithInfo:nil];
+    @weakify(self);
+    [[BBNetworkApiManager sharedManager] updateUserInfoWithCity:self.cityCell.rightLabelText
+                                                       nickName:self.nickNameCell.rightLabelText
+                                            personalDescription:self.descriptionCell.rightLabelText
+                                                completionBlock:^(BBUser *user, NSError *error) {
+                                                    @strongify(self);
+                                                    [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                                    if (error) {
+                                                        [self showErrorHUDWithInfo:error.userInfo[@"msg"]];
+                                                    }
+                                                    else {
+                                                        [BBUser setCurrentUser:user];
+                                                        [self fillData];
+                                                    }
+                                                }];
 }
 
 @end

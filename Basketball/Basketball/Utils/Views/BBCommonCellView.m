@@ -71,10 +71,10 @@
     [self.rightImageView mas_updateConstraints:^(MASConstraintMaker *make) {
         @strongify(self);
         if (self.shouldShowdisclosureIndicator) {
-            make.right.equalTo(self).offset(62);
+            make.right.equalTo(self).offset(-62);
         }
         else {
-            make.right.equalTo(self).offset(21);
+            make.right.equalTo(self).offset(-21);
         }
         make.centerY.equalTo(self);
     }];
@@ -173,6 +173,7 @@
 - (void)setRightImage:(UIImage *)rightImage {
     _rightImage = rightImage;
     self.rightImageView.image = rightImage;
+    self.rightImageView.hidden = NO;
 }
 
 - (void)setLeftImageString:(NSString *)leftImageString {

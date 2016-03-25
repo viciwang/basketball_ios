@@ -29,7 +29,7 @@
 
 #define kApiUserGetVerifyCode @"user/getVerifyCode"
 
-#define kApiUserUploadHeadImage @"user/uploadHeadImage"
+#define kApiUserupDateHeadImageUrl @"user/updateHeadImageUrl"
 
 #define kApiUserUpdateInfo @"user/updateInfo"
 

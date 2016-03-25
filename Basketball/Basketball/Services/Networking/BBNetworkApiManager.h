@@ -23,8 +23,8 @@ typedef void(^BBNetworkResponseBlock)(id responseObject, NSError *error);
 - (NSURLSessionDataTask *)getVerifyCodeWithEmail:(NSString *)email
                                  completionBlock:(BBNetworkResponseBlock)responseBlock;
 
-- (NSURLSessionDataTask *)uploadImageWithImage:(UIImage *)image
-                               completionBlock:(BBNetworkResponseBlock)responseBlock;
+- (NSURLSessionDataTask *)updateHeadImageUrlWithImage:(UIImage *)image
+                                      completionBlock:(BBNetworkResponseBlock)responseBlock;
 
 - (NSURLSessionDataTask *)loginWithEmail:(NSString *)email
                                 password:(NSString *)password

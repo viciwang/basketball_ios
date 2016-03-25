@@ -151,9 +151,9 @@ static NSString *_debugBaseUrl = nil;
     });
 }
 
-- (NSURLSessionDataTask *)uploadImageWithImage:(UIImage *)image
-                               completionBlock:(BBNetworkResponseBlock)responseBlock {
-    return [self POST:kApiUserUploadHeadImage parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+- (NSURLSessionDataTask *)updateHeadImageUrlWithImage:(UIImage *)image
+                                      completionBlock:(BBNetworkResponseBlock)responseBlock {
+    return [self POST:kApiUserupDateHeadImageUrl parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         NSString *fileName = [NSString stringWithFormat:@"%@.jpeg", @([[NSDate date] timeIntervalSince1970]).stringValue];
         [formData appendPartWithFileData:UIImageJPEGRepresentation(image, 0.8) name:@"image" fileName:fileName mimeType:@"image/jpeg"];
     } progress:nil

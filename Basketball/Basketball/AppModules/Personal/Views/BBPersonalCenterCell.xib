@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -25,17 +24,17 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Right Arrow 2" translatesAutoresizingMaskIntoConstraints="NO" id="ezb-gH-7EU">
-                        <rect key="frame" x="292" y="24" width="10" height="20"/>
+                        <rect key="frame" x="300" y="24" width="10" height="20"/>
                     </imageView>
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="0iP-99-D6I" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1bZ-FV-arS"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="ezb-gH-7EU" secondAttribute="trailing" constant="10" id="FPP-oW-4rj"/>
+                    <constraint firstAttribute="trailing" secondItem="ezb-gH-7EU" secondAttribute="trailing" constant="10" id="FPP-oW-4rj"/>
                     <constraint firstItem="0iP-99-D6I" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="LL2-fl-GBn"/>
+                    <constraint firstItem="2Is-KN-tnK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="62" id="LRn-Jf-c2x"/>
                     <constraint firstItem="2Is-KN-tnK" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="XDx-25-DVC"/>
                     <constraint firstItem="ezb-gH-7EU" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="YVP-qE-aVT"/>
-                    <constraint firstItem="2Is-KN-tnK" firstAttribute="leading" secondItem="0iP-99-D6I" secondAttribute="trailing" constant="20" id="o8q-HB-zwb"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

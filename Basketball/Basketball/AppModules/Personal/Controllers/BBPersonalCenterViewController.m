@@ -15,6 +15,7 @@
 #import "UIWindow+Utils.h"
 #import "BBLoginViewController.h"
 #import "BBNavigationController.h"
+#import "BBChangeInfoViewController.h"
 
 @interface BBPersonalCenterViewController ()
 <
@@ -155,7 +156,7 @@ UITableViewDataSource
         @weakify(self);
         cell.changeInfoBlock = ^{
             @strongify(self);
-            [self.navigationController pushViewController:[BBBaseViewController new] animated:YES];
+            [self.navigationController pushViewController:[BBChangeInfoViewController create] animated:YES];
         };
         return cell;
     }

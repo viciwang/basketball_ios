@@ -196,6 +196,13 @@ static NSString *_debugBaseUrl = nil;
     REQUEST(POST, kApiUserRegister ,(@{@"email":email,@"password":password,@"verifyCode":verifyCode}), [BBUser class], responseBlock);
 }
 
+- (NSURLSessionDataTask *)resetPasswordWithEmail:(NSString *)email
+                                        password:(NSString *)password
+                                      verifyCode:(NSString *)verifyCode
+                                 completionBlock:(BBNetworkResponseBlock)responseBlock {
+    REQUEST(POST, kApiUserResetPassword,(@{@"email":email,@"password":password,@"verifyCode":verifyCode}), nil, responseBlock);
+}
+
 - (NSURLSessionDataTask *)updateUserInfoWithCity:(NSString *)city
                                         nickName:(NSString *)nickName
                              personalDescription:(NSString *)personalDescription

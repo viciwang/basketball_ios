@@ -251,10 +251,9 @@ UITableViewDataSource
         if (error) {
             [self showErrorHUDWithInfo:error.userInfo[@"msg"]];
         }
-        else {
-            BBNavigationController *nav = [[BBNavigationController alloc] initWithRootViewController:[BBLoginViewController create]];
-            [[UIApplication sharedApplication].keyWindow bb_checkoutRootViewController:nav];
-        }
+        [BBUser setCurrentUser:nil];
+        BBNavigationController *nav = [[BBNavigationController alloc] initWithRootViewController:[BBLoginViewController create]];
+        [[UIApplication sharedApplication].keyWindow bb_checkoutRootViewController:nav];
     }];
 }
 @end

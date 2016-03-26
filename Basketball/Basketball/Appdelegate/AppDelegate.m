@@ -13,6 +13,7 @@
 #import "BBNetworkApiManager.h"
 #import "BBNavigationController.h"
 #import "BBLoginViewController.h"
+#import "BBAppearance.h"
 
 @interface AppDelegate ()
 
@@ -43,7 +44,7 @@ const int ddLogLevel = DDLogLevelWarning;
     [self.window makeKeyAndVisible];
     
     [self addNotificationObsever];
-    
+    [self setupUI];
     // debug
 #if DEBUG
     NSLog(@"当前用户：\n%@",[BBUser currentUser]);
@@ -66,6 +67,12 @@ const int ddLogLevel = DDLogLevelWarning;
     [BBLoginViewController showLoginViewControllerWithCompletionBlock:^{
         
     }];
+}
+
+#pragma mark - UI
+
+- (void)setupUI {
+    [BBAppearance configAppearance];
 }
 
 #pragma mark - debug

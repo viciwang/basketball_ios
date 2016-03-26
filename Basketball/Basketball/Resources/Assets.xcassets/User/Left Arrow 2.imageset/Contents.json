@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Right Arrow 2.png",
+      "filename" : "Left Arrow 2.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Right Arrow 2@2x.png",
+      "filename" : "Left Arrow 2@2x.png",
       "scale" : "2x"
     },
     {

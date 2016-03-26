@@ -26,7 +26,7 @@ extern const int ddLogLevel;
 #import "Macros.h"
 #import "BBNavigationController.h"
 #import "BBBaseViewController.h"
-#import "BBUIDefined.h"
+#import "BBAppearance.h"
 
 #import "UIStoryboard+Addition.h"
 #import "UIViewController+Create.h"

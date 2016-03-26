@@ -12,7 +12,7 @@
 #import "BBUser.h"
 #import "UIWindow+Utils.h"
 #import "BBTabBarController.h"
-#import "BBRegisterViewController.h"
+#import "BBRegisterAndResetPasswordViewController.h"
 
 @interface BBLoginViewController ()
 
@@ -57,6 +57,7 @@
     [super viewDidLoad];
     [self setupSignal];
     [self setupUI];
+    [self setupNotification];
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,10 +66,23 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 #pragma mark - ui
 
 - (void)setupUI {
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"快速注册" style:UIBarButtonItemStylePlain target:self action:@selector(registerAction:)];
+}
+
+#pragma mark - notification
+
+- (void)setupNotification {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userDidResetPassword:) name:kBBNotificationUserDidResetPassword object:nil];
+}
+
+- (void)userDidResetPassword:(NSNotification *)notification {
+    self.emailTextField.text = notification.userInfo[@"email"];
 }
 
 #pragma mark - signal
@@ -113,10 +127,10 @@
 }
 
 - (IBAction)forgetPasswordAction:(id)sender {
-    
+    [self.navigationController pushViewController:[BBRegisterAndResetPasswordViewController createWithType:BBRegisterAndResetPasswordViewControllerTypeResetPassword] animated:YES];
 }
 
 - (void)registerAction:(UIButton *)sender {
-    [self.navigationController pushViewController:[BBRegisterViewController create] animated:YES];
+    [self.navigationController pushViewController:[BBRegisterAndResetPasswordViewController createWithType:BBRegisterAndResetPasswordViewControllerTypeRegister] animated:YES];
 }
 @end

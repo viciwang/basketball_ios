@@ -37,13 +37,15 @@ typedef void(^BBNetworkResponseBlock)(id responseObject, NSError *error);
                                  verifyCode:(NSString *)verifyCode
                             completionBlock:(BBNetworkResponseBlock)responseBlock;
 
+- (NSURLSessionDataTask *)resetPasswordWithEmail:(NSString *)email
+                                        password:(NSString *)password
+                                      verifyCode:(NSString *)verifyCode
+                                 completionBlock:(BBNetworkResponseBlock)responseBlock;
+
 - (NSURLSessionDataTask *)updateUserInfoWithCity:(NSString *)city
                                         nickName:(NSString *)nickName
                              personalDescription:(NSString *)personalDescription
                                  completionBlock:(BBNetworkResponseBlock)responseBlock;
-
-- (NSURLSessionDataTask *)resetPasswordWithPassword:(NSString *)password
-                                    completionBlock:(BBNetworkResponseBlock)responseBlock;
 
 - (NSURLSessionDataTask *)getAverageStepCountWithCompletionBlock:(BBNetworkResponseBlock)responseBlock;
 

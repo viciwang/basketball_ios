@@ -27,6 +27,8 @@
 
 #define kApiUserRegister @"user/register"
 
+#define kApiUserResetPassword @"user/resetPassword"
+
 #define kApiUserGetVerifyCode @"user/getVerifyCode"
 
 #define kApiUserupDateHeadImageUrl @"user/updateHeadImageUrl"

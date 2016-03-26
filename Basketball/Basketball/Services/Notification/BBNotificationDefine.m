@@ -17,3 +17,5 @@ NSString *kBBNotificationUserDidLogin = @"kBBNotificationUserDidLogin";
 NSString *kBBNotificationUserDidLogout = @"kBBNotificationUserDidLogout";
 
 NSString *kBBNotificationUserDidUpdateInfo = @"kBBNotificationUserDidUpdateInfo";
+
+NSString *kBBNotificationUserDidResetPassword = @"kBBNotificationUserDidResetPassword";

@@ -20,7 +20,8 @@ static BBUser * _sharedCurrentUser;
              @"headImageUrl":@"headImageUrl",
              @"city":@"city",
              @"token":@"token",
-             @"lastLoginTime":@"lastLoginTime"
+             @"lastLoginTime":@"lastLoginTime",
+             @"personalDescription":@"personalDescription"
              };
 }
 

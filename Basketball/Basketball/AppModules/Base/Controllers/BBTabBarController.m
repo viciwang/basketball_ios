@@ -12,6 +12,7 @@
 #import "BBGamesScoreViewController.h"
 #import "BBArticleListViewController.h"
 #import "BBShareViewController.h"
+#import "BBPersonalCenterViewController.h"
 
 @interface BBTabBarController ()
 
@@ -55,7 +56,7 @@
                    selectedImage:[UIImage imageNamed:@"article_selected"]];
     [self addChildViewController:[BBShareViewController new] title:@"分享" defaultImage:[UIImage imageNamed:@"share_normal"]
                    selectedImage:[UIImage imageNamed:@"share_selected"]];
-    [self addChildViewController:[BBBaseViewController new] title:@"个人" defaultImage:[UIImage imageNamed:@"user_normal"]
+    [self addChildViewController:[BBPersonalCenterViewController new] title:@"个人" defaultImage:[UIImage imageNamed:@"user_normal"]
                    selectedImage:[UIImage imageNamed:@"user_selected"]];
 }
 
@@ -68,12 +69,10 @@
                                               selectedImage:[selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     
     BBNavigationController *childNav = [[BBNavigationController alloc]initWithRootViewController:childController];
-    childNav.navigationBar.translucent = YES;
-    [childNav.navigationBar lt_setBackgroundColor:[UIColor colorWithRed:1/255.0 green:146/255.0 blue:201/255.0 alpha:1]];
+//    childNav.navigationBar.translucent = YES;
+//    [childNav.navigationBar lt_setBackgroundColor:[UIColor colorWithRed:1/255.0 green:146/255.0 blue:201/255.0 alpha:1]];
     childNav.tabBarItem = item;
-    UIFont *font = [UIFont fontWithName:@"MicrosoftYaHei" size:17];
-    NSDictionary *attri = @{NSFontAttributeName:font,NSForegroundColorAttributeName:[UIColor whiteColor]};
-    childNav.navigationBar.titleTextAttributes = attri;
+
     [self addChildViewController:childNav];
     // 设置title
     childController.title = title;

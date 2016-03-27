@@ -27,6 +27,28 @@
 		9F33CE961CA15D260016EB39 /* BBPersonalCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F33CE951CA15D260016EB39 /* BBPersonalCenterViewController.m */; };
 		9F33CEA01CA15E0D0016EB39 /* BBPersonalCenterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F33CE9E1CA15E0D0016EB39 /* BBPersonalCenterCell.m */; };
 		9F33CEA11CA15E0D0016EB39 /* BBPersonalCenterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F33CE9F1CA15E0D0016EB39 /* BBPersonalCenterCell.xib */; };
+		9F36B3B81CA3D23A00083496 /* BBPersonalTableViewHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F36B3B61CA3D23A00083496 /* BBPersonalTableViewHeaderCell.m */; };
+		9F36B3B91CA3D23A00083496 /* BBPersonalTableViewHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F36B3B71CA3D23A00083496 /* BBPersonalTableViewHeaderCell.xib */; };
+		9F6AB7BC1CA4488900C7D963 /* BBChangeInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6AB7BA1CA4488900C7D963 /* BBChangeInfoViewController.m */; };
+		9F6AB7BD1CA4488900C7D963 /* BBChangeInfoViewController_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F6AB7BB1CA4488900C7D963 /* BBChangeInfoViewController_iPhone.storyboard */; };
+		9F6AB7C21CA4E7DE00C7D963 /* BBCommonCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6AB7C01CA4E7DE00C7D963 /* BBCommonCellView.m */; };
+		9F7A79B21CA52115004ABE1C /* UIImage+Blurring.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A79981CA52115004ABE1C /* UIImage+Blurring.m */; };
+		9F7A79B31CA52115004ABE1C /* UIImage+Enhancing.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A799A1CA52115004ABE1C /* UIImage+Enhancing.m */; };
+		9F7A79B41CA52115004ABE1C /* UIImage+Filtering.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A799C1CA52115004ABE1C /* UIImage+Filtering.m */; };
+		9F7A79B51CA52115004ABE1C /* UIImage+Masking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A799E1CA52115004ABE1C /* UIImage+Masking.m */; };
+		9F7A79B61CA52115004ABE1C /* UIImage+Reflection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A79A01CA52115004ABE1C /* UIImage+Reflection.m */; };
+		9F7A79B71CA52115004ABE1C /* UIImage+Resizing.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A79A21CA52115004ABE1C /* UIImage+Resizing.m */; };
+		9F7A79B81CA52115004ABE1C /* UIImage+Rotating.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A79A41CA52115004ABE1C /* UIImage+Rotating.m */; };
+		9F7A79B91CA52115004ABE1C /* UIImage+Saving.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A79A61CA52115004ABE1C /* UIImage+Saving.m */; };
+		9F7A79BA1CA52115004ABE1C /* UIScrollView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A79A81CA52115004ABE1C /* UIScrollView+Screenshot.m */; };
+		9F7A79BB1CA52115004ABE1C /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A79AA1CA52115004ABE1C /* UIView+Screenshot.m */; };
+		9F7A79BC1CA52115004ABE1C /* NYXProgressiveImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A79AD1CA52115004ABE1C /* NYXProgressiveImageView.m */; };
+		9F7A79BD1CA52115004ABE1C /* NYXImagesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A79B01CA52115004ABE1C /* NYXImagesHelper.m */; };
+		9F7A79C11CA52B7D004ABE1C /* BBPersonalInfoEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A79BF1CA52B7D004ABE1C /* BBPersonalInfoEditViewController.m */; };
+		9F7A79C21CA52B7D004ABE1C /* BBPersonalInfoEditViewController_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7A79C01CA52B7D004ABE1C /* BBPersonalInfoEditViewController_iPhone.storyboard */; };
+		9F7A79C61CA56FBD004ABE1C /* BBRegisterAndResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A79C41CA56FBD004ABE1C /* BBRegisterAndResetPasswordViewController.m */; };
+		9F7A79C71CA56FBD004ABE1C /* BBRegisterAndResetPasswordViewController_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7A79C51CA56FBD004ABE1C /* BBRegisterAndResetPasswordViewController_iPhone.storyboard */; };
+		9F7A79C91CA6A503004ABE1C /* BBAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A79C81CA69387004ABE1C /* BBAppearance.m */; };
 		9F9394541C8893C9009E6DDF /* BBStepCountingMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9394531C8893C9009E6DDF /* BBStepCountingMainViewController.m */; };
 		9F93945A1C88946F009E6DDF /* BBStepCountingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9394591C88946F009E6DDF /* BBStepCountingManager.m */; };
 		9F93945F1C88968D009E6DDF /* BBStepCountingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F93945E1C88968D009E6DDF /* BBStepCountingService.m */; };
@@ -235,6 +257,47 @@
 		9F33CE9D1CA15E0D0016EB39 /* BBPersonalCenterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBPersonalCenterCell.h; sourceTree = "<group>"; };
 		9F33CE9E1CA15E0D0016EB39 /* BBPersonalCenterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBPersonalCenterCell.m; sourceTree = "<group>"; };
 		9F33CE9F1CA15E0D0016EB39 /* BBPersonalCenterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBPersonalCenterCell.xib; sourceTree = "<group>"; };
+		9F36B3B51CA3D23A00083496 /* BBPersonalTableViewHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBPersonalTableViewHeaderCell.h; sourceTree = "<group>"; };
+		9F36B3B61CA3D23A00083496 /* BBPersonalTableViewHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBPersonalTableViewHeaderCell.m; sourceTree = "<group>"; };
+		9F36B3B71CA3D23A00083496 /* BBPersonalTableViewHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBPersonalTableViewHeaderCell.xib; sourceTree = "<group>"; };
+		9F6AB7B91CA4488900C7D963 /* BBChangeInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBChangeInfoViewController.h; path = Personal/Controllers/BBChangeInfoViewController.h; sourceTree = "<group>"; };
+		9F6AB7BA1CA4488900C7D963 /* BBChangeInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBChangeInfoViewController.m; path = Personal/Controllers/BBChangeInfoViewController.m; sourceTree = "<group>"; };
+		9F6AB7BB1CA4488900C7D963 /* BBChangeInfoViewController_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BBChangeInfoViewController_iPhone.storyboard; path = Personal/Controllers/BBChangeInfoViewController_iPhone.storyboard; sourceTree = "<group>"; };
+		9F6AB7BF1CA4E7DE00C7D963 /* BBCommonCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBCommonCellView.h; path = Views/BBCommonCellView.h; sourceTree = "<group>"; };
+		9F6AB7C01CA4E7DE00C7D963 /* BBCommonCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBCommonCellView.m; path = Views/BBCommonCellView.m; sourceTree = "<group>"; };
+		9F6AB7C41CA4ED2200C7D963 /* BBAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBAppearance.h; path = Basketball/AppModules/Base/Others/BBAppearance.h; sourceTree = SOURCE_ROOT; };
+		9F7A79971CA52115004ABE1C /* UIImage+Blurring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Blurring.h"; sourceTree = "<group>"; };
+		9F7A79981CA52115004ABE1C /* UIImage+Blurring.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Blurring.m"; sourceTree = "<group>"; };
+		9F7A79991CA52115004ABE1C /* UIImage+Enhancing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Enhancing.h"; sourceTree = "<group>"; };
+		9F7A799A1CA52115004ABE1C /* UIImage+Enhancing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Enhancing.m"; sourceTree = "<group>"; };
+		9F7A799B1CA52115004ABE1C /* UIImage+Filtering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Filtering.h"; sourceTree = "<group>"; };
+		9F7A799C1CA52115004ABE1C /* UIImage+Filtering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Filtering.m"; sourceTree = "<group>"; };
+		9F7A799D1CA52115004ABE1C /* UIImage+Masking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Masking.h"; sourceTree = "<group>"; };
+		9F7A799E1CA52115004ABE1C /* UIImage+Masking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Masking.m"; sourceTree = "<group>"; };
+		9F7A799F1CA52115004ABE1C /* UIImage+Reflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Reflection.h"; sourceTree = "<group>"; };
+		9F7A79A01CA52115004ABE1C /* UIImage+Reflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Reflection.m"; sourceTree = "<group>"; };
+		9F7A79A11CA52115004ABE1C /* UIImage+Resizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resizing.h"; sourceTree = "<group>"; };
+		9F7A79A21CA52115004ABE1C /* UIImage+Resizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resizing.m"; sourceTree = "<group>"; };
+		9F7A79A31CA52115004ABE1C /* UIImage+Rotating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Rotating.h"; sourceTree = "<group>"; };
+		9F7A79A41CA52115004ABE1C /* UIImage+Rotating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Rotating.m"; sourceTree = "<group>"; };
+		9F7A79A51CA52115004ABE1C /* UIImage+Saving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Saving.h"; sourceTree = "<group>"; };
+		9F7A79A61CA52115004ABE1C /* UIImage+Saving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Saving.m"; sourceTree = "<group>"; };
+		9F7A79A71CA52115004ABE1C /* UIScrollView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Screenshot.h"; sourceTree = "<group>"; };
+		9F7A79A81CA52115004ABE1C /* UIScrollView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Screenshot.m"; sourceTree = "<group>"; };
+		9F7A79A91CA52115004ABE1C /* UIView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Screenshot.h"; sourceTree = "<group>"; };
+		9F7A79AA1CA52115004ABE1C /* UIView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Screenshot.m"; sourceTree = "<group>"; };
+		9F7A79AC1CA52115004ABE1C /* NYXProgressiveImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYXProgressiveImageView.h; sourceTree = "<group>"; };
+		9F7A79AD1CA52115004ABE1C /* NYXProgressiveImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYXProgressiveImageView.m; sourceTree = "<group>"; };
+		9F7A79AF1CA52115004ABE1C /* NYXImagesHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYXImagesHelper.h; sourceTree = "<group>"; };
+		9F7A79B01CA52115004ABE1C /* NYXImagesHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYXImagesHelper.m; sourceTree = "<group>"; };
+		9F7A79B11CA52115004ABE1C /* NYXImagesKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYXImagesKit.h; sourceTree = "<group>"; };
+		9F7A79BE1CA52B7D004ABE1C /* BBPersonalInfoEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBPersonalInfoEditViewController.h; path = Personal/Controllers/BBPersonalInfoEditViewController.h; sourceTree = "<group>"; };
+		9F7A79BF1CA52B7D004ABE1C /* BBPersonalInfoEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBPersonalInfoEditViewController.m; path = Personal/Controllers/BBPersonalInfoEditViewController.m; sourceTree = "<group>"; };
+		9F7A79C01CA52B7D004ABE1C /* BBPersonalInfoEditViewController_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BBPersonalInfoEditViewController_iPhone.storyboard; path = Personal/Controllers/BBPersonalInfoEditViewController_iPhone.storyboard; sourceTree = "<group>"; };
+		9F7A79C31CA56FBD004ABE1C /* BBRegisterAndResetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBRegisterAndResetPasswordViewController.h; path = Personal/Controllers/BBRegisterAndResetPasswordViewController.h; sourceTree = "<group>"; };
+		9F7A79C41CA56FBD004ABE1C /* BBRegisterAndResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBRegisterAndResetPasswordViewController.m; path = Personal/Controllers/BBRegisterAndResetPasswordViewController.m; sourceTree = "<group>"; };
+		9F7A79C51CA56FBD004ABE1C /* BBRegisterAndResetPasswordViewController_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BBRegisterAndResetPasswordViewController_iPhone.storyboard; path = Personal/Controllers/BBRegisterAndResetPasswordViewController_iPhone.storyboard; sourceTree = "<group>"; };
+		9F7A79C81CA69387004ABE1C /* BBAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBAppearance.m; sourceTree = "<group>"; };
 		9F9394521C8893C9009E6DDF /* BBStepCountingMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBStepCountingMainViewController.h; path = Basketball/AppModules/StepCounting/Controllers/BBStepCountingMainViewController.h; sourceTree = SOURCE_ROOT; };
 		9F9394531C8893C9009E6DDF /* BBStepCountingMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBStepCountingMainViewController.m; path = Basketball/AppModules/StepCounting/Controllers/BBStepCountingMainViewController.m; sourceTree = SOURCE_ROOT; };
 		9F9394581C88946F009E6DDF /* BBStepCountingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBStepCountingManager.h; path = StepCounting/BBStepCountingManager.h; sourceTree = "<group>"; };
@@ -541,6 +604,7 @@
 		9F244CF21C85279000A388F6 /* Constant */ = {
 			isa = PBXGroup;
 			children = (
+				9F7A79951CA52115004ABE1C /* NYXImagesKit */,
 				9F9394AA1C89E245009E6DDF /* NSDate+Utilities */,
 				9F244CF31C85279000A388F6 /* RACExtObjc */,
 			);
@@ -574,9 +638,77 @@
 				9F33CE9D1CA15E0D0016EB39 /* BBPersonalCenterCell.h */,
 				9F33CE9E1CA15E0D0016EB39 /* BBPersonalCenterCell.m */,
 				9F33CE9F1CA15E0D0016EB39 /* BBPersonalCenterCell.xib */,
+				9F36B3B51CA3D23A00083496 /* BBPersonalTableViewHeaderCell.h */,
+				9F36B3B61CA3D23A00083496 /* BBPersonalTableViewHeaderCell.m */,
+				9F36B3B71CA3D23A00083496 /* BBPersonalTableViewHeaderCell.xib */,
 			);
 			name = Views;
 			path = Personal/Views;
+			sourceTree = "<group>";
+		};
+		9F6AB7BE1CA4E7A200C7D963 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9F6AB7BF1CA4E7DE00C7D963 /* BBCommonCellView.h */,
+				9F6AB7C01CA4E7DE00C7D963 /* BBCommonCellView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		9F7A79951CA52115004ABE1C /* NYXImagesKit */ = {
+			isa = PBXGroup;
+			children = (
+				9F7A79961CA52115004ABE1C /* Categories */,
+				9F7A79AB1CA52115004ABE1C /* Classes */,
+				9F7A79AE1CA52115004ABE1C /* Helper */,
+			);
+			path = NYXImagesKit;
+			sourceTree = "<group>";
+		};
+		9F7A79961CA52115004ABE1C /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				9F7A79971CA52115004ABE1C /* UIImage+Blurring.h */,
+				9F7A79981CA52115004ABE1C /* UIImage+Blurring.m */,
+				9F7A79991CA52115004ABE1C /* UIImage+Enhancing.h */,
+				9F7A799A1CA52115004ABE1C /* UIImage+Enhancing.m */,
+				9F7A799B1CA52115004ABE1C /* UIImage+Filtering.h */,
+				9F7A799C1CA52115004ABE1C /* UIImage+Filtering.m */,
+				9F7A799D1CA52115004ABE1C /* UIImage+Masking.h */,
+				9F7A799E1CA52115004ABE1C /* UIImage+Masking.m */,
+				9F7A799F1CA52115004ABE1C /* UIImage+Reflection.h */,
+				9F7A79A01CA52115004ABE1C /* UIImage+Reflection.m */,
+				9F7A79A11CA52115004ABE1C /* UIImage+Resizing.h */,
+				9F7A79A21CA52115004ABE1C /* UIImage+Resizing.m */,
+				9F7A79A31CA52115004ABE1C /* UIImage+Rotating.h */,
+				9F7A79A41CA52115004ABE1C /* UIImage+Rotating.m */,
+				9F7A79A51CA52115004ABE1C /* UIImage+Saving.h */,
+				9F7A79A61CA52115004ABE1C /* UIImage+Saving.m */,
+				9F7A79A71CA52115004ABE1C /* UIScrollView+Screenshot.h */,
+				9F7A79A81CA52115004ABE1C /* UIScrollView+Screenshot.m */,
+				9F7A79A91CA52115004ABE1C /* UIView+Screenshot.h */,
+				9F7A79AA1CA52115004ABE1C /* UIView+Screenshot.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		9F7A79AB1CA52115004ABE1C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9F7A79AC1CA52115004ABE1C /* NYXProgressiveImageView.h */,
+				9F7A79AD1CA52115004ABE1C /* NYXProgressiveImageView.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		9F7A79AE1CA52115004ABE1C /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				9F7A79AF1CA52115004ABE1C /* NYXImagesHelper.h */,
+				9F7A79B01CA52115004ABE1C /* NYXImagesHelper.m */,
+				9F7A79B11CA52115004ABE1C /* NYXImagesKit.h */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		9F9394571C889416009E6DDF /* StepCounting */ = {
@@ -724,6 +856,8 @@
 		9F9617BB1C83E9440078FB3C /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				9F6AB7C41CA4ED2200C7D963 /* BBAppearance.h */,
+				9F7A79C81CA69387004ABE1C /* BBAppearance.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -840,6 +974,7 @@
 		9F9617CA1C83E9440078FB3C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				9F6AB7BE1CA4E7A200C7D963 /* Views */,
 				C3584AFA1C9075C60087FF34 /* Category */,
 				9F9617E31C841B470078FB3C /* Macros.h */,
 			);
@@ -863,6 +998,15 @@
 				9FDEF2581C9E822500B629C5 /* BBLoginViewController_iPhone.storyboard */,
 				9F33CE941CA15D260016EB39 /* BBPersonalCenterViewController.h */,
 				9F33CE951CA15D260016EB39 /* BBPersonalCenterViewController.m */,
+				9F6AB7B91CA4488900C7D963 /* BBChangeInfoViewController.h */,
+				9F6AB7BA1CA4488900C7D963 /* BBChangeInfoViewController.m */,
+				9F6AB7BB1CA4488900C7D963 /* BBChangeInfoViewController_iPhone.storyboard */,
+				9F7A79BE1CA52B7D004ABE1C /* BBPersonalInfoEditViewController.h */,
+				9F7A79BF1CA52B7D004ABE1C /* BBPersonalInfoEditViewController.m */,
+				9F7A79C01CA52B7D004ABE1C /* BBPersonalInfoEditViewController_iPhone.storyboard */,
+				9F7A79C31CA56FBD004ABE1C /* BBRegisterAndResetPasswordViewController.h */,
+				9F7A79C41CA56FBD004ABE1C /* BBRegisterAndResetPasswordViewController.m */,
+				9F7A79C51CA56FBD004ABE1C /* BBRegisterAndResetPasswordViewController_iPhone.storyboard */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1641,6 +1785,7 @@
 				C3584B531C9076220087FF34 /* SAS_logo.png in Resources */,
 				C3584B391C9076220087FF34 /* ATL_logo.png in Resources */,
 				C3F8A55A1C9D80960086FF4B /* NewsRecourceViewController_iPhone.storyboard in Resources */,
+				9F7A79C71CA56FBD004ABE1C /* BBRegisterAndResetPasswordViewController_iPhone.storyboard in Resources */,
 				C3584B501C9076220087FF34 /* PHX_logo.png in Resources */,
 				9FDEF24D1C9D6AA700B629C5 /* BBStepCountingRollView.xib in Resources */,
 				C3584B411C9076220087FF34 /* DET_logo.png in Resources */,
@@ -1653,6 +1798,7 @@
 				C3F8A5481C9D72820086FF4B /* thumbnail.png in Resources */,
 				C3F8A4E61C9D703F0086FF4B /* LCArticlePageView2_iPhone.xib in Resources */,
 				C3F8A4E21C9D703F0086FF4B /* LCArticleTextBoxView.xib in Resources */,
+				9F7A79C21CA52B7D004ABE1C /* BBPersonalInfoEditViewController_iPhone.storyboard in Resources */,
 				C3F8A4E01C9D703F0086FF4B /* LCArticleImageBoxView.xib in Resources */,
 				C3584B4F1C9076220087FF34 /* PHI_logo.png in Resources */,
 				C3584B4E1C9076220087FF34 /* ORL_logo.png in Resources */,
@@ -1662,6 +1808,7 @@
 				C31680F11CA42A6600701A25 /* BBShareCell_iPhone.xib in Resources */,
 				9FDEF25A1C9E822500B629C5 /* BBLoginViewController_iPhone.storyboard in Resources */,
 				C3584B191C9075D80087FF34 /* BBGamesScoreViewController_iPhone.storyboard in Resources */,
+				9F6AB7BD1CA4488900C7D963 /* BBChangeInfoViewController_iPhone.storyboard in Resources */,
 				C3F8A4E51C9D703F0086FF4B /* LCArticlePageView1_iPhone.xib in Resources */,
 				C3584B481C9076220087FF34 /* MIA_logo.png in Resources */,
 				C3584B431C9076220087FF34 /* HOU_logo.png in Resources */,
@@ -1673,6 +1820,7 @@
 				9F9617D01C83E9440078FB3C /* LaunchScreen.storyboard in Resources */,
 				9F33CEA11CA15E0D0016EB39 /* BBPersonalCenterCell.xib in Resources */,
 				C3584B4A1C9076220087FF34 /* MIN_logo.png in Resources */,
+				9F36B3B91CA3D23A00083496 /* BBPersonalTableViewHeaderCell.xib in Resources */,
 				C3584B421C9076220087FF34 /* GSW_logo.png in Resources */,
 				C3584B3A1C9076220087FF34 /* BKN_logo.png in Resources */,
 				C3584B181C9075D80087FF34 /* BBGamesScoreTableViewCell_iPhone.xib in Resources */,
@@ -1786,6 +1934,7 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+			shellScript = "baseurl=http:\\/\\/`ifconfig en0 | grep inet | grep -v inet6 | awk '{print $2}'`:8081\n/usr/libexec/PlistBuddy -c \"Set :DebugBaseUrl $baseurl\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\necho \"Updated ${TARGET_BUILD_DIR}/${INFOPLIST_PATH} DebugBaseUrl to $baseurl\"";
 		};
 		E8ACE7579FE1E926C8537326 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1857,9 +2006,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F7A79B71CA52115004ABE1C /* UIImage+Resizing.m in Sources */,
+				9F7A79C91CA6A503004ABE1C /* BBAppearance.m in Sources */,
 				9F1B638D1C944B7500C486B0 /* BBResponseSerializer.m in Sources */,
 				9FDEF2601C9E8DD900B629C5 /* UIViewController+HUD.m in Sources */,
 				9F9394A31C89611F009E6DDF /* BBStepCountingTabBarView.m in Sources */,
+				9F7A79B21CA52115004ABE1C /* UIImage+Blurring.m in Sources */,
 				9FF05EEB1C9EC1DC00BC13CA /* UIImage+Utils.m in Sources */,
 				C31680EB1CA42A6600701A25 /* BBShareContentViewController.m in Sources */,
 				C3F8A55E1C9D81E80086FF4B /* Basketball.xcdatamodeld in Sources */,
@@ -1872,21 +2024,25 @@
 				C3F8A5331C9D72820086FF4B /* WYFeedEntity+CoreDataProperties.m in Sources */,
 				C3F8A5351C9D72820086FF4B /* WYFeedEntity.m in Sources */,
 				9F26F5AB1CA054B300481EA6 /* BBStepCountingHistoryRecordCell.m in Sources */,
+				9F7A79C11CA52B7D004ABE1C /* BBPersonalInfoEditViewController.m in Sources */,
 				9F9617D21C83E9440078FB3C /* main.m in Sources */,
 				C3F8A4E11C9D703F0086FF4B /* LCArticleTextBoxView.m in Sources */,
 				9F2EA0361C9C10960053A802 /* BBStepCountingMineViewController.m in Sources */,
 				9F33CE961CA15D260016EB39 /* BBPersonalCenterViewController.m in Sources */,
 				9F1B638C1C944B5100C486B0 /* BBModel.m in Sources */,
+				9F36B3B81CA3D23A00083496 /* BBPersonalTableViewHeaderCell.m in Sources */,
 				C3F8A5361C9D72820086FF4B /* WYFeedManager.m in Sources */,
 				C3F8A5591C9D80960086FF4B /* NewsRecourceViewController.m in Sources */,
 				9F9394AD1C89E245009E6DDF /* NSDate+Utilities.m in Sources */,
 				C3F8A5311C9D72820086FF4B /* WYFeed+CoreDataProperties.m in Sources */,
 				9F9394541C8893C9009E6DDF /* BBStepCountingMainViewController.m in Sources */,
+				9F7A79C61CA56FBD004ABE1C /* BBRegisterAndResetPasswordViewController.m in Sources */,
 				C3F8A4E71C9D703F0086FF4B /* LCFeedEntityPageViewModel.m in Sources */,
 				C3584B141C9075D80087FF34 /* BBGamesScore.m in Sources */,
 				C3584B031C9075C60087FF34 /* UIViewController+Create.m in Sources */,
 				C3F8A54A1C9D72820086FF4B /* WYTextScrollView.m in Sources */,
 				C3F8A4E41C9D703F0086FF4B /* LCArticlePageView.m in Sources */,
+				9F7A79B51CA52115004ABE1C /* UIImage+Masking.m in Sources */,
 				C3584B171C9075D80087FF34 /* BBGamesScoreTableViewCell.m in Sources */,
 				C3F8A5441C9D72820086FF4B /* TimeFormatterTransform.m in Sources */,
 				9F1B63941C9481B600C486B0 /* BBDatabaseManager.m in Sources */,
@@ -1895,8 +2051,10 @@
 				C31680ED1CA42A6600701A25 /* BBShareViewController.m in Sources */,
 				C3F8A5371C9D72820086FF4B /* WYFeedSerialization.m in Sources */,
 				9F26F59F1C9FE77A00481EA6 /* BBStepCountingHistoryRecord.m in Sources */,
+				9F7A79BA1CA52115004ABE1C /* UIScrollView+Screenshot.m in Sources */,
 				C3F8A53F1C9D72820086FF4B /* NSManagedObjectModel+WYStore.m in Sources */,
 				C3F8A4DE1C9D703F0086FF4B /* LCPageViewController.m in Sources */,
+				9F7A79BC1CA52115004ABE1C /* NYXProgressiveImageView.m in Sources */,
 				C3F8A53D1C9D72820086FF4B /* NSManagedObject+WYStoreFetch.m in Sources */,
 				C3F8A5301C9D72820086FF4B /* SDWebImageManager+Mutiple.m in Sources */,
 				9FDEF2481C9D30AC00B629C5 /* BBStepCountingChartView.m in Sources */,
@@ -1906,17 +2064,21 @@
 				C3F8A5391C9D72820086FF4B /* WYNetworkingManager.m in Sources */,
 				C3584B021C9075C60087FF34 /* UIView+Utils.m in Sources */,
 				9F33CE881CA13C5F0016EB39 /* BBStepCountingRank.m in Sources */,
+				9F6AB7BC1CA4488900C7D963 /* BBChangeInfoViewController.m in Sources */,
 				C3F8A53B1C9D72820086FF4B /* WYURLSessionTaskHandler.m in Sources */,
 				C3F8A4D71C9D703F0086FF4B /* LCArticleContentViewController.m in Sources */,
+				9F7A79B41CA52115004ABE1C /* UIImage+Filtering.m in Sources */,
 				C3F8A53A1C9D72820086FF4B /* WYURLSessionManager.m in Sources */,
 				C3F8A5451C9D72820086FF4B /* WYXMLDocument.m in Sources */,
 				C3F8A5381C9D72820086FF4B /* WYHTTPRequestManager.m in Sources */,
 				9F244CFC1C8527D500A388F6 /* BBNetworkApiManager.m in Sources */,
 				9F93946B1C88AC48009E6DDF /* BBNotificationDefine.m in Sources */,
 				9FDEF2591C9E822500B629C5 /* BBLoginViewController.m in Sources */,
+				9F7A79B61CA52115004ABE1C /* UIImage+Reflection.m in Sources */,
 				C3FEE38F1C9E7346000FCDBD /* UINavigationBar+Addition.m in Sources */,
 				C3F8A4E31C9D703F0086FF4B /* LCArticlePageView+Style.m in Sources */,
 				9F33CE921CA14B440016EB39 /* BBStepCountingRankCell.m in Sources */,
+				9F7A79BD1CA52115004ABE1C /* NYXImagesHelper.m in Sources */,
 				9F93945F1C88968D009E6DDF /* BBStepCountingService.m in Sources */,
 				C3F8A53E1C9D72820086FF4B /* NSManagedObjectContext+WYStore.m in Sources */,
 				C3F8A56E1C9DA41F0086FF4B /* BBArticleListViewController.m in Sources */,
@@ -1933,23 +2095,28 @@
 				C3584B161C9075D80087FF34 /* BBGamesScoreViewModel.m in Sources */,
 				C3F8A5711C9DA43C0086FF4B /* BBArticleListViewCell.m in Sources */,
 				C3F8A4DF1C9D703F0086FF4B /* LCArticleImageBoxView.m in Sources */,
+				9F7A79BB1CA52115004ABE1C /* UIView+Screenshot.m in Sources */,
 				C3F8A4DA1C9D703F0086FF4B /* LCArticleContentSettingView.m in Sources */,
 				C3F8A5421C9D72820086FF4B /* WYStore.m in Sources */,
 				9FDEF2421C9C153900B629C5 /* BBView.m in Sources */,
 				9FA8A6A81C9FDDF10076403A /* BBStepCountingHistoryViewController.m in Sources */,
 				9F9617E11C83F17A0078FB3C /* BBNavigationController.m in Sources */,
 				C31680EF1CA42A6600701A25 /* BBImageLayoutView.m in Sources */,
+				9F6AB7C21CA4E7DE00C7D963 /* BBCommonCellView.m in Sources */,
 				C3F8A5471C9D72820086FF4B /* WYXMLParserOperation.m in Sources */,
 				C3F8A5461C9D72820086FF4B /* WYXMLParserManager.m in Sources */,
 				C31680F01CA42A6600701A25 /* BBShareCell.m in Sources */,
 				C3F8A5321C9D72820086FF4B /* WYFeed.m in Sources */,
+				9F7A79B81CA52115004ABE1C /* UIImage+Rotating.m in Sources */,
 				9F9617CE1C83E9440078FB3C /* AppDelegate.m in Sources */,
+				9F7A79B31CA52115004ABE1C /* UIImage+Enhancing.m in Sources */,
 				9F9617DE1C83EF400078FB3C /* BBTabBar.m in Sources */,
 				9FDEF2631C9EAD2C00B629C5 /* UIWindow+Utils.m in Sources */,
 				C3FEE3891C9E411E000FCDBD /* BBArticleListViewModel.m in Sources */,
 				C3F8A4D91C9D703F0086FF4B /* LCArticleContentViewModel.m in Sources */,
 				9F93945A1C88946F009E6DDF /* BBStepCountingManager.m in Sources */,
 				C3584B151C9075D80087FF34 /* BBGamesScoreViewController.m in Sources */,
+				9F7A79B91CA52115004ABE1C /* UIImage+Saving.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

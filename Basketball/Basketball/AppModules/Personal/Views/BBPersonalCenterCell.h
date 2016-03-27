@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class BBCommonCellView;
+
 @interface BBPersonalCenterCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet BBCommonCellView *commonCellView;
 
 @end

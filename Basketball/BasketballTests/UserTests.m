@@ -48,6 +48,13 @@
     NSString *nickName = @"代码整洁之道";
     __block NSString *headImageUrl = nil;
     
+
+    NSString *baseurl = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"DebugBaseUrl"];
+    if(baseurl) {
+        NSLog(@"设置baseurl为：%@",baseurl);
+        [BBNetworkApiManager configDebugBaseUrl:baseurl];
+    }
+    
     // 验证码
     dispatch_group_enter(self.dispatcGroup);
     @weakify(self);

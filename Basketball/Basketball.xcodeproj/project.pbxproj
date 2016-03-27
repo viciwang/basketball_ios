@@ -141,6 +141,10 @@
 		C3584B541C9076220087FF34 /* TOR_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C3584B361C9076220087FF34 /* TOR_logo.png */; };
 		C3584B551C9076220087FF34 /* UTA_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C3584B371C9076220087FF34 /* UTA_logo.png */; };
 		C3584B561C9076220087FF34 /* WAS_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C3584B381C9076220087FF34 /* WAS_logo.png */; };
+		C3F3D6DC1CA7A8EA00A93A41 /* CamareAndPhotoLiberay.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F3D6DB1CA7A8EA00A93A41 /* CamareAndPhotoLiberay.m */; };
+		C3F3D6DE1CA7A9D500A93A41 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F3D6DD1CA7A9D500A93A41 /* MobileCoreServices.framework */; };
+		C3F3D6E11CA7AEB900A93A41 /* BBShareEditViewImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F3D6E01CA7AEB900A93A41 /* BBShareEditViewImageCell.m */; };
+		C3F3D6E41CA7B7CA00A93A41 /* BBShareEditViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F3D6E31CA7B7CA00A93A41 /* BBShareEditViewModel.m */; };
 		C3F8A4D71C9D703F0086FF4B /* LCArticleContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A4B31C9D703F0086FF4B /* LCArticleContentViewController.m */; };
 		C3F8A4D81C9D703F0086FF4B /* LCArticleContentViewController_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3F8A4B41C9D703F0086FF4B /* LCArticleContentViewController_iPhone.storyboard */; };
 		C3F8A4D91C9D703F0086FF4B /* LCArticleContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A4B81C9D703F0086FF4B /* LCArticleContentViewModel.m */; };
@@ -424,6 +428,13 @@
 		C3584B361C9076220087FF34 /* TOR_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TOR_logo.png; sourceTree = "<group>"; };
 		C3584B371C9076220087FF34 /* UTA_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UTA_logo.png; sourceTree = "<group>"; };
 		C3584B381C9076220087FF34 /* WAS_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WAS_logo.png; sourceTree = "<group>"; };
+		C3F3D6DA1CA7A8EA00A93A41 /* CamareAndPhotoLiberay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CamareAndPhotoLiberay.h; sourceTree = "<group>"; };
+		C3F3D6DB1CA7A8EA00A93A41 /* CamareAndPhotoLiberay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CamareAndPhotoLiberay.m; sourceTree = "<group>"; };
+		C3F3D6DD1CA7A9D500A93A41 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		C3F3D6DF1CA7AEB900A93A41 /* BBShareEditViewImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBShareEditViewImageCell.h; sourceTree = "<group>"; };
+		C3F3D6E01CA7AEB900A93A41 /* BBShareEditViewImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBShareEditViewImageCell.m; sourceTree = "<group>"; };
+		C3F3D6E21CA7B7CA00A93A41 /* BBShareEditViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBShareEditViewModel.h; sourceTree = "<group>"; };
+		C3F3D6E31CA7B7CA00A93A41 /* BBShareEditViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBShareEditViewModel.m; sourceTree = "<group>"; };
 		C3F8A4B21C9D703F0086FF4B /* LCArticleContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCArticleContentViewController.h; sourceTree = "<group>"; };
 		C3F8A4B31C9D703F0086FF4B /* LCArticleContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCArticleContentViewController.m; sourceTree = "<group>"; };
 		C3F8A4B41C9D703F0086FF4B /* LCArticleContentViewController_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LCArticleContentViewController_iPhone.storyboard; sourceTree = "<group>"; };
@@ -553,6 +564,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3F3D6DE1CA7A9D500A93A41 /* MobileCoreServices.framework in Frameworks */,
 				C3F8A5601C9D85320086FF4B /* libxml2.tbd in Frameworks */,
 				CF0C2CA4D9653D02921AD038 /* Pods_Basketball.framework in Frameworks */,
 			);
@@ -564,6 +576,7 @@
 		58169B67DA6756B40D59B63C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C3F3D6DD1CA7A9D500A93A41 /* MobileCoreServices.framework */,
 				C3F8A55F1C9D85320086FF4B /* libxml2.tbd */,
 				8F269EA67C66822FB5E231DE /* Pods_Basketball.framework */,
 				6BC94B49E81C187F76F78BFE /* Pods_BasketballTests.framework */,
@@ -974,6 +987,7 @@
 		9F9617CA1C83E9440078FB3C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C3F3D6D91CA7A8EA00A93A41 /* Camera */,
 				9F6AB7BE1CA4E7A200C7D963 /* Views */,
 				C3584AFA1C9075C60087FF34 /* Category */,
 				9F9617E31C841B470078FB3C /* Macros.h */,
@@ -1051,6 +1065,8 @@
 		C31680D31CA42A6600701A25 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C3F3D6E21CA7B7CA00A93A41 /* BBShareEditViewModel.h */,
+				C3F3D6E31CA7B7CA00A93A41 /* BBShareEditViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1058,6 +1074,8 @@
 		C31680D41CA42A6600701A25 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C3F3D6DF1CA7AEB900A93A41 /* BBShareEditViewImageCell.h */,
+				C3F3D6E01CA7AEB900A93A41 /* BBShareEditViewImageCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1231,6 +1249,15 @@
 				C3584B381C9076220087FF34 /* WAS_logo.png */,
 			);
 			path = nba_logo;
+			sourceTree = "<group>";
+		};
+		C3F3D6D91CA7A8EA00A93A41 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				C3F3D6DA1CA7A8EA00A93A41 /* CamareAndPhotoLiberay.h */,
+				C3F3D6DB1CA7A8EA00A93A41 /* CamareAndPhotoLiberay.m */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 		C3F8A4AF1C9D703F0086FF4B /* Article */ = {
@@ -1932,9 +1959,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
 			shellScript = "baseurl=http:\\/\\/`ifconfig en0 | grep inet | grep -v inet6 | awk '{print $2}'`:8081\n/usr/libexec/PlistBuddy -c \"Set :DebugBaseUrl $baseurl\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\necho \"Updated ${TARGET_BUILD_DIR}/${INFOPLIST_PATH} DebugBaseUrl to $baseurl\"";
+			showEnvVarsInLog = 0;
 		};
 		E8ACE7579FE1E926C8537326 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2038,6 +2064,7 @@
 				9F9394541C8893C9009E6DDF /* BBStepCountingMainViewController.m in Sources */,
 				9F7A79C61CA56FBD004ABE1C /* BBRegisterAndResetPasswordViewController.m in Sources */,
 				C3F8A4E71C9D703F0086FF4B /* LCFeedEntityPageViewModel.m in Sources */,
+				C3F3D6E11CA7AEB900A93A41 /* BBShareEditViewImageCell.m in Sources */,
 				C3584B141C9075D80087FF34 /* BBGamesScore.m in Sources */,
 				C3584B031C9075C60087FF34 /* UIViewController+Create.m in Sources */,
 				C3F8A54A1C9D72820086FF4B /* WYTextScrollView.m in Sources */,
@@ -2102,6 +2129,7 @@
 				9FA8A6A81C9FDDF10076403A /* BBStepCountingHistoryViewController.m in Sources */,
 				9F9617E11C83F17A0078FB3C /* BBNavigationController.m in Sources */,
 				C31680EF1CA42A6600701A25 /* BBImageLayoutView.m in Sources */,
+				C3F3D6DC1CA7A8EA00A93A41 /* CamareAndPhotoLiberay.m in Sources */,
 				9F6AB7C21CA4E7DE00C7D963 /* BBCommonCellView.m in Sources */,
 				C3F8A5471C9D72820086FF4B /* WYXMLParserOperation.m in Sources */,
 				C3F8A5461C9D72820086FF4B /* WYXMLParserManager.m in Sources */,
@@ -2114,6 +2142,7 @@
 				9FDEF2631C9EAD2C00B629C5 /* UIWindow+Utils.m in Sources */,
 				C3FEE3891C9E411E000FCDBD /* BBArticleListViewModel.m in Sources */,
 				C3F8A4D91C9D703F0086FF4B /* LCArticleContentViewModel.m in Sources */,
+				C3F3D6E41CA7B7CA00A93A41 /* BBShareEditViewModel.m in Sources */,
 				9F93945A1C88946F009E6DDF /* BBStepCountingManager.m in Sources */,
 				C3584B151C9075D80087FF34 /* BBGamesScoreViewController.m in Sources */,
 				9F7A79B91CA52115004ABE1C /* UIImage+Saving.m in Sources */,

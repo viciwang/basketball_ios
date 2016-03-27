@@ -9,12 +9,12 @@
 #ifndef BBNetworkAddress_h
 #define BBNetworkAddress_h
 
-#define DEBUG_LOCAL_HOST "如果想要用localhost作为baseUrl，就注释掉这一行"
+//#define DEBUG_LOCAL_HOST "如果想要用localhost作为baseUrl，就注释掉这一行"
 
 #ifdef DEBUG_LOCAL_HOST
   #define kApiBaseUrl @"http://192.168.1.103:8081"
 #else
-  #define kApiBaseUrl @"http://localhost:8000"
+  #define kApiBaseUrl @"http://localhost:8081"
 #endif
 
 #define kApiTestAddress @"test.json"
@@ -46,5 +46,7 @@
 #define kApiStepCountingHistory @"stepCounting/history"
 
 #define kApiStepCountingRanking @"stepCounting/ranking"
+
+#define kApiAddShare @"ShareManager/addShare"
 
 #endif /* BBNetworkAddress_h */

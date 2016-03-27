@@ -10,8 +10,9 @@
 #import "BBShareViewFlowLayout.h"
 #import "BBShareCell.h"
 #import "BBShareContentViewController.h"
+#import "BBShareEditViewController.h"
 
-@interface BBShareViewController () <UICollectionViewDelegate,UICollectionViewDataSource>
+@interface BBShareViewController () <UICollectionViewDelegate,UICollectionViewDataSource, BBShareEditViewControllerDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) UIButton *editShareButton;
@@ -23,6 +24,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     self.navigationController.navigationBar.hidden  = YES;
+    
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,13 +39,25 @@
     [self.view addSubview:_collectionView];
     [_collectionView reloadData];
     
-    _editShareButton = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetWidth(self.view.bounds)-55, 30, 40, 40)];
-    _editShareButton.titleLabel.text = @"";
-    _editShareButton.imageView.image = [UIImage imageNamed:@"share_camera"];
+    CGRect butRect = CGRectMake(CGRectGetWidth(self.view.bounds) - 55, 30, 40, 40);
+    _editShareButton = [[UIButton alloc] initWithFrame:butRect];
+    [_editShareButton setImage:[UIImage imageNamed:@"share_camera"] forState:UIControlStateNormal];
+    [_editShareButton addTarget:self action:@selector(editShareButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_editShareButton];
     // Do any additional setup after loading the view.
 }
 
+#pragma mark - button action
+- (void)editShareButtonAction:(id)sender {
+    BBShareEditViewController *vc = [BBShareEditViewController create];
+    vc.delegate = self;
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:nvc animated:YES completion:nil];
+}
+#pragma mark - share edit vc delegate
+- (void)shareEditViewController:(BBShareEditViewController *)viewController endEditingText:(NSString *)text images:(NSArray *)images {
+    
+}
 #pragma mark cell的数量
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {

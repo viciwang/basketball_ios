@@ -15,7 +15,9 @@
              @"uid":@"uid",
              @"stepCount":@"stepCount",
              @"nickName":@"nickName",
-             @"headImageUrl":@"headImageUrl"
+             @"headImageUrl":@"headImageUrl",
+             @"personalDescription": @"personalDescription",
+             @"rank":@"rank"
              };
 }
 

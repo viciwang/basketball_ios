@@ -9,6 +9,7 @@
 #import "BBStepCountingRankViewController.h"
 #import "BBNetworkApiManager.h"
 #import "BBStepCountingRankCell.h"
+#import "BBRefreshHeader.h"
 
 @interface BBStepCountingRankViewController ()
 <
@@ -53,8 +54,15 @@ UITableViewDataSource
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([BBStepCountingRankCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:NSStringFromClass([BBStepCountingRankCell class])];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.rowHeight = 150;
+    self.tableView.rowHeight = 65;
+    self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
+    self.tableView.backgroundColor = baseColor;
     [self.view addSubview:self.tableView];
+    @weakify(self);
+    self.tableView.mj_header = [BBRefreshHeader headerWithRefreshingBlock:^{
+        @strongify(self);
+        [self loadData];
+    }];
 }
 
 #pragma mark - data
@@ -64,6 +72,7 @@ UITableViewDataSource
     [self showLoadingHUDWithInfo:nil];
     [[BBNetworkApiManager sharedManager] getStepCountRankingWithCompletionBlock:^(NSArray *ranks, NSError *error) {
         @strongify(self);
+        [self.tableView.mj_header endRefreshing];
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         self.ranks = ranks;
         [self.tableView reloadData];

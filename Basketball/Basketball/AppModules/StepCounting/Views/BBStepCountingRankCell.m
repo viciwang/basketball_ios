@@ -8,6 +8,16 @@
 
 #import "BBStepCountingRankCell.h"
 
+@interface BBStepCountingRankCell()
+
+@property (weak, nonatomic) IBOutlet UILabel *rankLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *headImageView;
+@property (weak, nonatomic) IBOutlet UILabel *nickNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *personalDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *stepCountLabel;
+
+@end
+
 @implementation BBStepCountingRankCell
 
 - (void)awakeFromNib {
@@ -21,7 +31,11 @@
 }
 
 - (void)updateWithData:(BBStepCountingRank *)record {
-    
+    self.rankLabel.text = @(record.rank).stringValue;
+    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:record.headImageUrl] placeholderImage:[UIImage imageNamed:@"HOU_logo"]];
+    self.nickNameLabel.text = record.nickName;
+    self.personalDescriptionLabel.text = record.personalDescription;
+    self.stepCountLabel.text = @(record.stepCount).stringValue;
 }
 
 @end

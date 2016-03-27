@@ -81,6 +81,7 @@
 		9FC217D01C9719DB00CF2B2A /* UserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC217B41C97160D00CF2B2A /* UserTests.m */; };
 		9FC217D11C971A0900CF2B2A /* RACmetamacros.h in Sources */ = {isa = PBXBuildFile; fileRef = 9F244CF51C85279000A388F6 /* RACmetamacros.h */; };
 		9FC217D21C971A1C00CF2B2A /* RACEXTScope.h in Sources */ = {isa = PBXBuildFile; fileRef = 9F244CF41C85279000A388F6 /* RACEXTScope.h */; };
+		9FC545961CA7BFBE00367CB3 /* BBRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC545951CA7BFBE00367CB3 /* BBRefreshHeader.m */; };
 		9FDEF2421C9C153900B629C5 /* BBView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDEF2411C9C153900B629C5 /* BBView.m */; };
 		9FDEF2451C9C15A600B629C5 /* BBStepCountingRollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDEF2441C9C15A600B629C5 /* BBStepCountingRollView.m */; };
 		9FDEF2481C9D30AC00B629C5 /* BBStepCountingChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDEF2471C9D30AC00B629C5 /* BBStepCountingChartView.m */; };
@@ -327,6 +328,8 @@
 		9FA8A6A61C9FDDF10076403A /* BBStepCountingHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBStepCountingHistoryViewController.h; path = Basketball/AppModules/StepCounting/Controllers/BBStepCountingHistoryViewController.h; sourceTree = SOURCE_ROOT; };
 		9FA8A6A71C9FDDF10076403A /* BBStepCountingHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBStepCountingHistoryViewController.m; path = Basketball/AppModules/StepCounting/Controllers/BBStepCountingHistoryViewController.m; sourceTree = SOURCE_ROOT; };
 		9FC217B41C97160D00CF2B2A /* UserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTests.m; sourceTree = "<group>"; };
+		9FC545941CA7BFBE00367CB3 /* BBRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBRefreshHeader.h; sourceTree = "<group>"; };
+		9FC545951CA7BFBE00367CB3 /* BBRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBRefreshHeader.m; sourceTree = "<group>"; };
 		9FDEF2401C9C153900B629C5 /* BBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBView.h; sourceTree = "<group>"; };
 		9FDEF2411C9C153900B629C5 /* BBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBView.m; sourceTree = "<group>"; };
 		9FDEF2431C9C15A600B629C5 /* BBStepCountingRollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBStepCountingRollView.h; path = Basketball/AppModules/StepCounting/Views/BBStepCountingRollView.h; sourceTree = SOURCE_ROOT; };
@@ -836,6 +839,8 @@
 				9F9617DD1C83EF400078FB3C /* BBTabBar.m */,
 				9FDEF2401C9C153900B629C5 /* BBView.h */,
 				9FDEF2411C9C153900B629C5 /* BBView.m */,
+				9FC545941CA7BFBE00367CB3 /* BBRefreshHeader.h */,
+				9FC545951CA7BFBE00367CB3 /* BBRefreshHeader.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1941,6 +1946,7 @@
 				9F9394991C8960BF009E6DDF /* BBStepCountingStatisticViewController.m in Sources */,
 				C3F8A5341C9D72820086FF4B /* WYFeedEntity+VaildateArticle.m in Sources */,
 				9F9617D51C83ED860078FB3C /* BBTabBarController.m in Sources */,
+				9FC545961CA7BFBE00367CB3 /* BBRefreshHeader.m in Sources */,
 				C3584B161C9075D80087FF34 /* BBGamesScoreViewModel.m in Sources */,
 				C3F8A5711C9DA43C0086FF4B /* BBArticleListViewCell.m in Sources */,
 				C3F8A4DF1C9D703F0086FF4B /* LCArticleImageBoxView.m in Sources */,

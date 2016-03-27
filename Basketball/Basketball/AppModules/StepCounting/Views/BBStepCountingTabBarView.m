@@ -78,19 +78,19 @@
         UIButton *button = [UIButton new];
         [button setTitle:titles[index] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(tabButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self addSubview:button];
         [self.tabButtons addObject:button];
     }
     
     //设置当前tab指示view
     self.currentTabIndicatorView = [UIView new];
-    self.currentTabIndicatorView.backgroundColor = UIColorFromHex(0xFF0056);
+    self.currentTabIndicatorView.backgroundColor = UIColorFromHex(0xffffff);
     [self addSubview:self.currentTabIndicatorView];
     
     //底部的装饰横线
     self.bottomLineView = [UIView new];
-    self.bottomLineView.backgroundColor = UIColorFromHex(0xEFEFEF);
+    self.bottomLineView.backgroundColor = [UIColor clearColor];
     [self addSubview:self.bottomLineView];
     
     self.selectedTabButton = self.tabButtons.firstObject;

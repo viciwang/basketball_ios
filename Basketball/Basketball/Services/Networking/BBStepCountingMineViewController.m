@@ -12,12 +12,14 @@
 #import "BBStepCountingManager.h"
 #import "BBNetworkApiManager.h"
 #import "BBStepCountingHistoryViewController.h"
+#import "BBRefreshHeader.h"
 
 @interface BBStepCountingMineViewController ()
 
 @property (nonatomic, strong) BBStepCountingRollView *rollView;
 @property (nonatomic, strong) BBStepCountingChartView *chartView;
 @property (nonatomic, strong) UIButton *showHistoryButton;
+@property (nonatomic, strong) UIScrollView *scrollView;
 
 @end
 
@@ -25,9 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.view addSubview:self.rollView];
-    [self.view addSubview:self.chartView];
-    [self.view addSubview:self.showHistoryButton];
+    [self setupScrollView];
     [self.showHistoryButton addTarget:self action:@selector(showHistory:) forControlEvents:UIControlEventTouchUpInside];
     
     [self loadData];
@@ -39,25 +39,32 @@
 }
 
 - (void)updateViewConstraints {
+    
     @weakify(self);
+    [self.scrollView mas_updateConstraints:^(MASConstraintMaker *make) {
+        @strongify(self);
+        make.top.left.right.bottom.equalTo(self.view);
+    }];
     [self.rollView mas_updateConstraints:^(MASConstraintMaker *make) {
         @strongify(self);
         make.width.equalTo(self.rollView.mas_height);
-        make.top.equalTo(self.view.mas_top);
-        make.centerX.equalTo(self.view.mas_centerX);
+        make.top.equalTo(self.scrollView.mas_top);
+        make.centerX.equalTo(self.scrollView.mas_centerX);
         make.height.equalTo(self.view).multipliedBy(0.6);
     }];
     [self.chartView mas_updateConstraints:^(MASConstraintMaker *make) {
         @strongify(self);
         make.top.equalTo(self.rollView.mas_bottom);
-        make.left.right.equalTo(self.view);
+        make.left.right.equalTo(self.scrollView);
         make.height.equalTo(self.view).multipliedBy(0.3);
+        make.width.equalTo(self.view);
     }];
     [self.showHistoryButton mas_updateConstraints:^(MASConstraintMaker *make) {
         @strongify(self);
-        make.bottom.equalTo(self.view);
-        make.left.right.equalTo(self.view);
+        make.top.equalTo(self.chartView.mas_bottom);
+        make.left.right.equalTo(self.scrollView);
         make.height.equalTo(self.view).multipliedBy(0.1);
+        make.width.equalTo(self.view);
     }];
     [super updateViewConstraints];
 }
@@ -65,6 +72,20 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)setupScrollView {
+    self.scrollView = [UIScrollView new];
+    @weakify(self);
+    BBRefreshHeader *header = [BBRefreshHeader headerWithRefreshingBlock:^{
+        @strongify(self);
+        [self loadData];
+    }];
+    self.scrollView.mj_header = header;
+    [self.view addSubview:self.scrollView];
+    [self.scrollView addSubview:self.rollView];
+    [self.scrollView addSubview:self.chartView];
+    [self.scrollView addSubview:self.showHistoryButton];
 }
 
 #pragma mark - properties
@@ -110,6 +131,7 @@
     [[BBNetworkApiManager sharedManager] getAverageStepCountWithCompletionBlock:^(NSNumber *average, NSError *error) {
         @strongify(self);
         [MBProgressHUD hideHUDForView:self.view animated:YES];
+        [self.scrollView.mj_header endRefreshing];
         if (error) {
             [self showErrorHUDWithInfo:error.userInfo[@"msg"]];
         }

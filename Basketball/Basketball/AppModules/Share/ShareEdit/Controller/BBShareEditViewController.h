@@ -8,6 +8,15 @@
 
 #import "BBBaseViewController.h"
 
+@class BBShareEditViewController;
+@protocol BBShareEditViewControllerDelegate <NSObject>
+
+- (void)shareEditViewController:(BBShareEditViewController *)viewController endEditingText:(NSString *)text images:(NSArray *)images;
+
+@end
+
 @interface BBShareEditViewController : UITableViewController
+
+@property (nonatomic, weak) id<BBShareEditViewControllerDelegate> delegate;
 
 @end

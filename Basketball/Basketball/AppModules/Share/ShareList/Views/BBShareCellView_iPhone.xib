@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9527.1" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9525.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -24,7 +24,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hk7-pc-ez6">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share_normal" translatesAutoresizingMaskIntoConstraints="NO" id="Jg2-zM-8PR">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share_datetime" translatesAutoresizingMaskIntoConstraints="NO" id="Jg2-zM-8PR">
                             <rect key="frame" x="44" y="26" width="13" height="13"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="Jg2-zM-8PR" secondAttribute="height" id="ub9-Wl-ZjZ"/>
@@ -81,7 +81,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mql-5Q-SfW">
                             <rect key="frame" x="16" y="7" width="128" height="21"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share_normal" translatesAutoresizingMaskIntoConstraints="NO" id="jUM-XZ-rgV">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share_comment" translatesAutoresizingMaskIntoConstraints="NO" id="jUM-XZ-rgV">
                                     <rect key="frame" x="3" y="3" width="15" height="15"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="jUM-XZ-rgV" secondAttribute="height" id="TV3-GH-qtf"/>
@@ -140,7 +140,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RS3-E7-sl4">
                             <rect key="frame" x="16" y="7" width="128" height="21"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share_normal" translatesAutoresizingMaskIntoConstraints="NO" id="Itm-Bs-ydb">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share_approve" translatesAutoresizingMaskIntoConstraints="NO" id="Itm-Bs-ydb">
                                     <rect key="frame" x="3" y="3" width="15" height="15"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="Itm-Bs-ydb" secondAttribute="height" id="Mm1-UF-6nu"/>
@@ -219,6 +219,8 @@
     </objects>
     <resources>
         <image name="ATL_logo.png" width="400" height="400"/>
-        <image name="share_normal" width="60" height="60"/>
+        <image name="share_approve" width="10" height="10"/>
+        <image name="share_comment" width="10" height="10"/>
+        <image name="share_datetime" width="10" height="10"/>
     </resources>
 </document>

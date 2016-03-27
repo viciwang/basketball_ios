@@ -8,6 +8,7 @@
 
 #import "BBStepCountingHistoryRecordCell.h"
 #import "BBStepCountingHistoryRecord.h"
+#import "NSDate+Utilities.h"
 
 @interface BBStepCountingHistoryRecordCell ()
 <
@@ -15,6 +16,10 @@ ChartViewDelegate
 >
 
 @property (weak, nonatomic) IBOutlet BarChartView *chartView;
+@property (weak, nonatomic) IBOutlet UIView *bgView;
+@property (nonatomic, strong) CAGradientLayer *bgLayer;
+@property (weak, nonatomic) IBOutlet UILabel *monthLabel;
+@property (weak, nonatomic) IBOutlet UILabel *averageLabel;
 
 @end
 
@@ -22,7 +27,25 @@ ChartViewDelegate
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+    self.bgView.layer.cornerRadius = 7.0;
+    self.bgView.clipsToBounds = YES;
+    CAGradientLayer *gLayer = [CAGradientLayer layer];
+    [self.bgView.layer addSublayer:gLayer];
+    
+    gLayer.colors = @[(__bridge id)UIColorFromHex(0x045f82).CGColor,(__bridge id)UIColorFromHex(0x2ec0f8).CGColor];
+    gLayer.startPoint = CGPointMake(0, 1);
+    gLayer.endPoint = CGPointMake(0, 0);
+    gLayer.zPosition = -1;
+    self.bgLayer = gLayer;
     [self setupChartView];
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    self.bgLayer.frame = CGRectMake(0, 0, 500, 200);//self.bgView.bounds;
+//    NSLog(@"%@",NSStringFromCGRect(self.bgView.bounds));
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -35,6 +58,7 @@ ChartViewDelegate
 #pragma mark - UI
 
 - (void)setupChartView {
+    
     self.chartView.delegate = self;
     
     self.chartView.descriptionText = @"";
@@ -47,6 +71,7 @@ ChartViewDelegate
     
     self.chartView.leftAxis.enabled = NO;
     self.chartView.rightAxis.enabled = NO;
+    self.chartView.xAxis.enabled = NO;
     
     self.chartView.legend.enabled = NO;
 }
@@ -54,18 +79,31 @@ ChartViewDelegate
 #pragma mark - data
 
 - (void)updateWithData:(BBStepCountingHistoryMonthRecord *)record {
+    NSDateFormatter *formatter = [NSDateFormatter new];
+    formatter.dateFormat = @"yyyy-MM";
+    NSDate *date = [formatter dateFromString:record.month];
+    self.monthLabel.text = [date stringWithFormat:@"YYYY年MM月"];
+    
+    self.averageLabel.text = @(record.average).stringValue;
+    
+    
+    NSRange range = [[NSDate currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:date];
+    NSUInteger daysOfMonth = range.length;
+    
     NSMutableArray *xVals = [[NSMutableArray alloc] init];
     NSMutableArray *yVals = [[NSMutableArray alloc] init];
     
     
-    for (int i = 0; i < record.dayRecords.count; i++) {
-        BBStepCountingHistoryDayRecord *r = record.dayRecords[i];
-        [xVals addObject:r.date];
-        [yVals addObject:[[BarChartDataEntry alloc] initWithValue:r.stepCount xIndex:i]];
+    for (int i = 0; i < daysOfMonth; i++) {
+        [xVals addObject:@(i)];
+        if (i<record.dayRecords.count) {
+            BBStepCountingHistoryDayRecord *r = record.dayRecords[i];
+            [yVals addObject:[[BarChartDataEntry alloc] initWithValue:r.stepCount xIndex:i]];
+        }
     }
     
     BarChartDataSet *set1 = [[BarChartDataSet alloc] initWithYVals:yVals label:@"DataSet"];
-    set1.colors = ChartColorTemplates.vordiplom;
+    set1.colors = @[UIColorFromHexWithAlpha(0xffff92, 0.5)];
     set1.drawValuesEnabled = NO;
     
     NSMutableArray *dataSets = [[NSMutableArray alloc] init];
@@ -83,11 +121,11 @@ ChartViewDelegate
 
 - (void)chartValueSelected:(ChartViewBase * __nonnull)chartView entry:(ChartDataEntry * __nonnull)entry dataSetIndex:(NSInteger)dataSetIndex highlight:(ChartHighlight * __nonnull)highlight
 {
-    NSLog(@"chartValueSelected");
+//    NSLog(@"chartValueSelected");
 }
 
 - (void)chartValueNothingSelected:(ChartViewBase * __nonnull)chartView
 {
-    NSLog(@"chartValueNothingSelected");
+//    NSLog(@"chartValueNothingSelected");
 }
 @end

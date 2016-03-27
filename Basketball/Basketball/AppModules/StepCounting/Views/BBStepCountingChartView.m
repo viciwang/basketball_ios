@@ -25,7 +25,6 @@ ChartViewDelegate
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.backgroundColor = UIColorFromHex(arc4random()%0xffffff);
         [self setupChartView];
     }
     return self;

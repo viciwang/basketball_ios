@@ -12,6 +12,7 @@
 #import "BBStepCountingStatisticViewController.h"
 #import "BBStepCountingMineViewController.h"
 #import "BBStepCountingHistoryViewController.h"
+#import "BBStepCountingRankViewController.h"
 
 @interface BBStepCountingMainViewController ()
 <
@@ -21,8 +22,8 @@
 >
 
 @property (nonatomic, strong) UIPageViewController *pageViewController;
-@property (nonatomic, strong) BBStepCountingTabBarView *stepCountingTabBarView;
 @property (nonatomic, strong) NSMutableArray *statisticsVCs;
+@property (nonatomic, strong) UISegmentedControl *segmentedControl;
 
 @end
 
@@ -36,16 +37,15 @@
 
 - (void)updateViewConstraints {
     @weakify(self);
-    [self.stepCountingTabBarView mas_updateConstraints:^(MASConstraintMaker *make) {
-        @strongify(self);
-        make.height.equalTo(@(40));
-        make.top.left.right.equalTo(self.view);
-    }];
+//    [self.stepCountingTabBarView mas_updateConstraints:^(MASConstraintMaker *make) {
+//        @strongify(self);
+//        make.height.equalTo(@(40));
+//        make.top.left.right.equalTo(self.view);
+//    }];
     
     [self.pageViewController.view mas_updateConstraints:^(MASConstraintMaker *make) {
        @strongify(self);
-        make.top.equalTo(self.stepCountingTabBarView.mas_bottom);
-        make.left.right.bottom.equalTo(self.view);
+        make.top.left.right.bottom.equalTo(self.view);
     }];
     [super updateViewConstraints];
 }
@@ -53,9 +53,14 @@
 #pragma mark - UI
 
 - (void)setupUI {
-    self.stepCountingTabBarView = [[BBStepCountingTabBarView alloc]initWithDelegate:self titles:@[@"日",@"周",@"月",@"年"]];
-    [self.view addSubview:self.stepCountingTabBarView];
+    self.segmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"今日步数",@"排行榜"]];
+    [self.segmentedControl setSelectedSegmentIndex:0];
+    [self.segmentedControl addTarget:self action:@selector(segmentedControlDidChange:) forControlEvents:UIControlEventValueChanged];
+    self.navigationItem.titleView = self.segmentedControl;
     
+    self.view.backgroundColor = baseColor;
+//    self.stepCountingTabBarView = [[BBStepCountingTabBarView alloc]initWithDelegate:self titles:@[@"今日步数",@"排行榜"]];
+//    [self.view addSubview:self.stepCountingTabBarView];
     [self setupPageViewController];
     
     [self.view setNeedsUpdateConstraints];
@@ -77,6 +82,9 @@
     };
     [self.statisticsVCs addObject:mineVC];
     
+    BBStepCountingRankViewController *rankVC = [BBStepCountingRankViewController new];
+    [self.statisticsVCs addObject:rankVC];
+    
     [self.pageViewController setViewControllers:@[self.statisticsVCs[0]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
 }
 
@@ -97,7 +105,7 @@
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers transitionCompleted:(BOOL)completed {
     if (completed) {
         NSUInteger index = [self.statisticsVCs indexOfObject:pageViewController.viewControllers.firstObject];
-        [self.stepCountingTabBarView selectButtonAtIndex:index animate:YES];
+        [self.segmentedControl setSelectedSegmentIndex:index];
     }
 }
 
@@ -132,4 +140,9 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+#pragma mark - segment 
+
+- (void)segmentedControlDidChange:(UISegmentedControl *)sender {
+    [self.pageViewController setViewControllers:@[self.statisticsVCs[self.segmentedControl.selectedSegmentIndex]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+}
 @end

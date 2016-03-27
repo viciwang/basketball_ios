@@ -12,6 +12,7 @@
 #import "BBStepCountingStatisticViewController.h"
 #import "BBStepCountingMineViewController.h"
 #import "BBStepCountingHistoryViewController.h"
+#import "BBStepCountingRankViewController.h"
 
 @interface BBStepCountingMainViewController ()
 <
@@ -53,9 +54,9 @@
 #pragma mark - UI
 
 - (void)setupUI {
-    self.stepCountingTabBarView = [[BBStepCountingTabBarView alloc]initWithDelegate:self titles:@[@"日",@"周",@"月",@"年"]];
+    self.view.backgroundColor = baseColor;
+    self.stepCountingTabBarView = [[BBStepCountingTabBarView alloc]initWithDelegate:self titles:@[@"今日步数",@"排行榜"]];
     [self.view addSubview:self.stepCountingTabBarView];
-    
     [self setupPageViewController];
     
     [self.view setNeedsUpdateConstraints];
@@ -76,6 +77,9 @@
         [self showHistory];
     };
     [self.statisticsVCs addObject:mineVC];
+    
+    BBStepCountingRankViewController *rankVC = [BBStepCountingRankViewController new];
+    [self.statisticsVCs addObject:rankVC];
     
     [self.pageViewController setViewControllers:@[self.statisticsVCs[0]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
 }

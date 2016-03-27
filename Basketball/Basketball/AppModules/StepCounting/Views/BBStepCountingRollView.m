@@ -22,11 +22,15 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    CGFloat circleRadius = CGRectGetWidth(self.bounds)*0.5 - self.circleLayer.lineWidth;
-    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(self.circleLayer.lineWidth, self.circleLayer.lineWidth, circleRadius*2, circleRadius*2)
+    [self configCircle:self.circleLayer offset:self.backCircleLayer.lineWidth - self.circleLayer.lineWidth];
+    [self configCircle:self.backCircleLayer offset:0];
+}
+
+- (void)configCircle:(CAShapeLayer *)circleLayer offset:(CGFloat)offset {
+    CGFloat circleRadius = CGRectGetWidth(self.bounds)*0.5 - circleLayer.lineWidth - offset;
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(circleLayer.lineWidth + offset, circleLayer.lineWidth + offset, circleRadius*2, circleRadius*2)
                                                     cornerRadius:circleRadius];
-    self.circleLayer.path = path.CGPath;
-    self.backCircleLayer.path = path.CGPath;
+    circleLayer.path = path.CGPath;
 }
 
 - (void)refreshWithTodayStep:(NSUInteger)step average:(NSUInteger)average {
@@ -46,7 +50,7 @@
 - (CAShapeLayer *)circleLayer {
     if (!_circleLayer) {
         _circleLayer = [CAShapeLayer layer];
-        _circleLayer.strokeColor = [UIColor blueColor].CGColor;
+        _circleLayer.strokeColor = UIColorFromHex(0xffaa80).CGColor;
         _circleLayer.lineWidth = 10.0;
         _circleLayer.lineCap = kCALineCapRound;
         _circleLayer.fillColor = [UIColor clearColor].CGColor;
@@ -58,8 +62,10 @@
 
 - (CAShapeLayer *)backCircleLayer {
     if (!_backCircleLayer) {
-        _backCircleLayer = [NSKeyedUnarchiver unarchiveObjectWithData:[NSKeyedArchiver archivedDataWithRootObject:self.circleLayer]];
-        _backCircleLayer.strokeColor = [UIColor grayColor].CGColor;
+        _backCircleLayer = [CAShapeLayer layer];
+        _backCircleLayer.strokeColor = [UIColor colorWithWhite:1.0 alpha:0.5].CGColor;
+        _backCircleLayer.lineWidth = 20.0;
+        _backCircleLayer.fillColor = [UIColor clearColor].CGColor;
         _backCircleLayer.zPosition = 0;
         _backCircleLayer.strokeEnd = 1.0;
         [self.layer addSublayer:_backCircleLayer];

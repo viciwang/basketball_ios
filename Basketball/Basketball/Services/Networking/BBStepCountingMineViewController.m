@@ -45,13 +45,13 @@
         make.width.equalTo(self.rollView.mas_height);
         make.top.equalTo(self.view.mas_top);
         make.centerX.equalTo(self.view.mas_centerX);
-        make.height.equalTo(self.view).multipliedBy(0.5);
+        make.height.equalTo(self.view).multipliedBy(0.6);
     }];
     [self.chartView mas_updateConstraints:^(MASConstraintMaker *make) {
         @strongify(self);
         make.top.equalTo(self.rollView.mas_bottom);
         make.left.right.equalTo(self.view);
-        make.height.equalTo(self.view).multipliedBy(0.4);
+        make.height.equalTo(self.view).multipliedBy(0.3);
     }];
     [self.showHistoryButton mas_updateConstraints:^(MASConstraintMaker *make) {
         @strongify(self);

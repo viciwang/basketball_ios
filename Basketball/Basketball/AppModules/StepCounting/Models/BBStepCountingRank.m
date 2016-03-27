@@ -15,8 +15,30 @@
              @"uid":@"uid",
              @"stepCount":@"stepCount",
              @"nickName":@"nickName",
-             @"headImageUrl":@"headImageUrl"
+             @"headImageUrl":@"headImageUrl",
+             @"personalDescription": @"personalDescription",
+             @"rank":@"rank"
              };
+}
+
+@end
+
+@implementation BBStepCountingRankResponse
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{
+             @"myRank":@"myRank",
+             @"ranks":@"ranks"
+             };
+}
+
+//+ (NSValueTransformer *)myRankJSONTransformer {
+//    return [MTLJSONAdapter transformerForModelPropertiesOfClass:[BBStepCountingRank class]];
+//}
+
+
++ (NSValueTransformer *)ranksJSONTransformer {
+    return [MTLJSONAdapter arrayTransformerWithModelClass:[BBStepCountingRank class]];
 }
 
 @end

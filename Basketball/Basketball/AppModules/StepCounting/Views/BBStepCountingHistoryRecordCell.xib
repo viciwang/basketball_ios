@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -11,25 +11,75 @@
             <rect key="frame" x="0.0" y="0.0" width="418" height="170"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="418" height="169.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="418" height="169"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="21g-3m-JLo" customClass="BarChartView" customModule="Charts">
-                        <rect key="frame" x="0.0" y="0.0" width="418" height="169.5"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cgu-WB-z9O">
+                        <rect key="frame" x="5" y="5" width="408" height="159"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gRc-XF-dcu">
+                                <rect key="frame" x="12" y="44" width="384" height="1"/>
+                                <color key="backgroundColor" red="0.0039215686269999999" green="0.57254901960000004" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="tYK-HP-RC6"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="21g-3m-JLo" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="12" y="45" width="384" height="114"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016年5月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2GS-pU-6a8">
+                                <rect key="frame" x="17" y="13" width="83" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylV-fo-PwU">
+                                <rect key="frame" x="358" y="17" width="33" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日平均步数：" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2a-3X-h8a">
+                                <rect key="frame" x="274" y="17" width="84" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gRc-XF-dcu" firstAttribute="top" secondItem="2GS-pU-6a8" secondAttribute="bottom" constant="10" id="42z-bw-yXA"/>
+                            <constraint firstItem="ylV-fo-PwU" firstAttribute="leading" secondItem="U2a-3X-h8a" secondAttribute="trailing" id="7Cf-J9-6sG"/>
+                            <constraint firstItem="ylV-fo-PwU" firstAttribute="trailing" secondItem="gRc-XF-dcu" secondAttribute="trailing" constant="-5" id="9jq-cv-6HP"/>
+                            <constraint firstAttribute="bottom" secondItem="21g-3m-JLo" secondAttribute="bottom" id="SYH-HN-Y9n"/>
+                            <constraint firstAttribute="trailing" secondItem="21g-3m-JLo" secondAttribute="trailing" constant="12" id="TOe-HY-sUe"/>
+                            <constraint firstItem="21g-3m-JLo" firstAttribute="top" secondItem="gRc-XF-dcu" secondAttribute="bottom" id="UJ9-Y2-VvP"/>
+                            <constraint firstItem="gRc-XF-dcu" firstAttribute="top" secondItem="ylV-fo-PwU" secondAttribute="bottom" constant="10" id="WZb-vp-bif"/>
+                            <constraint firstItem="21g-3m-JLo" firstAttribute="leading" secondItem="Cgu-WB-z9O" secondAttribute="leading" constant="12" id="XXq-Qf-Dah"/>
+                            <constraint firstItem="gRc-XF-dcu" firstAttribute="trailing" secondItem="21g-3m-JLo" secondAttribute="trailing" id="aoK-yI-Dx4"/>
+                            <constraint firstItem="2GS-pU-6a8" firstAttribute="leading" secondItem="gRc-XF-dcu" secondAttribute="leading" constant="5" id="b6D-eN-wIX"/>
+                            <constraint firstItem="21g-3m-JLo" firstAttribute="top" secondItem="Cgu-WB-z9O" secondAttribute="top" constant="45" id="oQu-Zr-JWL"/>
+                            <constraint firstItem="gRc-XF-dcu" firstAttribute="top" secondItem="U2a-3X-h8a" secondAttribute="bottom" constant="10" id="pn9-B8-oV4"/>
+                            <constraint firstItem="gRc-XF-dcu" firstAttribute="leading" secondItem="21g-3m-JLo" secondAttribute="leading" id="q9O-et-hp5"/>
+                        </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="21g-3m-JLo" secondAttribute="bottom" id="FgL-gs-CCy"/>
-                    <constraint firstAttribute="trailing" secondItem="21g-3m-JLo" secondAttribute="trailing" id="KVJ-2w-4on"/>
-                    <constraint firstItem="21g-3m-JLo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Xg2-E6-QJn"/>
-                    <constraint firstItem="21g-3m-JLo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="tV4-SB-MHe"/>
+                    <constraint firstItem="Cgu-WB-z9O" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Vur-ES-Ekd"/>
+                    <constraint firstAttribute="trailing" secondItem="Cgu-WB-z9O" secondAttribute="trailing" constant="5" id="iA1-EJ-nFs"/>
+                    <constraint firstItem="Cgu-WB-z9O" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="jJQ-fA-Qjx"/>
+                    <constraint firstAttribute="bottom" secondItem="Cgu-WB-z9O" secondAttribute="bottom" constant="5" id="q9r-iL-g5Z"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="averageLabel" destination="ylV-fo-PwU" id="jvE-XG-6wO"/>
+                <outlet property="bgView" destination="Cgu-WB-z9O" id="a7L-t9-hg4"/>
                 <outlet property="chartView" destination="21g-3m-JLo" id="V5a-K4-2Pr"/>
+                <outlet property="monthLabel" destination="2GS-pU-6a8" id="Pb0-hT-98e"/>
             </connections>
-            <point key="canvasLocation" x="128" y="375"/>
+            <point key="canvasLocation" x="8" y="176"/>
         </tableViewCell>
     </objects>
 </document>

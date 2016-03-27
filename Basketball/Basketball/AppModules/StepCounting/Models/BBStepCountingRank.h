@@ -14,5 +14,14 @@
 @property (nonatomic, copy) NSString *nickName;
 @property (nonatomic, copy) NSString *headImageUrl;
 @property (nonatomic, assign) NSUInteger stepCount;
+@property (nonatomic, copy) NSString *personalDescription;
+@property (nonatomic, assign) NSUInteger rank;
+
+@end
+
+@interface BBStepCountingRankResponse : BBModel
+
+@property (nonatomic, strong) BBStepCountingRank *myRank;
+@property (nonatomic, strong) NSArray *ranks;
 
 @end

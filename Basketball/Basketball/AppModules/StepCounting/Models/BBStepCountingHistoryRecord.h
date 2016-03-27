@@ -12,6 +12,7 @@
 
 @property (nonatomic, copy) NSString *month;
 @property (nonatomic, strong) NSArray *dayRecords;
+@property (nonatomic, assign) NSUInteger average;
 
 @end
 

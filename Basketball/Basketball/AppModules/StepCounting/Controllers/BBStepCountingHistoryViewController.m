@@ -56,7 +56,7 @@ UITableViewDataSource
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([BBStepCountingHistoryRecordCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:NSStringFromClass([BBStepCountingHistoryRecordCell class])];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.rowHeight = 150;
+    self.tableView.rowHeight = 184;
     [self.view addSubview:self.tableView];
 }
 
@@ -68,8 +68,16 @@ UITableViewDataSource
     [[BBNetworkApiManager sharedManager] getHistoryStepCountWithCompletionBlock:^(NSArray *records, NSError *error) {
         @strongify(self);
         [MBProgressHUD hideHUDForView:self.view animated:YES];
-        self.records = records;
-        [self.tableView reloadData];
+        if (!error) {
+            for (BBStepCountingHistoryMonthRecord *r in records) {
+                r.average = ((NSNumber *)[r valueForKeyPath:@"dayRecords.@avg.stepCount"]).doubleValue;
+            }
+            self.records = records;
+            [self.tableView reloadData];
+        }
+        else {
+            [self showErrorHUDWithInfo:error.userInfo[@"msg"]];
+        }
     }];
 }
 

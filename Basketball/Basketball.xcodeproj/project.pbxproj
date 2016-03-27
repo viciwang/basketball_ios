@@ -80,6 +80,9 @@
 		9FC217D01C9719DB00CF2B2A /* UserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC217B41C97160D00CF2B2A /* UserTests.m */; };
 		9FC217D11C971A0900CF2B2A /* RACmetamacros.h in Sources */ = {isa = PBXBuildFile; fileRef = 9F244CF51C85279000A388F6 /* RACmetamacros.h */; };
 		9FC217D21C971A1C00CF2B2A /* RACEXTScope.h in Sources */ = {isa = PBXBuildFile; fileRef = 9F244CF41C85279000A388F6 /* RACEXTScope.h */; };
+		9FC545961CA7BFBE00367CB3 /* BBRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC545951CA7BFBE00367CB3 /* BBRefreshHeader.m */; };
+		9FC5459A1CA7D73B00367CB3 /* BBStepCountingRankHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC545981CA7D73B00367CB3 /* BBStepCountingRankHeadView.m */; };
+		9FC5459B1CA7D73B00367CB3 /* BBStepCountingRankHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FC545991CA7D73B00367CB3 /* BBStepCountingRankHeadView.xib */; };
 		9FDEF2421C9C153900B629C5 /* BBView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDEF2411C9C153900B629C5 /* BBView.m */; };
 		9FDEF2451C9C15A600B629C5 /* BBStepCountingRollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDEF2441C9C15A600B629C5 /* BBStepCountingRollView.m */; };
 		9FDEF2481C9D30AC00B629C5 /* BBStepCountingChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDEF2471C9D30AC00B629C5 /* BBStepCountingChartView.m */; };
@@ -344,6 +347,11 @@
 		9FA8A6A61C9FDDF10076403A /* BBStepCountingHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBStepCountingHistoryViewController.h; path = Basketball/AppModules/StepCounting/Controllers/BBStepCountingHistoryViewController.h; sourceTree = SOURCE_ROOT; };
 		9FA8A6A71C9FDDF10076403A /* BBStepCountingHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBStepCountingHistoryViewController.m; path = Basketball/AppModules/StepCounting/Controllers/BBStepCountingHistoryViewController.m; sourceTree = SOURCE_ROOT; };
 		9FC217B41C97160D00CF2B2A /* UserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTests.m; sourceTree = "<group>"; };
+		9FC545941CA7BFBE00367CB3 /* BBRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBRefreshHeader.h; sourceTree = "<group>"; };
+		9FC545951CA7BFBE00367CB3 /* BBRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBRefreshHeader.m; sourceTree = "<group>"; };
+		9FC545971CA7D73B00367CB3 /* BBStepCountingRankHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBStepCountingRankHeadView.h; path = Basketball/AppModules/StepCounting/Views/BBStepCountingRankHeadView.h; sourceTree = SOURCE_ROOT; };
+		9FC545981CA7D73B00367CB3 /* BBStepCountingRankHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBStepCountingRankHeadView.m; path = Basketball/AppModules/StepCounting/Views/BBStepCountingRankHeadView.m; sourceTree = SOURCE_ROOT; };
+		9FC545991CA7D73B00367CB3 /* BBStepCountingRankHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBStepCountingRankHeadView.xib; path = Basketball/AppModules/StepCounting/Views/BBStepCountingRankHeadView.xib; sourceTree = SOURCE_ROOT; };
 		9FDEF2401C9C153900B629C5 /* BBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBView.h; sourceTree = "<group>"; };
 		9FDEF2411C9C153900B629C5 /* BBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBView.m; sourceTree = "<group>"; };
 		9FDEF2431C9C15A600B629C5 /* BBStepCountingRollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBStepCountingRollView.h; path = Basketball/AppModules/StepCounting/Views/BBStepCountingRollView.h; sourceTree = SOURCE_ROOT; };
@@ -882,6 +890,8 @@
 				9F9617DD1C83EF400078FB3C /* BBTabBar.m */,
 				9FDEF2401C9C153900B629C5 /* BBView.h */,
 				9FDEF2411C9C153900B629C5 /* BBView.m */,
+				9FC545941CA7BFBE00367CB3 /* BBRefreshHeader.h */,
+				9FC545951CA7BFBE00367CB3 /* BBRefreshHeader.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -949,6 +959,9 @@
 				9F33CE8F1CA14B440016EB39 /* BBStepCountingRankCell.h */,
 				9F33CE901CA14B440016EB39 /* BBStepCountingRankCell.m */,
 				9F33CE911CA14B440016EB39 /* BBStepCountingRankCell.xib */,
+				9FC545971CA7D73B00367CB3 /* BBStepCountingRankHeadView.h */,
+				9FC545981CA7D73B00367CB3 /* BBStepCountingRankHeadView.m */,
+				9FC545991CA7D73B00367CB3 /* BBStepCountingRankHeadView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1804,6 +1817,7 @@
 				C3584B401C9076220087FF34 /* DEN_logo.png in Resources */,
 				C3584B4B1C9076220087FF34 /* NOP_logo.png in Resources */,
 				C3584B541C9076220087FF34 /* TOR_logo.png in Resources */,
+				9FC5459B1CA7D73B00367CB3 /* BBStepCountingRankHeadView.xib in Resources */,
 				C3F8A4DB1C9D703F0086FF4B /* LCArticleContentSettingView.xib in Resources */,
 				C3584B3B1C9076220087FF34 /* BOS_logo.png in Resources */,
 				C3584B561C9076220087FF34 /* WAS_logo.png in Resources */,
@@ -2062,6 +2076,7 @@
 				9F9394AD1C89E245009E6DDF /* NSDate+Utilities.m in Sources */,
 				C3F8A5311C9D72820086FF4B /* WYFeed+CoreDataProperties.m in Sources */,
 				9F9394541C8893C9009E6DDF /* BBStepCountingMainViewController.m in Sources */,
+				9FC5459A1CA7D73B00367CB3 /* BBStepCountingRankHeadView.m in Sources */,
 				9F7A79C61CA56FBD004ABE1C /* BBRegisterAndResetPasswordViewController.m in Sources */,
 				C3F8A4E71C9D703F0086FF4B /* LCFeedEntityPageViewModel.m in Sources */,
 				C3F3D6E11CA7AEB900A93A41 /* BBShareEditViewImageCell.m in Sources */,
@@ -2119,6 +2134,7 @@
 				C3F8A5341C9D72820086FF4B /* WYFeedEntity+VaildateArticle.m in Sources */,
 				C31680F21CA42A6600701A25 /* BBShareCellView.m in Sources */,
 				9F9617D51C83ED860078FB3C /* BBTabBarController.m in Sources */,
+				9FC545961CA7BFBE00367CB3 /* BBRefreshHeader.m in Sources */,
 				C3584B161C9075D80087FF34 /* BBGamesScoreViewModel.m in Sources */,
 				C3F8A5711C9DA43C0086FF4B /* BBArticleListViewCell.m in Sources */,
 				C3F8A4DF1C9D703F0086FF4B /* LCArticleImageBoxView.m in Sources */,

@@ -18,3 +18,10 @@
 @property (nonatomic, assign) NSUInteger rank;
 
 @end
+
+@interface BBStepCountingRankResponse : BBModel
+
+@property (nonatomic, strong) BBStepCountingRank *myRank;
+@property (nonatomic, strong) NSArray *ranks;
+
+@end

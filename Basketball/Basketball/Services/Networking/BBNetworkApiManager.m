@@ -249,17 +249,13 @@ static NSString *_debugBaseUrl = nil;
 }
 
 - (NSURLSessionDataTask *)getStepCountRankingWithCompletionBlock:(BBNetworkResponseBlock)responseBlock {
-    REQUEST(GET, kApiStepCountingRanking, nil, nil, ^(NSArray *ranking,NSError *error) {
+    REQUEST(GET, kApiStepCountingRanking, nil, [BBStepCountingRankResponse class], ^(BBStepCountingRankResponse *response,NSError *error) {
         if (responseBlock) {
             if (error) {
                 responseBlock(nil,error);
             }
             else {
-                NSArray *rank = [MTLJSONAdapter modelsOfClass:[BBStepCountingRank class] fromJSONArray:ranking error:&error];
-                if (error) {
-                    DDLogInfo(@"%@",error);
-                }
-                responseBlock(rank,error);
+                responseBlock(response,error);
             }
         }
     });

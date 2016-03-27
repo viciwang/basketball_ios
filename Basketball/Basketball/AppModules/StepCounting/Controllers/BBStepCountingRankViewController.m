@@ -10,6 +10,7 @@
 #import "BBNetworkApiManager.h"
 #import "BBStepCountingRankCell.h"
 #import "BBRefreshHeader.h"
+#import "BBStepCountingRankHeadView.h"
 
 @interface BBStepCountingRankViewController ()
 <
@@ -18,7 +19,7 @@ UITableViewDataSource
 >
 
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) NSArray *ranks;
+@property (nonatomic, strong) BBStepCountingRankResponse *ranksResponse;
 
 @end
 
@@ -52,9 +53,9 @@ UITableViewDataSource
 - (void)setupTableView {
     self.tableView = [UITableView new];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([BBStepCountingRankCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:NSStringFromClass([BBStepCountingRankCell class])];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([BBStepCountingRankHeadView class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:NSStringFromClass([BBStepCountingRankHeadView class])];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.rowHeight = 65;
     self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
     self.tableView.backgroundColor = baseColor;
     [self.view addSubview:self.tableView];
@@ -70,11 +71,11 @@ UITableViewDataSource
 - (void)loadData {
     @weakify(self);
     [self showLoadingHUDWithInfo:nil];
-    [[BBNetworkApiManager sharedManager] getStepCountRankingWithCompletionBlock:^(NSArray *ranks, NSError *error) {
+    [[BBNetworkApiManager sharedManager] getStepCountRankingWithCompletionBlock:^(BBStepCountingRankResponse *response, NSError *error) {
         @strongify(self);
         [self.tableView.mj_header endRefreshing];
         [MBProgressHUD hideHUDForView:self.view animated:YES];
-        self.ranks = ranks;
+        self.ranksResponse = response;
         [self.tableView reloadData];
     }];
 }
@@ -83,13 +84,43 @@ UITableViewDataSource
 
 #pragma mark - tableview datasource
 
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        return 145;
+    }
+    else {
+        return 65;
+    }
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 2;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.ranks.count;
+    if (!self.ranksResponse) {
+        return 0;
+    }
+    if (section == 0) {
+        return 1;
+    }
+    else {
+        return self.ranksResponse.ranks.count;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    BBStepCountingRankCell *cell = [self.tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BBStepCountingRankCell class]) forIndexPath:indexPath];
-    [cell updateWithData:self.ranks[indexPath.row]];
-    return cell;
+    if (indexPath.section == 0) {
+        BBStepCountingRankHeadView *v = [self.tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BBStepCountingRankHeadView class]) forIndexPath:indexPath];
+        [v updateWithData:self.ranksResponse.myRank rate:self.ranksResponse.myRank.rank/@(self.ranksResponse.ranks.count).floatValue];
+        return v;
+    }
+    else {
+        BBStepCountingRankCell *cell = [self.tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BBStepCountingRankCell class]) forIndexPath:indexPath];
+        [cell updateWithData:self.ranksResponse.ranks[indexPath.row]];
+        return cell;
+    }
 }
 @end

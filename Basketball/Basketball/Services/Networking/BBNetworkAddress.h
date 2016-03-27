@@ -48,5 +48,6 @@
 #define kApiStepCountingRanking @"stepCounting/ranking"
 
 #define kApiAddShare @"ShareManager/addShare"
+#define kApiGetShare @"ShareManager/getShareInfo"
 
 #endif /* BBNetworkAddress_h */

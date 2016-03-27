@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class WYShare;
 @interface BBShareCellView : UIView
-
+@property (nonatomic, strong) WYShare *shareEntity;
 @end

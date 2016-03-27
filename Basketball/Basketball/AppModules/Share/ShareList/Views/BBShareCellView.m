@@ -8,6 +8,7 @@
 
 #import "BBShareCellView.h"
 #import "BBImageLayoutView.h"
+#import "WYShare.h"
 
 @interface BBShareCellView ()
 
@@ -35,6 +36,18 @@
     self.shadowView1.layer.masksToBounds = YES;
     self.shadowView2.layer.cornerRadius = 3;
     self.shadowView2.layer.masksToBounds = YES;
+}
+
+- (void)setShareEntity:(WYShare *)shareEntity {
+    _shareEntity = shareEntity;
+    [_headerImageView sd_setImageWithURL:[NSURL URLWithString:_shareEntity.headImageUrl] placeholderImage:[UIImage imageNamed:@"ATL_logo.png"]];
+    _nickNameLabel.text = _shareEntity.nickName;
+    //_dateLabel.text = _shareEntity.publicDate;
+    _commentLabel.text = [NSString stringWithFormat:@"%lu",[_shareEntity.commentCount integerValue]];
+    _approveLabel.text = [NSString stringWithFormat:@"%lu",[_shareEntity.approveCount integerValue]];
+    _mainTextView.text = _shareEntity.content;
+    _mainImageLayoutViiew.images = _shareEntity.imageDictionary[@"origin"];
+    [_mainImageLayoutViiew layoutImageView];
 }
 /*
 // Only override drawRect: if you perform custom drawing.

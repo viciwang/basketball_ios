@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9520" systemVersion="14F1509" minimumToolsVersion="Xcode 7.0">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Xcode 7.0">
     <entity name="WYFeed" representedClassName="WYFeed" syncable="YES">
         <attribute name="feedDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
@@ -20,8 +20,23 @@
         <attribute name="thumbnail" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="WYShare" representedClassName="WYShare" syncable="YES">
+        <attribute name="approveCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="commentCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="headImageUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="images" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="isApprove" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isUserShare" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="locationName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nickName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="publicDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="shareId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="WYFeed" positionX="-63" positionY="-18" width="128" height="120"/>
         <element name="WYFeedEntity" positionX="-54" positionY="-9" width="128" height="210"/>
+        <element name="WYShare" positionX="-54" positionY="72" width="128" height="225"/>
     </elements>
 </model>

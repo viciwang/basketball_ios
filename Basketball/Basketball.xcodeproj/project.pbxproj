@@ -145,6 +145,10 @@
 		C3F3D6DE1CA7A9D500A93A41 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F3D6DD1CA7A9D500A93A41 /* MobileCoreServices.framework */; };
 		C3F3D6E11CA7AEB900A93A41 /* BBShareEditViewImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F3D6E01CA7AEB900A93A41 /* BBShareEditViewImageCell.m */; };
 		C3F3D6E41CA7B7CA00A93A41 /* BBShareEditViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F3D6E31CA7B7CA00A93A41 /* BBShareEditViewModel.m */; };
+		C3F3D6F41CA8307C00A93A41 /* WYShare.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F3D6EF1CA8307C00A93A41 /* WYShare.m */; };
+		C3F3D6F51CA8307C00A93A41 /* WYShare+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F3D6F11CA8307C00A93A41 /* WYShare+CoreDataProperties.m */; };
+		C3F3D6F61CA8307C00A93A41 /* WYStore+WYShare.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F3D6F31CA8307C00A93A41 /* WYStore+WYShare.m */; };
+		C3F3D6F91CA830BD00A93A41 /* BBShareViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F3D6F81CA830BD00A93A41 /* BBShareViewModel.m */; };
 		C3F8A4D71C9D703F0086FF4B /* LCArticleContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A4B31C9D703F0086FF4B /* LCArticleContentViewController.m */; };
 		C3F8A4D81C9D703F0086FF4B /* LCArticleContentViewController_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3F8A4B41C9D703F0086FF4B /* LCArticleContentViewController_iPhone.storyboard */; };
 		C3F8A4D91C9D703F0086FF4B /* LCArticleContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F8A4B81C9D703F0086FF4B /* LCArticleContentViewModel.m */; };
@@ -435,6 +439,14 @@
 		C3F3D6E01CA7AEB900A93A41 /* BBShareEditViewImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBShareEditViewImageCell.m; sourceTree = "<group>"; };
 		C3F3D6E21CA7B7CA00A93A41 /* BBShareEditViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBShareEditViewModel.h; sourceTree = "<group>"; };
 		C3F3D6E31CA7B7CA00A93A41 /* BBShareEditViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBShareEditViewModel.m; sourceTree = "<group>"; };
+		C3F3D6EE1CA8307C00A93A41 /* WYShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYShare.h; sourceTree = "<group>"; };
+		C3F3D6EF1CA8307C00A93A41 /* WYShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYShare.m; sourceTree = "<group>"; };
+		C3F3D6F01CA8307C00A93A41 /* WYShare+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WYShare+CoreDataProperties.h"; sourceTree = "<group>"; };
+		C3F3D6F11CA8307C00A93A41 /* WYShare+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WYShare+CoreDataProperties.m"; sourceTree = "<group>"; };
+		C3F3D6F21CA8307C00A93A41 /* WYStore+WYShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WYStore+WYShare.h"; sourceTree = "<group>"; };
+		C3F3D6F31CA8307C00A93A41 /* WYStore+WYShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WYStore+WYShare.m"; sourceTree = "<group>"; };
+		C3F3D6F71CA830BD00A93A41 /* BBShareViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBShareViewModel.h; sourceTree = "<group>"; };
+		C3F3D6F81CA830BD00A93A41 /* BBShareViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBShareViewModel.m; sourceTree = "<group>"; };
 		C3F8A4B21C9D703F0086FF4B /* LCArticleContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCArticleContentViewController.h; sourceTree = "<group>"; };
 		C3F8A4B31C9D703F0086FF4B /* LCArticleContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCArticleContentViewController.m; sourceTree = "<group>"; };
 		C3F8A4B41C9D703F0086FF4B /* LCArticleContentViewController_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LCArticleContentViewController_iPhone.storyboard; sourceTree = "<group>"; };
@@ -1108,6 +1120,12 @@
 		C31680DE1CA42A6600701A25 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C3F3D6EE1CA8307C00A93A41 /* WYShare.h */,
+				C3F3D6EF1CA8307C00A93A41 /* WYShare.m */,
+				C3F3D6F01CA8307C00A93A41 /* WYShare+CoreDataProperties.h */,
+				C3F3D6F11CA8307C00A93A41 /* WYShare+CoreDataProperties.m */,
+				C3F3D6F21CA8307C00A93A41 /* WYStore+WYShare.h */,
+				C3F3D6F31CA8307C00A93A41 /* WYStore+WYShare.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1115,6 +1133,8 @@
 		C31680DF1CA42A6600701A25 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				C3F3D6F71CA830BD00A93A41 /* BBShareViewModel.h */,
+				C3F3D6F81CA830BD00A93A41 /* BBShareViewModel.m */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -2045,6 +2065,7 @@
 				9F9617DB1C83EDEE0078FB3C /* BBBaseViewController.m in Sources */,
 				9FDEF25D1C9E825300B629C5 /* BBUser.m in Sources */,
 				C3F8A4DC1C9D703F0086FF4B /* LCArticleSinglePageViewController.m in Sources */,
+				C3F3D6F51CA8307C00A93A41 /* WYShare+CoreDataProperties.m in Sources */,
 				C31680EE1CA42A6600701A25 /* BBShareViewFlowLayout.m in Sources */,
 				C3F8A54C1C9D72820086FF4B /* WYTextContainer.m in Sources */,
 				C3F8A5331C9D72820086FF4B /* WYFeedEntity+CoreDataProperties.m in Sources */,
@@ -2095,6 +2116,7 @@
 				C3F8A53B1C9D72820086FF4B /* WYURLSessionTaskHandler.m in Sources */,
 				C3F8A4D71C9D703F0086FF4B /* LCArticleContentViewController.m in Sources */,
 				9F7A79B41CA52115004ABE1C /* UIImage+Filtering.m in Sources */,
+				C3F3D6F91CA830BD00A93A41 /* BBShareViewModel.m in Sources */,
 				C3F8A53A1C9D72820086FF4B /* WYURLSessionManager.m in Sources */,
 				C3F8A5451C9D72820086FF4B /* WYXMLDocument.m in Sources */,
 				C3F8A5381C9D72820086FF4B /* WYHTTPRequestManager.m in Sources */,
@@ -2102,6 +2124,7 @@
 				9F93946B1C88AC48009E6DDF /* BBNotificationDefine.m in Sources */,
 				9FDEF2591C9E822500B629C5 /* BBLoginViewController.m in Sources */,
 				9F7A79B61CA52115004ABE1C /* UIImage+Reflection.m in Sources */,
+				C3F3D6F41CA8307C00A93A41 /* WYShare.m in Sources */,
 				C3FEE38F1C9E7346000FCDBD /* UINavigationBar+Addition.m in Sources */,
 				C3F8A4E31C9D703F0086FF4B /* LCArticlePageView+Style.m in Sources */,
 				9F33CE921CA14B440016EB39 /* BBStepCountingRankCell.m in Sources */,
@@ -2146,6 +2169,7 @@
 				9F93945A1C88946F009E6DDF /* BBStepCountingManager.m in Sources */,
 				C3584B151C9075D80087FF34 /* BBGamesScoreViewController.m in Sources */,
 				9F7A79B91CA52115004ABE1C /* UIImage+Saving.m in Sources */,
+				C3F3D6F61CA8307C00A93A41 /* WYStore+WYShare.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

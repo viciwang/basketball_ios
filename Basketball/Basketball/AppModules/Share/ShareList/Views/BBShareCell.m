@@ -8,6 +8,7 @@
 
 #import "BBShareCell.h"
 
+
 @implementation BBShareCell
 
 - (void)awakeFromNib {

@@ -12,6 +12,7 @@
             <string>MicrosoftYaHei</string>
             <string>MicrosoftYaHei</string>
             <string>MicrosoftYaHei</string>
+            <string>MicrosoftYaHei</string>
         </mutableArray>
     </customFonts>
     <objects>
@@ -22,28 +23,28 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hk7-pc-ez6">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share_datetime" translatesAutoresizingMaskIntoConstraints="NO" id="Jg2-zM-8PR">
-                            <rect key="frame" x="44" y="26" width="13" height="13"/>
+                            <rect key="frame" x="49" y="29" width="15" height="15"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="Jg2-zM-8PR" secondAttribute="height" id="ub9-Wl-ZjZ"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="basketball" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEz-2O-RW4">
-                            <rect key="frame" x="44" y="6" width="271" height="13"/>
-                            <fontDescription key="fontDescription" name="MicrosoftYaHei" family="Microsoft YaHei" pointSize="11"/>
+                            <rect key="frame" x="49" y="6" width="266" height="17"/>
+                            <fontDescription key="fontDescription" name="MicrosoftYaHei" family="Microsoft YaHei" pointSize="13"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ATL_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="vHe-Ui-Dtf">
-                            <rect key="frame" x="6" y="6" width="33" height="33"/>
+                            <rect key="frame" x="6" y="6" width="38" height="38"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="vHe-Ui-Dtf" secondAttribute="height" id="Kli-QJ-f58"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="刚刚" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3A5-Hd-OKt">
-                            <rect key="frame" x="62" y="26" width="253" height="13"/>
+                            <rect key="frame" x="69" y="29" width="246" height="15"/>
                             <fontDescription key="fontDescription" name="MicrosoftYaHei" family="Microsoft YaHei" pointSize="10"/>
                             <color key="textColor" red="0.85858585860000003" green="0.85858585860000003" blue="0.85858585860000003" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -56,39 +57,39 @@
                         <constraint firstItem="3A5-Hd-OKt" firstAttribute="leading" secondItem="Jg2-zM-8PR" secondAttribute="trailing" constant="5" id="CHh-4B-6lo"/>
                         <constraint firstItem="3A5-Hd-OKt" firstAttribute="height" secondItem="Jg2-zM-8PR" secondAttribute="height" id="Ez4-iH-bxT"/>
                         <constraint firstAttribute="bottom" secondItem="vHe-Ui-Dtf" secondAttribute="bottom" constant="6" id="JzI-0o-c0I"/>
-                        <constraint firstAttribute="height" constant="45" id="P7a-e2-KeV"/>
+                        <constraint firstAttribute="height" constant="50" id="P7a-e2-KeV"/>
                         <constraint firstItem="vHe-Ui-Dtf" firstAttribute="top" secondItem="hk7-pc-ez6" secondAttribute="top" constant="6" id="TMx-aH-d3d"/>
                         <constraint firstAttribute="trailing" secondItem="VEz-2O-RW4" secondAttribute="trailing" constant="5" id="Xoe-Iz-Xcd"/>
                         <constraint firstItem="Jg2-zM-8PR" firstAttribute="height" secondItem="vHe-Ui-Dtf" secondAttribute="height" multiplier="2/5" id="d73-RN-cyI"/>
                         <constraint firstAttribute="trailing" secondItem="3A5-Hd-OKt" secondAttribute="trailing" constant="5" id="f0c-4J-sLr"/>
                         <constraint firstItem="Jg2-zM-8PR" firstAttribute="leading" secondItem="vHe-Ui-Dtf" secondAttribute="trailing" constant="5" id="kbC-xh-3y8"/>
                         <constraint firstItem="VEz-2O-RW4" firstAttribute="top" secondItem="hk7-pc-ez6" secondAttribute="top" constant="6" id="o6z-eG-lNu"/>
-                        <constraint firstItem="VEz-2O-RW4" firstAttribute="height" secondItem="vHe-Ui-Dtf" secondAttribute="height" multiplier="2/5" id="sX3-D2-PEq"/>
+                        <constraint firstItem="VEz-2O-RW4" firstAttribute="height" secondItem="vHe-Ui-Dtf" secondAttribute="height" multiplier="3/7" id="sX3-D2-PEq"/>
                         <constraint firstItem="vHe-Ui-Dtf" firstAttribute="leading" secondItem="hk7-pc-ez6" secondAttribute="leading" constant="6" id="yDP-Qt-kEo"/>
                         <constraint firstItem="3A5-Hd-OKt" firstAttribute="bottom" secondItem="Jg2-zM-8PR" secondAttribute="bottom" id="yZN-6W-5iK"/>
                     </constraints>
                 </view>
-                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6XZ-lq-0iE" customClass="BBImageLayoutView">
-                    <rect key="frame" x="0.0" y="45" width="320" height="200"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6XZ-lq-0iE" customClass="BBImageLayoutView">
+                    <rect key="frame" x="0.0" y="50" width="320" height="200"/>
+                    <color key="backgroundColor" red="0.85858585860000003" green="0.85858585860000003" blue="0.85858585860000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="200" id="Iqi-ur-uzi"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jMQ-Op-pjf">
-                    <rect key="frame" x="0.0" y="245" width="160" height="35"/>
+                    <rect key="frame" x="0.0" y="250" width="160" height="40"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mql-5Q-SfW">
-                            <rect key="frame" x="16" y="7" width="128" height="21"/>
+                            <rect key="frame" x="16" y="7" width="128" height="26"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share_comment" translatesAutoresizingMaskIntoConstraints="NO" id="jUM-XZ-rgV">
-                                    <rect key="frame" x="3" y="3" width="15" height="15"/>
+                                    <rect key="frame" x="3" y="3" width="20" height="20"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="jUM-XZ-rgV" secondAttribute="height" id="TV3-GH-qtf"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7S-bT-Boi">
-                                    <rect key="frame" x="23" y="3" width="100" height="15"/>
+                                    <rect key="frame" x="28" y="3" width="95" height="20"/>
                                     <fontDescription key="fontDescription" name="MicrosoftYaHei" family="Microsoft YaHei" pointSize="9"/>
                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
@@ -109,45 +110,44 @@
                     <color key="backgroundColor" red="0.85858585860000003" green="0.85858585860000003" blue="0.85858585860000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="mql-5Q-SfW" secondAttribute="bottom" constant="7" id="2JY-Tm-Yg2"/>
-                        <constraint firstAttribute="height" constant="35" id="8FW-Cc-ATf"/>
+                        <constraint firstAttribute="height" constant="40" id="8FW-Cc-ATf"/>
                         <constraint firstItem="mql-5Q-SfW" firstAttribute="centerX" secondItem="jMQ-Op-pjf" secondAttribute="centerX" id="8my-1U-sCC"/>
                         <constraint firstItem="mql-5Q-SfW" firstAttribute="top" secondItem="jMQ-Op-pjf" secondAttribute="top" constant="7" id="QWq-uP-KEV"/>
                         <constraint firstItem="mql-5Q-SfW" firstAttribute="width" secondItem="jMQ-Op-pjf" secondAttribute="width" multiplier="4/5" id="poV-VC-iM7"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hCZ-O2-vjE">
-                    <rect key="frame" x="0.0" y="280" width="320" height="288"/>
+                    <rect key="frame" x="0.0" y="290" width="320" height="278"/>
                     <subviews>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gcv-hh-SRc">
-                            <rect key="frame" x="10" y="10" width="300" height="268"/>
+                            <rect key="frame" x="10" y="0.0" width="300" height="268"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <fontDescription key="fontDescription" name="MicrosoftYaHei" family="Microsoft YaHei" pointSize="21"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.85858585860000003" green="0.85858585860000003" blue="0.85858585860000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="Gcv-hh-SRc" secondAttribute="bottom" constant="10" id="Fya-mV-gOc"/>
                         <constraint firstItem="Gcv-hh-SRc" firstAttribute="leading" secondItem="hCZ-O2-vjE" secondAttribute="leading" constant="10" id="LWu-Z7-cWU"/>
                         <constraint firstAttribute="trailing" secondItem="Gcv-hh-SRc" secondAttribute="trailing" constant="10" id="NA7-bG-JcE"/>
-                        <constraint firstItem="Gcv-hh-SRc" firstAttribute="top" secondItem="hCZ-O2-vjE" secondAttribute="top" constant="10" id="uta-e4-AbA"/>
+                        <constraint firstItem="Gcv-hh-SRc" firstAttribute="top" secondItem="hCZ-O2-vjE" secondAttribute="top" id="uta-e4-AbA"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mYd-Wo-Xro">
-                    <rect key="frame" x="160" y="245" width="160" height="35"/>
+                    <rect key="frame" x="160" y="250" width="160" height="40"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RS3-E7-sl4">
-                            <rect key="frame" x="16" y="7" width="128" height="21"/>
+                            <rect key="frame" x="16" y="7" width="128" height="26"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share_approve" translatesAutoresizingMaskIntoConstraints="NO" id="Itm-Bs-ydb">
-                                    <rect key="frame" x="3" y="3" width="15" height="15"/>
+                                    <rect key="frame" x="3" y="3" width="20" height="20"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="Itm-Bs-ydb" secondAttribute="height" id="Mm1-UF-6nu"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8L-RK-Dv1">
-                                    <rect key="frame" x="23" y="3" width="100" height="15"/>
+                                    <rect key="frame" x="28" y="3" width="95" height="20"/>
                                     <fontDescription key="fontDescription" name="MicrosoftYaHei" family="Microsoft YaHei" pointSize="9"/>
                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
@@ -174,7 +174,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.85858585860000003" green="0.85858585860000003" blue="0.85858585860000003" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="6XZ-lq-0iE" firstAttribute="leading" secondItem="cf4-xI-2LP" secondAttribute="leading" id="79C-ev-XuJ"/>
                 <constraint firstItem="hCZ-O2-vjE" firstAttribute="top" secondItem="mYd-Wo-Xro" secondAttribute="bottom" id="7ko-Xl-8W8"/>
@@ -203,6 +203,7 @@
                 </mask>
             </variation>
             <connections>
+                <outlet property="approveImageView" destination="Itm-Bs-ydb" id="JGO-o4-UJA"/>
                 <outlet property="approveLabel" destination="u8L-RK-Dv1" id="egm-2c-aW6"/>
                 <outlet property="commentLabel" destination="A7S-bT-Boi" id="ViH-KB-iQv"/>
                 <outlet property="dateLabel" destination="3A5-Hd-OKt" id="Be2-pG-7iK"/>
@@ -219,8 +220,8 @@
     </objects>
     <resources>
         <image name="ATL_logo.png" width="400" height="400"/>
-        <image name="share_approve" width="10" height="10"/>
-        <image name="share_comment" width="10" height="10"/>
+        <image name="share_approve" width="20" height="20"/>
+        <image name="share_comment" width="20" height="20"/>
         <image name="share_datetime" width="10" height="10"/>
     </resources>
 </document>

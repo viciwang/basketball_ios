@@ -34,9 +34,22 @@
         <attribute name="shareId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="WYShareComment" representedClassName="WYShareComment" syncable="YES">
+        <attribute name="commentId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="headImageUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isReply" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="nikcName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="publicDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="replyUserId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="replyUserName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shareId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="WYFeed" positionX="-63" positionY="-18" width="128" height="120"/>
         <element name="WYFeedEntity" positionX="-54" positionY="-9" width="128" height="210"/>
         <element name="WYShare" positionX="-54" positionY="72" width="128" height="225"/>
+        <element name="WYShareComment" positionX="-54" positionY="117" width="128" height="195"/>
     </elements>
 </model>

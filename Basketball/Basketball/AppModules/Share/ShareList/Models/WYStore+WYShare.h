@@ -11,5 +11,5 @@
 @interface WYFeedStore(WYShare)
 
 - (NSArray *)numbersOfTemporaryShareEntity:(NSInteger)numbers;
-
+- (NSArray *)numbersOfTemporaryShareCommentEntity:(NSInteger)numbers;
 @end

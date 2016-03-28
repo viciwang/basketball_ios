@@ -53,4 +53,7 @@ typedef void(^BBNetworkResponseBlock)(id responseObject, NSError *error);
 
 - (NSURLSessionDataTask *)getStepCountRankingWithCompletionBlock:(BBNetworkResponseBlock)responseBlock;
 
+- (NSURLSessionDataTask *)approveForShareId:(NSString *)shareId
+                                  deApprove:(BOOL)deApprove
+                            completionBlock:(BBNetworkResponseBlock)responseBlock;
 @end

@@ -8,6 +8,8 @@
 
 #import "BBBaseViewController.h"
 
+FOUNDATION_EXTERN NSString * const kRefreshShareNotification;
+
 @interface BBShareViewController : BBBaseViewController
 
 @end

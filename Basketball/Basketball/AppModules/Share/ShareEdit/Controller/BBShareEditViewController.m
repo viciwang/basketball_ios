@@ -10,6 +10,7 @@
 #import "CamareAndPhotoLiberay.h"
 #import "BBShareEditViewImageCell.h"
 #import "BBShareEditViewModel.h"
+
 #import <MobileCoreServices/UTCoreTypes.h>
 
 @interface BBShareEditViewController () < UICollectionViewDataSource, UICollectionViewDelegate, UIImagePickerControllerDelegate, BBShareEditViewModelDelegate>
@@ -65,6 +66,7 @@
 #pragma mark - view model delegate
 - (void)viewModel:(BBShareEditViewModel *)viewModel didUploadDataFinish:(NSError *)error {
     if (!error) {
+        
          NSLog(@"success");
     }else {
         NSLog(@"failure");

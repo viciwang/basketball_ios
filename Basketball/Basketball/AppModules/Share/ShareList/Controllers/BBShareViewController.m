@@ -13,7 +13,9 @@
 #import "BBShareEditViewController.h"
 #import "bbshareViewModel.h"
 
-@interface BBShareViewController () <UICollectionViewDelegate,UICollectionViewDataSource, BBShareEditViewControllerDelegate, BBShareViewModelDelegate>
+NSString * const kRefreshShareNotification = @"kRefreshShareNotification";
+
+@interface BBShareViewController () <UICollectionViewDelegate,UICollectionViewDataSource, BBShareEditViewControllerDelegate, BBShareViewModelDelegate, BBShareCellViewDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) UIButton *editShareButton;
@@ -22,8 +24,8 @@
 
 @implementation BBShareViewController
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden  = YES;
     
 }
@@ -36,7 +38,7 @@
     BBShareViewFlowLayout *layout = [[BBShareViewFlowLayout alloc] init];
     _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
     [_collectionView registerNib:[BBShareCell registerNib] forCellWithReuseIdentifier:@"shareCell"];
-    [_collectionView setBackgroundColor:[UIColor grayColor]];
+    [_collectionView setBackgroundColor:[UIColor colorWithRed:190/255.0 green:190/255.0 blue:190/255.0 alpha:1]];
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
     [self.view addSubview:_collectionView];
@@ -47,9 +49,14 @@
     [_editShareButton setImage:[UIImage imageNamed:@"share_camera"] forState:UIControlStateNormal];
     [_editShareButton addTarget:self action:@selector(editShareButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_editShareButton];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadShare) name:kRefreshShareNotification object:nil];
     // Do any additional setup after loading the view.
 }
-
+#pragma mark - reload data 
+- (void)reloadShare {
+    [_viewModel loadData];
+}
 #pragma mark - button action
 - (void)editShareButtonAction:(id)sender {
     BBShareEditViewController *vc = [BBShareEditViewController create];
@@ -88,6 +95,7 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     BBShareContentViewController *vc = [BBShareContentViewController create];
+    vc.shareEntity = _viewModel.shareArray[indexPath.row];
     [self.navigationController pushViewController:vc animated:YES];
 }
 /*

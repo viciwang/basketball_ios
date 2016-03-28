@@ -105,6 +105,9 @@
 		C31680F41CA42A6600701A25 /* BBShareCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C31680EA1CA42A6600701A25 /* BBShareCommentCell.m */; };
 		C31680F61CA42A9700701A25 /* BBShareEditViewController_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C31680F51CA42A9700701A25 /* BBShareEditViewController_iPhone.storyboard */; };
 		C31680F91CA42AA300701A25 /* BBShareEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31680F81CA42AA300701A25 /* BBShareEditViewController.m */; };
+		C32C46051CA8F8F7004C462D /* WYShareComment+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C32C46021CA8F8F7004C462D /* WYShareComment+CoreDataProperties.m */; };
+		C32C46061CA8F8F7004C462D /* WYShareComment.m in Sources */ = {isa = PBXBuildFile; fileRef = C32C46041CA8F8F7004C462D /* WYShareComment.m */; };
+		C32C46091CA8F9AF004C462D /* BBShareContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C32C46081CA8F9AF004C462D /* BBShareContentViewModel.m */; };
 		C3584B011C9075C60087FF34 /* UIStoryboard+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = C3584AFC1C9075C60087FF34 /* UIStoryboard+Addition.m */; };
 		C3584B021C9075C60087FF34 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = C3584AFE1C9075C60087FF34 /* UIView+Utils.m */; };
 		C3584B031C9075C60087FF34 /* UIViewController+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = C3584B001C9075C60087FF34 /* UIViewController+Create.m */; };
@@ -394,6 +397,12 @@
 		C31680F51CA42A9700701A25 /* BBShareEditViewController_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BBShareEditViewController_iPhone.storyboard; sourceTree = "<group>"; };
 		C31680F71CA42AA300701A25 /* BBShareEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBShareEditViewController.h; sourceTree = "<group>"; };
 		C31680F81CA42AA300701A25 /* BBShareEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBShareEditViewController.m; sourceTree = "<group>"; };
+		C32C46011CA8F8F7004C462D /* WYShareComment+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WYShareComment+CoreDataProperties.h"; sourceTree = "<group>"; };
+		C32C46021CA8F8F7004C462D /* WYShareComment+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WYShareComment+CoreDataProperties.m"; sourceTree = "<group>"; };
+		C32C46031CA8F8F7004C462D /* WYShareComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYShareComment.h; sourceTree = "<group>"; };
+		C32C46041CA8F8F7004C462D /* WYShareComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYShareComment.m; sourceTree = "<group>"; };
+		C32C46071CA8F9AF004C462D /* BBShareContentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBShareContentViewModel.h; sourceTree = "<group>"; };
+		C32C46081CA8F9AF004C462D /* BBShareContentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBShareContentViewModel.m; sourceTree = "<group>"; };
 		C3584AFB1C9075C60087FF34 /* UIStoryboard+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+Addition.h"; sourceTree = "<group>"; };
 		C3584AFC1C9075C60087FF34 /* UIStoryboard+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+Addition.m"; sourceTree = "<group>"; };
 		C3584AFD1C9075C60087FF34 /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
@@ -1139,6 +1148,10 @@
 				C3F3D6F11CA8307C00A93A41 /* WYShare+CoreDataProperties.m */,
 				C3F3D6F21CA8307C00A93A41 /* WYStore+WYShare.h */,
 				C3F3D6F31CA8307C00A93A41 /* WYStore+WYShare.m */,
+				C32C46011CA8F8F7004C462D /* WYShareComment+CoreDataProperties.h */,
+				C32C46021CA8F8F7004C462D /* WYShareComment+CoreDataProperties.m */,
+				C32C46031CA8F8F7004C462D /* WYShareComment.h */,
+				C32C46041CA8F8F7004C462D /* WYShareComment.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1148,6 +1161,8 @@
 			children = (
 				C3F3D6F71CA830BD00A93A41 /* BBShareViewModel.h */,
 				C3F3D6F81CA830BD00A93A41 /* BBShareViewModel.m */,
+				C32C46071CA8F9AF004C462D /* BBShareContentViewModel.h */,
+				C32C46081CA8F9AF004C462D /* BBShareContentViewModel.m */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -1993,7 +2008,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "baseurl=http:\\/\\/`ifconfig en0 | grep inet | grep -v inet6 | awk '{print $2}'`:8081\n/usr/libexec/PlistBuddy -c \"Set :DebugBaseUrl $baseurl\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\necho \"Updated ${TARGET_BUILD_DIR}/${INFOPLIST_PATH} DebugBaseUrl to $baseurl\"";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		E8ACE7579FE1E926C8537326 /* Copy Pods Resources */ = {
@@ -2078,6 +2093,7 @@
 				9FDEF2451C9C15A600B629C5 /* BBStepCountingRollView.m in Sources */,
 				9F9617DB1C83EDEE0078FB3C /* BBBaseViewController.m in Sources */,
 				9FDEF25D1C9E825300B629C5 /* BBUser.m in Sources */,
+				C32C46051CA8F8F7004C462D /* WYShareComment+CoreDataProperties.m in Sources */,
 				C3F8A4DC1C9D703F0086FF4B /* LCArticleSinglePageViewController.m in Sources */,
 				C3F3D6F51CA8307C00A93A41 /* WYShare+CoreDataProperties.m in Sources */,
 				C31680EE1CA42A6600701A25 /* BBShareViewFlowLayout.m in Sources */,
@@ -2090,6 +2106,7 @@
 				C3F8A4E11C9D703F0086FF4B /* LCArticleTextBoxView.m in Sources */,
 				9F2EA0361C9C10960053A802 /* BBStepCountingMineViewController.m in Sources */,
 				9F33CE961CA15D260016EB39 /* BBPersonalCenterViewController.m in Sources */,
+				C32C46061CA8F8F7004C462D /* WYShareComment.m in Sources */,
 				9F1B638C1C944B5100C486B0 /* BBModel.m in Sources */,
 				9F36B3B81CA3D23A00083496 /* BBPersonalTableViewHeaderCell.m in Sources */,
 				C3F8A5361C9D72820086FF4B /* WYFeedManager.m in Sources */,
@@ -2145,6 +2162,7 @@
 				9F33CE921CA14B440016EB39 /* BBStepCountingRankCell.m in Sources */,
 				9F7A79BD1CA52115004ABE1C /* NYXImagesHelper.m in Sources */,
 				9F93945F1C88968D009E6DDF /* BBStepCountingService.m in Sources */,
+				C32C46091CA8F9AF004C462D /* BBShareContentViewModel.m in Sources */,
 				C3F8A53E1C9D72820086FF4B /* NSManagedObjectContext+WYStore.m in Sources */,
 				C3F8A56E1C9DA41F0086FF4B /* BBArticleListViewController.m in Sources */,
 				9F33CE8E1CA147A80016EB39 /* BBStepCountingRankViewController.m in Sources */,

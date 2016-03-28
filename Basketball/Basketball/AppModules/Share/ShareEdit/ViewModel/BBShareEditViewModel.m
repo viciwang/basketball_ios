@@ -7,6 +7,7 @@
 //
 
 #import "BBShareEditViewModel.h"
+#import "BBShareViewController.h"
 
 @implementation BBShareEditViewModel
 
@@ -29,6 +30,7 @@
                 [formData appendPartWithFileData:UIImagePNGRepresentation(images[idx]) name:key fileName:@"upload.png" mimeType:@"image/png"];
             }
     } progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:kRefreshShareNotification object:nil];
         if ([_delegate respondsToSelector:@selector(viewModel:didUploadDataFinish:)]) {
             [_delegate viewModel:self didUploadDataFinish:nil];
         }

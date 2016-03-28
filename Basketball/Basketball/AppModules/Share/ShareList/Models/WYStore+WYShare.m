@@ -8,11 +8,15 @@
 
 #import "WYStore+WYShare.h"
 #import "WYShare.h"
+#import "WYShareComment.h"
 
 @implementation WYFeedStore(WYShare)
 
 - (NSArray *)numbersOfTemporaryShareEntity:(NSInteger)numbers {
     return [WYShare wy_createNumbers:numbers managedObjectInContext:self.tempContext];
+}
+- (NSArray *)numbersOfTemporaryShareCommentEntity:(NSInteger)numbers {
+    return [WYShareComment wy_createNumbers:numbers managedObjectInContext:self.tempContext];
 }
 
 @end

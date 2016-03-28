@@ -12,12 +12,13 @@
 @protocol BBShareViewModelDelegate <NSObject>
 
 - (void)viewModel:(BBShareViewModel *)viewModel didLoadDataFinish:(NSError *)error;
-
+- (void)viewModel:(BBShareViewModel *)viewModel didApproveShareFinishStatus:(BOOL)isUserApprove approveCount:(NSInteger)aprCount error:(NSError *)error;
 @end
 @interface BBShareViewModel : BBNetworkApiManager
 
 @property (nonatomic, weak) id<BBShareViewModelDelegate> delegate;
 @property (nonatomic, readonly) NSArray *shareArray;
-- (void)loadData;
 
+- (void)loadData;
++ (void)approveForShareId:(NSString *)shareId deApprove:(BOOL)deApprove;
 @end

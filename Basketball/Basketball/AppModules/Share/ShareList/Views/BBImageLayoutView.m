@@ -35,6 +35,11 @@
     if (_images.count == 0) {
         return;
     }
+//    if ([_delegate respondsToSelector:@selector(imageLayoutView:didLayoutFinish:)]) {
+//        if (_images.count > 1) {
+//            [_delegate imageLayoutView:self didLayoutFinish:CGRectGetWidth(self.bounds)];
+//        }
+//    }
     
     for (UIImageView *imgView in _imageViews) {
         imgView.hidden = YES;
@@ -49,12 +54,12 @@
     CGFloat viewHeight = CGRectGetHeight(self.frame);
     
     CGFloat w, h;
-    w = viewWidth/cols.count;
+    w = (viewWidth-(cols.count-1)*2)/cols.count;
     NSInteger idx = 0;
     for (NSInteger c = 0; c < cols.count; ++c) {
-        h = viewHeight/[cols[c] integerValue];
+        h = (viewHeight-([cols[c] integerValue]-1)*2)/[cols[c] integerValue];
         for (NSInteger r = 0; r < [cols[c] integerValue]; ++r) {
-            CGRect frame = CGRectMake(c*w, r*h, w, h);
+            CGRect frame = CGRectMake(c*(w+2), r*(h+2), w, h);
             UIImageView *imgView;
             if (idx <_imageViews.count) {
                 imgView = _imageViews[idx];
@@ -76,6 +81,7 @@
         }
         [imgView sd_setImageWithURL:[NSURL URLWithString:_images[idx++]]];
     }
+    
 }
 
 @end

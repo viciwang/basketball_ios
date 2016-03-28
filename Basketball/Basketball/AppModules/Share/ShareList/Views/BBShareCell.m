@@ -14,6 +14,7 @@
 - (void)awakeFromNib {
     _mainView = [BBShareCellView loadFromNib];
     [self addSubview:_mainView];
+    
 }
 
 - (void)layoutSubviews {

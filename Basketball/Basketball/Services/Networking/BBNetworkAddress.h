@@ -49,5 +49,9 @@
 
 #define kApiAddShare @"ShareManager/addShare"
 #define kApiGetShare @"ShareManager/getShareInfo"
+#define kApiApproveShare @"ShareManager/approve"
+#define kApiDeApproveShare @"ShareManager/deapprove"
+#define kApiGetShareComment @"ShareManager/getComment"
+#define kApiAddShareComment @"ShareManager/comment"
 
 #endif /* BBNetworkAddress_h */

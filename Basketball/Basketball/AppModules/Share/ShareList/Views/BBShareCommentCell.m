@@ -7,6 +7,7 @@
 //
 
 #import "BBShareCommentCell.h"
+#import "WYShareComment.h"
 
 @interface BBShareCommentCell ()
 
@@ -24,10 +25,16 @@
     // Initialization code
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)setCommentEntity:(WYShareComment *)commentEntity {
+    _commentEntity = commentEntity;
+    
+    [_headerImageView sd_setImageWithURL:[NSURL URLWithString:_commentEntity.headImageUrl] placeholderImage:[UIImage imageNamed:@"ATL_logo.png"]];
+    _nickNameLabel.text = _commentEntity.nikcName;
+    if ([_commentEntity.isReply boolValue]) {
+        _contentTextView.text = [NSString stringWithFormat:@"回复 %@ 的评论： %@", _commentEntity.replyUserName,_commentEntity.content];
+    } else {
+        _contentTextView.text = _commentEntity.content;
+    }
 }
 
 @end

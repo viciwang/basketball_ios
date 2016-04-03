@@ -274,11 +274,33 @@ static NSString *_debugBaseUrl = nil;
     });
 }
 
+- (NSURLSessionDataTask *)approveForShareId:(NSString *)shareId
+                                  deApprove:(BOOL)deApprove
+                            completionBlock:(BBNetworkResponseBlock)responseBlock {
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSString *publicDate = [formatter stringFromDate:[NSDate date]];
+    NSDictionary *postDictionary = @{@"shareId":shareId,
+                                     @"publicDate":publicDate
+                                     };
+    return [self POST:deApprove?kApiDeApproveShare:kApiApproveShare parameters:postDictionary progress:nil
+       success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+           NSDictionary *responseDictionary = responseObject[@"data"];
+           if (responseBlock) {
+               responseBlock(responseDictionary, nil);
+           }
+       } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+           if (responseBlock) {
+               responseBlock(nil,error);
+           }
+       }];
+}
+
 - (NSURLSessionDataTask *)uploadStepDataWithStepCount:(NSUInteger)stepCount
                                             startTime:(NSString *)startTime
                                       completionBlock:(BBNetworkResponseBlock)responseBlock {
     REQUEST(POST, kApiStepCountingUploadData, (@{@"stepCount":@(stepCount),@"startTime":startTime}), nil, responseBlock);
     
 }
-
 @end

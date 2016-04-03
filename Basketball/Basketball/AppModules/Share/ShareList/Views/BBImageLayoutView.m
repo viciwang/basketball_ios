@@ -35,30 +35,53 @@
     if (_images.count == 0) {
         return;
     }
+//    if ([_delegate respondsToSelector:@selector(imageLayoutView:didLayoutFinish:)]) {
+//        if (_images.count > 1) {
+//            [_delegate imageLayoutView:self didLayoutFinish:CGRectGetWidth(self.bounds)];
+//        }
+//    }
     
-    NSArray *cols = DefaultLayouts[_images.count];
-    _imageViews = [NSMutableArray arrayWithCapacity:_images.count];
+    for (UIImageView *imgView in _imageViews) {
+        imgView.hidden = YES;
+    }
+    
+    NSArray *cols = DefaultLayouts[_images.count-1];
+    if (!_imageViews) {
+        _imageViews = [NSMutableArray arrayWithCapacity:9];
+    }
     
     CGFloat viewWidth = CGRectGetWidth(self.frame);
     CGFloat viewHeight = CGRectGetHeight(self.frame);
     
     CGFloat w, h;
-    w = viewWidth/cols.count;
-
+    w = (viewWidth-(cols.count-1)*2)/cols.count;
+    NSInteger idx = 0;
     for (NSInteger c = 0; c < cols.count; ++c) {
-        h = viewHeight/[cols[c] integerValue];
+        h = (viewHeight-([cols[c] integerValue]-1)*2)/[cols[c] integerValue];
         for (NSInteger r = 0; r < [cols[c] integerValue]; ++r) {
-            CGRect frame = CGRectMake(c*w, r*h, w, h);
-            UIImageView *imgView = [[UIImageView alloc] initWithFrame:frame];
-            [self addSubview:imgView];
-            [_imageViews addObject:imgView];
+            CGRect frame = CGRectMake(c*(w+2), r*(h+2), w, h);
+            UIImageView *imgView;
+            if (idx <_imageViews.count) {
+                imgView = _imageViews[idx];
+                [imgView setFrame:frame];
+                imgView.hidden = NO;
+            } else {
+                imgView = [[UIImageView alloc] initWithFrame:frame];
+                [self addSubview:imgView];
+                [_imageViews addObject:imgView];
+            }
+            ++idx;
         }
     }
     
-    NSInteger idx = 0;
+    idx = 0;
     for (UIImageView *imgView in _imageViews) {
+        if (idx >= _images.count) {
+            break;
+        }
         [imgView sd_setImageWithURL:[NSURL URLWithString:_images[idx++]]];
     }
+    
 }
 
 @end

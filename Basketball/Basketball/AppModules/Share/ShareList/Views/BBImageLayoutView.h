@@ -19,4 +19,5 @@
 @property (nonatomic, weak) id<BBImageLayoutViewDelegate> delegate;
 @property (nonatomic, strong) NSArray *images;
 
+- (void)layoutImageView;
 @end

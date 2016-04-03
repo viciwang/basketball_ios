@@ -11,29 +11,34 @@
 #import "BBShareCell.h"
 #import "BBShareContentViewController.h"
 #import "BBShareEditViewController.h"
+#import "bbshareViewModel.h"
 
-@interface BBShareViewController () <UICollectionViewDelegate,UICollectionViewDataSource, BBShareEditViewControllerDelegate>
+NSString * const kRefreshShareNotification = @"kRefreshShareNotification";
+
+@interface BBShareViewController () <UICollectionViewDelegate,UICollectionViewDataSource, BBShareEditViewControllerDelegate, BBShareViewModelDelegate, BBShareCellViewDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) UIButton *editShareButton;
-
+@property (nonatomic, strong) BBShareViewModel *viewModel;
 @end
 
 @implementation BBShareViewController
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden  = YES;
     
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    _viewModel = [[BBShareViewModel alloc] init];
+    _viewModel.delegate = self;
+    [_viewModel loadData];
     self.navigationController.navigationBar.hidden  = YES;
     BBShareViewFlowLayout *layout = [[BBShareViewFlowLayout alloc] init];
     _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
     [_collectionView registerNib:[BBShareCell registerNib] forCellWithReuseIdentifier:@"shareCell"];
-    [_collectionView setBackgroundColor:[UIColor grayColor]];
+    [_collectionView setBackgroundColor:[UIColor colorWithRed:190/255.0 green:190/255.0 blue:190/255.0 alpha:1]];
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
     [self.view addSubview:_collectionView];
@@ -44,15 +49,24 @@
     [_editShareButton setImage:[UIImage imageNamed:@"share_camera"] forState:UIControlStateNormal];
     [_editShareButton addTarget:self action:@selector(editShareButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_editShareButton];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadShare) name:kRefreshShareNotification object:nil];
     // Do any additional setup after loading the view.
 }
-
+#pragma mark - reload data 
+- (void)reloadShare {
+    [_viewModel loadData];
+}
 #pragma mark - button action
 - (void)editShareButtonAction:(id)sender {
     BBShareEditViewController *vc = [BBShareEditViewController create];
     vc.delegate = self;
     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
     [self presentViewController:nvc animated:YES completion:nil];
+}
+#pragma mark - view model delegate
+- (void)viewModel:(BBShareViewModel *)viewModel didLoadDataFinish:(NSError *)error {
+    [_collectionView reloadData];
 }
 #pragma mark - share edit vc delegate
 - (void)shareEditViewController:(BBShareEditViewController *)viewController endEditingText:(NSString *)text images:(NSArray *)images {
@@ -61,7 +75,7 @@
 #pragma mark cell的数量
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 5;
+    return _viewModel.shareArray.count;
 }
 
 #pragma mark cell的视图
@@ -69,7 +83,7 @@
 {
     NSString *cellIdentifier = @"shareCell";
     BBShareCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
-
+    cell.mainView.shareEntity = _viewModel.shareArray[indexPath.row];
     return cell;
 }
 
@@ -81,6 +95,7 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     BBShareContentViewController *vc = [BBShareContentViewController create];
+    vc.shareEntity = _viewModel.shareArray[indexPath.row];
     [self.navigationController pushViewController:vc animated:YES];
 }
 /*

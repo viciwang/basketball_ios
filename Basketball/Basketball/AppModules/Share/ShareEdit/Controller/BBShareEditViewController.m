@@ -10,9 +10,10 @@
 #import "CamareAndPhotoLiberay.h"
 #import "BBShareEditViewImageCell.h"
 #import "BBShareEditViewModel.h"
+
 #import <MobileCoreServices/UTCoreTypes.h>
 
-@interface BBShareEditViewController () < UICollectionViewDataSource, UICollectionViewDelegate, UIImagePickerControllerDelegate>
+@interface BBShareEditViewController () < UICollectionViewDataSource, UICollectionViewDelegate, UIImagePickerControllerDelegate, BBShareEditViewModelDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -37,7 +38,7 @@
     self.tableView.tableFooterView = [UIView new];
     
     _viewModel = [[BBShareEditViewModel alloc] init];
-    [_viewModel uploadShareContent:@"fjhdkjfhksdhfkjdsgkgshgjk" images:nil];
+    _viewModel.delegate = self;
     
     _images = [NSMutableArray arrayWithCapacity:9];
     _controllerAlbum = [[UIImagePickerController alloc]init];
@@ -57,8 +58,18 @@
 }
 - (IBAction)donButtonAction:(id)sender {
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
-    if ([_delegate respondsToSelector:@selector(shareEditViewController:endEditingText:images:)]) {
-        [_delegate shareEditViewController:self endEditingText:_contentTextView.text images:nil];
+//    if ([_delegate respondsToSelector:@selector(shareEditViewController:endEditingText:images:)]) {
+//        [_delegate shareEditViewController:self endEditingText:_contentTextView.text images:nil];
+//    }
+    [_viewModel uploadShareContent:_contentTextView.text images:_images];
+}
+#pragma mark - view model delegate
+- (void)viewModel:(BBShareEditViewModel *)viewModel didUploadDataFinish:(NSError *)error {
+    if (!error) {
+        
+         NSLog(@"success");
+    }else {
+        NSLog(@"failure");
     }
 }
 #pragma mark - table view datasource

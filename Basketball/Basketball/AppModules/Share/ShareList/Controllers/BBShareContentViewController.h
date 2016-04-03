@@ -8,6 +8,9 @@
 
 #import "BBBaseViewController.h"
 
+@class WYShare;
 @interface BBShareContentViewController : BBBaseViewController
+
+@property (nonatomic, strong) WYShare *shareEntity;
 
 @end

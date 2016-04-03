@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class WYShareComment;
 @interface BBShareCommentCell : UITableViewCell
+
+@property (nonatomic, strong) WYShareComment *commentEntity;
 
 @end

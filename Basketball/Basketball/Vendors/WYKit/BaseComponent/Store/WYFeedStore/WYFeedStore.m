@@ -49,6 +49,10 @@ static NSUInteger WYFeedStoreDefaultFeedEntityPageSize = 18;
     return self;
 }
 
+- (NSManagedObjectContext *)tempContext {
+    return _temporaryContext;
+}
+
 + (void)setDefaultFeedPageSize:(NSUInteger)size {
     if (size) {
         WYFeedStoreDefaultFeedPageSize = size;

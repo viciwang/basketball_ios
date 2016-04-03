@@ -13,6 +13,8 @@
 
 @interface WYFeedStore : WYStore
 
+@property (nonatomic, readonly) NSManagedObjectContext *tempContext;
+
 + (void)setDefaultFeedPageSize:(NSUInteger)size;
 + (void)setDefaultFeedEntityPageSize:(NSUInteger)size;
 

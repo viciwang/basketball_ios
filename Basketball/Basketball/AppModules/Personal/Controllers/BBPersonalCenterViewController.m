@@ -17,6 +17,10 @@
 #import "BBNavigationController.h"
 #import "BBChangeInfoViewController.h"
 #import "BBCommonCellView.h"
+#import "BBStepCountingMainViewController.h"
+#import "BBStepCountingRankViewController.h"
+#import "BBStepCountingHistoryViewController.h"
+#import "BBStepCountingMineViewController.h"
 
 @interface BBPersonalCenterViewController ()
 <
@@ -29,6 +33,7 @@ UITableViewDataSource
 @property (nonatomic, strong) UITableViewCell *logoutCell;
 @property (nonatomic, strong) NSArray *cellTitles;
 @property (nonatomic, strong) NSArray *cellIconString;
+@property (nonatomic, strong) UIView *titleBannerView;
 
 @end
 
@@ -38,7 +43,8 @@ UITableViewDataSource
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"个人中心";
+    self.title = @"";
+    [self setupNavigationBar];
     [self setupTableView];
     [self setupObserver];
 //    [self setupBackground];
@@ -61,6 +67,14 @@ UITableViewDataSource
         @strongify(self);
         make.top.left.right.bottom.equalTo(self.view);
     }];
+    
+    [self.titleBannerView mas_updateConstraints:^(MASConstraintMaker *make) {
+        @strongify(self);
+        make.left.equalTo(self.tableView);
+        make.top.equalTo(self.tableView).offset(150-SCREEN_HEIGHT);
+        make.height.mas_equalTo(SCREEN_HEIGHT);
+        make.width.mas_equalTo(SCREEN_WIDTH);
+    }];
     [super updateViewConstraints];
 }
 
@@ -80,6 +94,10 @@ UITableViewDataSource
 
 #pragma mark - UI
 
+- (void)setupNavigationBar {
+    
+}
+
 - (void)setupTableView {
     self.tableView = [UITableView new];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([BBPersonalCenterCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:NSStringFromClass([BBPersonalCenterCell class])];
@@ -91,8 +109,12 @@ UITableViewDataSource
     self.tableView.backgroundColor = UIColorFromHex(0xf2f1ef);
     [self.view addSubview:self.tableView];
     
-    self.cellTitles = @[@"运动数据",@"运动数据",@"运动数据"];
-    self.cellIconString = @[@"Contact Card 1",@"Contact Card 1",@"Contact Card 1"];
+    self.cellTitles = @[@[@"个人描述"],@[@"今天步数",@"步数排行榜",@"历史数据"],@[@"清除缓存",@"关于我们"],@[@"退出"]];
+    self.cellIconString = @[@[@"no_image"],@[@"Run",@"Rank",@"Trash"],@[@"History",@"Info"],@[@"no_image"]];
+    
+    self.titleBannerView = [UIView new];
+    self.titleBannerView.backgroundColor = baseColor;
+    [self.tableView insertSubview:self.titleBannerView atIndex:0];
 }
 
 - (void)setupBackground {
@@ -117,10 +139,33 @@ UITableViewDataSource
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSUInteger section = indexPath.section;
     NSUInteger row = indexPath.row;
+    
     if (section == 1) {
-        
+        switch (row) {
+            case 0: {
+                BBStepCountingMineViewController *vc = [BBStepCountingMineViewController new];
+                [self.navigationController pushViewController:vc animated:YES];
+                break;
+            }
+            case 1:{
+                BBStepCountingRankViewController *vc = [BBStepCountingRankViewController new];
+                [self.navigationController pushViewController:vc animated:YES];
+                break;
+            }
+            case 2:{
+                BBStepCountingHistoryViewController *vc = [BBStepCountingHistoryViewController new];
+                [self.navigationController pushViewController:vc animated:YES];
+                break;
+            }
+                
+            default:
+                break;
+        }
     }
     else if(section == 2) {
+        
+    }
+    else if(section == 3) {
         @weakify(self);
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"确定要退出" message:nil preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *action0 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -162,25 +207,11 @@ UITableViewDataSource
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 3;
+    return self.cellTitles.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    switch (section) {
-        case 0: {
-            return 1;
-        }
-        case 1: {
-            return self.cellTitles.count;
-        }
-        case 2: {
-            return 1;
-        }
-            
-        default:
-            return 0;
-            break;
-    }
+    return [self.cellTitles[section] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -195,10 +226,10 @@ UITableViewDataSource
         };
         return cell;
     }
-    else if(indexPath.section == 1) {
+    else if(indexPath.section == 1 || indexPath.section == 2) {
         BBPersonalCenterCell *cell = [self.tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BBPersonalCenterCell class]) forIndexPath:indexPath];
-        cell.commonCellView.leftImage = [UIImage imageNamed:self.cellIconString[row]];
-        cell.commonCellView.leftLabelText = self.cellTitles[row];
+        cell.commonCellView.leftImage = [UIImage imageNamed:self.cellIconString[indexPath.section][row]];
+        cell.commonCellView.leftLabelText = self.cellTitles[indexPath.section][row];
         cell.commonCellView.shouldShowTopLine = YES;
         if (row != 0) {
             cell.commonCellView.topLineLeftSpace = 10;
@@ -221,6 +252,13 @@ UITableViewDataSource
         return self.logoutCell;
     }
     
+}
+
+#pragma mark - scrollview
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [self.tableView setNeedsUpdateConstraints];
+    [self.tableView updateFocusIfNeeded];
 }
 
 #pragma mark - properties

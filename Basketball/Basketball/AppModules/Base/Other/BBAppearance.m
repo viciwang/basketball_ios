@@ -34,6 +34,12 @@
     barAppearance.titleTextAttributes = attri;
     barAppearance.barTintColor = baseColor;
     barAppearance.translucent = NO;
+    
+    [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init]
+                                      forBarPosition:UIBarPositionAny
+                                          barMetrics:UIBarMetricsDefault];
+    
+    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
 }
 
 @end

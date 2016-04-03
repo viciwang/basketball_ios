@@ -54,4 +54,6 @@
 #define kApiGetShareComment @"ShareManager/getComment"
 #define kApiAddShareComment @"ShareManager/comment"
 
+#define kApiStepCountingUploadData @"stepCounting/uploadStepData"
+
 #endif /* BBNetworkAddress_h */

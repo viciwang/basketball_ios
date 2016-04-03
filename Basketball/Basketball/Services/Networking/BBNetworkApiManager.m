@@ -229,8 +229,9 @@ static NSString *_debugBaseUrl = nil;
     });
 }
 
-- (NSURLSessionDataTask *)getHistoryStepCountWithCompletionBlock:(BBNetworkResponseBlock)responseBlock {
-    REQUEST(GET, kApiStepCountingHistory, nil, nil, ^(NSArray *record,NSError *error){
+- (NSURLSessionDataTask *)getHistoryStepCountAfterDate:(NSString *)date
+                                       completionBlock:(BBNetworkResponseBlock)responseBlock {
+    REQUEST(POST, kApiStepCountingHistory, @{@"date":date}, nil, ^(NSArray *record,NSError *error){
         if (error) {
             if (responseBlock) {
                 responseBlock(nil,error);
@@ -272,6 +273,7 @@ static NSString *_debugBaseUrl = nil;
         }
     });
 }
+
 - (NSURLSessionDataTask *)approveForShareId:(NSString *)shareId
                                   deApprove:(BOOL)deApprove
                             completionBlock:(BBNetworkResponseBlock)responseBlock {
@@ -282,7 +284,6 @@ static NSString *_debugBaseUrl = nil;
     NSDictionary *postDictionary = @{@"shareId":shareId,
                                      @"publicDate":publicDate
                                      };
-
     return [self POST:deApprove?kApiDeApproveShare:kApiApproveShare parameters:postDictionary progress:nil
        success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
            NSDictionary *responseDictionary = responseObject[@"data"];
@@ -294,5 +295,12 @@ static NSString *_debugBaseUrl = nil;
                responseBlock(nil,error);
            }
        }];
+}
+
+- (NSURLSessionDataTask *)uploadStepDataWithStepCount:(NSUInteger)stepCount
+                                            startTime:(NSString *)startTime
+                                      completionBlock:(BBNetworkResponseBlock)responseBlock {
+    REQUEST(POST, kApiStepCountingUploadData, (@{@"stepCount":@(stepCount),@"startTime":startTime}), nil, responseBlock);
+    
 }
 @end

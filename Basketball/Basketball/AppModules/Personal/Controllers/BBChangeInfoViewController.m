@@ -178,6 +178,7 @@ UINavigationControllerDelegate
             user.headImageUrl = imageUrl;
             [BBUser setCurrentUser:user];
             [self fillData];
+            [[NSNotificationCenter defaultCenter] postNotificationName:kBBNotificationUserDidUpdateInfo object:nil];
         }
     }];
 }
@@ -197,6 +198,7 @@ UINavigationControllerDelegate
                                                     else {
                                                         [BBUser setCurrentUser:user];
                                                         [self fillData];
+                                                        [[NSNotificationCenter defaultCenter] postNotificationName:kBBNotificationUserDidUpdateInfo object:nil];
                                                     }
                                                 }];
 }

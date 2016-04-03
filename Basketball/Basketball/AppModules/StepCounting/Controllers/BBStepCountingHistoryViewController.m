@@ -11,6 +11,7 @@
 #import "MBProgressHUD.h"
 #import "BBStepCountingHistoryRecord.h"
 #import "BBStepCountingHistoryRecordCell.h"
+#import "NSDate+Utilities.h"
 
 @interface BBStepCountingHistoryViewController ()
 <
@@ -65,20 +66,21 @@ UITableViewDataSource
 - (void)loadData {
     @weakify(self);
     [self showLoadingHUDWithInfo:nil];
-    [[BBNetworkApiManager sharedManager] getHistoryStepCountWithCompletionBlock:^(NSArray *records, NSError *error) {
-        @strongify(self);
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
-        if (!error) {
-            for (BBStepCountingHistoryMonthRecord *r in records) {
-                r.average = ((NSNumber *)[r valueForKeyPath:@"dayRecords.@avg.stepCount"]).doubleValue;
-            }
-            self.records = records;
-            [self.tableView reloadData];
-        }
-        else {
-            [self showErrorHUDWithInfo:error.userInfo[@"msg"]];
-        }
-    }];
+    [[BBNetworkApiManager sharedManager] getHistoryStepCountAfterDate:[[NSDate dateWithTimeIntervalSince1970:0] dayString]
+                                                      completionBlock:^(NSArray *records, NSError *error) {
+                                                          @strongify(self);
+                                                          [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                                          if (!error) {
+                                                              for (BBStepCountingHistoryMonthRecord *r in records) {
+                                                                  r.average = ((NSNumber *)[r valueForKeyPath:@"dayRecords.@avg.stepCount"]).doubleValue;
+                                                              }
+                                                              self.records = records;
+                                                              [self.tableView reloadData];
+                                                          }
+                                                          else {
+                                                              [self showErrorHUDWithInfo:error.userInfo[@"msg"]];
+                                                          }
+                                                      }];
 }
 
 #pragma mark - tableview delegate

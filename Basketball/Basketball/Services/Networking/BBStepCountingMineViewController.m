@@ -27,6 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupUI];
     [self setupScrollView];
     [self.showHistoryButton addTarget:self action:@selector(showHistory:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -88,6 +89,11 @@
     [self.scrollView addSubview:self.showHistoryButton];
 }
 
+- (void)setupUI {
+    self.view.backgroundColor = baseColor;
+    self.title = @"今日步数";
+}
+
 #pragma mark - properties
 
 - (BBStepCountingRollView *)rollView {
@@ -136,7 +142,7 @@
             [self showErrorHUDWithInfo:error.userInfo[@"msg"]];
         }
         else {
-            [[BBStepCountingManager sharedManager] queryStepsOfToday:^(NSArray *steps, NSUInteger totalSteps) {
+            [[BBStepCountingManager sharedManager] queryStepsOfToday:^(NSArray *steps, NSUInteger totalSteps,NSError *error) {
                 @strongify(self);
                 [self.chartView refreshWithData:steps];
                 [self.rollView refreshWithTodayStep:totalSteps average:average.unsignedIntegerValue];

@@ -14,6 +14,7 @@
 #import "BBNavigationController.h"
 #import "BBLoginViewController.h"
 #import "BBAppearance.h"
+#import "BBStepCountingManager.h"
 
 @interface AppDelegate ()
 
@@ -43,8 +44,6 @@ const int ddLogLevel = DDLogLevelWarning;
     self.window.rootViewController = controller;
     [self.window makeKeyAndVisible];
     
-    [self addNotificationObsever];
-    [self setupUI];
     // debug
 #if DEBUG
     NSLog(@"当前用户：\n%@",[BBUser currentUser]);
@@ -52,6 +51,12 @@ const int ddLogLevel = DDLogLevelWarning;
     [self configCocoaLumberjack];
     [self configBaseUrl];
 #endif
+    
+    [self addNotificationObsever];
+    [self setupUI];
+    
+    // 计步
+    [[BBStepCountingManager sharedManager] start];
     
     return YES;
 }

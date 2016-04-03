@@ -17,4 +17,8 @@
 
 - (BOOL)saveCurrentUser:(BBUser *)user;
 
+- (BOOL)saveStepCountData:(NSArray *)stepCountData;
+
+- (NSDate *)lastDateSavedStepCountData;
+
 @end

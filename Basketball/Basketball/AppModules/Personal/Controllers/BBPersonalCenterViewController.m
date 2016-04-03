@@ -17,6 +17,7 @@
 #import "BBNavigationController.h"
 #import "BBChangeInfoViewController.h"
 #import "BBCommonCellView.h"
+#import "BBStepCountingMainViewController.h"
 
 @interface BBPersonalCenterViewController ()
 <
@@ -118,7 +119,16 @@ UITableViewDataSource
     NSUInteger section = indexPath.section;
     NSUInteger row = indexPath.row;
     if (section == 1) {
-        
+        switch (row) {
+            case 0: {
+                BBStepCountingMainViewController *vc = [BBStepCountingMainViewController new];
+                [self.navigationController pushViewController:vc animated:YES];
+                break;
+            }
+                
+            default:
+                break;
+        }
     }
     else if(section == 2) {
         @weakify(self);

@@ -1762,7 +1762,7 @@
 					};
 					9F9617661C83D6B00078FB3C = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = MY5Q8FA2DZ;
+						DevelopmentTeam = JX5LFX27DB;
 					};
 				};
 			};
@@ -2339,7 +2339,7 @@
 				HEADER_SEARCH_PATHS = "${SDK_DIR}/usr/include/libxml2";
 				INFOPLIST_FILE = "$(SRCROOT)/Basketball/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.scnu.basketball.Basketball;
+				PRODUCT_BUNDLE_IDENTIFIER = com.allen.basketball.Basketball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -2355,7 +2355,7 @@
 				HEADER_SEARCH_PATHS = "${SDK_DIR}/usr/include/libxml2";
 				INFOPLIST_FILE = "$(SRCROOT)/Basketball/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.scnu.basketball.Basketball;
+				PRODUCT_BUNDLE_IDENTIFIER = com.allen.basketball.Basketball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

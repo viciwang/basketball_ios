@@ -136,7 +136,7 @@
             [self showErrorHUDWithInfo:error.userInfo[@"msg"]];
         }
         else {
-            [[BBStepCountingManager sharedManager] queryStepsOfToday:^(NSArray *steps, NSUInteger totalSteps) {
+            [[BBStepCountingManager sharedManager] queryStepsOfToday:^(NSArray *steps, NSUInteger totalSteps,NSError *error) {
                 @strongify(self);
                 [self.chartView refreshWithData:steps];
                 [self.rollView refreshWithTodayStep:totalSteps average:average.unsignedIntegerValue];

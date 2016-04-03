@@ -9,10 +9,15 @@
 #import "BBStepCountingManager.h"
 #import "BBStepCountingService.h"
 #import "NSDate+Utilities.h"
+#import "BBNetworkApiManager.h"
+#import "BBDatabaseManager.h"
+
+#define kUploadInterval 5
 
 @interface BBStepCountingManager ()
 
 @property (nonatomic, strong) id<BBStepCountingService> stepCountingService;
+@property (nonatomic, strong) NSTimer *timer;
 
 @end
 
@@ -28,29 +33,55 @@
     return manager;
 }
 
-- (void)startStepCounting {
-    [self.stepCountingService startStepCountingWithHandler:^(NSUInteger numberOfSteps, NSDate *timestamp, NSError *error) {
+- (void)dealloc {
+    [_timer invalidate];
+}
+
+- (void)start {
+    if ([self.timer isValid]) {
+        [self.timer invalidate];
+    }
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:kUploadInterval target:self selector:@selector(uploadStepCountData:) userInfo:nil repeats:YES];
+    [[BBNetworkApiManager sharedManager] getHistoryStepCountAfterDate:[[[BBDatabaseManager sharedManager] lastDateSavedStepCountData]dayString]
+                                                      completionBlock:^(NSArray *array, NSError *error) {
+                                                          if (!error) {
+                                                              [[BBDatabaseManager sharedManager] saveStepCountData:array];
+                                                          }
+    }];
+}
+
+- (void)uploadStepCountData:(NSTimer *)timer {
+    NSDate *now = [[NSDate date] dateBySubtractingMinutes:[NSDate date].minute];
+    [self queryStepsOfHour:now resultBlock:^(NSUInteger stepCount, NSError *error) {
         if (!error) {
-            [[NSNotificationCenter defaultCenter]postNotificationName:kBBNotificationStepCountingUpdate object:nil userInfo:@{@"date":timestamp,@"steps":@(numberOfSteps)}];
+            [[BBNetworkApiManager sharedManager] uploadStepDataWithStepCount:stepCount startTime:[now stringWithFormat:@"yyyy-MM-dd HH:mm:ss"]  completionBlock:^(id responseObject, NSError *error) {
+                
+            }];
         }
     }];
 }
 
-- (void)queryStepsOfToday:(QueryResultBlock)resultBlock {
+- (void)queryStepsOfHour:(NSDate *)beginOfHour  resultBlock:(QueryHourResultBlock)resultBlock {
+    [self.stepCountingService queryStepCountingFromDate:beginOfHour endDate:[beginOfHour dateByAddingHours:1] handler:^(NSUInteger numberOfSteps, NSDate *timestamp, NSError *error) {
+        resultBlock(numberOfSteps,error);
+    }];
+}
+
+- (void)queryStepsOfToday:(QueryTodayResultBlock)resultBlock {
     __block NSMutableArray *result = [[NSMutableArray alloc]init];
     __block NSUInteger count = 0;
     __block NSUInteger totalSteps = 0;
     for (NSUInteger index = 0; index < 24; index++) {
         [result addObject:@(0)];
     }
-    NSDate *beginDate = [[NSDate date]dateAtStartOfDay] ;
+    NSDate *beginDate = [[NSDate date]dateAtStartOfDay];
     for (NSUInteger index = 0; index < 24; index++) {
         [self.stepCountingService queryStepCountingFromDate:[beginDate dateByAddingHours:index] endDate:[beginDate dateByAddingHours:index+1] handler:^(NSUInteger numberOfSteps, NSDate *timestamp, NSError *error) {
             result[timestamp.hour] = @(numberOfSteps);
             count++;
             totalSteps += numberOfSteps;
             if (count >= 24) {
-                resultBlock(result, totalSteps);
+                resultBlock(result, totalSteps,nil);
             }
         }];
     }

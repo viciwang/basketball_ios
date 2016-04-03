@@ -49,8 +49,13 @@ typedef void(^BBNetworkResponseBlock)(id responseObject, NSError *error);
 
 - (NSURLSessionDataTask *)getAverageStepCountWithCompletionBlock:(BBNetworkResponseBlock)responseBlock;
 
-- (NSURLSessionDataTask *)getHistoryStepCountWithCompletionBlock:(BBNetworkResponseBlock)responseBlock;
+- (NSURLSessionDataTask *)getHistoryStepCountAfterDate:(NSString *)date
+                                       completionBlock:(BBNetworkResponseBlock)responseBlock;
 
 - (NSURLSessionDataTask *)getStepCountRankingWithCompletionBlock:(BBNetworkResponseBlock)responseBlock;
+
+- (NSURLSessionDataTask *)uploadStepDataWithStepCount:(NSUInteger)stepCount
+                                            startTime:(NSString *)startTime
+                                      completionBlock:(BBNetworkResponseBlock)responseBlock;
 
 @end

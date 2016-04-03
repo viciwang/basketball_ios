@@ -103,7 +103,7 @@
 
 - (void)updateChartData {
     @weakify(self);
-    [[BBStepCountingManager sharedManager] queryStepsOfToday:^(NSArray *steps, NSUInteger totalStep) {
+    [[BBStepCountingManager sharedManager] queryStepsOfToday:^(NSArray *steps, NSUInteger totalStep, NSError *error) {
         @strongify(self);
         [self updateTodayData:steps];
         [self.chartView animateWithXAxisDuration:2.0];

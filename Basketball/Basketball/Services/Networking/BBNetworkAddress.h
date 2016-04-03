@@ -49,4 +49,6 @@
 
 #define kApiAddShare @"ShareManager/addShare"
 
+#define kApiStepCountingUploadData @"stepCounting/uploadStepData"
+
 #endif /* BBNetworkAddress_h */

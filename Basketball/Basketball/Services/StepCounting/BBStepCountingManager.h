@@ -8,17 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void(^QueryResultBlock)(NSArray *steps, NSUInteger todayTotalStep);
+typedef void(^QueryTodayResultBlock)(NSArray *steps, NSUInteger todayTotalStep,NSError *error);
+typedef void(^QueryHourResultBlock)(NSUInteger stepCount,NSError *error);
 
 @interface BBStepCountingManager : NSObject
 
 + (BBStepCountingManager *)sharedManager;
 
-//- (void)startStepCounting;
+- (void)start;
 //
 //- (void)stopStepCounting;
 
-- (void)queryStepsOfToday:(QueryResultBlock)resultBlock;
+- (void)queryStepsOfToday:(QueryTodayResultBlock)resultBlock;
 
 //- (void)queryStepsOfThisWeek:(QueryResultBlock)resultBlock;
 //

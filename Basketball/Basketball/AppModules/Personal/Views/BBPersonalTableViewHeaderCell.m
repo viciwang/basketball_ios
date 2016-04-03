@@ -40,7 +40,7 @@
         self.userNameLabel.text = user.nickName;
         self.userNameLabel.userInteractionEnabled = NO;
         [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:user.headImageUrl]];
-        self.personalDescriptionLabel.text = user.personalDescription;
+        self.personalDescriptionLabel.text = user.personalDescription.length == 0 ? @"暂无个人描述":user.personalDescription;
     }
     else {
         self.userNameLabel.userInteractionEnabled = YES;

@@ -76,6 +76,7 @@
         user.city = [result stringForColumn:@"city"];
         user.token = [result stringForColumn:@"token"];
         user.lastLoginTime = [result stringForColumn:@"lastLoginTime"];
+        user.personalDescription = [result stringForColumn:@"personalDescription"];
     }
     [self.localDatabase close];
     return user;

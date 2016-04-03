@@ -27,6 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupUI];
     [self setupScrollView];
     [self.showHistoryButton addTarget:self action:@selector(showHistory:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -86,6 +87,11 @@
     [self.scrollView addSubview:self.rollView];
     [self.scrollView addSubview:self.chartView];
     [self.scrollView addSubview:self.showHistoryButton];
+}
+
+- (void)setupUI {
+    self.view.backgroundColor = baseColor;
+    self.title = @"今日步数";
 }
 
 #pragma mark - properties

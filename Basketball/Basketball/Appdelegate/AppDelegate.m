@@ -31,14 +31,6 @@ const int ddLogLevel = DDLogLevelWarning;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    // debug
-#if DEBUG
-    NSLog(@"当前用户：\n%@",[BBUser currentUser]);
-    [self configFLEX];
-    [self configCocoaLumberjack];
-    [self configBaseUrl];
-#endif
-    
     UIViewController *controller = nil;
     if (![BBUser currentUser]) {
         controller = [[BBNavigationController alloc]initWithRootViewController:[BBLoginViewController create]];
@@ -51,6 +43,14 @@ const int ddLogLevel = DDLogLevelWarning;
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = controller;
     [self.window makeKeyAndVisible];
+    
+    // debug
+#if DEBUG
+    NSLog(@"当前用户：\n%@",[BBUser currentUser]);
+    [self configFLEX];
+    [self configCocoaLumberjack];
+    [self configBaseUrl];
+#endif
     
     [self addNotificationObsever];
     [self setupUI];

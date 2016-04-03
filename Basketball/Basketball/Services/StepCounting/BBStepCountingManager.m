@@ -12,7 +12,7 @@
 #import "BBNetworkApiManager.h"
 #import "BBDatabaseManager.h"
 
-#define kUploadInterval 5
+#define kUploadInterval 30
 
 @interface BBStepCountingManager ()
 

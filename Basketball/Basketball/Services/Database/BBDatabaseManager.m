@@ -125,7 +125,7 @@
             if ([date isLaterThanDate:lastDate]) {
                 break;
             }
-            [self.localDatabase executeUpdate:@"INSERT INTO StepCountDailyCount (stepCount, startTime) VALUES (?,?)",dayRecord.stepCount , dayRecord.date];
+            [self.localDatabase executeUpdate:@"INSERT INTO StepCountDailyList (stepCount, date) VALUES (?,?)",@(dayRecord.stepCount) , dayRecord.date];
         }
         if (i != monthRecord.dayRecords.count) {
             break;
@@ -142,7 +142,7 @@
     FMResultSet *result = [self.localDatabase executeQuery:@"SELECT `date` FROM StepCountDailyList  ORDER BY `date` DESC;"];
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:0];
     if ([result next]) {
-        date = [result dateForColumn:0];
+        date = [result dateForColumnIndex:0];
     }
     [self.localDatabase close];
     return date;

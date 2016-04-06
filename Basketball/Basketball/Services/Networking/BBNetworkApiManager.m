@@ -62,6 +62,9 @@ static NSString *_debugBaseUrl = nil;
     if ([BBNetworkApiManager retriveDebugBaseUrl]) {
         self = [super initWithBaseURL:[NSURL URLWithString:[BBNetworkApiManager retriveDebugBaseUrl]]];
     }
+    else {
+        self = [super initWithBaseURL:[NSURL URLWithString:kApiBaseUrl]];
+    }
 #else
     self = [super initWithBaseURL:[NSURL URLWithString:kApiBaseUrl]];
 #endif

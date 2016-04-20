@@ -60,13 +60,13 @@
         make.height.equalTo(self.view).multipliedBy(0.3);
         make.width.equalTo(self.view);
     }];
-    [self.showHistoryButton mas_updateConstraints:^(MASConstraintMaker *make) {
-        @strongify(self);
-        make.top.equalTo(self.chartView.mas_bottom);
-        make.left.right.equalTo(self.scrollView);
-        make.height.equalTo(self.view).multipliedBy(0.1);
-        make.width.equalTo(self.view);
-    }];
+//    [self.showHistoryButton mas_updateConstraints:^(MASConstraintMaker *make) {
+//        @strongify(self);
+//        make.top.equalTo(self.chartView.mas_bottom);
+//        make.left.right.equalTo(self.scrollView);
+//        make.height.equalTo(self.view).multipliedBy(0.1);
+//        make.width.equalTo(self.view);
+//    }];
     [super updateViewConstraints];
 }
 
@@ -86,7 +86,7 @@
     [self.view addSubview:self.scrollView];
     [self.scrollView addSubview:self.rollView];
     [self.scrollView addSubview:self.chartView];
-    [self.scrollView addSubview:self.showHistoryButton];
+//    [self.scrollView addSubview:self.showHistoryButton];
 }
 
 - (void)setupUI {

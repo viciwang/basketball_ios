@@ -110,7 +110,7 @@ UITableViewDataSource
     [self.view addSubview:self.tableView];
     
     self.cellTitles = @[@[@"个人描述"],@[@"今天步数",@"步数排行榜",@"历史数据"],@[@"清除缓存",@"关于我们"],@[@"退出"]];
-    self.cellIconString = @[@[@"no_image"],@[@"Run",@"Rank",@"Trash"],@[@"History",@"Info"],@[@"no_image"]];
+    self.cellIconString = @[@[@"no_image"],@[@"Run",@"Rank",@"History"],@[@"Trash",@"Info"],@[@"no_image"]];
     
     self.titleBannerView = [UIView new];
     self.titleBannerView.backgroundColor = baseColor;

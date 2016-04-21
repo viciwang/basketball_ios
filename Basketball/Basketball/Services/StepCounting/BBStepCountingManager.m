@@ -87,4 +87,17 @@
     }
 }
 
+- (void)queryAverageStepCountWithCompletionBlock:(void (^)(NSInteger, NSError *))completionBlock {
+    NSInteger stepCount = [[BBDatabaseManager sharedManager] retriveAverageStepCount];
+    if (stepCount > 0) {
+        completionBlock(stepCount, nil);
+        return;
+    }
+    [[BBNetworkApiManager sharedManager] getAverageStepCountWithCompletionBlock:^(NSNumber *average, NSError *error) {
+        if (completionBlock) {
+            completionBlock(average.integerValue,error);
+        }
+    }];
+}
+
 @end

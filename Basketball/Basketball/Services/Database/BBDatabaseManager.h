@@ -13,6 +13,8 @@
 
 + (BBDatabaseManager *)sharedManager;
 
+- (NSInteger)retriveAverageStepCount;
+
 - (BBUser *)retriveCurrentUser;
 
 - (BOOL)saveCurrentUser:(BBUser *)user;

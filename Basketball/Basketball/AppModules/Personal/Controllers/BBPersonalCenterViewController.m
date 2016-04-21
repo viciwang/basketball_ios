@@ -245,6 +245,12 @@ UITableViewDataSource
         cell.commonCellView.bottomLineRightSpace = 0;
         
         cell.commonCellView.shouldShowdisclosureIndicator = YES;
+        
+        // 清除缓存
+        if (indexPath.section == 2 && indexPath.row == 1) {
+            NSInteger size = ([SDImageCache sharedImageCache].getSize + [[NSURLCache sharedURLCache] currentDiskUsage])/ 1024 / 1024.0;// byte -> kb -> mb
+            cell.commonCellView.rightLabelText = [NSString stringWithFormat:@"%@M", @(size)];
+        }
         return cell;
     }
     

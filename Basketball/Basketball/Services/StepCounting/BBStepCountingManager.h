@@ -21,6 +21,8 @@ typedef void(^QueryHourResultBlock)(NSUInteger stepCount,NSError *error);
 
 - (void)queryStepsOfToday:(QueryTodayResultBlock)resultBlock;
 
+- (void)queryAverageStepCountWithCompletionBlock:(void (^)(NSInteger average, NSError *error)) completionBlock;
+
 //- (void)queryStepsOfThisWeek:(QueryResultBlock)resultBlock;
 //
 //- (void)queryStepsOfThisMonth:(QueryResultBlock)resultBlock;

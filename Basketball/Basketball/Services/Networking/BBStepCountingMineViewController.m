@@ -134,7 +134,7 @@
 - (void)loadData {
     @weakify(self);
     [self showLoadingHUDWithInfo:nil];
-    [[BBNetworkApiManager sharedManager] getAverageStepCountWithCompletionBlock:^(NSNumber *average, NSError *error) {
+    [[BBStepCountingManager sharedManager] queryAverageStepCountWithCompletionBlock:^(NSInteger average, NSError *error) {
         @strongify(self);
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         [self.scrollView.mj_header endRefreshing];
@@ -145,7 +145,7 @@
             [[BBStepCountingManager sharedManager] queryStepsOfToday:^(NSArray *steps, NSUInteger totalSteps,NSError *error) {
                 @strongify(self);
                 [self.chartView refreshWithData:steps];
-                [self.rollView refreshWithTodayStep:totalSteps average:average.unsignedIntegerValue];
+                [self.rollView refreshWithTodayStep:totalSteps average:average];
             }];
         }
     }];

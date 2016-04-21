@@ -149,4 +149,17 @@
     return date;
 }
 
+- (NSInteger)retriveAverageStepCount {
+    if (![self.localDatabase open]) {
+        return NO;
+    }
+    FMResultSet *result = [self.localDatabase executeQuery:@"SELECT avg(stepCount) FROM StepCountDailyList"];
+    NSInteger num = 0;
+    if ([result next]) {
+        num = [result longForColumnIndex:0];
+    }
+    [self.localDatabase close];
+    return  num;
+}
+
 @end

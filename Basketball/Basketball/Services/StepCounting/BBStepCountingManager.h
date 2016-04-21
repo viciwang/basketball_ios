@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BBStepCountingService.h"
 
 typedef void(^QueryTodayResultBlock)(NSArray *steps, NSUInteger todayTotalStep,NSError *error);
 typedef void(^QueryHourResultBlock)(NSUInteger stepCount,NSError *error);
@@ -16,8 +17,10 @@ typedef void(^QueryHourResultBlock)(NSUInteger stepCount,NSError *error);
 + (BBStepCountingManager *)sharedManager;
 
 - (void)start;
-//
-//- (void)stopStepCounting;
+
+- (void)startStepCountingUpdateWithHandler:(StepCountingUpdateBlock)handler;
+
+- (void)stopStepCountingUpdate;
 
 - (void)queryStepsOfToday:(QueryTodayResultBlock)resultBlock;
 

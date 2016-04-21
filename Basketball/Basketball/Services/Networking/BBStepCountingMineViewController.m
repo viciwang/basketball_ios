@@ -29,9 +29,9 @@
     [super viewDidLoad];
     [self setupUI];
     [self setupScrollView];
-    [self.showHistoryButton addTarget:self action:@selector(showHistory:) forControlEvents:UIControlEventTouchUpInside];
     
     [self loadData];
+    [self startStepCountingUpdate];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -75,6 +75,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc {
+    [[BBStepCountingManager sharedManager] stopStepCountingUpdate];
+}
+
 - (void)setupScrollView {
     self.scrollView = [UIScrollView new];
     @weakify(self);
@@ -92,6 +96,7 @@
 - (void)setupUI {
     self.view.backgroundColor = baseColor;
     self.title = @"今日步数";
+    [self.showHistoryButton addTarget:self action:@selector(showHistory:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 #pragma mark - properties
@@ -129,7 +134,7 @@
     }
 }
 
-#pragma mark - load data
+#pragma mark - data
 
 - (void)loadData {
     @weakify(self);
@@ -150,4 +155,15 @@
         }
     }];
 }
+
+- (void)startStepCountingUpdate {
+    @weakify(self);
+    [[BBStepCountingManager sharedManager] startStepCountingUpdateWithHandler:^(NSUInteger numberOfSteps, NSDate *timestamp, NSError *error) {
+        @strongify(self);
+        if (!error) {
+            [self.rollView refreshWithTodayStep:numberOfSteps];
+        }
+    }];
+}
+
 @end

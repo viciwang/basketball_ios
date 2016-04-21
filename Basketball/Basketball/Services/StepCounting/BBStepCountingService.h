@@ -12,7 +12,9 @@ typedef void (^StepCountingUpdateBlock)(NSUInteger numberOfSteps, NSDate *timest
 
 @protocol BBStepCountingService <NSObject>
 
-- (void)startStepCountingWithHandler:(StepCountingUpdateBlock)handler;
+- (void)startStepCountingUpdateWithHandler:(StepCountingUpdateBlock)handler;
+
+- (void)stopStepCountingUpdate;
 
 - (void)queryStepCountingFromDate:(NSDate *)beginDate endDate:(NSDate *)endDate handler:(StepCountingUpdateBlock)handler;
 

@@ -100,4 +100,16 @@
     }];
 }
 
+- (void)startStepCountingUpdateWithHandler:(StepCountingUpdateBlock)handler {
+    [self.stepCountingService startStepCountingUpdateWithHandler:^(NSUInteger numberOfSteps, NSDate *timestamp, NSError *error) {
+        if (handler) {
+            handler(numberOfSteps,timestamp,error);
+        }
+    }];
+}
+
+- (void)stopStepCountingUpdate {
+    [self.stepCountingService stopStepCountingUpdate];
+}
+
 @end

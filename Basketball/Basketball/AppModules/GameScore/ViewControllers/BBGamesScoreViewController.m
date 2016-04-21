@@ -113,7 +113,7 @@
         date = [formatter stringFromDate:[NSDate date]];
     }
     
-    _titileLabel.text = [NSString stringWithFormat:@"%@  NBA %lu场比赛",date, _viewModel.games.count];
+    _titileLabel.text = [NSString stringWithFormat:@"%@  NBA %@场比赛",date, @(_viewModel.games.count)];
     [self showContentView];
     [_activityView stopAnimating];
     [self.mainTableView reloadData];

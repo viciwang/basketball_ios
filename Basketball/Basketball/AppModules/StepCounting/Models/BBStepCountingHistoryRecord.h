@@ -11,7 +11,7 @@
 @interface BBStepCountingHistoryMonthRecord : BBModel
 
 @property (nonatomic, copy) NSString *month;
-@property (nonatomic, strong) NSArray *dayRecords;
+@property (nonatomic, copy) NSArray *dayRecords;
 @property (nonatomic, assign) NSUInteger average;
 
 @end

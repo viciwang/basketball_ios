@@ -18,6 +18,8 @@ typedef void(^QueryHourResultBlock)(NSUInteger stepCount,NSError *error);
 
 - (void)start;
 
+- (void)stop;
+
 - (void)startStepCountingUpdateWithHandler:(StepCountingUpdateBlock)handler;
 
 - (void)stopStepCountingUpdate;

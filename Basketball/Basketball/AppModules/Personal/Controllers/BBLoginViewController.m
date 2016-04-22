@@ -58,6 +58,17 @@
     [self setupSignal];
     [self setupUI];
     [self setupNotification];
+    
+#ifdef DEBUG
+    UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(autoFillInfo:)];
+    [self.view addGestureRecognizer:recognizer];
+#endif
+}
+
+- (void)autoFillInfo:(UITapGestureRecognizer *)recognizer
+{
+    self.emailTextField.text = @"1214362919@qq.com";
+    self.passwordTextField.text = @"123456";
 }
 
 - (void)didReceiveMemoryWarning

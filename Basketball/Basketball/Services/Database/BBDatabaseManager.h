@@ -21,6 +21,8 @@
 
 - (BOOL)saveStepCountData:(NSArray *)stepCountData;
 
-- (NSDate *)lastDateSavedStepCountData;
+- (void)retriveHistoryStepCountWithCompletionHandler:(void (^)(NSArray *allMonthData))handler;
+
+- (NSString *)lastDateSavedStepCountData;
 
 @end

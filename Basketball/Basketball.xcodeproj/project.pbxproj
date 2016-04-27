@@ -84,6 +84,8 @@
 		9FC545961CA7BFBE00367CB3 /* BBRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC545951CA7BFBE00367CB3 /* BBRefreshHeader.m */; };
 		9FC5459A1CA7D73B00367CB3 /* BBStepCountingRankHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC545981CA7D73B00367CB3 /* BBStepCountingRankHeadView.m */; };
 		9FC5459B1CA7D73B00367CB3 /* BBStepCountingRankHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FC545991CA7D73B00367CB3 /* BBStepCountingRankHeadView.xib */; };
+		9FCC39E31CD10D300079E324 /* BBAboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC39E11CD10D300079E324 /* BBAboutUsViewController.m */; };
+		9FCC39E41CD10D300079E324 /* BBAboutUsViewController_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC39E21CD10D300079E324 /* BBAboutUsViewController_iPhone.storyboard */; };
 		9FDEF2421C9C153900B629C5 /* BBView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDEF2411C9C153900B629C5 /* BBView.m */; };
 		9FDEF2451C9C15A600B629C5 /* BBStepCountingRollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDEF2441C9C15A600B629C5 /* BBStepCountingRollView.m */; };
 		9FDEF2481C9D30AC00B629C5 /* BBStepCountingChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDEF2471C9D30AC00B629C5 /* BBStepCountingChartView.m */; };
@@ -362,6 +364,9 @@
 		9FC545971CA7D73B00367CB3 /* BBStepCountingRankHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBStepCountingRankHeadView.h; path = Basketball/AppModules/StepCounting/Views/BBStepCountingRankHeadView.h; sourceTree = SOURCE_ROOT; };
 		9FC545981CA7D73B00367CB3 /* BBStepCountingRankHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBStepCountingRankHeadView.m; path = Basketball/AppModules/StepCounting/Views/BBStepCountingRankHeadView.m; sourceTree = SOURCE_ROOT; };
 		9FC545991CA7D73B00367CB3 /* BBStepCountingRankHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBStepCountingRankHeadView.xib; path = Basketball/AppModules/StepCounting/Views/BBStepCountingRankHeadView.xib; sourceTree = SOURCE_ROOT; };
+		9FCC39E01CD10D300079E324 /* BBAboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBAboutUsViewController.h; path = Personal/Controllers/BBAboutUsViewController.h; sourceTree = "<group>"; };
+		9FCC39E11CD10D300079E324 /* BBAboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBAboutUsViewController.m; path = Personal/Controllers/BBAboutUsViewController.m; sourceTree = "<group>"; };
+		9FCC39E21CD10D300079E324 /* BBAboutUsViewController_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BBAboutUsViewController_iPhone.storyboard; path = Personal/Controllers/BBAboutUsViewController_iPhone.storyboard; sourceTree = "<group>"; };
 		9FDEF2401C9C153900B629C5 /* BBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBView.h; sourceTree = "<group>"; };
 		9FDEF2411C9C153900B629C5 /* BBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBView.m; sourceTree = "<group>"; };
 		9FDEF2431C9C15A600B629C5 /* BBStepCountingRollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBStepCountingRollView.h; path = Basketball/AppModules/StepCounting/Views/BBStepCountingRollView.h; sourceTree = SOURCE_ROOT; };
@@ -1060,6 +1065,9 @@
 				9F7A79C31CA56FBD004ABE1C /* BBRegisterAndResetPasswordViewController.h */,
 				9F7A79C41CA56FBD004ABE1C /* BBRegisterAndResetPasswordViewController.m */,
 				9F7A79C51CA56FBD004ABE1C /* BBRegisterAndResetPasswordViewController_iPhone.storyboard */,
+				9FCC39E01CD10D300079E324 /* BBAboutUsViewController.h */,
+				9FCC39E11CD10D300079E324 /* BBAboutUsViewController.m */,
+				9FCC39E21CD10D300079E324 /* BBAboutUsViewController_iPhone.storyboard */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1864,6 +1872,7 @@
 				C3584B3E1C9076220087FF34 /* CLE_logo.png in Resources */,
 				C31680F61CA42A9700701A25 /* BBShareEditViewController_iPhone.storyboard in Resources */,
 				C3584B531C9076220087FF34 /* SAS_logo.png in Resources */,
+				9FCC39E41CD10D300079E324 /* BBAboutUsViewController_iPhone.storyboard in Resources */,
 				C3584B391C9076220087FF34 /* ATL_logo.png in Resources */,
 				C3F8A55A1C9D80960086FF4B /* NewsRecourceViewController_iPhone.storyboard in Resources */,
 				9F7A79C71CA56FBD004ABE1C /* BBRegisterAndResetPasswordViewController_iPhone.storyboard in Resources */,
@@ -2148,6 +2157,7 @@
 				9F2E841D1CCA00A40053BFB2 /* BBStartupManager.m in Sources */,
 				C31680F41CA42A6600701A25 /* BBShareCommentCell.m in Sources */,
 				C3F8A5391C9D72820086FF4B /* WYNetworkingManager.m in Sources */,
+				9FCC39E31CD10D300079E324 /* BBAboutUsViewController.m in Sources */,
 				C3584B021C9075C60087FF34 /* UIView+Utils.m in Sources */,
 				9F33CE881CA13C5F0016EB39 /* BBStepCountingRank.m in Sources */,
 				9F6AB7BC1CA4488900C7D963 /* BBChangeInfoViewController.m in Sources */,

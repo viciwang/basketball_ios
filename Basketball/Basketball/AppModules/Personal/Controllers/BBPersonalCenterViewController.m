@@ -21,6 +21,7 @@
 #import "BBStepCountingRankViewController.h"
 #import "BBStepCountingHistoryViewController.h"
 #import "BBStepCountingMineViewController.h"
+#import "BBAboutUsViewController.h"
 
 @interface BBPersonalCenterViewController ()
 <
@@ -163,7 +164,19 @@ UITableViewDataSource
         }
     }
     else if(section == 2) {
-        
+        switch (row) {
+            case 0: {
+                [self clearCache];
+                break;
+            }
+            case 1: {
+                [self.navigationController pushViewController:[BBAboutUsViewController create] animated:YES];
+                break;
+            }
+                
+            default:
+                break;
+        }
     }
     else if(section == 3) {
         @weakify(self);
@@ -247,7 +260,7 @@ UITableViewDataSource
         cell.commonCellView.shouldShowdisclosureIndicator = YES;
         
         // 清除缓存
-        if (indexPath.section == 2 && indexPath.row == 1) {
+        if (indexPath.section == 2 && indexPath.row == 0) {
             NSInteger size = ([SDImageCache sharedImageCache].getSize + [[NSURLCache sharedURLCache] currentDiskUsage])/ 1024 / 1024.0;// byte -> kb -> mb
             cell.commonCellView.rightLabelText = [NSString stringWithFormat:@"%@M", @(size)];
         }
@@ -300,4 +313,20 @@ UITableViewDataSource
         [[UIApplication sharedApplication].keyWindow bb_checkoutRootViewController:nav];
     }];
 }
+
+- (void)clearCache
+{
+    @weakify(self);
+    [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            [[NSURLCache sharedURLCache] removeAllCachedResponses];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                @strongify(self);
+                [self showInfoHUD:@"缓存清理成功"];
+                [self.tableView reloadData];
+            });
+        });
+    }];
+}
+
 @end

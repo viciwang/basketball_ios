@@ -74,11 +74,13 @@ ChartViewDelegate
     self.chartView.xAxis.enabled = NO;
     
     self.chartView.legend.enabled = NO;
+    self.chartView.scaleXEnabled = NO;
+    self.chartView.scaleYEnabled = NO;
 }
 
 #pragma mark - data
 
-- (void)updateWithData:(BBStepCountingHistoryMonthRecord *)record {
+- (void)updateWithData:(BBStepCountingHistoryMonthRecord *)record isLastCell:(BOOL)isLastCell selectedHandler:(void (^)(NSUInteger, NSUInteger))handler {
     NSDateFormatter *formatter = [NSDateFormatter new];
     formatter.dateFormat = @"yyyy-MM";
     NSDate *date = [formatter dateFromString:record.month];
@@ -93,11 +95,23 @@ ChartViewDelegate
     NSMutableArray *xVals = [[NSMutableArray alloc] init];
     NSMutableArray *yVals = [[NSMutableArray alloc] init];
     
-    
-    for (int i = 0; i < daysOfMonth; i++) {
+    int i = 0;
+    NSUInteger descress = daysOfMonth - record.dayRecords.count;
+    if (descress>0 && isLastCell) {
+        for (i = 0; i < descress; i++) {
+            [xVals addObject:@(i)];
+            [yVals addObject:[[BarChartDataEntry alloc] initWithValue:0 xIndex:i]];
+        }
+        descress = daysOfMonth - record.dayRecords.count;
+    }
+    else {
+        descress = 0;
+    }
+    for (; i < daysOfMonth; i++) {
+        NSUInteger index = i - descress;
         [xVals addObject:@(i)];
-        if (i<record.dayRecords.count) {
-            BBStepCountingHistoryDayRecord *r = record.dayRecords[i];
+        if (index <record.dayRecords.count) {
+            BBStepCountingHistoryDayRecord *r = record.dayRecords[index];
             [yVals addObject:[[BarChartDataEntry alloc] initWithValue:r.stepCount xIndex:i]];
         }
     }
@@ -121,11 +135,11 @@ ChartViewDelegate
 
 - (void)chartValueSelected:(ChartViewBase * __nonnull)chartView entry:(ChartDataEntry * __nonnull)entry dataSetIndex:(NSInteger)dataSetIndex highlight:(ChartHighlight * __nonnull)highlight
 {
-//    NSLog(@"chartValueSelected");
+    NSLog(@"chartValueSelected");
 }
 
 - (void)chartValueNothingSelected:(ChartViewBase * __nonnull)chartView
 {
-//    NSLog(@"chartValueNothingSelected");
+    NSLog(@"chartValueNothingSelected");
 }
 @end

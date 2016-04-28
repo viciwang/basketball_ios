@@ -85,7 +85,7 @@ UITableViewDataSource
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     BBStepCountingHistoryRecordCell *cell = [self.tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BBStepCountingHistoryRecordCell class]) forIndexPath:indexPath];
-    [cell updateWithData:self.records[indexPath.row]];
+    [cell updateWithData:self.records[indexPath.row] isLastCell:(indexPath.row == self.records.count -1)];
     return cell;
 }
 @end

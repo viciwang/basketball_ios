@@ -44,7 +44,7 @@ UITableViewDataSource
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"";
+    self.title = @"我";
     [self setupNavigationBar];
     [self setupTableView];
     [self setupObserver];

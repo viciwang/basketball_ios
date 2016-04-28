@@ -11,6 +11,7 @@
 #import "BBTabBarController.h"
 #import "BBUser.h"
 #import "UIWindow+Utils.h"
+#import "NSString+NSHash.h"
 
 @interface BBRegisterAndResetPasswordViewController ()
 
@@ -103,7 +104,7 @@
     @weakify(self);
     
     if (self.type == BBRegisterAndResetPasswordViewControllerTypeRegister) {
-        [[BBNetworkApiManager sharedManager] registerWithEmail:self.emailTextField.text password:self.passwordTextField.text verifyCode:self.verifyCodeTextField.text completionBlock:^(BBUser *user, NSError *error) {
+        [[BBNetworkApiManager sharedManager] registerWithEmail:self.emailTextField.text password:[self.passwordTextField.text MD5] verifyCode:self.verifyCodeTextField.text completionBlock:^(BBUser *user, NSError *error) {
             @strongify(self);
             [MBProgressHUD hideHUDForView:self.view animated:YES];
             if (error) {
@@ -116,7 +117,7 @@
         }];
     }
     else {
-        [[BBNetworkApiManager sharedManager] resetPasswordWithEmail:self.emailTextField.text password:self.passwordTextField.text verifyCode:self.verifyCodeTextField.text completionBlock:^(BBUser *user, NSError *error) {
+        [[BBNetworkApiManager sharedManager] resetPasswordWithEmail:self.emailTextField.text password:[self.passwordTextField.text MD5] verifyCode:self.verifyCodeTextField.text completionBlock:^(BBUser *user, NSError *error) {
             @strongify(self);
             [MBProgressHUD hideHUDForView:self.view animated:YES];
             if (error) {

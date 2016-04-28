@@ -94,7 +94,7 @@
     }
     BOOL success = NO;
     if (user) {
-        BOOL success = [self.localDatabase executeUpdate:@"INSERT INTO User (uid, email, nickName, headImageUrl, city, token, lastLoginTime) VALUES (?,?,?,?,?,?,?)",user.uid,user.email,user.nickName,user.headImageUrl,user.city,user.token,user.lastLoginTime];
+        BOOL success = [self.localDatabase executeUpdate:@"INSERT INTO User (uid, email, nickName, headImageUrl, city, token, lastLoginTime, personalDescription) VALUES (?,?,?,?,?,?,?,?)",user.uid,user.email,user.nickName,user.headImageUrl,user.city,user.token,user.lastLoginTime,user.personalDescription];
         if (!success) {
             DDLogInfo(@"sqlite保存出错：%@",[self.localDatabase lastErrorMessage]);
         }

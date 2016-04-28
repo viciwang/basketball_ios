@@ -129,6 +129,7 @@
     [[BBNetworkApiManager sharedManager] loginWithEmail:self.emailTextField.text password:[self.passwordTextField.text MD5] completionBlock:^(BBUser *user, NSError *error) {
         @strongify(self);
         [MBProgressHUD hideHUDForView:self.view animated:YES];
+        self.view.userInteractionEnabled = YES;
         if (error) {
             [self showErrorHUDWithInfo:error.userInfo[@"msg"]];
         }

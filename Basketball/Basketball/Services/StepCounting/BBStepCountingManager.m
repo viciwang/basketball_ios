@@ -12,7 +12,7 @@
 #import "BBNetworkApiManager.h"
 #import "BBDatabaseManager.h"
 
-#define kUploadInterval 30
+#define kUploadInterval 60
 
 @interface BBStepCountingManager ()
 
@@ -42,12 +42,20 @@
         [self.timer invalidate];
     }
     self.timer = [NSTimer scheduledTimerWithTimeInterval:kUploadInterval target:self selector:@selector(uploadStepCountData:) userInfo:nil repeats:YES];
-    [[BBNetworkApiManager sharedManager] getHistoryStepCountAfterDate:[[[BBDatabaseManager sharedManager] lastDateSavedStepCountData]dayString]
+    [[BBNetworkApiManager sharedManager] getHistoryStepCountAfterDate:[[BBDatabaseManager sharedManager] lastDateSavedStepCountData]
                                                       completionBlock:^(NSArray *array, NSError *error) {
                                                           if (!error) {
                                                               [[BBDatabaseManager sharedManager] saveStepCountData:array];
                                                           }
     }];
+}
+
+- (void)stop
+{
+    if ([self.timer isValid]) {
+        [self.timer invalidate];
+    }
+    [self stopStepCountingUpdate];
 }
 
 - (void)uploadStepCountData:(NSTimer *)timer {
@@ -85,6 +93,31 @@
             }
         }];
     }
+}
+
+- (void)queryAverageStepCountWithCompletionBlock:(void (^)(NSInteger, NSError *))completionBlock {
+    NSInteger stepCount = [[BBDatabaseManager sharedManager] retriveAverageStepCount];
+    if (stepCount > 0) {
+        completionBlock(stepCount, nil);
+        return;
+    }
+    [[BBNetworkApiManager sharedManager] getAverageStepCountWithCompletionBlock:^(NSNumber *average, NSError *error) {
+        if (completionBlock) {
+            completionBlock(average.integerValue,error);
+        }
+    }];
+}
+
+- (void)startStepCountingUpdateWithHandler:(StepCountingUpdateBlock)handler {
+    [self.stepCountingService startStepCountingUpdateWithHandler:^(NSUInteger numberOfSteps, NSDate *timestamp, NSError *error) {
+        if (handler) {
+            handler(numberOfSteps,timestamp,error);
+        }
+    }];
+}
+
+- (void)stopStepCountingUpdate {
+    [self.stepCountingService stopStepCountingUpdate];
 }
 
 @end

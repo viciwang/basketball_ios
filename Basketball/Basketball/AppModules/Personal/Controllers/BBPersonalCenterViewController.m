@@ -21,6 +21,7 @@
 #import "BBStepCountingRankViewController.h"
 #import "BBStepCountingHistoryViewController.h"
 #import "BBStepCountingMineViewController.h"
+#import "BBAboutUsViewController.h"
 
 @interface BBPersonalCenterViewController ()
 <
@@ -43,7 +44,6 @@ UITableViewDataSource
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"";
     [self setupNavigationBar];
     [self setupTableView];
     [self setupObserver];
@@ -95,7 +95,9 @@ UITableViewDataSource
 #pragma mark - UI
 
 - (void)setupNavigationBar {
-    
+    NSMutableDictionary *dict = [self.navigationController.navigationBar.titleTextAttributes mutableCopy];
+    dict[NSForegroundColorAttributeName] = UIColorFromHex(0x0192c9);
+    self.navigationController.navigationBar.titleTextAttributes = dict;
 }
 
 - (void)setupTableView {
@@ -110,7 +112,7 @@ UITableViewDataSource
     [self.view addSubview:self.tableView];
     
     self.cellTitles = @[@[@"个人描述"],@[@"今天步数",@"步数排行榜",@"历史数据"],@[@"清除缓存",@"关于我们"],@[@"退出"]];
-    self.cellIconString = @[@[@"no_image"],@[@"Run",@"Rank",@"Trash"],@[@"History",@"Info"],@[@"no_image"]];
+    self.cellIconString = @[@[@"no_image"],@[@"Run",@"Rank",@"History"],@[@"Trash",@"Info"],@[@"no_image"]];
     
     self.titleBannerView = [UIView new];
     self.titleBannerView.backgroundColor = baseColor;
@@ -163,7 +165,19 @@ UITableViewDataSource
         }
     }
     else if(section == 2) {
-        
+        switch (row) {
+            case 0: {
+                [self clearCache];
+                break;
+            }
+            case 1: {
+                [self.navigationController pushViewController:[BBAboutUsViewController create] animated:YES];
+                break;
+            }
+                
+            default:
+                break;
+        }
     }
     else if(section == 3) {
         @weakify(self);
@@ -245,6 +259,12 @@ UITableViewDataSource
         cell.commonCellView.bottomLineRightSpace = 0;
         
         cell.commonCellView.shouldShowdisclosureIndicator = YES;
+        
+        // 清除缓存
+        if (indexPath.section == 2 && indexPath.row == 0) {
+            NSInteger size = ([SDImageCache sharedImageCache].getSize + [[NSURLCache sharedURLCache] currentDiskUsage])/ 1024 / 1024.0;// byte -> kb -> mb
+            cell.commonCellView.rightLabelText = [NSString stringWithFormat:@"%@M", @(size)];
+        }
         return cell;
     }
     
@@ -294,4 +314,20 @@ UITableViewDataSource
         [[UIApplication sharedApplication].keyWindow bb_checkoutRootViewController:nav];
     }];
 }
+
+- (void)clearCache
+{
+    @weakify(self);
+    [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            [[NSURLCache sharedURLCache] removeAllCachedResponses];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                @strongify(self);
+                [self showInfoHUD:@"缓存清理成功"];
+                [self.tableView reloadData];
+            });
+        });
+    }];
+}
+
 @end

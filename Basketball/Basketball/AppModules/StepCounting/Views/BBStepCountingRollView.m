@@ -47,6 +47,10 @@
     [self.circleLayer addAnimation:animation forKey:@"strokeEndAnimation"];
 }
 
+- (void)refreshWithTodayStep:(NSUInteger)steps {
+    self.todayCountingLabel.text = @(steps).stringValue;
+}
+
 - (CAShapeLayer *)circleLayer {
     if (!_circleLayer) {
         _circleLayer = [CAShapeLayer layer];

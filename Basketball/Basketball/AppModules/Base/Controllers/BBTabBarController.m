@@ -71,6 +71,7 @@
     BBNavigationController *childNav = [[BBNavigationController alloc]initWithRootViewController:childController];
 //    childNav.navigationBar.translucent = YES;
 //    [childNav.navigationBar lt_setBackgroundColor:[UIColor colorWithRed:1/255.0 green:146/255.0 blue:201/255.0 alpha:1]];
+    item.title = title;
     childNav.tabBarItem = item;
 
     [self addChildViewController:childNav];

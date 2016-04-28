@@ -29,9 +29,9 @@
     [super viewDidLoad];
     [self setupUI];
     [self setupScrollView];
-    [self.showHistoryButton addTarget:self action:@selector(showHistory:) forControlEvents:UIControlEventTouchUpInside];
     
     [self loadData];
+    [self startStepCountingUpdate];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -60,19 +60,23 @@
         make.height.equalTo(self.view).multipliedBy(0.3);
         make.width.equalTo(self.view);
     }];
-    [self.showHistoryButton mas_updateConstraints:^(MASConstraintMaker *make) {
-        @strongify(self);
-        make.top.equalTo(self.chartView.mas_bottom);
-        make.left.right.equalTo(self.scrollView);
-        make.height.equalTo(self.view).multipliedBy(0.1);
-        make.width.equalTo(self.view);
-    }];
+//    [self.showHistoryButton mas_updateConstraints:^(MASConstraintMaker *make) {
+//        @strongify(self);
+//        make.top.equalTo(self.chartView.mas_bottom);
+//        make.left.right.equalTo(self.scrollView);
+//        make.height.equalTo(self.view).multipliedBy(0.1);
+//        make.width.equalTo(self.view);
+//    }];
     [super updateViewConstraints];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)dealloc {
+    [[BBStepCountingManager sharedManager] stopStepCountingUpdate];
 }
 
 - (void)setupScrollView {
@@ -86,12 +90,13 @@
     [self.view addSubview:self.scrollView];
     [self.scrollView addSubview:self.rollView];
     [self.scrollView addSubview:self.chartView];
-    [self.scrollView addSubview:self.showHistoryButton];
+//    [self.scrollView addSubview:self.showHistoryButton];
 }
 
 - (void)setupUI {
     self.view.backgroundColor = baseColor;
     self.title = @"今日步数";
+    [self.showHistoryButton addTarget:self action:@selector(showHistory:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 #pragma mark - properties
@@ -129,12 +134,12 @@
     }
 }
 
-#pragma mark - load data
+#pragma mark - data
 
 - (void)loadData {
     @weakify(self);
     [self showLoadingHUDWithInfo:nil];
-    [[BBNetworkApiManager sharedManager] getAverageStepCountWithCompletionBlock:^(NSNumber *average, NSError *error) {
+    [[BBStepCountingManager sharedManager] queryAverageStepCountWithCompletionBlock:^(NSInteger average, NSError *error) {
         @strongify(self);
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         [self.scrollView.mj_header endRefreshing];
@@ -145,9 +150,20 @@
             [[BBStepCountingManager sharedManager] queryStepsOfToday:^(NSArray *steps, NSUInteger totalSteps,NSError *error) {
                 @strongify(self);
                 [self.chartView refreshWithData:steps];
-                [self.rollView refreshWithTodayStep:totalSteps average:average.unsignedIntegerValue];
+                [self.rollView refreshWithTodayStep:totalSteps average:average];
             }];
         }
     }];
 }
+
+- (void)startStepCountingUpdate {
+    @weakify(self);
+    [[BBStepCountingManager sharedManager] startStepCountingUpdateWithHandler:^(NSUInteger numberOfSteps, NSDate *timestamp, NSError *error) {
+        @strongify(self);
+        if (!error) {
+            [self.rollView refreshWithTodayStep:numberOfSteps];
+        }
+    }];
+}
+
 @end

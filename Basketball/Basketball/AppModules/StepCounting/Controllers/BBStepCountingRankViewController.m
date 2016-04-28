@@ -114,7 +114,7 @@ UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         BBStepCountingRankHeadView *v = [self.tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BBStepCountingRankHeadView class]) forIndexPath:indexPath];
-        [v updateWithData:self.ranksResponse.myRank rate:self.ranksResponse.myRank.rank/@(self.ranksResponse.ranks.count).floatValue];
+        [v updateWithData:self.ranksResponse.myRank rate:(self.ranksResponse.ranks.count - self.ranksResponse.myRank.rank)/@(self.ranksResponse.ranks.count).floatValue];
         return v;
     }
     else {

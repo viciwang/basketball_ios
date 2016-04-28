@@ -13,6 +13,7 @@
 #import "UIWindow+Utils.h"
 #import "BBTabBarController.h"
 #import "BBRegisterAndResetPasswordViewController.h"
+#import "NSString+NSHash.h"
 
 @interface BBLoginViewController ()
 
@@ -58,6 +59,17 @@
     [self setupSignal];
     [self setupUI];
     [self setupNotification];
+    
+#ifdef DEBUG
+    UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(autoFillInfo:)];
+    [self.view addGestureRecognizer:recognizer];
+#endif
+}
+
+- (void)autoFillInfo:(UITapGestureRecognizer *)recognizer
+{
+    self.emailTextField.text = @"1214362919@qq.com";
+    self.passwordTextField.text = @"123456";
 }
 
 - (void)didReceiveMemoryWarning
@@ -113,7 +125,7 @@
 - (IBAction)loginAction:(id)sender {
     [self showLoadingHUDWithInfo:nil];
     @weakify(self);
-    [[BBNetworkApiManager sharedManager] loginWithEmail:self.emailTextField.text password:self.passwordTextField.text completionBlock:^(BBUser *user, NSError *error) {
+    [[BBNetworkApiManager sharedManager] loginWithEmail:self.emailTextField.text password:[self.passwordTextField.text MD5] completionBlock:^(BBUser *user, NSError *error) {
         @strongify(self);
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         if (error) {

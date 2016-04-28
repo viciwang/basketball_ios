@@ -13,12 +13,16 @@
 
 + (BBDatabaseManager *)sharedManager;
 
+- (NSInteger)retriveAverageStepCount;
+
 - (BBUser *)retriveCurrentUser;
 
 - (BOOL)saveCurrentUser:(BBUser *)user;
 
 - (BOOL)saveStepCountData:(NSArray *)stepCountData;
 
-- (NSDate *)lastDateSavedStepCountData;
+- (void)retriveHistoryStepCountWithCompletionHandler:(void (^)(NSArray *allMonthData))handler;
+
+- (NSString *)lastDateSavedStepCountData;
 
 @end

@@ -58,15 +58,19 @@ static NSString *_debugBaseUrl = nil;
 }
 
 - (instancetype)init {
+    
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    configuration.timeoutIntervalForRequest = 15;
+    
 #ifdef DEBUG
     if ([BBNetworkApiManager retriveDebugBaseUrl]) {
-        self = [super initWithBaseURL:[NSURL URLWithString:[BBNetworkApiManager retriveDebugBaseUrl]]];
+        self = [super initWithBaseURL:[NSURL URLWithString:[BBNetworkApiManager retriveDebugBaseUrl]] sessionConfiguration:configuration];
     }
     else {
-        self = [super initWithBaseURL:[NSURL URLWithString:kApiBaseUrl]];
+        self = [super initWithBaseURL:[NSURL URLWithString:kApiBaseUrl] sessionConfiguration:configuration];
     }
 #else
-    self = [super initWithBaseURL:[NSURL URLWithString:kApiBaseUrl]];
+    self = [super initWithBaseURL:[NSURL URLWithString:kApiBaseUrl] sessionConfiguration:configuration];
 #endif
     
     if (self) {
@@ -245,6 +249,11 @@ static NSString *_debugBaseUrl = nil;
                 NSArray *records = [MTLJSONAdapter modelsOfClass:[BBStepCountingHistoryMonthRecord class] fromJSONArray:record error:&error];
                 if (error) {
                     DDLogInfo(@"%@",error);
+                }
+                else {
+                    for (BBStepCountingHistoryMonthRecord *r in records) {
+                        r.average = ((NSNumber *)[r valueForKeyPath:@"dayRecords.@avg.stepCount"]).doubleValue;
+                    }
                 }
                 responseBlock(records,nil);
             }

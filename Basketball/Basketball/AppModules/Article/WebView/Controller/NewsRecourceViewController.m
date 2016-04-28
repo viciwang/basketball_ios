@@ -41,8 +41,9 @@
     _progressView.progress = 1.0;
     [UIView animateWithDuration:0.2
                           delay:2.0
-                        options:0
-                     animations:nil
+                        options:0 animations:^{
+                            
+                        }
                      completion:^(BOOL f){
                          _progressView.hidden = YES;
                      }];

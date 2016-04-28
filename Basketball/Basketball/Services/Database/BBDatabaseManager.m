@@ -94,7 +94,7 @@
     }
     BOOL success = NO;
     if (user) {
-        BOOL success = [self.localDatabase executeUpdate:@"INSERT INTO User (uid, email, nickName, headImageUrl, city, token, lastLoginTime) VALUES (?,?,?,?,?,?,?)",user.uid,user.email,user.nickName,user.headImageUrl,user.city,user.token,user.lastLoginTime];
+        BOOL success = [self.localDatabase executeUpdate:@"INSERT INTO User (uid, email, nickName, headImageUrl, city, token, lastLoginTime, personalDescription) VALUES (?,?,?,?,?,?,?,?)",user.uid,user.email,user.nickName,user.headImageUrl,user.city,user.token,user.lastLoginTime,user.personalDescription];
         if (!success) {
             DDLogInfo(@"sqlite保存出错：%@",[self.localDatabase lastErrorMessage]);
         }
@@ -136,17 +136,76 @@
     return YES;
 }
 
-- (NSDate *)lastDateSavedStepCountData {
+- (NSString *)lastDateSavedStepCountData {
     if (![self.localDatabase open]) {
-        return [NSDate dateWithTimeIntervalSince1970:0];
+        return @"1970-01-01";
     }
     FMResultSet *result = [self.localDatabase executeQuery:@"SELECT `date` FROM StepCountDailyList  ORDER BY `date` DESC;"];
-    NSDate *date = [NSDate dateWithTimeIntervalSince1970:0];
+    NSString *date = @"1970-01-01";
     if ([result next]) {
-        date = [result dateForColumnIndex:0];
+        date = [result stringForColumnIndex:0];
     }
     [self.localDatabase close];
     return date;
+}
+
+- (NSInteger)retriveAverageStepCount {
+    if (![self.localDatabase open]) {
+        return 0;
+    }
+    FMResultSet *result = [self.localDatabase executeQuery:@"SELECT avg(stepCount) FROM StepCountDailyList"];
+    NSInteger num = 0;
+    if ([result next]) {
+        num = [result longForColumnIndex:0];
+    }
+    [self.localDatabase close];
+    return  num;
+}
+
+- (void)retriveHistoryStepCountWithCompletionHandler:(void (^)(NSArray *))handler
+{
+    if (![self.localDatabase open]) {
+        if (handler) {
+            handler(nil);
+        }
+    }
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        FMResultSet *result = [self.localDatabase executeQuery:@"SELECT `stepCount`,`date` FROM StepCountDailyList ORDER BY `date` DESC;"];
+        
+        NSMutableArray *allMonthData = [NSMutableArray new];
+        NSMutableArray *dayRecords = [NSMutableArray new];
+        BBStepCountingHistoryDayRecord *record;
+        while ([result next]) {
+            record = [BBStepCountingHistoryDayRecord new];
+            record.stepCount = [result intForColumnIndex:0];
+            record.date = [result stringForColumnIndex:1];
+            [dayRecords addObject:record];
+            if ([[record.date substringFromIndex:8] isEqualToString:@"01"]) {
+                BBStepCountingHistoryMonthRecord *month = [BBStepCountingHistoryMonthRecord new];
+                month.dayRecords = dayRecords;
+                month.month = [record.date substringToIndex:7];
+                [allMonthData addObject:month];
+                dayRecords = [NSMutableArray new];
+            }
+        }
+        
+        BBStepCountingHistoryMonthRecord *month = [BBStepCountingHistoryMonthRecord new];
+        month.dayRecords = dayRecords;
+        month.month = [record.date substringToIndex:7];
+        [allMonthData addObject:month];
+        
+        for (BBStepCountingHistoryMonthRecord *r in allMonthData) {
+            r.average = ((NSNumber *)[r valueForKeyPath:@"dayRecords.@avg.stepCount"]).doubleValue;
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if(handler) {
+                handler(allMonthData);
+            }
+        });
+        [self.localDatabase close];
+    });
 }
 
 @end

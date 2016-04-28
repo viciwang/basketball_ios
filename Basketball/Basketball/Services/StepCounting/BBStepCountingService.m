@@ -8,6 +8,7 @@
 
 #import "BBStepCountingService.h"
 #import <CoreMotion/CoreMotion.h>
+#import "NSDate+Utilities.h"
 
 @interface BBStepCountingService ()
 
@@ -25,14 +26,18 @@
     return self;
 }
 
-- (void)startStepCountingWithHandler:(StepCountingUpdateBlock)handler {
-    [self.pedmeter startPedometerUpdatesFromDate:[NSDate date] withHandler:^(CMPedometerData * _Nullable pedometerData, NSError * _Nullable error) {
+- (void)startStepCountingUpdateWithHandler:(StepCountingUpdateBlock)handler {
+    [self.pedmeter startPedometerUpdatesFromDate:[[NSDate date] dateAtStartOfDay] withHandler:^(CMPedometerData * _Nullable pedometerData, NSError * _Nullable error) {
         if (handler) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 handler(pedometerData.numberOfSteps.unsignedIntegerValue, pedometerData.endDate, error);
             });
         }
     }];
+}
+
+- (void)stopStepCountingUpdate {
+    [self.pedmeter stopPedometerUpdates];
 }
 
 - (void)queryStepCountingFromDate:(NSDate *)beginDate endDate:(NSDate *)endDate handler:(StepCountingUpdateBlock)handler {

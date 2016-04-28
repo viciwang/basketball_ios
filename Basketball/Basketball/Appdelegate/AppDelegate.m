@@ -15,6 +15,7 @@
 #import "BBLoginViewController.h"
 #import "BBAppearance.h"
 #import "BBStepCountingManager.h"
+#import "BBStartupManager.h"
 
 @interface AppDelegate ()
 
@@ -52,26 +53,9 @@ const int ddLogLevel = DDLogLevelWarning;
     [self configBaseUrl];
 #endif
     
-    [self addNotificationObsever];
     [self setupUI];
-    
-    // 计步
-    [[BBStepCountingManager sharedManager] start];
-    
+    [[BBStartupManager sharedManager] start];
     return YES;
-}
-
-#pragma mark - notification
-
-- (void)addNotificationObsever {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tokenDidExpired) name:kBBNotificationTokenExpired object:nil];
-    
-}
-
-- (void)tokenDidExpired {
-    [BBLoginViewController showLoginViewControllerWithCompletionBlock:^{
-        
-    }];
 }
 
 #pragma mark - UI

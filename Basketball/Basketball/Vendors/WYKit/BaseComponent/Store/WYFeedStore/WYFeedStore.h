@@ -33,7 +33,6 @@
 + (WYFeed *)feedExistWithLink:(NSString *)link;
 
 + (void)insertFeed:(WYFeed *)feedInfo completion:(WYStoreSaveCompletionBlock)block;
-- (void)insertFeeds:(NSArray *)feedInfos completion:(WYStoreSaveCompletionBlock)block;
 + (void)insertFeedEntity:(id)entitys forFeed:(WYFeed *)feed completion:(WYStoreSaveCompletionBlock)block;
 
 + (void)deleteAllFeedWithCompletion:(WYStoreSaveCompletionBlock)block;

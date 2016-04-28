@@ -20,6 +20,8 @@ ChartViewDelegate
 @property (nonatomic, strong) CAGradientLayer *bgLayer;
 @property (weak, nonatomic) IBOutlet UILabel *monthLabel;
 @property (weak, nonatomic) IBOutlet UILabel *averageLabel;
+@property (nonatomic, copy) void (^selectedHandler)(NSUInteger decress,NSUInteger index);
+@property (nonatomic, assign) NSUInteger descress;
 
 @end
 
@@ -74,11 +76,15 @@ ChartViewDelegate
     self.chartView.xAxis.enabled = NO;
     
     self.chartView.legend.enabled = NO;
+    self.chartView.scaleXEnabled = NO;
+    self.chartView.scaleYEnabled = NO;
 }
 
 #pragma mark - data
 
-- (void)updateWithData:(BBStepCountingHistoryMonthRecord *)record {
+- (void)updateWithData:(BBStepCountingHistoryMonthRecord *)record isLastCell:(BOOL)isLastCell selectedHandler:(void (^)(NSUInteger, NSUInteger))handler {
+    self.selectedHandler = handler;
+    
     NSDateFormatter *formatter = [NSDateFormatter new];
     formatter.dateFormat = @"yyyy-MM";
     NSDate *date = [formatter dateFromString:record.month];
@@ -93,11 +99,23 @@ ChartViewDelegate
     NSMutableArray *xVals = [[NSMutableArray alloc] init];
     NSMutableArray *yVals = [[NSMutableArray alloc] init];
     
-    
-    for (int i = 0; i < daysOfMonth; i++) {
+    int i = 0;
+    self.descress = daysOfMonth - record.dayRecords.count;
+    if (self.descress>0 && isLastCell) {
+        for (i = 0; i < self.descress; i++) {
+            [xVals addObject:@(i)];
+            [yVals addObject:[[BarChartDataEntry alloc] initWithValue:0 xIndex:i]];
+        }
+        self.descress = daysOfMonth - record.dayRecords.count;
+    }
+    else {
+        self.descress = 0;
+    }
+    for (; i < daysOfMonth; i++) {
+        NSUInteger index = i - self.descress;
         [xVals addObject:@(i)];
-        if (i<record.dayRecords.count) {
-            BBStepCountingHistoryDayRecord *r = record.dayRecords[i];
+        if (index <record.dayRecords.count) {
+            BBStepCountingHistoryDayRecord *r = record.dayRecords[record.dayRecords.count - 1 - index];
             [yVals addObject:[[BarChartDataEntry alloc] initWithValue:r.stepCount xIndex:i]];
         }
     }
@@ -121,11 +139,12 @@ ChartViewDelegate
 
 - (void)chartValueSelected:(ChartViewBase * __nonnull)chartView entry:(ChartDataEntry * __nonnull)entry dataSetIndex:(NSInteger)dataSetIndex highlight:(ChartHighlight * __nonnull)highlight
 {
-//    NSLog(@"chartValueSelected");
+    self.selectedHandler(self.descress,entry.xIndex);
+    NSLog(@"chartValueSelected");
 }
 
 - (void)chartValueNothingSelected:(ChartViewBase * __nonnull)chartView
 {
-//    NSLog(@"chartValueNothingSelected");
+    NSLog(@"chartValueNothingSelected");
 }
 @end

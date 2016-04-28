@@ -12,4 +12,6 @@
 
 - (void)refreshWithTodayStep:(NSUInteger)steps average:(NSUInteger)average;
 
+- (void)refreshWithTodayStep:(NSUInteger)steps;
+
 @end

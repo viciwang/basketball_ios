@@ -11,6 +11,6 @@
 
 @interface BBStepCountingHistoryRecordCell : UITableViewCell
 
-- (void)updateWithData:(BBStepCountingHistoryMonthRecord *)record;
+- (void)updateWithData:(BBStepCountingHistoryMonthRecord *)record isLastCell:(BOOL)isLastCell selectedHandler:(void (^)(NSUInteger descress,NSUInteger index)) handler;
 
 @end

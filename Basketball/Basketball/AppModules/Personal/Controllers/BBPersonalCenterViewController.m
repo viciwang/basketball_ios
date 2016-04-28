@@ -44,7 +44,6 @@ UITableViewDataSource
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"我";
     [self setupNavigationBar];
     [self setupTableView];
     [self setupObserver];
@@ -96,7 +95,9 @@ UITableViewDataSource
 #pragma mark - UI
 
 - (void)setupNavigationBar {
-    
+    NSMutableDictionary *dict = [self.navigationController.navigationBar.titleTextAttributes mutableCopy];
+    dict[NSForegroundColorAttributeName] = UIColorFromHex(0x0192c9);
+    self.navigationController.navigationBar.titleTextAttributes = dict;
 }
 
 - (void)setupTableView {

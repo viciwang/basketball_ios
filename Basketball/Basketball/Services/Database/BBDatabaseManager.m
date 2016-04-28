@@ -14,6 +14,7 @@
 @interface BBDatabaseManager ()
 
 @property (nonatomic, strong) FMDatabase *localDatabase;
+@property (nonatomic, strong) FMDatabase *currentUserDatabase;
 
 @end
 
@@ -28,15 +29,15 @@
     return _sharedDatabaseManager;
 }
 
-- (FMDatabase *)localDatabase {
-    if(!_localDatabase) {
+- (FMDatabase *)currentUserDatabase {
+    if (!_currentUserDatabase) {
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDirectory = [paths objectAtIndex:0];
-        NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:@"Basketball.sqlite"];
+        NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:@"CurrentUser.sqlite"];
         NSLog(@"数据库物理地址：%@",writableDBPath);
-        _localDatabase = [FMDatabase databaseWithPath:writableDBPath];
-        [_localDatabase open];
-        [_localDatabase executeUpdate:@"CREATE TABLE IF NOT EXISTS \
+        _currentUserDatabase = [FMDatabase databaseWithPath:writableDBPath];
+        [_currentUserDatabase open];
+        [_currentUserDatabase executeUpdate:@"CREATE TABLE IF NOT EXISTS \
          `User` ( \
          `uid` char(10) NOT NULL, \
          `email` varchar(56) NOT NULL, \
@@ -48,24 +49,39 @@
          `personalDescription` varchar(180) \
          );"];
         
-        [_localDatabase executeUpdate:@"CREATE TABLE IF NOT EXISTS \
-         `StepCountDailyList` ( \
-         `date` DATE NOT NULL, \
-         `stepCount` int NOT NULL \
-         );"];
-        
-        [_localDatabase close];
+        [_currentUserDatabase close];
     }
-    return _localDatabase;
+    return _currentUserDatabase;
+}
+
+- (void)resetCurrentUserDatabase {
+    NSString *uid = [BBUser currentUser].uid;
+    if (!uid) {
+        _localDatabase = nil;
+        return;
+    }
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@Basketball.sqlite",uid]];
+    NSLog(@"数据库物理地址：%@",writableDBPath);
+    _localDatabase = [FMDatabase databaseWithPath:writableDBPath];
+    [_localDatabase open];
+    [_localDatabase executeUpdate:@"CREATE TABLE IF NOT EXISTS \
+     `StepCountDailyList` ( \
+     `date` DATE NOT NULL, \
+     `stepCount` int NOT NULL \
+     );"];
+    
+    [_localDatabase close];
 }
 
 - (BBUser *)retriveCurrentUser {
     
-    if (![self.localDatabase open]) {
+    if (![self.currentUserDatabase open]) {
         return nil;
     }
     
-    FMResultSet *result = [self.localDatabase executeQuery:@"SELECT * FROM User"];
+    FMResultSet *result = [self.currentUserDatabase executeQuery:@"SELECT * FROM User"];
     BBUser *user = nil;
     if ([result next]) {
         user = [BBUser new];
@@ -78,31 +94,31 @@
         user.lastLoginTime = [result stringForColumn:@"lastLoginTime"];
         user.personalDescription = [result stringForColumn:@"personalDescription"];
     }
-    [self.localDatabase close];
+    [self.currentUserDatabase close];
     return user;
 }
 
 - (BOOL)saveCurrentUser:(BBUser *)user {
     
-    if (![self.localDatabase open]) {
+    if (![self.currentUserDatabase open]) {
         return NO;
     }
     
-    if (![self.localDatabase executeStatements:@"DELETE FROM User"]) {
+    if (![self.currentUserDatabase executeStatements:@"DELETE FROM User"]) {
         DDLogInfo(@"清空用户表出错：%@",[self.localDatabase lastErrorMessage]);
         return NO;
     }
     BOOL success = NO;
     if (user) {
-        BOOL success = [self.localDatabase executeUpdate:@"INSERT INTO User (uid, email, nickName, headImageUrl, city, token, lastLoginTime, personalDescription) VALUES (?,?,?,?,?,?,?,?)",user.uid,user.email,user.nickName,user.headImageUrl,user.city,user.token,user.lastLoginTime,user.personalDescription];
+        BOOL success = [self.currentUserDatabase executeUpdate:@"INSERT INTO User (uid, email, nickName, headImageUrl, city, token, lastLoginTime, personalDescription) VALUES (?,?,?,?,?,?,?,?)",user.uid,user.email,user.nickName,user.headImageUrl,user.city,user.token,user.lastLoginTime,user.personalDescription];
         if (!success) {
-            DDLogInfo(@"sqlite保存出错：%@",[self.localDatabase lastErrorMessage]);
+            DDLogInfo(@"sqlite保存出错：%@",[self.currentUserDatabase lastErrorMessage]);
         }
     }
     else {
         success = YES;
     }
-    [self.localDatabase close];
+    [self.currentUserDatabase close];
     return success;
 }
 

@@ -10,6 +10,7 @@
 #import "BBLoginViewController.h"
 #import "BBUser.h"
 #import "BBStepCountingManager.h"
+#import "BBDatabaseManager.h"
 
 @implementation BBStartupManager
 
@@ -32,6 +33,7 @@
 - (void)start
 {
     if ([BBUser currentUser]) {
+        [[BBDatabaseManager sharedManager] resetCurrentUserDatabase];
         // 计步
         [[BBStepCountingManager sharedManager] start];
     }

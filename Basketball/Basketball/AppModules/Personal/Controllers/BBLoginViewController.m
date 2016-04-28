@@ -124,6 +124,7 @@
 
 - (IBAction)loginAction:(id)sender {
     [self showLoadingHUDWithInfo:nil];
+    self.view.userInteractionEnabled = NO;
     @weakify(self);
     [[BBNetworkApiManager sharedManager] loginWithEmail:self.emailTextField.text password:[self.passwordTextField.text MD5] completionBlock:^(BBUser *user, NSError *error) {
         @strongify(self);
@@ -132,7 +133,6 @@
             [self showErrorHUDWithInfo:error.userInfo[@"msg"]];
         }
         else {
-            [BBUser setCurrentUser:user];
             [[UIApplication sharedApplication].keyWindow bb_checkoutRootViewController:[BBTabBarController new]];
         }
     }];

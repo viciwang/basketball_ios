@@ -83,6 +83,9 @@ ChartViewDelegate
 #pragma mark - data
 
 - (void)updateWithData:(BBStepCountingHistoryMonthRecord *)record isLastCell:(BOOL)isLastCell selectedHandler:(void (^)(NSUInteger, NSUInteger))handler {
+    if (!record || record.dayRecords.count <= 0) {
+        return;
+    }
     self.selectedHandler = handler;
     
     NSDateFormatter *formatter = [NSDateFormatter new];

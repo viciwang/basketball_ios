@@ -13,6 +13,7 @@
 #import "BBUser.h"
 #import "BBStepCountingHistoryRecord.h"
 #import "BBStepCountingRank.h"
+#import "BBDatabaseManager.h"
 
 #define REQUEST(METHOD, URLString, PARAMETERS, MODEL_CLASS, RESPONSE_BLOCK) \
 { \
@@ -188,6 +189,7 @@ static NSString *_debugBaseUrl = nil;
         else {
             [[BBNetworkApiManager sharedManager].requestSerializer setValue:user.token forHTTPHeaderField:@"token"];
             [[BBNetworkApiManager sharedManager].requestSerializer setValue:user.uid forHTTPHeaderField:@"uid"];
+            [BBUser setCurrentUser:user];
             [[NSNotificationCenter defaultCenter] postNotificationName:kBBNotificationUserDidLogin object:nil];
             if (responseBlock) {
                 responseBlock(user, error);
@@ -278,6 +280,7 @@ static NSString *_debugBaseUrl = nil;
     REQUEST(GET, kApiUserLogout, nil, nil, ^(id responseObject, NSError *error){
         if (!error) {
             [BBUser setCurrentUser:nil];
+            [[BBDatabaseManager sharedManager] resetCurrentUserDatabase];
             [[NSNotificationCenter defaultCenter] postNotificationName:kBBNotificationUserDidLogout object:nil];
         }
         if (responseBlock) {
